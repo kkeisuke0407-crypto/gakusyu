@@ -1,0 +1,165 @@
+﻿brand_name,normalized_brand_name,brand_alias,normalized_alias,alias_type,use_in_matrix,domain,service_type,discovery_source
+家庭教師のトライ,家庭教師のトライ,トライ,トライ,検索形,1,,家庭教師,keywords_unique | 00_意図マップ | Google_SERP | 競合ページ見出し
+家庭教師のトライ,家庭教師のトライ,家庭教師のトライ,家庭教師のトライ,検索形,1,,家庭教師,keywords_unique | Google_SERP | 競合ページ見出し
+家庭教師のトライ,家庭教師のトライ,家庭教師 トライ,家庭教師トライ,表記揺れ,0,,家庭教師,keywords_unique
+家庭教師のトライ,家庭教師のトライ,try,try,表記揺れ,0,,家庭教師,keywords_unique | 00_意図マップ | Google_SERP
+個別教室のトライ,個別教室のトライ,個別教室のトライ,個別教室のトライ,検索形,1,,個別指導塾,keywords_unique | Google_SERP | 競合ページ見出し
+個別教室のトライ,個別教室のトライ,トライ 個別,トライ個別,検索形,1,,個別指導塾,keywords_unique | 競合ページ見出し
+個別教室のトライ,個別教室のトライ,トライ 塾,トライ塾,表記揺れ,0,,個別指導塾,keywords_unique
+トライのオンライン個別指導塾,トライのオンライン個別指導塾,トライ オンライン,トライオンライン,検索形,1,www.try-online.jp,オンライン塾,keywords_unique | urls.csv | Google_SERP | 競合ページ見出し
+トライのオンライン個別指導塾,トライのオンライン個別指導塾,トライのオンライン個別指導塾,トライのオンライン個別指導塾,検索形,1,www.try-online.jp,オンライン塾,keywords_unique | urls.csv | Google_SERP | 競合ページ見出し
+トライ式高等学院,トライ式高等学院,トライ式高等学院,トライ式高等学院,検索形,1,,通信制高校サポート校,keywords_unique | 競合ページ見出し
+トライ式高等学院,トライ式高等学院,トライ 高等学院,トライ高等学院,検索形,1,,通信制高校サポート校,人手追加（既存データで未観測）
+個別指導塾トライプラス,個別指導塾トライプラス,トライプラス,トライプラス,検索形,1,,個別指導塾,keywords_unique | 競合ページ見出し
+個別指導塾トライプラス,個別指導塾トライプラス,トライ プラス 塾,トライプラス塾,検索形,1,,個別指導塾,keywords_unique
+オンラインプロ教師のメガスタ,オンラインプロ教師のメガスタ,メガスタ,メガスタ,検索形,1,,オンライン家庭教師,keywords_unique | 00_意図マップ | Google_SERP
+オンラインプロ教師のメガスタ,オンラインプロ教師のメガスタ,メガスタ オンライン,メガスタオンライン,検索形,1,,オンライン家庭教師,keywords_unique
+家庭教師のあすなろ,家庭教師のあすなろ,あすなろ,あすなろ,検索形,1,www.asunaro-kk.com / www.seisekiup.net,家庭教師,keywords_unique | 00_意図マップ | urls.csv | Google_SERP | 競合ページ見出し
+家庭教師のあすなろ,家庭教師のあすなろ,家庭教師のあすなろ,家庭教師のあすなろ,検索形,1,www.asunaro-kk.com / www.seisekiup.net,家庭教師,keywords_unique | urls.csv | Google_SERP | 競合ページ見出し
+家庭教師のあすなろ,家庭教師のあすなろ,家庭教師 あすなろ,家庭教師あすなろ,表記揺れ,0,www.asunaro-kk.com / www.seisekiup.net,家庭教師,keywords_unique | urls.csv | Google_SERP | 競合ページ見出し
+家庭教師のノーバス,家庭教師のノーバス,ノーバス,ノーバス,検索形,1,www.nohvas.com,家庭教師,keywords_unique | 00_意図マップ | urls.csv | Google_SERP | 競合ページ見出し
+家庭教師のノーバス,家庭教師のノーバス,家庭教師のノーバス,家庭教師のノーバス,検索形,1,www.nohvas.com,家庭教師,keywords_unique | urls.csv | Google_SERP | 競合ページ見出し
+家庭教師のノーバス,家庭教師のノーバス,nohvas,nohvas,表記揺れ,0,www.nohvas.com,家庭教師,urls.csv | Google_SERP
+家庭教師のノーバス,家庭教師のノーバス,個別指導塾ノーバス,個別指導塾ノーバス,表記揺れ,0,www.nohvas.com,家庭教師,keywords_unique | urls.csv | Google_SERP
+家庭教師のノーバス,家庭教師のノーバス,家庭教師ノーバス,家庭教師ノーバス,表記揺れ,0,www.nohvas.com,家庭教師,keywords_unique | urls.csv | Google_SERP
+家庭教師のランナー,家庭教師のランナー,家庭教師のランナー,家庭教師のランナー,検索形,1,k-runner.co.jp,家庭教師,keywords_unique | urls.csv | Google_SERP | 競合ページ見出し
+家庭教師のランナー,家庭教師のランナー,ランナー 家庭教師,ランナー家庭教師,検索形,1,k-runner.co.jp,家庭教師,keywords_unique | urls.csv | 競合ページ見出し
+家庭教師ファースト,家庭教師ファースト,家庭教師ファースト,家庭教師ファースト,検索形,1,www.kyoushi1.net,家庭教師,keywords_unique | urls.csv | Google_SERP | 競合ページ見出し
+家庭教師ファースト,家庭教師ファースト,家庭教師のファースト,家庭教師のファースト,検索形,1,www.kyoushi1.net,家庭教師,keywords_unique | 00_意図マップ | urls.csv
+家庭教師のサクシード,家庭教師のサクシード,サクシード,サクシード,検索形,1,www.benkyo.co.jp,家庭教師,keywords_unique | 00_意図マップ | urls.csv | 競合ページ見出し
+家庭教師のサクシード,家庭教師のサクシード,家庭教師のサクシード,家庭教師のサクシード,検索形,1,www.benkyo.co.jp,家庭教師,keywords_unique | urls.csv | 競合ページ見出し
+学研の家庭教師,学研の家庭教師,学研の家庭教師,学研の家庭教師,検索形,1,www.kame.co.jp,家庭教師,keywords_unique | urls.csv | Google_SERP | 競合ページ見出し
+学研の家庭教師,学研の家庭教師,学研 家庭教師,学研家庭教師,検索形,1,www.kame.co.jp,家庭教師,keywords_unique | urls.csv
+家庭教師のガンバ,家庭教師のガンバ,家庭教師のガンバ,家庭教師のガンバ,検索形,1,,家庭教師,keywords_unique
+家庭教師のガンバ,家庭教師のガンバ,ガンバ 家庭教師,ガンバ家庭教師,検索形,1,,家庭教師,keywords_unique
+家庭教師のやる気アシスト,家庭教師のやる気アシスト,やる気アシスト,やる気アシスト,検索形,1,www.yaruki-assist.com,家庭教師,keywords_unique | urls.csv | Google_SERP | 競合ページ見出し
+家庭教師のやる気アシスト,家庭教師のやる気アシスト,家庭教師のやる気アシスト,家庭教師のやる気アシスト,検索形,1,www.yaruki-assist.com,家庭教師,keywords_unique | urls.csv | Google_SERP | 競合ページ見出し
+家庭教師のマスター,家庭教師のマスター,家庭教師のマスター,家庭教師のマスター,検索形,1,www.u-master.net,家庭教師,keywords_unique | urls.csv | 競合ページ見出し
+家庭教師のマスター,家庭教師のマスター,マスター 家庭教師,マスター家庭教師,検索形,1,www.u-master.net,家庭教師,keywords_unique | urls.csv
+全国家庭教師協会,全国家庭教師協会,全国家庭教師協会,全国家庭教師協会,検索形,1,kateikyoushi-pro.com,家庭教師,keywords_unique | urls.csv | 競合ページ見出し
+全国家庭教師協会,全国家庭教師協会,家庭教師協会,家庭教師協会,検索形,1,kateikyoushi-pro.com,家庭教師,keywords_unique | urls.csv | 競合ページ見出し
+家庭教師の銀河,家庭教師の銀河,家庭教師の銀河,家庭教師の銀河,検索形,1,,家庭教師,keywords_unique | Google_SERP | 競合ページ見出し
+家庭教師の銀河,家庭教師の銀河,銀河 家庭教師,銀河家庭教師,検索形,1,,家庭教師,人手追加（既存データで未観測）
+家庭教師アカデミー,家庭教師アカデミー,家庭教師アカデミー,家庭教師アカデミー,検索形,1,,家庭教師,keywords_unique | Google_SERP
+TOS家庭教師センター,tos家庭教師センター,TOS 家庭教師,tos家庭教師,検索形,1,www.tos-kc.com / tos-kc1.com,家庭教師,keywords_unique | urls.csv | Google_SERP | 競合ページ見出し
+TOS家庭教師センター,tos家庭教師センター,TOS家庭教師センター,tos家庭教師センター,検索形,1,www.tos-kc.com / tos-kc1.com,家庭教師,keywords_unique | urls.csv | Google_SERP | 競合ページ見出し
+家庭教師のコーチング1,家庭教師のコーチング1,コーチング1,コーチング1,検索形,1,www.coaching01.com / www.juku-coaching01.com,発達障害専門 家庭教師,keywords_unique | urls.csv | Google_SERP | 競合ページ見出し
+家庭教師のコーチング1,家庭教師のコーチング1,家庭教師のコーチング1,家庭教師のコーチング1,検索形,1,www.coaching01.com / www.juku-coaching01.com,発達障害専門 家庭教師,keywords_unique | urls.csv | Google_SERP | 競合ページ見出し
+家庭教師のコーチング1,家庭教師のコーチング1,コーチングワン,コーチングワン,表記揺れ,0,www.coaching01.com / www.juku-coaching01.com,発達障害専門 家庭教師,keywords_unique | urls.csv
+プロ家庭教師のジャンプ,プロ家庭教師のジャンプ,家庭教師のジャンプ,家庭教師のジャンプ,検索形,1,www.jump-japan.co.jp,発達障害専門 家庭教師,keywords_unique | urls.csv | Google_SERP | 競合ページ見出し
+プロ家庭教師のジャンプ,プロ家庭教師のジャンプ,ジャンプ 家庭教師,ジャンプ家庭教師,検索形,1,www.jump-japan.co.jp,発達障害専門 家庭教師,keywords_unique | urls.csv | Google_SERP
+プロ家庭教師のジャンプ,プロ家庭教師のジャンプ,jump 家庭教師,jump家庭教師,表記揺れ,0,www.jump-japan.co.jp,発達障害専門 家庭教師,urls.csv
+メガジュン,メガジュン,メガジュン,メガジュン,検索形,1,pro-megajun.com,発達障害専門 家庭教師,keywords_unique | urls.csv | 競合ページ見出し
+メガジュン,メガジュン,プロ家庭教師 メガジュン,プロ家庭教師メガジュン,検索形,1,pro-megajun.com,発達障害専門 家庭教師,keywords_unique | urls.csv | 競合ページ見出し
+キズキプロ家庭教師,キズキプロ家庭教師,キズキプロ家庭教師,キズキプロ家庭教師,検索形,1,tokyo-yagaku.jp,不登校・発達障害対応 家庭教師,keywords_unique | urls.csv | 競合ページ見出し
+キズキプロ家庭教師,キズキプロ家庭教師,キズキ 家庭教師,キズキ家庭教師,検索形,1,tokyo-yagaku.jp,不登校・発達障害対応 家庭教師,urls.csv
+ティントル,ティントル,ティントル,ティントル,検索形,1,tintle.net,不登校専門 家庭教師,keywords_unique | urls.csv | Google_SERP | 競合ページ見出し
+ティントル,ティントル,tintle,tintle,検索形,1,tintle.net,不登校専門 家庭教師,urls.csv | Google_SERP
+ウォウフル,ウォウフル,ウォウフル,ウォウフル,検索形,1,wowfull.jp,不登校向け オンライン教室,urls.csv
+ウォウフル,ウォウフル,wowfull,wowfull,検索形,1,wowfull.jp,不登校向け オンライン教室,urls.csv | Google_SERP
+まなぶてらす,まなぶてらす,まなぶてらす,まなぶてらす,検索形,1,www.manatera.com,オンライン家庭教師,keywords_unique | 00_意図マップ | urls.csv | Google_SERP | 競合ページ見出し
+まなぶてらす,まなぶてらす,マナブテラス,マナブテラス,検索形,1,www.manatera.com,オンライン家庭教師,urls.csv
+まなぶてらす,まなぶてらす,まなぶ てらす,まなぶてらす,表記揺れ,0,www.manatera.com,オンライン家庭教師,keywords_unique | 00_意図マップ | urls.csv | Google_SERP | 競合ページ見出し
+まなぶてらす,まなぶてらす,学ぶテラス,学ぶテラス,表記揺れ,0,www.manatera.com,オンライン家庭教師,urls.csv | Google_SERP
+マナリンク,マナリンク,マナリンク,マナリンク,検索形,1,manalink.jp,オンライン家庭教師,keywords_unique | urls.csv | Google_SERP | 競合ページ見出し
+マナリンク,マナリンク,manalink,manalink,検索形,1,manalink.jp,オンライン家庭教師,urls.csv | Google_SERP
+マナリンク,マナリンク,マナ リンク,マナリンク,表記揺れ,0,manalink.jp,オンライン家庭教師,keywords_unique | urls.csv | Google_SERP | 競合ページ見出し
+オンライン家庭教師GIPS,オンライン家庭教師gips,GIPS,gips,検索形,1,gips-kateikyosi.com,オンライン家庭教師,keywords_unique | urls.csv | Google_SERP | 競合ページ見出し
+オンライン家庭教師GIPS,オンライン家庭教師gips,ジップス 家庭教師,ジップス家庭教師,検索形,1,gips-kateikyosi.com,オンライン家庭教師,urls.csv
+オンライン家庭教師GIPS,オンライン家庭教師gips,GIPS 家庭教師,gips家庭教師,表記揺れ,0,gips-kateikyosi.com,オンライン家庭教師,keywords_unique | urls.csv | Google_SERP | 競合ページ見出し
+オンライン個別指導塾リバランス,オンライン個別指導塾リバランス,リバランス,リバランス,検索形,1,reba1ance.com,オンライン塾,keywords_unique | urls.csv | Google_SERP | 競合ページ見出し
+オンライン個別指導塾リバランス,オンライン個別指導塾リバランス,リバランス 塾,リバランス塾,検索形,1,reba1ance.com,オンライン塾,urls.csv | 競合ページ見出し
+Preステップオンライン,preステップオンライン,Preステップ,preステップ,検索形,1,prestep-online.com,オンライン塾,keywords_unique | urls.csv | Google_SERP | 競合ページ見出し
+Preステップオンライン,preステップオンライン,プレステップ オンライン,プレステップオンライン,検索形,1,prestep-online.com,オンライン塾,urls.csv
+個別指導の明光義塾,個別指導の明光義塾,明光義塾,明光義塾,検索形,1,,個別指導塾,keywords_unique | Google_SERP | 競合ページ見出し
+個別指導の明光義塾,個別指導の明光義塾,明光,明光,検索形,1,,個別指導塾,keywords_unique | 00_意図マップ | Google_SERP | 競合ページ見出し
+東京個別指導学院,東京個別指導学院,東京個別指導学院,東京個別指導学院,検索形,1,,個別指導塾,keywords_unique | 競合ページ見出し
+東京個別指導学院,東京個別指導学院,東京個別,東京個別,検索形,1,,個別指導塾,keywords_unique | 00_意図マップ | 競合ページ見出し
+ITTO個別指導学院,itto個別指導学院,itto,itto,検索形,1,,個別指導塾,keywords_unique | 00_意図マップ | 競合ページ見出し
+ITTO個別指導学院,itto個別指導学院,イットー,イットー,検索形,1,,個別指導塾,keywords_unique | 00_意図マップ
+ITTO個別指導学院,itto個別指導学院,itto個別指導学院,itto個別指導学院,表記揺れ,0,,個別指導塾,keywords_unique | 競合ページ見出し
+ITTO個別指導学院,itto個別指導学院,いっとー,いっとー,表記揺れ,0,,個別指導塾,人手追加（既存データで未観測）
+スクールIE,スクールie,スクールie,スクールie,検索形,1,,個別指導塾,keywords_unique | 00_意図マップ | 競合ページ見出し
+スクールIE,スクールie,スクールIE,スクールie,検索形,1,,個別指導塾,keywords_unique | 00_意図マップ | 競合ページ見出し
+スクールIE,スクールie,やる気スイッチ,やる気スイッチ,表記揺れ,0,,個別指導塾,keywords_unique | Google_SERP | 競合ページ見出し
+スクールIE,スクールie,ieスクール,ieスクール,表記揺れ,0,,個別指導塾,人手追加（既存データで未観測）
+スクールIE,スクールie,すくーるいえ,すくーるいえ,表記揺れ,0,,個別指導塾,人手追加（既存データで未観測）
+スクールIE,スクールie,スクールアイイー,スクールアイイー,表記揺れ,0,,個別指導塾,keywords_unique | 00_意図マップ
+ナビ個別指導学院,ナビ個別指導学院,ナビ個別指導学院,ナビ個別指導学院,検索形,1,,個別指導塾,keywords_unique | 競合ページ見出し
+ナビ個別指導学院,ナビ個別指導学院,ナビ個別,ナビ個別,検索形,1,,個別指導塾,keywords_unique | 00_意図マップ | 競合ページ見出し
+ナビ個別指導学院,ナビ個別指導学院,ナビこべつ,ナビこべつ,表記揺れ,0,,個別指導塾,人手追加（既存データで未観測）
+ナビ個別指導学院,ナビ個別指導学院,個別指導学院ナビ,個別指導学院ナビ,表記揺れ,0,,個別指導塾,競合ページ見出し
+栄光の個別ビザビ,栄光の個別ビザビ,ビザビ,ビザビ,検索形,1,,個別指導塾,keywords_unique | 00_意図マップ
+栄光の個別ビザビ,栄光の個別ビザビ,栄光ビザビ,栄光ビザビ,検索形,1,,個別指導塾,keywords_unique
+個別指導Axis,個別指導axis,アクシス 塾,アクシス塾,検索形,1,,個別指導塾,keywords_unique
+個別指導Axis,個別指導axis,axis 個別指導,axis個別指導,検索形,1,,個別指導塾,keywords_unique
+森塾,森塾,森塾,森塾,検索形,1,,個別指導塾,keywords_unique | 00_意図マップ | 競合ページ見出し
+TOMAS,tomas,トーマス 塾,トーマス塾,検索形,1,,個別指導塾,keywords_unique
+TOMAS,tomas,tomas,tomas,検索形,1,,個別指導塾,keywords_unique | 00_意図マップ | 競合ページ見出し
+武田塾,武田塾,武田塾,武田塾,検索形,1,,個別指導塾,keywords_unique | 00_意図マップ | 競合ページ見出し
+フリーステップ,フリーステップ,フリーステップ,フリーステップ,検索形,1,,個別指導塾,keywords_unique | 00_意図マップ | 競合ページ見出し
+京進スクール・ワン,京進スクール・ワン,スクールワン,スクールワン,検索形,1,,個別指導塾,keywords_unique
+京進スクール・ワン,京進スクール・ワン,京進スクールワン,京進スクールワン,検索形,1,,個別指導塾,keywords_unique
+ECCベストワン,eccベストワン,ベストワン,ベストワン,検索形,1,,個別指導塾,keywords_unique | 競合ページ見出し
+ECCベストワン,eccベストワン,ecc ベストワン,eccベストワン,検索形,1,,個別指導塾,keywords_unique
+ECCベストワン,eccベストワン,ザ ベストワン,ザベストワン,表記揺れ,0,,個別指導塾,人手追加（既存データで未観測）
+キズキ共育塾,キズキ共育塾,キズキ共育塾,キズキ共育塾,検索形,1,kizuki.or.jp,不登校・中退向け 個別指導塾,keywords_unique | urls.csv | Google_SERP | 競合ページ見出し
+キズキ共育塾,キズキ共育塾,キズキ,キズキ,検索形,1,kizuki.or.jp,不登校・中退向け 個別指導塾,keywords_unique | 00_意図マップ | urls.csv | Google_SERP | 競合ページ見出し
+キズキ共育塾,キズキ共育塾,キズキ教育塾,キズキ教育塾,表記揺れ,0,kizuki.or.jp,不登校・中退向け 個別指導塾,keywords_unique | urls.csv | Google_SERP
+キズキ共育塾,キズキ共育塾,キズキ 教育 塾,キズキ教育塾,表記揺れ,0,kizuki.or.jp,不登校・中退向け 個別指導塾,keywords_unique | urls.csv | Google_SERP
+キズキビジネスカレッジ,キズキビジネスカレッジ,キズキビジネスカレッジ,キズキビジネスカレッジ,検索形,1,,就労移行支援,人手追加（既存データで未観測）
+個別指導塾スタディホップ,個別指導塾スタディホップ,スタディホップ,スタディホップ,検索形,1,studyhop.poka-step.jp,発達支援児向け 個別指導塾,keywords_unique | urls.csv | 競合ページ見出し
+個別指導塾スタディホップ,個別指導塾スタディホップ,studyhop,studyhop,検索形,1,studyhop.poka-step.jp,発達支援児向け 個別指導塾,urls.csv | Google_SERP
+さくらOne個別指導塾,さくらone個別指導塾,さくらone,さくらone,検索形,1,hachiojisakura.com,個別指導塾,keywords_unique | urls.csv | Google_SERP | 競合ページ見出し
+さくらOne個別指導塾,さくらone個別指導塾,さくらOne個別指導塾,さくらone個別指導塾,検索形,1,hachiojisakura.com,個別指導塾,keywords_unique | urls.csv | Google_SERP | 競合ページ見出し
+はなたに塾,はなたに塾,はなたに塾,はなたに塾,検索形,1,hanatanijuku.com,個別指導塾,keywords_unique | urls.csv | 競合ページ見出し
+四谷学院（療育・発達支援）,四谷学院(療育・発達支援),四谷学院 療育,四谷学院療育,検索形,1,yotsuyagakuin-ryoiku.com,発達障害 療育・学習支援,keywords_unique | urls.csv
+四谷学院（療育・発達支援）,四谷学院(療育・発達支援),四谷学院 発達支援,四谷学院発達支援,検索形,1,yotsuyagakuin-ryoiku.com,発達障害 療育・学習支援,keywords_unique | urls.csv | 競合ページ見出し
+LITALICOジュニア,litalicoジュニア,リタリコジュニア,リタリコジュニア,検索形,1,junior.litalico.jp,発達障害 療育・学習支援,keywords_unique | urls.csv | Google_SERP
+LITALICOジュニア,litalicoジュニア,litalicoジュニア,litalicoジュニア,検索形,1,junior.litalico.jp,発達障害 療育・学習支援,keywords_unique | urls.csv | Google_SERP | 競合ページ見出し
+LITALICOジュニア,litalicoジュニア,リタリコ,リタリコ,表記揺れ,0,junior.litalico.jp,発達障害 療育・学習支援,keywords_unique | 00_意図マップ | urls.csv | Google_SERP
+LITALICOジュニア,litalicoジュニア,リタリコ パーソナル,リタリコパーソナル,表記揺れ,0,junior.litalico.jp,発達障害 療育・学習支援,keywords_unique | urls.csv | Google_SERP
+LITALICOジュニア,litalicoジュニア,リタ リコ ジュニア,リタリコジュニア,表記揺れ,0,junior.litalico.jp,発達障害 療育・学習支援,keywords_unique | urls.csv | Google_SERP
+LITALICO発達ナビ,litalico発達ナビ,発達ナビ,発達ナビ,検索形,1,h-navi.jp,発達障害 情報サイト,keywords_unique | urls.csv | Google_SERP | 競合ページ見出し
+LITALICO発達ナビ,litalico発達ナビ,リタリコ発達ナビ,リタリコ発達ナビ,検索形,1,h-navi.jp,発達障害 情報サイト,keywords_unique | urls.csv
+スタジオそら,スタジオそら,スタジオそら,スタジオそら,検索形,1,studiosora.jp,児童発達支援・放課後等デイサービス,keywords_unique | urls.csv | Google_SERP | 競合ページ見出し
+スタジオplus+,スタジオplus+,スタジオプラス,スタジオプラス,検索形,1,www.st-plus.org,児童発達支援・放課後等デイサービス,urls.csv
+スタジオplus+,スタジオplus+,スタジオplus,スタジオplus,検索形,1,www.st-plus.org,児童発達支援・放課後等デイサービス,keywords_unique | urls.csv | Google_SERP | 競合ページ見出し
+Branch,branch,ブランチ 不登校,ブランチ不登校,検索形,1,branchkids.jp,不登校・発達障害 居場所,urls.csv
+Branch,branch,branch 発達障害,branch発達障害,検索形,1,branchkids.jp,不登校・発達障害 居場所,urls.csv
+ウィズ・ユー,ウィズ・ユー,ウィズユー,ウィズユー,検索形,1,www.with-ac.com,放課後等デイサービス・学童,keywords_unique | urls.csv
+ウィズ・ユー,ウィズ・ユー,ウィズ・ユー,ウィズ・ユー,検索形,1,www.with-ac.com,放課後等デイサービス・学童,keywords_unique | urls.csv | Google_SERP | 競合ページ見出し
+ティーンズ,ティーンズ,ティーンズ 発達障害,ティーンズ発達障害,検索形,1,www.teensmoon.com,発達障害 学習支援・就労準備,urls.csv | 競合ページ見出し
+ティーンズ,ティーンズ,teens 発達障害,teens発達障害,検索形,1,www.teensmoon.com,発達障害 学習支援・就労準備,urls.csv
+ハッピーテラス,ハッピーテラス,ハッピーテラス,ハッピーテラス,検索形,1,,児童発達支援・放課後等デイサービス,keywords_unique | 00_意図マップ | 競合ページ見出し
+コペルプラス,コペルプラス,コペルプラス,コペルプラス,検索形,1,,児童発達支援,keywords_unique | 競合ページ見出し
+こぱんはうすさくら,こぱんはうすさくら,こぱんはうすさくら,こぱんはうすさくら,検索形,1,,児童発達支援・放課後等デイサービス,keywords_unique
+こぱんはうすさくら,こぱんはうすさくら,こぱん,こぱん,検索形,1,,児童発達支援・放課後等デイサービス,keywords_unique | 00_意図マップ
+オンラインフリースクール シンガク,オンラインフリースクールシンガク,シンガク フリースクール,シンガクフリースクール,検索形,1,www.shingaku-fs.jp,不登校 オンラインフリースクール,urls.csv
+オンラインフリースクール シンガク,オンラインフリースクールシンガク,シンガク 不登校,シンガク不登校,検索形,1,www.shingaku-fs.jp,不登校 オンラインフリースクール,urls.csv
+学研WILL学園,学研will学園,WILL学園,will学園,検索形,1,www.willschool.net,フリースクール・サポート校,keywords_unique | urls.csv | 競合ページ見出し
+学研WILL学園,学研will学園,学研WILL学園,学研will学園,検索形,1,www.willschool.net,フリースクール・サポート校,keywords_unique | urls.csv | 競合ページ見出し
+クラスジャパン小中学園,クラスジャパン小中学園,クラスジャパン,クラスジャパン,検索形,1,,不登校 オンライン学習,00_意図マップ
+クラスジャパン小中学園,クラスジャパン小中学園,クラスジャパン小中学園,クラスジャパン小中学園,検索形,1,,不登校 オンライン学習,人手追加（既存データで未観測）
+トウコベ,トウコベ,トウコベ,トウコベ,検索形,1,,不登校 オンライン学習,keywords_unique | 00_意図マップ
+青楓館高等学院,青楓館高等学院,青楓館高等学院,青楓館高等学院,検索形,1,seifukan-gakuin.com,通信制高校サポート校,keywords_unique | urls.csv | 競合ページ見出し
+青楓館高等学院,青楓館高等学院,青楓館,青楓館,検索形,1,seifukan-gakuin.com,通信制高校サポート校,keywords_unique | urls.csv | 競合ページ見出し
+興学社高等学院,興学社高等学院,興学社高等学院,興学社高等学院,検索形,1,highschool.kohgakusha.com,通信制高校サポート校,keywords_unique | urls.csv | 競合ページ見出し
+興学社高等学院,興学社高等学院,興学社,興学社,検索形,1,highschool.kohgakusha.com,通信制高校サポート校,keywords_unique | urls.csv | 競合ページ見出し
+すらら,すらら,すらら,すらら,検索形,1,surala.jp,通信教育・ICT教材,keywords_unique | 00_意図マップ | urls.csv | Google_SERP | 競合ページ見出し
+すらら,すらら,すらら発達障害スクール,すらら発達障害スクール,検索形,1,surala.jp,通信教育・ICT教材,urls.csv | Google_SERP
+進研ゼミ,進研ゼミ,進研ゼミ,進研ゼミ,検索形,1,,通信教育,keywords_unique | 00_意図マップ | 競合ページ見出し
+進研ゼミ,進研ゼミ,チャレンジ 進研ゼミ,チャレンジ進研ゼミ,検索形,1,,通信教育,人手追加（既存データで未観測）
+スマイルゼミ,スマイルゼミ,スマイルゼミ,スマイルゼミ,検索形,1,,通信教育（タブレット）,keywords_unique | 00_意図マップ | Google_SERP
+Z会,z会,z会,z会,検索形,1,,通信教育,keywords_unique | 00_意図マップ | Google_SERP
+Z会,z会,Z会 通信教育,z会通信教育,検索形,1,,通信教育,keywords_unique
+スタディサプリ,スタディサプリ,スタディサプリ,スタディサプリ,検索形,1,,オンライン学習,keywords_unique | 00_意図マップ
+スタディサプリ,スタディサプリ,スタサプ,スタサプ,検索形,1,,オンライン学習,keywords_unique | 00_意図マップ
+天神,天神,天神 教材,天神教材,検索形,1,,通信教育（タブレット）,人手追加（既存データで未観測）
+天神,天神,天神 タブレット,天神タブレット,検索形,1,,通信教育（タブレット）,人手追加（既存データで未観測）
+公文式,公文式,公文,公文,検索形,1,,学習教室,keywords_unique | 00_意図マップ | 競合ページ見出し
+公文式,公文式,くもん,くもん,検索形,1,,学習教室,keywords_unique | 00_意図マップ | Google_SERP | 競合ページ見出し
+公文式,公文式,kumon,kumon,表記揺れ,0,,学習教室,人手追加（既存データで未観測）
+学研教室,学研教室,学研教室,学研教室,検索形,1,,学習教室,keywords_unique
+QQキッズ,qqキッズ,qqキッズ,qqキッズ,検索形,1,www.qqeng.com,オンライン英会話,keywords_unique | 00_意図マップ | urls.csv | 競合ページ見出し
+QQキッズ,qqキッズ,QQ English キッズ,qqenglishキッズ,検索形,1,www.qqeng.com,オンライン英会話,keywords_unique | urls.csv

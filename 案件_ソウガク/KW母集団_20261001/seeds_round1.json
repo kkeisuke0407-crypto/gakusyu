@@ -1,0 +1,3862 @@
+{
+ "keyword_groups": [
+  {
+   "group": "発達障害×家庭教師",
+   "keywords": [
+    "発達障害 家庭教師",
+    "発達障害 オンライン家庭教師",
+    "発達障害 家庭教師 専門",
+    "発達障がい 家庭教師",
+    "発達障害 プロ家庭教師",
+    "家庭教師 発達障害 対応"
+   ]
+  },
+  {
+   "group": "グレーゾーン×家庭教師・塾",
+   "keywords": [
+    "グレーゾーン 家庭教師",
+    "グレーゾーン オンライン家庭教師",
+    "発達グレー 家庭教師",
+    "グレーゾーン 塾",
+    "グレーゾーン 個別指導"
+   ]
+  },
+  {
+   "group": "ADHD×家庭教師・塾",
+   "keywords": [
+    "ADHD 家庭教師",
+    "ADHD 塾",
+    "ADHD オンライン家庭教師",
+    "ADHD 個別指導",
+    "注意欠如 塾"
+   ]
+  },
+  {
+   "group": "ASD×家庭教師・塾",
+   "keywords": [
+    "ASD 家庭教師",
+    "ASD 塾",
+    "自閉症 家庭教師",
+    "アスペルガー 塾",
+    "自閉スペクトラム 学習"
+   ]
+  },
+  {
+   "group": "LD×家庭教師・塾",
+   "keywords": [
+    "LD 家庭教師",
+    "学習障害 家庭教師",
+    "学習障害 塾",
+    "LD 塾",
+    "ディスレクシア 塾",
+    "識字障害 塾"
+   ]
+  },
+  {
+   "group": "発達障害×塾",
+   "keywords": [
+    "発達障害 塾",
+    "発達障害 個別指導",
+    "発達障害 対応 塾",
+    "発達障害 専門 塾",
+    "発達障害 オンライン塾",
+    "発達障害 学習塾"
+   ]
+  },
+  {
+   "group": "発達障害×勉強方法",
+   "keywords": [
+    "発達障害 勉強方法",
+    "発達障害 勉強法",
+    "発達障害 学習方法",
+    "発達障害 勉強の仕方",
+    "発達障害 教え方"
+   ]
+  },
+  {
+   "group": "ADHD×勉強",
+   "keywords": [
+    "ADHD 勉強",
+    "ADHD 勉強方法",
+    "ADHD 勉強 集中",
+    "ADHD 子供 勉強",
+    "ADHD 宿題"
+   ]
+  },
+  {
+   "group": "ASD×勉強",
+   "keywords": [
+    "ASD 勉強",
+    "ASD 勉強方法",
+    "自閉症 勉強",
+    "アスペルガー 勉強",
+    "自閉症 子供 学習"
+   ]
+  },
+  {
+   "group": "LD×学習",
+   "keywords": [
+    "LD 学習",
+    "学習障害 勉強方法",
+    "学習障害 子供",
+    "ディスレクシア 勉強",
+    "読み書き 苦手 子供",
+    "書字障害 支援"
+   ]
+  },
+  {
+   "group": "グレーゾーン×学習",
+   "keywords": [
+    "グレーゾーン 勉強",
+    "グレーゾーン 学習",
+    "グレーゾーン 子供 勉強",
+    "発達グレー 勉強",
+    "グレーゾーン 勉強できない"
+   ]
+  },
+  {
+   "group": "境界知能×学習",
+   "keywords": [
+    "境界知能 勉強",
+    "境界知能 子供",
+    "境界知能 中学生",
+    "境界知能 塾",
+    "境界知能 高校受験"
+   ]
+  },
+  {
+   "group": "発達障害×小学生",
+   "keywords": [
+    "発達障害 小学生 勉強",
+    "発達障害 小学生 塾",
+    "発達障害 小学生 家庭教師",
+    "発達障害 小学校 勉強 ついていけない",
+    "発達障害 低学年 勉強"
+   ]
+  },
+  {
+   "group": "発達障害×中学生",
+   "keywords": [
+    "発達障害 中学生 勉強",
+    "発達障害 中学生 塾",
+    "発達障害 中学生 家庭教師",
+    "発達障害 中学 勉強 ついていけない",
+    "発達障害 中学生 成績"
+   ]
+  },
+  {
+   "group": "発達障害×高校生",
+   "keywords": [
+    "発達障害 高校生 勉強",
+    "発達障害 高校生 塾",
+    "発達障害 高校 勉強 ついていけない",
+    "発達障害 高校生 家庭教師",
+    "発達障害 高校 単位"
+   ]
+  },
+  {
+   "group": "発達障害×高校受験",
+   "keywords": [
+    "発達障害 高校受験",
+    "発達障害 高校受験 塾",
+    "発達障害 内申",
+    "発達障害 高校 選び方",
+    "グレーゾーン 高校受験"
+   ]
+  },
+  {
+   "group": "発達障害×中学受験",
+   "keywords": [
+    "発達障害 中学受験",
+    "ADHD 中学受験",
+    "グレーゾーン 中学受験",
+    "発達障害 中学受験 塾",
+    "中学受験 発達障害 向いてない"
+   ]
+  },
+  {
+   "group": "発達障害×大学受験",
+   "keywords": [
+    "発達障害 大学受験",
+    "ADHD 大学受験",
+    "発達障害 大学 進学",
+    "発達障害 受験 配慮",
+    "合理的配慮 受験"
+   ]
+  },
+  {
+   "group": "不登校×学習",
+   "keywords": [
+    "不登校 勉強",
+    "不登校 家庭教師",
+    "不登校 オンライン家庭教師",
+    "不登校 塾",
+    "不登校 学習支援",
+    "不登校 勉強 遅れ"
+   ]
+  },
+  {
+   "group": "発達障害×不登校",
+   "keywords": [
+    "発達障害 不登校",
+    "発達障害 不登校 勉強",
+    "発達障害 不登校 中学生",
+    "発達障害 不登校 家庭教師",
+    "起立性調節障害 勉強"
+   ]
+  },
+  {
+   "group": "集中できない",
+   "keywords": [
+    "集中できない 子供 勉強",
+    "勉強 集中できない 中学生",
+    "集中力がない 子供",
+    "勉強 集中 方法 子供",
+    "座っていられない 勉強"
+   ]
+  },
+  {
+   "group": "勉強しない",
+   "keywords": [
+    "子供 勉強しない",
+    "中学生 勉強しない",
+    "勉強しない 発達障害",
+    "勉強嫌い 子供",
+    "やる気がない 子供 勉強"
+   ]
+  },
+  {
+   "group": "宿題",
+   "keywords": [
+    "宿題 できない 子供",
+    "宿題 やらない",
+    "宿題 時間かかる",
+    "発達障害 宿題",
+    "宿題 終わらない 子供"
+   ]
+  },
+  {
+   "group": "テスト・成績",
+   "keywords": [
+    "テスト 点数 取れない",
+    "成績 上がらない 中学生",
+    "定期テスト 対策 発達障害",
+    "発達障害 テスト 配慮",
+    "成績 悪い 子供"
+   ]
+  },
+  {
+   "group": "授業・学校についていけない",
+   "keywords": [
+    "授業 ついていけない",
+    "勉強 ついていけない 中学生",
+    "小学校 勉強 ついていけない",
+    "学校 勉強 遅れ",
+    "勉強 遅れ 取り戻す"
+   ]
+  },
+  {
+   "group": "覚えられない",
+   "keywords": [
+    "覚えられない 子供",
+    "暗記 苦手 子供",
+    "ワーキングメモリ 低い 勉強",
+    "九九 覚えられない",
+    "漢字 覚えられない"
+   ]
+  },
+  {
+   "group": "読み書き",
+   "keywords": [
+    "読み書き 苦手",
+    "文字 書けない 子供",
+    "音読 苦手",
+    "漢字 書けない",
+    "読むのが苦手 子供"
+   ]
+  },
+  {
+   "group": "算数",
+   "keywords": [
+    "算数 苦手 子供",
+    "計算 できない 子供",
+    "算数障害",
+    "文章題 苦手",
+    "発達障害 算数"
+   ]
+  },
+  {
+   "group": "国語",
+   "keywords": [
+    "国語 苦手 子供",
+    "読解力 ない 子供",
+    "発達障害 国語",
+    "作文 苦手 子供",
+    "文章 読めない"
+   ]
+  },
+  {
+   "group": "英語",
+   "keywords": [
+    "英語 苦手 中学生",
+    "発達障害 英語",
+    "英単語 覚えられない",
+    "ディスレクシア 英語",
+    "英語 書けない"
+   ]
+  },
+  {
+   "group": "オンライン家庭教師（一般）",
+   "keywords": [
+    "オンライン家庭教師",
+    "オンライン家庭教師 おすすめ",
+    "オンライン家庭教師 小学生",
+    "オンライン家庭教師 中学生",
+    "オンライン家庭教師 高校生",
+    "オンライン家庭教師 比較"
+   ]
+  },
+  {
+   "group": "家庭教師（一般）×検討",
+   "keywords": [
+    "家庭教師 おすすめ",
+    "家庭教師 料金",
+    "家庭教師 相場",
+    "家庭教師 比較",
+    "家庭教師 選び方",
+    "家庭教師 無料体験"
+   ]
+  },
+  {
+   "group": "塾（一般）",
+   "keywords": [
+    "個別指導塾 おすすめ",
+    "個別指導 料金",
+    "塾 選び方",
+    "塾 合わない",
+    "集団塾 合わない",
+    "マンツーマン 塾"
+   ]
+  },
+  {
+   "group": "発達障害×比較・おすすめ",
+   "keywords": [
+    "発達障害 家庭教師 おすすめ",
+    "発達障害 塾 おすすめ",
+    "発達障害 オンライン塾 おすすめ",
+    "発達障害 家庭教師 ランキング",
+    "発達障害 家庭教師 比較"
+   ]
+  },
+  {
+   "group": "発達障害×料金",
+   "keywords": [
+    "発達障害 家庭教師 料金",
+    "発達障害 塾 料金",
+    "発達障害 家庭教師 費用",
+    "発達障害 個別指導 料金",
+    "発達障害 家庭教師 安い"
+   ]
+  },
+  {
+   "group": "発達障害×評判",
+   "keywords": [
+    "発達障害 家庭教師 口コミ",
+    "発達障害 家庭教師 評判",
+    "発達障害 塾 口コミ",
+    "発達障害 オンライン家庭教師 口コミ",
+    "発達障害 塾 評判"
+   ]
+  },
+  {
+   "group": "発達障害×無料体験・相談",
+   "keywords": [
+    "発達障害 家庭教師 無料体験",
+    "発達障害 塾 体験",
+    "発達障害 学習 相談",
+    "発達障害 勉強 相談",
+    "発達障害 子供 相談"
+   ]
+  },
+  {
+   "group": "合わない・断られた",
+   "keywords": [
+    "発達障害 塾 断られた",
+    "発達障害 塾 合わない",
+    "発達障害 塾 やめた",
+    "塾 断られた",
+    "塾 辞めたい 子供"
+   ]
+  },
+  {
+   "group": "療育・放デイ",
+   "keywords": [
+    "療育 勉強",
+    "放課後等デイサービス 学習支援",
+    "放課後等デイサービス 中学生",
+    "児童発達支援 学習",
+    "療育 小学生 勉強"
+   ]
+  },
+  {
+   "group": "学習支援・教育支援",
+   "keywords": [
+    "発達障害 学習支援",
+    "学習支援 子供",
+    "発達障害 教育支援",
+    "学習サポート 子供",
+    "発達支援 学習"
+   ]
+  },
+  {
+   "group": "フリースクール・通信制",
+   "keywords": [
+    "フリースクール 発達障害",
+    "フリースクール 勉強",
+    "フリースクール 中学生",
+    "サポート校 発達障害",
+    "通信制高校 発達障害"
+   ]
+  },
+  {
+   "group": "特別支援学級・通級",
+   "keywords": [
+    "特別支援学級 勉強",
+    "支援級 勉強",
+    "通級 勉強",
+    "特別支援学級 高校受験",
+    "特別支援学級 塾"
+   ]
+  },
+  {
+   "group": "親の悩み・関わり",
+   "keywords": [
+    "発達障害 子供 勉強 教え方",
+    "子供 勉強 教え方 親",
+    "親が教える 勉強 イライラ",
+    "発達障害 親 疲れた",
+    "子供 勉強 怒ってしまう"
+   ]
+  },
+  {
+   "group": "家庭学習",
+   "keywords": [
+    "家庭学習 発達障害",
+    "家庭学習 やり方",
+    "家庭学習 習慣 小学生",
+    "自宅学習 中学生",
+    "家で勉強しない 子供"
+   ]
+  },
+  {
+   "group": "診断・検査",
+   "keywords": [
+    "発達障害 診断 子供",
+    "発達検査 子供",
+    "WISC 検査",
+    "発達障害 チェック 子供",
+    "学習障害 検査"
+   ]
+  },
+  {
+   "group": "特性理解",
+   "keywords": [
+    "発達障害 特徴 子供",
+    "ADHD 特徴 子供",
+    "ASD 特徴 子供",
+    "学習障害 特徴",
+    "グレーゾーン 特徴"
+   ]
+  },
+  {
+   "group": "教材・アプリ・通信教育",
+   "keywords": [
+    "発達障害 教材",
+    "学習障害 アプリ",
+    "タブレット学習 発達障害",
+    "すらら 発達障害",
+    "発達障害 通信教育"
+   ]
+  },
+  {
+   "group": "進路・将来",
+   "keywords": [
+    "発達障害 進路 中学生",
+    "発達障害 高校 進学",
+    "発達障害 将来 不安",
+    "発達障害 高校 どこ",
+    "特別支援学校 高等部"
+   ]
+  },
+  {
+   "group": "ギフテッド・2E",
+   "keywords": [
+    "ギフテッド 家庭教師",
+    "2E 子供",
+    "ギフテッド 塾",
+    "発達障害 ギフテッド",
+    "浮きこぼれ"
+   ]
+  },
+  {
+   "group": "HSC・感覚過敏・場面緘黙",
+   "keywords": [
+    "HSC 勉強",
+    "HSP 子供 学校",
+    "感覚過敏 勉強",
+    "場面緘黙 学習",
+    "不安が強い 子供 勉強"
+   ]
+  },
+  {
+   "group": "単語seed:発達障害",
+   "keywords": [
+    "発達障害"
+   ]
+  },
+  {
+   "group": "単語seed:発達障害 子供",
+   "keywords": [
+    "発達障害 子供"
+   ]
+  },
+  {
+   "group": "単語seed:学習障害",
+   "keywords": [
+    "学習障害"
+   ]
+  },
+  {
+   "group": "単語seed:ADHD",
+   "keywords": [
+    "ADHD"
+   ]
+  },
+  {
+   "group": "単語seed:ASD",
+   "keywords": [
+    "ASD"
+   ]
+  },
+  {
+   "group": "単語seed:自閉症",
+   "keywords": [
+    "自閉症"
+   ]
+  },
+  {
+   "group": "単語seed:アスペルガー",
+   "keywords": [
+    "アスペルガー"
+   ]
+  },
+  {
+   "group": "単語seed:グレーゾーン",
+   "keywords": [
+    "グレーゾーン"
+   ]
+  },
+  {
+   "group": "単語seed:境界知能",
+   "keywords": [
+    "境界知能"
+   ]
+  },
+  {
+   "group": "単語seed:ディスレクシア",
+   "keywords": [
+    "ディスレクシア"
+   ]
+  },
+  {
+   "group": "単語seed:不登校",
+   "keywords": [
+    "不登校"
+   ]
+  },
+  {
+   "group": "単語seed:家庭教師",
+   "keywords": [
+    "家庭教師"
+   ]
+  },
+  {
+   "group": "単語seed:オンライン家庭教師",
+   "keywords": [
+    "オンライン家庭教師"
+   ]
+  },
+  {
+   "group": "単語seed:塾",
+   "keywords": [
+    "塾"
+   ]
+  },
+  {
+   "group": "単語seed:個別指導",
+   "keywords": [
+    "個別指導"
+   ]
+  },
+  {
+   "group": "単語seed:療育",
+   "keywords": [
+    "療育"
+   ]
+  },
+  {
+   "group": "単語seed:放課後等デイサービス",
+   "keywords": [
+    "放課後等デイサービス"
+   ]
+  },
+  {
+   "group": "単語seed:フリースクール",
+   "keywords": [
+    "フリースクール"
+   ]
+  },
+  {
+   "group": "単語seed:特別支援学級",
+   "keywords": [
+    "特別支援学級"
+   ]
+  },
+  {
+   "group": "単語seed:通級",
+   "keywords": [
+    "通級"
+   ]
+  },
+  {
+   "group": "単語seed:勉強方法",
+   "keywords": [
+    "勉強方法"
+   ]
+  },
+  {
+   "group": "単語seed:勉強しない",
+   "keywords": [
+    "勉強しない"
+   ]
+  },
+  {
+   "group": "単語seed:集中できない",
+   "keywords": [
+    "集中できない"
+   ]
+  },
+  {
+   "group": "単語seed:宿題",
+   "keywords": [
+    "宿題"
+   ]
+  },
+  {
+   "group": "単語seed:高校受験",
+   "keywords": [
+    "高校受験"
+   ]
+  },
+  {
+   "group": "単語seed:中学受験",
+   "keywords": [
+    "中学受験"
+   ]
+  },
+  {
+   "group": "単語seed:学習支援",
+   "keywords": [
+    "学習支援"
+   ]
+  },
+  {
+   "group": "単語seed:発達支援",
+   "keywords": [
+    "発達支援"
+   ]
+  },
+  {
+   "group": "単語seed:起立性調節障害",
+   "keywords": [
+    "起立性調節障害"
+   ]
+  },
+  {
+   "group": "単語seed:HSC",
+   "keywords": [
+    "HSC"
+   ]
+  },
+  {
+   "group": "単語seed:ギフテッド",
+   "keywords": [
+    "ギフテッド"
+   ]
+  },
+  {
+   "group": "単語seed:WISC",
+   "keywords": [
+    "WISC"
+   ]
+  }
+ ],
+ "urls": [
+  {
+   "url": "https://manalink.jp/teacher/features/6",
+   "group": "SERP:発達障害 オンライン家庭教師"
+  },
+  {
+   "url": "https://www.kobekyo.com/column/onlinetutor-developmental/",
+   "group": "SERP:発達障害 オンライン家庭教師"
+  },
+  {
+   "url": "https://kkschool.co.jp/",
+   "group": "SERP:発達障害 オンライン家庭教師"
+  },
+  {
+   "url": "https://coeteco.jp/articles/11641",
+   "group": "SERP:発達障害 オンライン家庭教師"
+  },
+  {
+   "url": "https://reba1ance.com/",
+   "group": "SERP:発達障害 オンライン家庭教師"
+  },
+  {
+   "url": "https://gips-kateikyosi.com/learning-support/developmental-disabilities/",
+   "group": "SERP:発達障害 オンライン家庭教師"
+  },
+  {
+   "url": "https://www.manatera.com/blog/hattatsu-online-tutor-guide/",
+   "group": "SERP:発達障害 オンライン家庭教師"
+  },
+  {
+   "url": "https://picro.jp/media/developmental-disorder/",
+   "group": "SERP:発達障害 オンライン家庭教師"
+  },
+  {
+   "url": "https://www.try-online.jp/kobetsu/tokusei/",
+   "group": "SERP:発達障害 オンライン家庭教師"
+  },
+  {
+   "url": "https://www.seisekiup.net/course/develop/",
+   "group": "SERP:発達障害 家庭教師"
+  },
+  {
+   "url": "https://coeteco.jp/articles/14795",
+   "group": "SERP:発達障害 家庭教師"
+  },
+  {
+   "url": "https://www.kyoushi1.net/service/hattatsu.html",
+   "group": "SERP:発達障害 家庭教師"
+  },
+  {
+   "url": "https://www.kobekyo.com/column/tutor-developmental/",
+   "group": "SERP:発達障害 家庭教師"
+  },
+  {
+   "url": "https://h-navi.jp/qa/questions/193711",
+   "group": "SERP:発達障害 家庭教師"
+  },
+  {
+   "url": "https://www.jump-japan.co.jp/area/tokyo",
+   "group": "SERP:発達障害 家庭教師"
+  },
+  {
+   "url": "https://tos-kc1.com/",
+   "group": "SERP:発達障害 家庭教師"
+  },
+  {
+   "url": "https://kateikyoushi-pro.com/course/support/",
+   "group": "SERP:発達障害 家庭教師"
+  },
+  {
+   "url": "https://www.asunaro-kk.com/about/developmental-disabilities/",
+   "group": "SERP:発達障害 家庭教師"
+  },
+  {
+   "url": "https://www.jump-japan.co.jp/developmental-disability/gray-area",
+   "group": "SERP:グレーゾーン 家庭教師"
+  },
+  {
+   "url": "https://www.coaching01.com/type/ldadhdas.html",
+   "group": "SERP:グレーゾーン 家庭教師"
+  },
+  {
+   "url": "https://www.seisekiup.net/course/develop/adhd/",
+   "group": "SERP:ADHD 家庭教師"
+  },
+  {
+   "url": "https://www.benkyo.co.jp/course/ld-adhd-asd/",
+   "group": "SERP:ADHD 家庭教師"
+  },
+  {
+   "url": "https://k-runner.co.jp/course/developmental-disabilities/",
+   "group": "SERP:ADHD 家庭教師"
+  },
+  {
+   "url": "https://www.nohvas.com/kokoro/adhd/",
+   "group": "SERP:ADHD 家庭教師"
+  },
+  {
+   "url": "https://www.seisekiup.net/course/develop/as/",
+   "group": "SERP:ASD 家庭教師"
+  },
+  {
+   "url": "https://www.manatera.com/blog/asd-child-tutor-online-guide/",
+   "group": "SERP:ASD 家庭教師"
+  },
+  {
+   "url": "https://www.nohvas.com/kokoro/autistic/",
+   "group": "SERP:ASD 家庭教師"
+  },
+  {
+   "url": "https://jukushiru.com/schools/prefecture/13/city/666/feature/developmentally_disabled_child",
+   "group": "SERP:学習障害 塾"
+  },
+  {
+   "url": "https://www.cuore-educare.jp/",
+   "group": "SERP:学習障害 塾"
+  },
+  {
+   "url": "http://nijinowa.jp/",
+   "group": "SERP:学習障害 塾"
+  },
+  {
+   "url": "https://bestjuku.com/article/4675/",
+   "group": "SERP:学習障害 塾"
+  },
+  {
+   "url": "https://zoukei-rythmique.jp/",
+   "group": "SERP:学習障害 塾"
+  },
+  {
+   "url": "https://www.juku-coaching01.com/",
+   "group": "SERP:学習障害 塾"
+  },
+  {
+   "url": "https://life.litalico.jp/hattatsu/mailmag/147/",
+   "group": "SERP:学習障害 塾"
+  },
+  {
+   "url": "https://ouchibu-navi.com/ld-juku/",
+   "group": "SERP:学習障害 塾"
+  },
+  {
+   "url": "https://tfi.ac.jp/shotoku/",
+   "group": "SERP:学習障害 塾"
+  },
+  {
+   "url": "https://jukushiru.com/schools/prefecture/13/city/687/feature/developmentally_disabled_child",
+   "group": "SERP:発達障害 塾"
+  },
+  {
+   "url": "https://www.stadia-education.com/",
+   "group": "SERP:発達障害 塾"
+  },
+  {
+   "url": "https://roho-seminar.jp/",
+   "group": "SERP:発達障害 塾"
+  },
+  {
+   "url": "https://forest-coach.jp/",
+   "group": "SERP:発達障害 塾"
+  },
+  {
+   "url": "https://prestep-online.com/",
+   "group": "SERP:発達障害 塾"
+  },
+  {
+   "url": "https://agao.jp/scrum_1to1/",
+   "group": "SERP:発達障害 個別指導"
+  },
+  {
+   "url": "https://hachiojisakura.com/special-support/",
+   "group": "SERP:発達障害 個別指導"
+  },
+  {
+   "url": "https://surala.jp/column/learning/31831/",
+   "group": "SERP:発達障害 中学生 勉強方法"
+  },
+  {
+   "url": "https://kizuki.or.jp/blog/dd/dd-jhs-student-study/",
+   "group": "SERP:発達障害 中学生 勉強方法"
+  },
+  {
+   "url": "https://www.seisekiup.net/column/develop/2170/",
+   "group": "SERP:発達障害 中学生 勉強方法"
+  },
+  {
+   "url": "https://life.litalico.jp/hattatsu/mailmag/067/",
+   "group": "SERP:発達障害 中学生 勉強方法"
+  },
+  {
+   "url": "https://www.welbe.co.jp/campus/worries/study.html",
+   "group": "SERP:発達障害 中学生 勉強方法"
+  },
+  {
+   "url": "https://www.kobekyo.com/column/donotstudy-juniorhigh-developmental/",
+   "group": "SERP:発達障害 中学生 勉強方法"
+  },
+  {
+   "url": "https://www.with-ac.com/column/junior-high-school-students-who-do-not-study-may-be-developmentally-disabled-measures-to-help-them-study-introduction/",
+   "group": "SERP:発達障害 中学生 勉強方法"
+  },
+  {
+   "url": "https://www.manatera.com/blog/adhd-child-online-learning-study/",
+   "group": "SERP:発達障害 中学生 勉強方法"
+  },
+  {
+   "url": "https://www.kobekyo.com/column/study-developmental/",
+   "group": "SERP:発達障害 小学生 勉強"
+  },
+  {
+   "url": "https://www.kyoushi1.net/column/hattatsu/studymethod-elementary/",
+   "group": "SERP:発達障害 小学生 勉強"
+  },
+  {
+   "url": "https://life.litalico.jp/hattatsu/ld/",
+   "group": "SERP:発達障害 小学生 勉強"
+  },
+  {
+   "url": "https://surala.jp/column/learning/25991/",
+   "group": "SERP:発達障害 小学生 勉強"
+  },
+  {
+   "url": "https://www.chamomile.jp/blog/developmental-disorder-study-article",
+   "group": "SERP:発達障害 小学生 勉強"
+  },
+  {
+   "url": "https://tokyo-yagaku.jp/column/dd-study-follow/",
+   "group": "SERP:発達障害 小学生 勉強"
+  },
+  {
+   "url": "https://yotsuyagakuin-ryoiku.com/blogs/gakusyuushidou/",
+   "group": "SERP:発達障害 小学生 勉強"
+  },
+  {
+   "url": "https://kasuga-mental.jp/blog/adult-dd-study-focus/",
+   "group": "SERP:ADHD 勉強 集中できない"
+  },
+  {
+   "url": "https://www.with-ac.com/column/adhd-child-study/",
+   "group": "SERP:ADHD 勉強 集中できない"
+  },
+  {
+   "url": "https://www.manatera.com/blog/adhd-study-concentration/",
+   "group": "SERP:ADHD 勉強 集中できない"
+  },
+  {
+   "url": "https://sapporo.wako-psy-clinic.com/adhd%E3%81%AE%E5%AD%90%E3%81%A9%E3%82%82%E3%81%AE%E5%AD%A6%E7%BF%92%E5%8A%B9%E7%8E%87%E3%82%92%E6%94%B9%E5%96%84%E3%81%99%E3%82%8B%E3%81%AB%E3%81%AF%EF%BC%9F%E9%9B%86%E4%B8%AD%E5%8A%9B%E3%82%92/",
+   "group": "SERP:ADHD 勉強 集中できない"
+  },
+  {
+   "url": "https://www.kobekyo.com/column/adhd-study-methods/",
+   "group": "SERP:ADHD 勉強 集中できない"
+  },
+  {
+   "url": "https://h-navi.jp/column/article/35028535",
+   "group": "SERP:ADHD 勉強 集中できない"
+  },
+  {
+   "url": "https://k-good.net/devdis/asd-study-method/",
+   "group": "SERP:ASD 勉強方法"
+  },
+  {
+   "url": "https://pro-megajun.com/archives/1517",
+   "group": "SERP:ASD 勉強方法"
+  },
+  {
+   "url": "https://www.seisekiup.net/column/develop/2276/",
+   "group": "SERP:ASD 勉強方法"
+  },
+  {
+   "url": "https://sole.education/labo/lower-elementary/studysupport-for-asd/",
+   "group": "SERP:ASD 勉強方法"
+  },
+  {
+   "url": "https://www.dinf.ne.jp/doc/japanese/access/daisy/report/kato.html",
+   "group": "SERP:LD 読み書き 支援"
+  },
+  {
+   "url": "https://www.ypec.ed.jp/ypechp/wp-content/uploads/2022/08/%E5%AD%A6%E7%BF%92%E9%9A%9C%E5%AE%B3%E3%81%AE%E3%81%82%E3%82%8B%E5%AD%90%E4%BE%9B%E3%81%B8%E3%81%AE%E6%94%AF%E6%8F%B4%E3%83%AA%E3%83%BC%E3%83%95%E3%83%AC%E3%83%83%E3%83%88.pdf",
+   "group": "SERP:LD 読み書き 支援"
+  },
+  {
+   "url": "https://npo-edge.jp/support/yomikaki/",
+   "group": "SERP:LD 読み書き 支援"
+  },
+  {
+   "url": "https://j-shinrikensa.jp/column/ld-support/",
+   "group": "SERP:LD 読み書き 支援"
+  },
+  {
+   "url": "https://studiosora.jp/column/2107/",
+   "group": "SERP:LD 読み書き 支援"
+  },
+  {
+   "url": "https://www.dinf.ne.jp/doc/japanese/access/dyslexia/adfs/school.html",
+   "group": "SERP:ディスレクシア 学習支援"
+  },
+  {
+   "url": "https://www.manatera.com/blog/dyslexia-online-learning-support/",
+   "group": "SERP:ディスレクシア 学習支援"
+  },
+  {
+   "url": "https://tokushi-tobira.jp/special/003.html",
+   "group": "SERP:ディスレクシア 学習支援"
+  },
+  {
+   "url": "https://seigakusha.net/%E9%A0%91%E5%BC%B5%E3%81%A3%E3%81%A6%E3%82%82%E5%8B%89%E5%BC%B7%E8%8B%A6%E6%89%8B%E3%81%AA%E5%AD%90%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E3%80%81%E6%AD%A3%E7%9B%B4%E3%81%AB%E8%AA%9E%E3%82%8A%E3%81%BE/",
+   "group": "SERP:境界知能 勉強"
+  },
+  {
+   "url": "https://www.meiji.ac.jp/mhc/qfki0t00000bg5nr.html",
+   "group": "SERP:境界知能 勉強"
+  },
+  {
+   "url": "https://desc-lab.com/132797/",
+   "group": "SERP:境界知能 勉強"
+  },
+  {
+   "url": "https://k-good.net/devdis/gray-zone-learning/",
+   "group": "SERP:境界知能 勉強"
+  },
+  {
+   "url": "https://www.10000nen.com/lp/kyoukaichinoukakunin/",
+   "group": "SERP:境界知能 勉強"
+  },
+  {
+   "url": "https://mizuhara-cl.jp/menu/study",
+   "group": "SERP:境界知能 勉強"
+  },
+  {
+   "url": "https://pro-megajun.com/archives/974",
+   "group": "SERP:グレーゾーン 高校受験"
+  },
+  {
+   "url": "https://www.kobekyo.com/column/highschool-developmental/",
+   "group": "SERP:グレーゾーン 高校受験"
+  },
+  {
+   "url": "https://kidsinfost.net/2022/12/12/qa-48/",
+   "group": "SERP:グレーゾーン 高校受験"
+  },
+  {
+   "url": "https://re-gakuin.com/blog_k004-2/",
+   "group": "SERP:グレーゾーン 高校受験"
+  },
+  {
+   "url": "https://h-navi.jp/qa/questions/201261",
+   "group": "SERP:グレーゾーン 高校受験"
+  },
+  {
+   "url": "https://life.litalico.jp/hattatsu/mailmag/072/",
+   "group": "SERP:グレーゾーン 高校受験"
+  },
+  {
+   "url": "https://reba1ance.com/blog/support_education_countrywide/",
+   "group": "SERP:グレーゾーン 高校受験"
+  },
+  {
+   "url": "https://www.reviewsumtsu-shinhs.com/dd-exam/intellectual-disability.html",
+   "group": "SERP:グレーゾーン 高校受験"
+  },
+  {
+   "url": "https://www.manatera.com/blog/hattatsu-adhd-highschool-exam-guide/",
+   "group": "SERP:発達障害 高校受験"
+  },
+  {
+   "url": "https://highschool.kohgakusha.com/2026/04/24/developmental-disorder-high-school-exam/",
+   "group": "SERP:発達障害 高校受験"
+  },
+  {
+   "url": "https://www.teensmoon.com/chart/koukoujyuken/",
+   "group": "SERP:発達障害 高校受験"
+  },
+  {
+   "url": "https://www.reviewsumtsu-shinhs.com/dd-exam/",
+   "group": "SERP:発達障害 高校受験"
+  },
+  {
+   "url": "https://reba1ance.com/hs_exam/",
+   "group": "SERP:発達障害 高校受験"
+  },
+  {
+   "url": "https://kizuki.or.jp/blog/dd/dd-hs-entrance-exam/",
+   "group": "SERP:発達障害 高校受験"
+  },
+  {
+   "url": "https://www.welbe.co.jp/campus/course/university_entrance_exam.html",
+   "group": "SERP:発達障害 大学受験"
+  },
+  {
+   "url": "https://www.kobekyo.com/column/developmental-university-exam/",
+   "group": "SERP:発達障害 大学受験"
+  },
+  {
+   "url": "https://kizuki.or.jp/blog/dd/dd-university-entrance-exam/",
+   "group": "SERP:発達障害 大学受験"
+  },
+  {
+   "url": "https://jukushiru.com/article/post-34493/",
+   "group": "SERP:発達障害 大学受験"
+  },
+  {
+   "url": "https://www.kawai-juku.ac.jp/cosmo/column/17/",
+   "group": "SERP:発達障害 大学受験"
+  },
+  {
+   "url": "https://www.ku-pono.org/exam-nav",
+   "group": "SERP:発達障害 大学受験"
+  },
+  {
+   "url": "https://kizuki.or.jp/blog/dd/dd-futoko-no-study/",
+   "group": "SERP:発達障害 不登校 勉強"
+  },
+  {
+   "url": "https://seifukan-gakuin.com/futoukou-hattatsu-relation/",
+   "group": "SERP:発達障害 不登校 勉強"
+  },
+  {
+   "url": "https://h-navi.jp/qa/questions/172650",
+   "group": "SERP:発達障害 不登校 勉強"
+  },
+  {
+   "url": "https://www.welbe.co.jp/campus/worries/absenteeism.html",
+   "group": "SERP:発達障害 不登校 勉強"
+  },
+  {
+   "url": "https://hanatanijuku.com/developmental-disorders-to-learn/",
+   "group": "SERP:発達障害 不登校 勉強"
+  },
+  {
+   "url": "https://branchkids.jp/articles/b319",
+   "group": "SERP:発達障害 不登校 勉強"
+  },
+  {
+   "url": "https://www.shingaku-fs.jp/tsunaguba/column/truancy_type/hattatsusyogai-sugoshikata",
+   "group": "SERP:発達障害 不登校 勉強"
+  },
+  {
+   "url": "https://tintle.net/",
+   "group": "SERP:不登校 オンライン家庭教師"
+  },
+  {
+   "url": "https://coeteco.jp/articles/11599",
+   "group": "SERP:不登校 オンライン家庭教師"
+  },
+  {
+   "url": "https://wowfull.jp/",
+   "group": "SERP:不登校 オンライン家庭教師"
+  },
+  {
+   "url": "https://bestjuku.com/article/12141/",
+   "group": "SERP:不登校 オンライン家庭教師"
+  },
+  {
+   "url": "https://www.try-online.jp/kobetsu/futoukou/",
+   "group": "SERP:不登校 オンライン家庭教師"
+  },
+  {
+   "url": "https://katekyo.jp/special/special03.php",
+   "group": "SERP:不登校 オンライン家庭教師"
+  },
+  {
+   "url": "https://juku.ameba.jp/onlinejuku/a000011775/",
+   "group": "SERP:不登校 オンライン家庭教師"
+  },
+  {
+   "url": "https://www.kobekyo.com/column/online-tutor-futoukou/",
+   "group": "SERP:不登校 オンライン家庭教師"
+  },
+  {
+   "url": "https://www.manatera.com/wte/futoko/",
+   "group": "SERP:不登校 オンライン家庭教師"
+  },
+  {
+   "url": "https://www.kobekyo.com/column/donothomework-developmental/",
+   "group": "SERP:発達障害 宿題 やらない"
+  },
+  {
+   "url": "https://kizuki.or.jp/blog/dd/dd-dont-homework/",
+   "group": "SERP:発達障害 宿題 やらない"
+  },
+  {
+   "url": "https://www.seisekiup.net/column/develop/2863/",
+   "group": "SERP:発達障害 宿題 やらない"
+  },
+  {
+   "url": "https://h-navi.jp/column/article/35030759/2",
+   "group": "SERP:発達障害 宿題 やらない"
+  },
+  {
+   "url": "https://ninkyou.jp/blog/?p=3253",
+   "group": "SERP:発達障害 宿題 やらない"
+  },
+  {
+   "url": "https://k-runner.co.jp/column/homework-avoidant-child-developmental-disorder/",
+   "group": "SERP:発達障害 宿題 やらない"
+  },
+  {
+   "url": "https://www.manatera.com/blog/hattatsu-shukudai-kansyaku-online/",
+   "group": "SERP:発達障害 宿題 やらない"
+  },
+  {
+   "url": "https://manalink.jp/teacher/12421/blog/4845",
+   "group": "SERP:発達障害 テスト 点数 取れない"
+  },
+  {
+   "url": "https://www.seisekiup.net/column/develop/755/",
+   "group": "SERP:発達障害 テスト 点数 取れない"
+  },
+  {
+   "url": "https://h-navi.jp/qa/questions/69154",
+   "group": "SERP:発達障害 テスト 点数 取れない"
+  },
+  {
+   "url": "https://www.willschool.net/column/column000466-html",
+   "group": "SERP:発達障害 テスト 点数 取れない"
+  },
+  {
+   "url": "https://www.jump-japan.co.jp/teaching/241",
+   "group": "SERP:発達障害 テスト 点数 取れない"
+  },
+  {
+   "url": "https://www.teensmoon.com/staffblog/%E7%99%BA%E9%81%94%E9%9A%9C%E5%AE%B3%E5%85%90%E3%81%A8%E5%8B%89%E5%BC%B7-%E3%80%8Eiq%E3%81%8B%E3%82%89%E8%80%83%E3%81%88%E3%82%8B%E5%8B%89%E5%BC%B7%E3%81%AE%E5%87%BA%E6%9D%A5%E3%83%BB/",
+   "group": "SERP:発達障害 テスト 点数 取れない"
+  },
+  {
+   "url": "https://hattatsu-kids.com/?p=5969",
+   "group": "SERP:発達障害 テスト 点数 取れない"
+  },
+  {
+   "url": "https://h-navi.jp/column/article/35030774",
+   "group": "SERP:発達障害 塾 断られた"
+  },
+  {
+   "url": "https://www.inter-edu.com/forum/read.php?804,3871145",
+   "group": "SERP:発達障害 塾 断られた"
+  },
+  {
+   "url": "https://jukushiru.com/article/post-34519/",
+   "group": "SERP:発達障害 塾 合わない"
+  },
+  {
+   "url": "https://www.kame.co.jp/column/column000450-html",
+   "group": "SERP:発達障害 塾 合わない"
+  },
+  {
+   "url": "https://h-navi.jp/qa/questions/74414",
+   "group": "SERP:発達障害 塾 合わない"
+  },
+  {
+   "url": "https://www.inter-edu.com/forum/read.php?1644,5587355",
+   "group": "SERP:発達障害 塾 合わない"
+  },
+  {
+   "url": "https://www.juku-coaching01.com/special-needs-exam/2769/",
+   "group": "SERP:発達障害 塾 合わない"
+  },
+  {
+   "url": "https://tos-kc1.com/course/",
+   "group": "SERP:発達障害 家庭教師 料金"
+  },
+  {
+   "url": "https://www.tos-kc.com/course",
+   "group": "SERP:発達障害 家庭教師 料金"
+  },
+  {
+   "url": "https://www.coaching01.com/price.html",
+   "group": "SERP:発達障害 家庭教師 料金"
+  },
+  {
+   "url": "https://www.iku-den.co.jp/blog/special-education-tutor/",
+   "group": "SERP:発達障害 家庭教師 料金"
+  },
+  {
+   "url": "https://ouchibu-navi.com/developmental-disorder-tutor/",
+   "group": "SERP:発達障害 家庭教師 料金"
+  },
+  {
+   "url": "https://lifedesign-edu.jp/developmental-disorder/",
+   "group": "SERP:発達障害 家庭教師 おすすめ"
+  },
+  {
+   "url": "https://k-runner.co.jp/column/developmental-disorder-tutor/",
+   "group": "SERP:発達障害 家庭教師 おすすめ"
+  },
+  {
+   "url": "https://lifedesign-edu.jp/cram-school-syougai/",
+   "group": "SERP:発達障害 家庭教師 口コミ"
+  },
+  {
+   "url": "https://happy-funsite.com/archives/7916",
+   "group": "SERP:発達障害 家庭教師 口コミ"
+  },
+  {
+   "url": "https://up-seiseki.jp/media/tutor-developmental-disorder/",
+   "group": "SERP:発達障害 家庭教師 口コミ"
+  },
+  {
+   "url": "https://kateikyoushi.kuraveil.jp/bbs_2956",
+   "group": "SERP:発達障害 家庭教師 口コミ"
+  },
+  {
+   "url": "https://www.jump-japan.co.jp/comment",
+   "group": "SERP:発達障害 家庭教師 口コミ"
+  },
+  {
+   "url": "https://www.alc.co.jp/license/tsushin-kyoiku/katei-first/",
+   "group": "SERP:発達障害 家庭教師 口コミ"
+  },
+  {
+   "url": "https://www.jump-japan.co.jp/system/try",
+   "group": "SERP:発達障害 家庭教師 無料体験"
+  },
+  {
+   "url": "https://www.seisekiup.net/trial/",
+   "group": "SERP:発達障害 家庭教師 無料体験"
+  },
+  {
+   "url": "http://paskobetsu.net/course/trial.html",
+   "group": "SERP:発達障害 家庭教師 無料体験"
+  },
+  {
+   "url": "https://www.yaruki-assist.com/up/",
+   "group": "SERP:発達障害 家庭教師 無料体験"
+  },
+  {
+   "url": "https://surala.jp/daysurala/column/after-school-day-service-study-support/",
+   "group": "SERP:放課後等デイサービス 学習支援"
+  },
+  {
+   "url": "https://h-navi.jp/support_facility/tokyo/program/30",
+   "group": "SERP:放課後等デイサービス 学習支援"
+  },
+  {
+   "url": "https://www.iku-den.co.jp/houday/tokyo/study/",
+   "group": "SERP:放課後等デイサービス 学習支援"
+  },
+  {
+   "url": "https://shuuyale.net/",
+   "group": "SERP:放課後等デイサービス 学習支援"
+  },
+  {
+   "url": "https://kumakuma-counselingoffice.com/5589/",
+   "group": "SERP:放課後等デイサービス 学習支援"
+  },
+  {
+   "url": "https://ibaraki-hoseikai.jp/archives/608",
+   "group": "SERP:放課後等デイサービス 学習支援"
+  },
+  {
+   "url": "https://agao.jp/",
+   "group": "SERP:放課後等デイサービス 学習支援"
+  },
+  {
+   "url": "https://www.emina-base.com/shotokuclub/news/learning-support-therapy-ideas",
+   "group": "SERP:放課後等デイサービス 学習支援"
+  },
+  {
+   "url": "https://h-navi.jp/support_facility/tokyo/cities/424/program/30",
+   "group": "SERP:放課後等デイサービス 学習支援"
+  },
+  {
+   "url": "https://ann-class.com/",
+   "group": "SERP:発達障害 学習支援 サービス"
+  },
+  {
+   "url": "https://surala.jp/type/disability",
+   "group": "SERP:発達障害 学習支援 サービス"
+  },
+  {
+   "url": "https://junior.litalico.jp/",
+   "group": "SERP:発達障害 学習支援 サービス"
+  },
+  {
+   "url": "https://www.st-plus.org/",
+   "group": "SERP:発達障害 学習支援 サービス"
+  },
+  {
+   "url": "https://www.kodomoshien-step.com/",
+   "group": "SERP:発達障害 学習支援 サービス"
+  },
+  {
+   "url": "https://studiosora.jp/",
+   "group": "SERP:発達障害 学習支援 サービス"
+  },
+  {
+   "url": "https://www.kobekyo.com/column/developmental-juku-juniorhigh/",
+   "group": "SERP:療育 勉強 中学生"
+  },
+  {
+   "url": "https://jollygoodplus.com/about/schoolage/case/teens/",
+   "group": "SERP:療育 勉強 中学生"
+  },
+  {
+   "url": "https://h-navi.jp/column/article/35027717/2",
+   "group": "SERP:療育 勉強 中学生"
+  },
+  {
+   "url": "https://kizuki.or.jp/blog/dd/dd-grayzone-jhs-student/",
+   "group": "SERP:療育 勉強 中学生"
+  },
+  {
+   "url": "https://www.taman.or.jp/kokoiro/houkago/",
+   "group": "SERP:療育 勉強 中学生"
+  },
+  {
+   "url": "https://www.manatera.com/blog/hattatsu-study-parent-support/",
+   "group": "SERP:発達障害 子供 勉強 教え方 親"
+  },
+  {
+   "url": "https://www.with-ac.com/column/perhaps-a-learning-disability-what-parents-can-do-for-their-children/",
+   "group": "SERP:発達障害 子供 勉強 教え方 親"
+  },
+  {
+   "url": "https://k-runner.co.jp/column/developmental-study-tips-methods/",
+   "group": "SERP:発達障害 子供 勉強 教え方 親"
+  },
+  {
+   "url": "https://kizuki.or.jp/blog/dd/dd-study-hate/",
+   "group": "SERP:発達障害 子供 勉強 教え方 親"
+  },
+  {
+   "url": "https://nagomi.support/post-355/",
+   "group": "SERP:発達障害 子供 勉強 教え方 親"
+  },
+  {
+   "url": "https://h-navi.jp/column/article/35027586",
+   "group": "SERP:発達障害 勉強しない 中学生"
+  },
+  {
+   "url": "https://www.welbe.co.jp/campus/case/grayzone.html",
+   "group": "SERP:発達障害 勉強しない 中学生"
+  },
+  {
+   "url": "https://kateikyoushi-pro.com/blog/hattatsu-shougai-chuugakusei-benkyou/",
+   "group": "SERP:発達障害 勉強しない 中学生"
+  },
+  {
+   "url": "https://desc-lab.com/4161/",
+   "group": "SERP:発達障害 勉強しない 中学生"
+  },
+  {
+   "url": "https://k-runner.co.jp/column/special-student-not-studying/",
+   "group": "SERP:発達障害 勉強しない 中学生"
+  },
+  {
+   "url": "https://life.litalico.jp/hattatsu/mailmag/090/",
+   "group": "SERP:通級 勉強 ついていけない"
+  },
+  {
+   "url": "https://h-navi.jp/qa/questions/200745",
+   "group": "SERP:通級 勉強 ついていけない"
+  },
+  {
+   "url": "https://h-navi.jp/qa/questions/186335",
+   "group": "SERP:通級 勉強 ついていけない"
+  },
+  {
+   "url": "https://stkotori.com/column/tuukyuu2025060501/",
+   "group": "SERP:通級 勉強 ついていけない"
+  },
+  {
+   "url": "https://h-navi.jp/column/article/35028228",
+   "group": "SERP:特別支援学級 中学 進路"
+  },
+  {
+   "url": "https://www.treasure-max.fun/shinro_shien1/",
+   "group": "SERP:特別支援学級 中学 進路"
+  },
+  {
+   "url": "https://sodachimap.com/",
+   "group": "SERP:特別支援学級 中学 進路"
+  },
+  {
+   "url": "https://hanatanijuku.com/junior-high-school-entrance-developmental-disabilities/",
+   "group": "SERP:特別支援学級 中学 進路"
+  },
+  {
+   "url": "https://specialeducationjourney.com/course/",
+   "group": "SERP:特別支援学級 中学 進路"
+  },
+  {
+   "url": "https://www.kobekyo.com/column/developmental-math-weak/",
+   "group": "SERP:発達障害 算数 苦手"
+  },
+  {
+   "url": "https://tokyo-brain.clinic/psychiatric-illness/ld/6183",
+   "group": "SERP:発達障害 算数 苦手"
+  },
+  {
+   "url": "https://www.z-kyosai.com/column/7357.html",
+   "group": "SERP:発達障害 算数 苦手"
+  },
+  {
+   "url": "https://tokyo-yagaku.jp/column/dd-math/",
+   "group": "SERP:発達障害 算数 苦手"
+  },
+  {
+   "url": "https://medical-b.jp/a01-01-021/post021-02/",
+   "group": "SERP:発達障害 算数 苦手"
+  },
+  {
+   "url": "https://h-navi.jp/column/article/35028423",
+   "group": "SERP:発達障害 算数 苦手"
+  },
+  {
+   "url": "https://web.kohatsu.org/25_021-1/",
+   "group": "SERP:発達障害 算数 苦手"
+  },
+  {
+   "url": "https://desc-lab.com/pasteljump/9062/",
+   "group": "SERP:発達障害 英語 苦手"
+  },
+  {
+   "url": "https://greenwitch.jp/asd-adhd/3627/",
+   "group": "SERP:発達障害 英語 苦手"
+  },
+  {
+   "url": "https://tanzam.net/column/english-vocab-learning-disabilities/",
+   "group": "SERP:発達障害 英語 苦手"
+  },
+  {
+   "url": "https://www.bravekids.info/blog/english-dyslexia/",
+   "group": "SERP:発達障害 英語 苦手"
+  },
+  {
+   "url": "https://www.qqeng.com/qqkids/english-column/kids20260503",
+   "group": "SERP:発達障害 英語 苦手"
+  },
+  {
+   "url": "https://www.u-master.net/column/adhd/12430/",
+   "group": "SERP:発達障害 英語 苦手"
+  },
+  {
+   "url": "https://www.stella-edu.com/column/c_dokkairyoku/",
+   "group": "SERP:発達障害 国語 読解"
+  },
+  {
+   "url": "https://www.jump-japan.co.jp/national-language",
+   "group": "SERP:発達障害 国語 読解"
+  },
+  {
+   "url": "https://junior.litalico.jp/case/problem/bunshoudokkai/",
+   "group": "SERP:発達障害 国語 読解"
+  },
+  {
+   "url": "https://pro-megajun.com/archives/15509",
+   "group": "SERP:発達障害 国語 読解"
+  },
+  {
+   "url": "https://reba1ance.com/blog/characteristics003/",
+   "group": "SERP:発達障害 国語 読解"
+  },
+  {
+   "url": "https://ts-assist.jp/column/difficulty-with-japanese-developmental-disorder/",
+   "group": "SERP:発達障害 国語 読解"
+  },
+  {
+   "url": "https://studyhop.poka-step.jp/%E3%82%B3%E3%83%A9%E3%83%A0/regular-test-preparation/",
+   "group": "SERP:発達障害 定期テスト 対策"
+  },
+  {
+   "url": "https://www.teensmoon.com/staffblog/teens1-2/",
+   "group": "SERP:発達障害 定期テスト 対策"
+  },
+  {
+   "url": "https://h-navi.jp/column/article/35030105",
+   "group": "SERP:発達障害 定期テスト 対策"
+  },
+  {
+   "url": "https://www.jump-japan.co.jp/regular-test/264",
+   "group": "SERP:発達障害 定期テスト 対策"
+  },
+  {
+   "url": "https://tokushi-tobira.jp/casestudy/009.html",
+   "group": "SERP:発達障害 定期テスト 対策"
+  },
+  {
+   "url": "https://bestjuku.com/shingaku/s-article/33372/",
+   "group": "SERP:グレーゾーン 中学生 勉強"
+  },
+  {
+   "url": "https://seifukan-gakuin.com/ld-features/",
+   "group": "SERP:グレーゾーン 中学生 勉強"
+  },
+  {
+   "url": "https://www.stadia-education.com/2025/05/20/%E4%B8%AD%E5%AD%A6%E7%94%9F%E3%83%86%E3%82%B9%E3%83%88-%E7%99%BA%E9%81%94%E9%9A%9C%E5%AE%B3-%E3%82%B0%E3%83%AC%E3%83%BC%E3%82%BE%E3%83%BC%E3%83%B3%E3%81%AE%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%8B%89%E5%BC%B7%E6%B3%95/",
+   "group": "SERP:グレーゾーン 中学生 勉強"
+  },
+  {
+   "url": "https://www.willschool.net/column/column000191-html",
+   "group": "SERP:グレーゾーン 中学生 勉強"
+  },
+  {
+   "url": "https://k-runner.co.jp/column/gray-zone-middle-school-traits/",
+   "group": "SERP:グレーゾーン 中学生 勉強"
+  },
+  {
+   "url": "https://www.try-online.jp/kobetsu/price/",
+   "group": "下層:料金"
+  },
+  {
+   "url": "https://www.try-online.jp/kobetsu/faq/",
+   "group": "下層:FAQ"
+  },
+  {
+   "url": "https://picro.jp/pages/faq/index/",
+   "group": "下層:FAQ"
+  },
+  {
+   "url": "https://picro.jp/pages/faq/index",
+   "group": "下層:FAQ"
+  },
+  {
+   "url": "https://manalink.jp/teacher/subjects/juniorhighschoolmath",
+   "group": "下層:学年向け"
+  },
+  {
+   "url": "https://manalink.jp/teacher/subjects/highschoolmath",
+   "group": "下層:学年向け"
+  },
+  {
+   "url": "https://manalink.jp/teacher/grades/elementary-school",
+   "group": "下層:学年向け"
+  },
+  {
+   "url": "https://manalink.jp/teacher/grades/junior-high-school",
+   "group": "下層:学年向け"
+  },
+  {
+   "url": "https://reba1ance.com/exam/",
+   "group": "下層:受験"
+  },
+  {
+   "url": "https://reba1ance.com/faq/",
+   "group": "下層:FAQ"
+  },
+  {
+   "url": "https://gips-kateikyosi.com/price/",
+   "group": "下層:料金"
+  },
+  {
+   "url": "https://gips-kateikyosi.com/students-voice/",
+   "group": "下層:口コミ・体験談"
+  },
+  {
+   "url": "https://gips-kateikyosi.com/graduates-voice/",
+   "group": "下層:口コミ・体験談"
+  },
+  {
+   "url": "https://gips-kateikyosi.com/reviews/",
+   "group": "下層:口コミ・体験談"
+  },
+  {
+   "url": "https://www.kyoushi1.net/schoolchild/index.html",
+   "group": "下層:発達障害向け"
+  },
+  {
+   "url": "https://www.kyoushi1.net/junior/index.html",
+   "group": "下層:学年向け"
+  },
+  {
+   "url": "https://www.kyoushi1.net/high/index.html",
+   "group": "下層:学年向け"
+  },
+  {
+   "url": "https://www.kyoushi1.net/inquiry/question.html",
+   "group": "下層:FAQ"
+  },
+  {
+   "url": "https://www.jump-japan.co.jp/developmental-disability/case_study",
+   "group": "下層:口コミ・体験談"
+  },
+  {
+   "url": "https://www.jump-japan.co.jp/jhs_e_exam",
+   "group": "下層:受験"
+  },
+  {
+   "url": "https://www.jump-japan.co.jp/system/fee",
+   "group": "下層:料金"
+  },
+  {
+   "url": "https://www.coaching01.com/type/exam.html",
+   "group": "下層:受験"
+  },
+  {
+   "url": "https://www.coaching01.com/voice.html",
+   "group": "下層:口コミ・体験談"
+  },
+  {
+   "url": "https://www.coaching01.com/others/faq.html",
+   "group": "下層:FAQ"
+  },
+  {
+   "url": "https://kateikyoushi-pro.com/faq/",
+   "group": "下層:FAQ"
+  },
+  {
+   "url": "https://kateikyoushi-pro.com/course/junior/",
+   "group": "下層:学年向け"
+  },
+  {
+   "url": "https://kateikyoushi-pro.com/trial/contact.php",
+   "group": "下層:無料体験"
+  },
+  {
+   "url": "https://kateikyoushi-pro.com/blog/feed/",
+   "group": "下層:料金"
+  },
+  {
+   "url": "https://www.asunaro-kk.com/trial/form/",
+   "group": "下層:無料体験"
+  },
+  {
+   "url": "https://www.asunaro-kk.com/price/",
+   "group": "下層:料金"
+  },
+  {
+   "url": "https://www.asunaro-kk.com/trial/",
+   "group": "下層:無料体験"
+  },
+  {
+   "url": "https://www.asunaro-kk.com/member-voice/",
+   "group": "下層:口コミ・体験談"
+  },
+  {
+   "url": "https://www.benkyo.co.jp/request_taiken/",
+   "group": "下層:無料体験"
+  },
+  {
+   "url": "https://www.benkyo.co.jp/trial/",
+   "group": "下層:無料体験"
+  },
+  {
+   "url": "https://k-runner.co.jp/trial-apply/",
+   "group": "下層:無料体験"
+  },
+  {
+   "url": "https://k-runner.co.jp/course/elementary",
+   "group": "下層:学年向け"
+  },
+  {
+   "url": "https://k-runner.co.jp/course/junior-high-school/",
+   "group": "下層:学年向け"
+  },
+  {
+   "url": "https://k-runner.co.jp/course/high-school/",
+   "group": "下層:学年向け"
+  },
+  {
+   "url": "https://jukushiru.com/schools/search/grade/elementary",
+   "group": "下層:学年向け"
+  },
+  {
+   "url": "https://jukushiru.com/schools/search/grade/high",
+   "group": "下層:学年向け"
+  },
+  {
+   "url": "https://jukushiru.com/schools/search/type/elementary_school_entrance_exam",
+   "group": "下層:学年向け"
+  },
+  {
+   "url": "https://jukushiru.com/schools/search/type/middle_school_entrance_exam",
+   "group": "下層:受験"
+  },
+  {
+   "url": "https://www.seisekiup.net/faq/",
+   "group": "下層:FAQ"
+  },
+  {
+   "url": "https://www.seisekiup.net/voice/",
+   "group": "下層:口コミ・体験談"
+  },
+  {
+   "url": "https://www.seisekiup.net/course/elementary/",
+   "group": "下層:学年向け"
+  },
+  {
+   "url": "https://www.seisekiup.net/course/junior/",
+   "group": "下層:学年向け"
+  },
+  {
+   "url": "https://www.nohvas.com/trial/",
+   "group": "下層:無料体験"
+  },
+  {
+   "url": "https://www.nohvas.com/about/price/",
+   "group": "下層:料金"
+  },
+  {
+   "url": "https://www.nohvas.com/course/elementary/",
+   "group": "下層:学年向け"
+  },
+  {
+   "url": "https://www.nohvas.com/course/elementary-juniorhigh/",
+   "group": "下層:学年向け"
+  },
+  {
+   "url": "https://ouchibu-navi.com/category/futoko/",
+   "group": "下層:不登校向け"
+  },
+  {
+   "url": "https://ouchibu-navi.com/category/university-entrance-exam/",
+   "group": "下層:受験"
+  },
+  {
+   "url": "https://ouchibu-navi.com/feed/",
+   "group": "下層:料金"
+  },
+  {
+   "url": "https://ouchibu-navi.com/futoko-highschool/",
+   "group": "下層:不登校向け"
+  },
+  {
+   "url": "https://agao.jp/information/faq/",
+   "group": "下層:FAQ"
+  },
+  {
+   "url": "https://agao.jp",
+   "group": "下層:トップ"
+  },
+  {
+   "url": "https://www.stadia-education.com/料金-東京の勉強が苦手-勉強が嫌いな子のための塾-発達障害-グレーゾーンのための塾-少人数制-個別指導塾-学習支援塾すたでぃあ-asd-adhd-ld-東京-杉並-世田谷-目黒-渋谷-中野-三鷹-渋谷-神泉-駒場東大前-池ノ上-下北沢-新代田-東松原-明大前-永福町-西永福-浜田山-高井戸-富士見ケ丘-久我山-三鷹台-井の頭公園-吉祥寺/",
+   "group": "下層:料金"
+  },
+  {
+   "url": "https://www.stadia-education.com/塾設立の想い-東京の発達障害-グレーゾーン-勉強が嫌い-勉強が苦手な子のための塾-少人数制-個別指導-学習支援塾すたでぃあ/",
+   "group": "下層:発達障害向け"
+  },
+  {
+   "url": "https://www.stadia-education.com/ブログ-東京の勉強が苦手-勉強が嫌いな子のための塾-発達障害-グレーゾーンのための塾-少人数制-個別指導塾-学習支援塾すたでぃあ-asd-adhd-ld-東京-杉並-世田谷-目黒-渋谷-中野-三鷹-渋谷-神泉-駒場東大前-池ノ上-下北沢-新代田-東松原-明大前-永福町-西永福-浜田山-高井戸-富士見ケ丘-久我山-三鷹台-井の頭公園-吉祥寺/",
+   "group": "下層:発達障害向け"
+  },
+  {
+   "url": "https://www.stadia-education.com/保護者様の声-東京の勉強が苦手-勉強が嫌いな子のための塾-発達障害-グレーゾーンのための塾-少人数制-個別指導塾-学習支援塾すたでぃあ-asd-adhd-ld-東京-杉並-世田谷-目黒-渋谷-中野-三鷹-渋谷-神泉-駒場東大前-池ノ上-下北沢-新代田-東松原-明大前-永福町-西永福-浜田山-高井戸-富士見ケ丘-久我山-三鷹台-井の頭公園-吉祥寺/",
+   "group": "下層:発達障害向け"
+  },
+  {
+   "url": "https://life.litalico.jp/hattatsu/",
+   "group": "下層:発達障害向け"
+  },
+  {
+   "url": "https://life.litalico.jp/hattatsu/seminar_age/",
+   "group": "下層:発達障害向け"
+  },
+  {
+   "url": "https://life.litalico.jp/hattatsu/seminar_area/",
+   "group": "下層:発達障害向け"
+  },
+  {
+   "url": "https://life.litalico.jp/hattatsu/seminar_theme/",
+   "group": "下層:発達障害向け"
+  },
+  {
+   "url": "https://www.welbe.co.jp/campus/case/",
+   "group": "下層:口コミ・体験談"
+  },
+  {
+   "url": "https://www.welbe.co.jp/campus/case/genetic.html",
+   "group": "下層:口コミ・体験談"
+  },
+  {
+   "url": "https://www.welbe.co.jp/campus/case/maybe.html",
+   "group": "下層:口コミ・体験談"
+  },
+  {
+   "url": "https://www.welbe.co.jp/campus/case/highschool.html",
+   "group": "下層:口コミ・体験談"
+  },
+  {
+   "url": "https://kizuki.or.jp/voice/",
+   "group": "下層:口コミ・体験談"
+  },
+  {
+   "url": "https://kizuki.or.jp/questions/",
+   "group": "下層:FAQ"
+  },
+  {
+   "url": "https://surala.jp/daysurala/case/",
+   "group": "下層:口コミ・体験談"
+  },
+  {
+   "url": "https://surala.jp/daysurala/faq/",
+   "group": "下層:FAQ"
+  },
+  {
+   "url": "https://surala.jp/form/student_test/trialentry.php",
+   "group": "下層:無料体験"
+  },
+  {
+   "url": "https://surala.jp/grade/junior/",
+   "group": "下層:学年向け"
+  },
+  {
+   "url": "https://hachiojisakura.com/jh-exam-course/",
+   "group": "下層:受験"
+  },
+  {
+   "url": "https://hachiojisakura.com/h-exam-course/",
+   "group": "下層:受験"
+  },
+  {
+   "url": "https://hachiojisakura.com/u-exam-course/",
+   "group": "下層:受験"
+  },
+  {
+   "url": "https://hachiojisakura.com/price/",
+   "group": "下層:料金"
+  },
+  {
+   "url": "https://www.with-ac.com/fee/",
+   "group": "下層:料金"
+  },
+  {
+   "url": "https://www.with-ac.com/faq/",
+   "group": "下層:FAQ"
+  },
+  {
+   "url": "https://tokyo-yagaku.jp/faq/",
+   "group": "下層:FAQ"
+  },
+  {
+   "url": "https://tokyo-yagaku.jp/introduce/child/",
+   "group": "下層:発達障害向け"
+  },
+  {
+   "url": "https://yotsuyagakuin-ryoiku.com/hattatsushienshi/",
+   "group": "下層:発達障害向け"
+  },
+  {
+   "url": "https://kasuga-mental.jp/診断書料金・作成日数/",
+   "group": "下層:料金"
+  },
+  {
+   "url": "https://kasuga-mental.jp/よくあるご質問/",
+   "group": "下層:FAQ"
+  },
+  {
+   "url": "https://kasuga-mental.jp/ADHD（注意欠如・多動症）/",
+   "group": "下層:発達障害向け"
+  },
+  {
+   "url": "https://kasuga-mental.jp/ASD（自閉スペクトラム症）/",
+   "group": "下層:発達障害向け"
+  },
+  {
+   "url": "https://k-good.net/freetrial",
+   "group": "下層:無料体験"
+  },
+  {
+   "url": "https://k-good.net/elementaryteach",
+   "group": "下層:学年向け"
+  },
+  {
+   "url": "https://k-good.net/highschoolteach",
+   "group": "下層:学年向け"
+  },
+  {
+   "url": "https://pro-megajun.com/price",
+   "group": "下層:料金"
+  },
+  {
+   "url": "https://pro-megajun.com/faq",
+   "group": "下層:FAQ"
+  },
+  {
+   "url": "https://pro-megajun.com/archives/category/topics/topics_hattatsu",
+   "group": "下層:発達障害向け"
+  },
+  {
+   "url": "https://pro-megajun.com/archives/faqs",
+   "group": "下層:FAQ"
+  },
+  {
+   "url": "https://www.dinf.ne.jp/japanese/world/",
+   "group": "下層:発達障害向け"
+  },
+  {
+   "url": "https://www.dinf.ne.jp/doc/japanese/world/2015dp/2015dp.html",
+   "group": "下層:発達障害向け"
+  },
+  {
+   "url": "https://www.dinf.ne.jp/japanese/world/escap_decade/",
+   "group": "下層:発達障害向け"
+  },
+  {
+   "url": "https://www.dinf.ne.jp/japanese/world/cbr/",
+   "group": "下層:発達障害向け"
+  },
+  {
+   "url": "https://tokushi-tobira.jp/casestudy.html",
+   "group": "下層:口コミ・体験談"
+  },
+  {
+   "url": "https://tokushi-tobira.jp/casestudy/008.html",
+   "group": "下層:口コミ・体験談"
+  },
+  {
+   "url": "https://tokushi-tobira.jp/casestudy/010.html",
+   "group": "下層:口コミ・体験談"
+  },
+  {
+   "url": "https://tokushi-tobira.jp/casestudy/001.html",
+   "group": "下層:口コミ・体験談"
+  },
+  {
+   "url": "https://seigakusha.net/course-fee/",
+   "group": "下層:料金"
+  },
+  {
+   "url": "https://seigakusha.net/elementary/",
+   "group": "下層:学年向け"
+  },
+  {
+   "url": "https://seigakusha.net/jr-high/",
+   "group": "下層:学年向け"
+  },
+  {
+   "url": "https://seigakusha.net/high/",
+   "group": "下層:学年向け"
+  },
+  {
+   "url": "https://j-shinrikensa.jp/menu-child/",
+   "group": "下層:発達障害向け"
+  },
+  {
+   "url": "https://j-shinrikensa.jp/menu-child/ninchi-gakushu/",
+   "group": "下層:発達障害向け"
+  },
+  {
+   "url": "https://j-shinrikensa.jp/menu-adult/hattatsu/",
+   "group": "下層:発達障害向け"
+  },
+  {
+   "url": "https://j-shinrikensa.jp/menu-child/child-hattatsu/",
+   "group": "下層:発達障害向け"
+  },
+  {
+   "url": "https://npo-edge.jp/support/hattatsu/",
+   "group": "下層:発達障害向け"
+  },
+  {
+   "url": "https://npo-edge.jp/2026/09/07/hattatsu202603/",
+   "group": "下層:発達障害向け"
+  },
+  {
+   "url": "https://npo-edge.jp//support/hattatsu/",
+   "group": "下層:発達障害向け"
+  },
+  {
+   "url": "https://desc-lab.com/category/normal/futoko/",
+   "group": "下層:不登校向け"
+  },
+  {
+   "url": "https://desc-lab.com/category/feature/real-junior-high-life/",
+   "group": "下層:学年向け"
+  },
+  {
+   "url": "https://kidsinfost.net/schoolchildren/",
+   "group": "下層:発達障害向け"
+  },
+  {
+   "url": "https://www.reviewsumtsu-shinhs.com/hsc/",
+   "group": "下層:口コミ・体験談"
+  },
+  {
+   "url": "https://www.reviewsumtsu-shinhs.com/hsc/hsc-school.html",
+   "group": "下層:口コミ・体験談"
+  },
+  {
+   "url": "https://www.reviewsumtsu-shinhs.com/protector/",
+   "group": "下層:口コミ・体験談"
+  },
+  {
+   "url": "https://www.reviewsumtsu-shinhs.com/student/",
+   "group": "下層:口コミ・体験談"
+  },
+  {
+   "url": "https://re-gakuin.com/fee/",
+   "group": "下層:料金"
+  },
+  {
+   "url": "https://re-gakuin.com/faq/",
+   "group": "下層:FAQ"
+  },
+  {
+   "url": "https://www.teensmoon.com/faq/",
+   "group": "下層:FAQ"
+  },
+  {
+   "url": "https://www.teensmoon.com/about/junior-program/",
+   "group": "下層:学年向け"
+  },
+  {
+   "url": "https://www.teensmoon.com/about/high-program/",
+   "group": "下層:学年向け"
+  },
+  {
+   "url": "https://www.teensmoon.com/tag/teenscase",
+   "group": "下層:口コミ・体験談"
+  },
+  {
+   "url": "https://seifukan-gakuin.com/category/voices/",
+   "group": "下層:口コミ・体験談"
+  },
+  {
+   "url": "https://seifukan-gakuin.com/category/tsushinsei-koko/ld/",
+   "group": "下層:発達障害向け"
+  },
+  {
+   "url": "https://seifukan-gakuin.com/ld-shindan/",
+   "group": "下層:発達障害向け"
+  },
+  {
+   "url": "https://seifukan-gakuin.com/ld-work/",
+   "group": "下層:発達障害向け"
+  },
+  {
+   "url": "https://hanatanijuku.com/osaka-prefectura-high-school-empowerment-school-and-step-school/",
+   "group": "下層:学年向け"
+  },
+  {
+   "url": "https://hanatanijuku.com/resource-based-instruction-in-high-schools-in-osaka-prefecture/",
+   "group": "下層:学年向け"
+  },
+  {
+   "url": "https://highschool.kohgakusha.com/about/convey1/",
+   "group": "下層:学年向け"
+  },
+  {
+   "url": "https://highschool.kohgakusha.com/about/clm3/",
+   "group": "下層:学年向け"
+  },
+  {
+   "url": "https://highschool.kohgakusha.com/truancy/",
+   "group": "下層:学年向け"
+  },
+  {
+   "url": "https://highschool.kohgakusha.com/faq/",
+   "group": "下層:FAQ"
+  },
+  {
+   "url": "https://branchkids.jp/voice",
+   "group": "下層:口コミ・体験談"
+  },
+  {
+   "url": "https://branchkids.jp/faq",
+   "group": "下層:FAQ"
+  },
+  {
+   "url": "https://branchkids.jp/services/community-for-children",
+   "group": "下層:発達障害向け"
+  },
+  {
+   "url": "https://katekyo.jp/question.php",
+   "group": "下層:FAQ"
+  },
+  {
+   "url": "https://ninkyou.jp/faq/",
+   "group": "下層:FAQ"
+  },
+  {
+   "url": "https://juku.ameba.jp/review/",
+   "group": "下層:口コミ・体験談"
+  },
+  {
+   "url": "https://juku.ameba.jp/yobiko/review/",
+   "group": "下層:口コミ・体験談"
+  },
+  {
+   "url": "https://juku.ameba.jp/kateikyoushi/review/",
+   "group": "下層:口コミ・体験談"
+  },
+  {
+   "url": "https://juku.ameba.jp/onlinejuku/review/",
+   "group": "下層:口コミ・体験談"
+  },
+  {
+   "url": "https://www.shingaku-fs.jp/price",
+   "group": "下層:料金"
+  },
+  {
+   "url": "https://www.shingaku-fs.jp/faq",
+   "group": "下層:FAQ"
+  },
+  {
+   "url": "https://www.willschool.net/school/elementary/",
+   "group": "下層:学年向け"
+  },
+  {
+   "url": "https://www.willschool.net/school/high/",
+   "group": "下層:学年向け"
+  },
+  {
+   "url": "https://www.willschool.net/course/elementaryschool/",
+   "group": "下層:学年向け"
+  },
+  {
+   "url": "https://hattatsu-kids.com/?page_id=1567",
+   "group": "下層:発達障害向け"
+  },
+  {
+   "url": "https://hattatsu-kids.com/?p=7059",
+   "group": "下層:発達障害向け"
+  },
+  {
+   "url": "https://hattatsu-kids.com/?p=7040",
+   "group": "下層:発達障害向け"
+  },
+  {
+   "url": "https://hattatsu-kids.com/?p=7032",
+   "group": "下層:発達障害向け"
+  },
+  {
+   "url": "https://www.kame.co.jp/course/elementary/elementary.html",
+   "group": "下層:学年向け"
+  },
+  {
+   "url": "https://www.kame.co.jp/course/high/high.html",
+   "group": "下層:学年向け"
+  },
+  {
+   "url": "https://www.kame.co.jp/price/",
+   "group": "下層:料金"
+  },
+  {
+   "url": "https://www.tos-kc.com",
+   "group": "下層:トップ"
+  },
+  {
+   "url": "https://www.tos-kc.com/question",
+   "group": "下層:FAQ"
+  },
+  {
+   "url": "https://kateikyoushi.kuraveil.jp/common/faq",
+   "group": "下層:FAQ"
+  },
+  {
+   "url": "https://up-seiseki.jp/media/cramschool-online-cost/",
+   "group": "下層:料金"
+  },
+  {
+   "url": "https://happy-funsite.com/adhd%e3%81%ae%e5%ad%90%e3%81%a9%e3%82%82",
+   "group": "下層:発達障害向け"
+  },
+  {
+   "url": "https://happy-funsite.com/%e5%ad%a6%e7%bf%92%e9%9a%9c%e5%ae%b3-ld-%e3%81%ae%e5%ad%90%e3%81%a9%e3%82%82",
+   "group": "下層:発達障害向け"
+  },
+  {
+   "url": "http://paskobetsu.net/pas/futoko.html",
+   "group": "下層:不登校向け"
+  },
+  {
+   "url": "http://paskobetsu.net/faq/index.html",
+   "group": "下層:FAQ"
+  },
+  {
+   "url": "http://paskobetsu.net/trialform/form.php",
+   "group": "下層:無料体験"
+  },
+  {
+   "url": "http://paskobetsu.net/about/f_examination.html",
+   "group": "下層:受験"
+  },
+  {
+   "url": "https://shuuyale.net/day-price/",
+   "group": "下層:料金"
+  },
+  {
+   "url": "https://shuuyale.net/faq/",
+   "group": "下層:FAQ"
+  },
+  {
+   "url": "https://junior.litalico.jp/course/",
+   "group": "下層:学年向け"
+  },
+  {
+   "url": "https://junior.litalico.jp/course/age0-2/",
+   "group": "下層:学年向け"
+  },
+  {
+   "url": "https://junior.litalico.jp/course/age3-6/",
+   "group": "下層:学年向け"
+  },
+  {
+   "url": "https://junior.litalico.jp/course/lower-grades/",
+   "group": "下層:学年向け"
+  },
+  {
+   "url": "https://ann-class.com/voice/",
+   "group": "下層:口コミ・体験談"
+  },
+  {
+   "url": "https://www.emina-base.com/shotokuclub/what-is-jidou-hattatsu",
+   "group": "下層:発達障害向け"
+  },
+  {
+   "url": "https://www.emina-base.com/shotokuclub/faq",
+   "group": "下層:FAQ"
+  },
+  {
+   "url": "https://www.emina-base.com/shotokuclub/cases",
+   "group": "下層:口コミ・体験談"
+  },
+  {
+   "url": "https://www.emina-base.com/shotokuclub/voices",
+   "group": "下層:口コミ・体験談"
+  },
+  {
+   "url": "https://www.yaruki-assist.com/about-trial/",
+   "group": "下層:無料体験"
+  },
+  {
+   "url": "https://www.yaruki-assist.com/elementary-school/",
+   "group": "下層:学年向け"
+  },
+  {
+   "url": "https://www.yaruki-assist.com/junior-high-school/",
+   "group": "下層:学年向け"
+  },
+  {
+   "url": "https://www.yaruki-assist.com/high-school/",
+   "group": "下層:学年向け"
+  },
+  {
+   "url": "https://www.st-plus.org",
+   "group": "下層:トップ"
+  },
+  {
+   "url": "https://www.st-plus.org/about-hattatsu",
+   "group": "下層:発達障害向け"
+  },
+  {
+   "url": "https://www.st-plus.org/child-development",
+   "group": "下層:発達障害向け"
+  },
+  {
+   "url": "https://www.st-plus.org/post/児童発達支援事業を開始します（スタジオplus-）",
+   "group": "下層:発達障害向け"
+  },
+  {
+   "url": "https://jollygoodplus.com/about/schoolage/case/recovery/",
+   "group": "下層:口コミ・体験談"
+  },
+  {
+   "url": "https://jollygoodplus.com/about/schoolage/case/visst/",
+   "group": "下層:口コミ・体験談"
+  },
+  {
+   "url": "https://jollygoodplus.com/about/schoolage/case/rinocare/",
+   "group": "下層:口コミ・体験談"
+  },
+  {
+   "url": "https://jollygoodplus.com/highschool/",
+   "group": "下層:学年向け"
+  },
+  {
+   "url": "https://kumakuma-counselingoffice.com/サービス：初回相談無料/",
+   "group": "下層:無料体験"
+  },
+  {
+   "url": "https://www.taman.or.jp/kokoiku/hattatsu/",
+   "group": "下層:発達障害向け"
+  },
+  {
+   "url": "https://stkotori.com/faq/",
+   "group": "下層:FAQ"
+  },
+  {
+   "url": "https://stkotori.com/price/",
+   "group": "下層:料金"
+  },
+  {
+   "url": "https://stkotori.com/cost-of-testing/",
+   "group": "下層:料金"
+  },
+  {
+   "url": "https://www.treasure-max.fun/feed/",
+   "group": "下層:料金"
+  },
+  {
+   "url": "https://www.treasure-max.fun/chatbot-low-cost-sustainability/",
+   "group": "下層:料金"
+  },
+  {
+   "url": "https://sodachimap.com/highschool.html",
+   "group": "下層:学年向け"
+  },
+  {
+   "url": "https://specialeducationjourney.com/what-is-the-difference-between-asd-and-adhd/",
+   "group": "下層:発達障害向け"
+  },
+  {
+   "url": "https://specialeducationjourney.com/how-to-teach-children-with-developmental-disabilities-to-tell-time/",
+   "group": "下層:発達障害向け"
+  },
+  {
+   "url": "https://specialeducationjourney.com/feed/",
+   "group": "下層:料金"
+  },
+  {
+   "url": "https://tokyo-brain.clinic/self-check/asd",
+   "group": "下層:発達障害向け"
+  },
+  {
+   "url": "https://tokyo-brain.clinic/examination/child",
+   "group": "下層:発達障害向け"
+  },
+  {
+   "url": "https://tokyo-brain.clinic/psychiatry/developmental/ld",
+   "group": "下層:発達障害向け"
+  },
+  {
+   "url": "https://tokyo-brain.clinic/category/psychiatric-illness/ld",
+   "group": "下層:発達障害向け"
+  },
+  {
+   "url": "https://medical-b.jp/category/childbirth/childbirth.html",
+   "group": "下層:発達障害向け"
+  },
+  {
+   "url": "https://www.z-kyosai.com/faq",
+   "group": "下層:FAQ"
+  },
+  {
+   "url": "https://www.bravekids.info/trial/",
+   "group": "下層:無料体験"
+  },
+  {
+   "url": "https://www.bravekids.info/voices/",
+   "group": "下層:口コミ・体験談"
+  },
+  {
+   "url": "https://www.bravekids.info/question/",
+   "group": "下層:FAQ"
+  },
+  {
+   "url": "https://greenwitch.jp/category/asd-adhd/",
+   "group": "下層:発達障害向け"
+  },
+  {
+   "url": "https://greenwitch.jp/asd-adhd/3583/",
+   "group": "下層:発達障害向け"
+  },
+  {
+   "url": "https://www.qqeng.com/qqkids/pricelist",
+   "group": "下層:料金"
+  },
+  {
+   "url": "https://www.qqeng.com/qqkids/voice",
+   "group": "下層:口コミ・体験談"
+  },
+  {
+   "url": "https://www.qqeng.com/qqkids/faq",
+   "group": "下層:FAQ"
+  },
+  {
+   "url": "https://www.qqeng.com/lp/qqjunior/",
+   "group": "下層:学年向け"
+  },
+  {
+   "url": "https://www.u-master.net/assets/form/trial/form.html",
+   "group": "下層:無料体験"
+  },
+  {
+   "url": "https://www.u-master.net/faq/",
+   "group": "下層:FAQ"
+  },
+  {
+   "url": "https://www.u-master.net/course/junior_high_school/",
+   "group": "下層:学年向け"
+  },
+  {
+   "url": "https://www.u-master.net/course/elementary_school/",
+   "group": "下層:学年向け"
+  },
+  {
+   "url": "https://studyhop.poka-step.jp/case/",
+   "group": "下層:口コミ・体験談"
+  },
+  {
+   "url": "https://studyhop.poka-step.jp/voice/",
+   "group": "下層:口コミ・体験談"
+  }
+ ],
+ "sites": [
+  {
+   "site": "h-navi.jp",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "www.kobekyo.com",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "www.manatera.com",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "www.seisekiup.net",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "www.jump-japan.co.jp",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "kizuki.or.jp",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "k-runner.co.jp",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "life.litalico.jp",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "reba1ance.com",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "jukushiru.com",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "surala.jp",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "www.welbe.co.jp",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "bestjuku.com",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "www.with-ac.com",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "pro-megajun.com",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "desc-lab.com",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "www.teensmoon.com",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "manalink.jp",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "www.try-online.jp",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "www.kyoushi1.net",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "kateikyoushi-pro.com",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "www.nohvas.com",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "ouchibu-navi.com",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "www.stadia-education.com",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "tokyo-yagaku.jp",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "k-good.net",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "www.dinf.ne.jp",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "studiosora.jp",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "www.reviewsumtsu-shinhs.com",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "seifukan-gakuin.com",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "hanatanijuku.com",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "www.willschool.net",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "www.inter-edu.com",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "www.iku-den.co.jp",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "lifedesign-edu.jp",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "junior.litalico.jp",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "gips-kateikyosi.com",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "www.asunaro-kk.com",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "www.benkyo.co.jp",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "hachiojisakura.com",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "kasuga-mental.jp",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "npo-edge.jp",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "tokushi-tobira.jp",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "highschool.kohgakusha.com",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "branchkids.jp",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "www.shingaku-fs.jp",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "katekyo.jp",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "juku.ameba.jp",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "hattatsu-kids.com",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "www.kame.co.jp",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "happy-funsite.com",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "kateikyoushi.kuraveil.jp",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "www.yaruki-assist.com",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "www.taman.or.jp",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "nagomi.support",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "stkotori.com",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "www.treasure-max.fun",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "specialeducationjourney.com",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "tokyo-brain.clinic",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "www.z-kyosai.com",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "medical-b.jp",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "tanzam.net",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "www.bravekids.info",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "www.qqeng.com",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "www.u-master.net",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "www.stella-edu.com",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "studyhop.poka-step.jp",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "seigakusha.net",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "www.emina-base.com",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "www.coaching01.com",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "jollygoodplus.com",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "j-shinrikensa.jp",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "re-gakuin.com",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "www.st-plus.org",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "web.kohatsu.org",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "ts-assist.jp",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "ninkyou.jp",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "paskobetsu.net",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "agao.jp",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "kidsinfost.net",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "www.tos-kc.com",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "shuuyale.net",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "kumakuma-counselingoffice.com",
+   "group": "競合・関連ドメイン"
+  },
+  {
+   "site": "ibaraki-hoseikai.jp",
+   "group": "競合・関連ドメイン"
+  }
+ ],
+ "kw_url": [
+  {
+   "group": "SERP上位:発達障害 オンライン家庭教師",
+   "keywords": [
+    "発達障害",
+    "オンライン家庭教師"
+   ],
+   "url": "https://manalink.jp/teacher/features/6"
+  },
+  {
+   "group": "SERP上位:発達障害 オンライン家庭教師",
+   "keywords": [
+    "発達障害",
+    "オンライン家庭教師"
+   ],
+   "url": "https://www.kobekyo.com/column/onlinetutor-developmental/"
+  },
+  {
+   "group": "SERP上位:発達障害 オンライン家庭教師",
+   "keywords": [
+    "発達障害",
+    "オンライン家庭教師"
+   ],
+   "url": "https://kkschool.co.jp/"
+  },
+  {
+   "group": "SERP上位:発達障害 家庭教師",
+   "keywords": [
+    "発達障害",
+    "家庭教師"
+   ],
+   "url": "https://www.seisekiup.net/course/develop/"
+  },
+  {
+   "group": "SERP上位:発達障害 家庭教師",
+   "keywords": [
+    "発達障害",
+    "家庭教師"
+   ],
+   "url": "https://coeteco.jp/articles/14795"
+  },
+  {
+   "group": "SERP上位:発達障害 家庭教師",
+   "keywords": [
+    "発達障害",
+    "家庭教師"
+   ],
+   "url": "https://www.kyoushi1.net/service/hattatsu.html"
+  },
+  {
+   "group": "SERP上位:グレーゾーン 家庭教師",
+   "keywords": [
+    "グレーゾーン",
+    "家庭教師"
+   ],
+   "url": "https://www.seisekiup.net/course/develop/"
+  },
+  {
+   "group": "SERP上位:グレーゾーン 家庭教師",
+   "keywords": [
+    "グレーゾーン",
+    "家庭教師"
+   ],
+   "url": "https://www.kobekyo.com/column/tutor-developmental/"
+  },
+  {
+   "group": "SERP上位:グレーゾーン 家庭教師",
+   "keywords": [
+    "グレーゾーン",
+    "家庭教師"
+   ],
+   "url": "https://www.jump-japan.co.jp/developmental-disability/gray-area"
+  },
+  {
+   "group": "SERP上位:ADHD 家庭教師",
+   "keywords": [
+    "ADHD",
+    "家庭教師"
+   ],
+   "url": "https://www.seisekiup.net/course/develop/adhd/"
+  },
+  {
+   "group": "SERP上位:ADHD 家庭教師",
+   "keywords": [
+    "ADHD",
+    "家庭教師"
+   ],
+   "url": "https://coeteco.jp/articles/14795"
+  },
+  {
+   "group": "SERP上位:ADHD 家庭教師",
+   "keywords": [
+    "ADHD",
+    "家庭教師"
+   ],
+   "url": "https://www.benkyo.co.jp/course/ld-adhd-asd/"
+  },
+  {
+   "group": "SERP上位:ASD 家庭教師",
+   "keywords": [
+    "ASD",
+    "家庭教師"
+   ],
+   "url": "https://www.seisekiup.net/course/develop/as/"
+  },
+  {
+   "group": "SERP上位:ASD 家庭教師",
+   "keywords": [
+    "ASD",
+    "家庭教師"
+   ],
+   "url": "https://www.benkyo.co.jp/course/ld-adhd-asd/"
+  },
+  {
+   "group": "SERP上位:ASD 家庭教師",
+   "keywords": [
+    "ASD",
+    "家庭教師"
+   ],
+   "url": "https://www.kobekyo.com/column/tutor-developmental/"
+  },
+  {
+   "group": "SERP上位:学習障害 塾",
+   "keywords": [
+    "学習障害",
+    "塾"
+   ],
+   "url": "https://jukushiru.com/schools/prefecture/13/city/666/feature/developmentally_disabled_child"
+  },
+  {
+   "group": "SERP上位:学習障害 塾",
+   "keywords": [
+    "学習障害",
+    "塾"
+   ],
+   "url": "https://www.cuore-educare.jp/"
+  },
+  {
+   "group": "SERP上位:学習障害 塾",
+   "keywords": [
+    "学習障害",
+    "塾"
+   ],
+   "url": "http://nijinowa.jp/"
+  },
+  {
+   "group": "SERP上位:発達障害 塾",
+   "keywords": [
+    "発達障害",
+    "塾"
+   ],
+   "url": "https://bestjuku.com/article/4675/"
+  },
+  {
+   "group": "SERP上位:発達障害 塾",
+   "keywords": [
+    "発達障害",
+    "塾"
+   ],
+   "url": "https://zoukei-rythmique.jp/"
+  },
+  {
+   "group": "SERP上位:発達障害 塾",
+   "keywords": [
+    "発達障害",
+    "塾"
+   ],
+   "url": "http://nijinowa.jp/"
+  },
+  {
+   "group": "SERP上位:発達障害 個別指導",
+   "keywords": [
+    "発達障害",
+    "個別指導"
+   ],
+   "url": "https://bestjuku.com/article/4675/"
+  },
+  {
+   "group": "SERP上位:発達障害 個別指導",
+   "keywords": [
+    "発達障害",
+    "個別指導"
+   ],
+   "url": "https://www.juku-coaching01.com/"
+  },
+  {
+   "group": "SERP上位:発達障害 個別指導",
+   "keywords": [
+    "発達障害",
+    "個別指導"
+   ],
+   "url": "http://nijinowa.jp/"
+  },
+  {
+   "group": "SERP上位:発達障害 中学生 勉強方法",
+   "keywords": [
+    "発達障害",
+    "中学生",
+    "勉強方法"
+   ],
+   "url": "https://surala.jp/column/learning/31831/"
+  },
+  {
+   "group": "SERP上位:発達障害 中学生 勉強方法",
+   "keywords": [
+    "発達障害",
+    "中学生",
+    "勉強方法"
+   ],
+   "url": "https://kizuki.or.jp/blog/dd/dd-jhs-student-study/"
+  },
+  {
+   "group": "SERP上位:発達障害 中学生 勉強方法",
+   "keywords": [
+    "発達障害",
+    "中学生",
+    "勉強方法"
+   ],
+   "url": "https://www.seisekiup.net/column/develop/2170/"
+  },
+  {
+   "group": "SERP上位:発達障害 小学生 勉強",
+   "keywords": [
+    "発達障害",
+    "小学生",
+    "勉強"
+   ],
+   "url": "https://www.kobekyo.com/column/study-developmental/"
+  },
+  {
+   "group": "SERP上位:発達障害 小学生 勉強",
+   "keywords": [
+    "発達障害",
+    "小学生",
+    "勉強"
+   ],
+   "url": "https://www.kyoushi1.net/column/hattatsu/studymethod-elementary/"
+  },
+  {
+   "group": "SERP上位:発達障害 小学生 勉強",
+   "keywords": [
+    "発達障害",
+    "小学生",
+    "勉強"
+   ],
+   "url": "https://life.litalico.jp/hattatsu/ld/"
+  },
+  {
+   "group": "SERP上位:ADHD 勉強 集中できない",
+   "keywords": [
+    "ADHD",
+    "勉強",
+    "集中できない"
+   ],
+   "url": "https://kasuga-mental.jp/blog/adult-dd-study-focus/"
+  },
+  {
+   "group": "SERP上位:ADHD 勉強 集中できない",
+   "keywords": [
+    "ADHD",
+    "勉強",
+    "集中できない"
+   ],
+   "url": "https://www.with-ac.com/column/adhd-child-study/"
+  },
+  {
+   "group": "SERP上位:ADHD 勉強 集中できない",
+   "keywords": [
+    "ADHD",
+    "勉強",
+    "集中できない"
+   ],
+   "url": "https://www.manatera.com/blog/adhd-study-concentration/"
+  },
+  {
+   "group": "SERP上位:ASD 勉強方法",
+   "keywords": [
+    "ASD",
+    "勉強方法"
+   ],
+   "url": "https://www.kobekyo.com/column/study-developmental/"
+  },
+  {
+   "group": "SERP上位:ASD 勉強方法",
+   "keywords": [
+    "ASD",
+    "勉強方法"
+   ],
+   "url": "https://k-good.net/devdis/asd-study-method/"
+  },
+  {
+   "group": "SERP上位:ASD 勉強方法",
+   "keywords": [
+    "ASD",
+    "勉強方法"
+   ],
+   "url": "https://pro-megajun.com/archives/1517"
+  },
+  {
+   "group": "SERP上位:LD 読み書き 支援",
+   "keywords": [
+    "LD",
+    "読み書き",
+    "支援"
+   ],
+   "url": "https://life.litalico.jp/hattatsu/ld/"
+  },
+  {
+   "group": "SERP上位:LD 読み書き 支援",
+   "keywords": [
+    "LD",
+    "読み書き",
+    "支援"
+   ],
+   "url": "https://www.dinf.ne.jp/doc/japanese/access/daisy/report/kato.html"
+  },
+  {
+   "group": "SERP上位:LD 読み書き 支援",
+   "keywords": [
+    "LD",
+    "読み書き",
+    "支援"
+   ],
+   "url": "https://www.ypec.ed.jp/ypechp/wp-content/uploads/2022/08/%E5%AD%A6%E7%BF%92%E9%9A%9C%E5%AE%B3%E3%81%AE%E3%81%82%E3%82%8B%E5%AD%90%E4%BE%9B%E3%81%B8%E3%81%AE%E6%94%AF%E6%8F%B4%E3%83%AA%E3%83%BC%E3%83%95%E3%83%AC%E3%83%83%E3%83%88.pdf"
+  },
+  {
+   "group": "SERP上位:ディスレクシア 学習支援",
+   "keywords": [
+    "ディスレクシア",
+    "学習支援"
+   ],
+   "url": "https://www.ypec.ed.jp/ypechp/wp-content/uploads/2022/08/%E5%AD%A6%E7%BF%92%E9%9A%9C%E5%AE%B3%E3%81%AE%E3%81%82%E3%82%8B%E5%AD%90%E4%BE%9B%E3%81%B8%E3%81%AE%E6%94%AF%E6%8F%B4%E3%83%AA%E3%83%BC%E3%83%95%E3%83%AC%E3%83%83%E3%83%88.pdf"
+  },
+  {
+   "group": "SERP上位:ディスレクシア 学習支援",
+   "keywords": [
+    "ディスレクシア",
+    "学習支援"
+   ],
+   "url": "https://npo-edge.jp/support/yomikaki/"
+  },
+  {
+   "group": "SERP上位:ディスレクシア 学習支援",
+   "keywords": [
+    "ディスレクシア",
+    "学習支援"
+   ],
+   "url": "https://www.dinf.ne.jp/doc/japanese/access/dyslexia/adfs/school.html"
+  },
+  {
+   "group": "SERP上位:境界知能 勉強",
+   "keywords": [
+    "境界知能",
+    "勉強"
+   ],
+   "url": "https://seigakusha.net/%E9%A0%91%E5%BC%B5%E3%81%A3%E3%81%A6%E3%82%82%E5%8B%89%E5%BC%B7%E8%8B%A6%E6%89%8B%E3%81%AA%E5%AD%90%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E3%80%81%E6%AD%A3%E7%9B%B4%E3%81%AB%E8%AA%9E%E3%82%8A%E3%81%BE/"
+  },
+  {
+   "group": "SERP上位:境界知能 勉強",
+   "keywords": [
+    "境界知能",
+    "勉強"
+   ],
+   "url": "https://www.meiji.ac.jp/mhc/qfki0t00000bg5nr.html"
+  },
+  {
+   "group": "SERP上位:境界知能 勉強",
+   "keywords": [
+    "境界知能",
+    "勉強"
+   ],
+   "url": "https://desc-lab.com/132797/"
+  },
+  {
+   "group": "SERP上位:グレーゾーン 高校受験",
+   "keywords": [
+    "グレーゾーン",
+    "高校受験"
+   ],
+   "url": "https://pro-megajun.com/archives/974"
+  },
+  {
+   "group": "SERP上位:グレーゾーン 高校受験",
+   "keywords": [
+    "グレーゾーン",
+    "高校受験"
+   ],
+   "url": "https://www.kobekyo.com/column/highschool-developmental/"
+  },
+  {
+   "group": "SERP上位:グレーゾーン 高校受験",
+   "keywords": [
+    "グレーゾーン",
+    "高校受験"
+   ],
+   "url": "https://kidsinfost.net/2022/12/12/qa-48/"
+  },
+  {
+   "group": "SERP上位:発達障害 高校受験",
+   "keywords": [
+    "発達障害",
+    "高校受験"
+   ],
+   "url": "https://www.manatera.com/blog/hattatsu-adhd-highschool-exam-guide/"
+  },
+  {
+   "group": "SERP上位:発達障害 高校受験",
+   "keywords": [
+    "発達障害",
+    "高校受験"
+   ],
+   "url": "https://life.litalico.jp/hattatsu/mailmag/072/"
+  },
+  {
+   "group": "SERP上位:発達障害 高校受験",
+   "keywords": [
+    "発達障害",
+    "高校受験"
+   ],
+   "url": "https://www.kobekyo.com/column/highschool-developmental/"
+  },
+  {
+   "group": "SERP上位:発達障害 大学受験",
+   "keywords": [
+    "発達障害",
+    "大学受験"
+   ],
+   "url": "https://www.welbe.co.jp/campus/course/university_entrance_exam.html"
+  },
+  {
+   "group": "SERP上位:発達障害 大学受験",
+   "keywords": [
+    "発達障害",
+    "大学受験"
+   ],
+   "url": "https://www.kobekyo.com/column/developmental-university-exam/"
+  },
+  {
+   "group": "SERP上位:発達障害 大学受験",
+   "keywords": [
+    "発達障害",
+    "大学受験"
+   ],
+   "url": "https://kizuki.or.jp/blog/dd/dd-university-entrance-exam/"
+  },
+  {
+   "group": "SERP上位:発達障害 不登校 勉強",
+   "keywords": [
+    "発達障害",
+    "不登校",
+    "勉強"
+   ],
+   "url": "https://kizuki.or.jp/blog/dd/dd-futoko-no-study/"
+  },
+  {
+   "group": "SERP上位:発達障害 不登校 勉強",
+   "keywords": [
+    "発達障害",
+    "不登校",
+    "勉強"
+   ],
+   "url": "https://seifukan-gakuin.com/futoukou-hattatsu-relation/"
+  },
+  {
+   "group": "SERP上位:発達障害 不登校 勉強",
+   "keywords": [
+    "発達障害",
+    "不登校",
+    "勉強"
+   ],
+   "url": "https://h-navi.jp/qa/questions/172650"
+  },
+  {
+   "group": "SERP上位:不登校 オンライン家庭教師",
+   "keywords": [
+    "不登校",
+    "オンライン家庭教師"
+   ],
+   "url": "https://tintle.net/"
+  },
+  {
+   "group": "SERP上位:不登校 オンライン家庭教師",
+   "keywords": [
+    "不登校",
+    "オンライン家庭教師"
+   ],
+   "url": "https://coeteco.jp/articles/11599"
+  },
+  {
+   "group": "SERP上位:不登校 オンライン家庭教師",
+   "keywords": [
+    "不登校",
+    "オンライン家庭教師"
+   ],
+   "url": "https://wowfull.jp/"
+  },
+  {
+   "group": "SERP上位:発達障害 宿題 やらない",
+   "keywords": [
+    "発達障害",
+    "宿題",
+    "やらない"
+   ],
+   "url": "https://www.kobekyo.com/column/donothomework-developmental/"
+  },
+  {
+   "group": "SERP上位:発達障害 宿題 やらない",
+   "keywords": [
+    "発達障害",
+    "宿題",
+    "やらない"
+   ],
+   "url": "https://kizuki.or.jp/blog/dd/dd-dont-homework/"
+  },
+  {
+   "group": "SERP上位:発達障害 宿題 やらない",
+   "keywords": [
+    "発達障害",
+    "宿題",
+    "やらない"
+   ],
+   "url": "https://www.seisekiup.net/column/develop/2863/"
+  },
+  {
+   "group": "SERP上位:発達障害 テスト 点数 取れない",
+   "keywords": [
+    "発達障害",
+    "テスト",
+    "点数",
+    "取れない"
+   ],
+   "url": "https://manalink.jp/teacher/12421/blog/4845"
+  },
+  {
+   "group": "SERP上位:発達障害 テスト 点数 取れない",
+   "keywords": [
+    "発達障害",
+    "テスト",
+    "点数",
+    "取れない"
+   ],
+   "url": "https://www.seisekiup.net/column/develop/755/"
+  },
+  {
+   "group": "SERP上位:発達障害 テスト 点数 取れない",
+   "keywords": [
+    "発達障害",
+    "テスト",
+    "点数",
+    "取れない"
+   ],
+   "url": "https://h-navi.jp/qa/questions/69154"
+  },
+  {
+   "group": "SERP上位:発達障害 塾 断られた",
+   "keywords": [
+    "発達障害",
+    "塾",
+    "断られた"
+   ],
+   "url": "https://h-navi.jp/column/article/35030774"
+  },
+  {
+   "group": "SERP上位:発達障害 塾 断られた",
+   "keywords": [
+    "発達障害",
+    "塾",
+    "断られた"
+   ],
+   "url": "https://www.inter-edu.com/forum/read.php?804,3871145"
+  },
+  {
+   "group": "SERP上位:発達障害 塾 合わない",
+   "keywords": [
+    "発達障害",
+    "塾",
+    "合わない"
+   ],
+   "url": "https://jukushiru.com/article/post-34519/"
+  },
+  {
+   "group": "SERP上位:発達障害 塾 合わない",
+   "keywords": [
+    "発達障害",
+    "塾",
+    "合わない"
+   ],
+   "url": "https://www.kame.co.jp/column/column000450-html"
+  },
+  {
+   "group": "SERP上位:発達障害 塾 合わない",
+   "keywords": [
+    "発達障害",
+    "塾",
+    "合わない"
+   ],
+   "url": "https://life.litalico.jp/hattatsu/mailmag/147/"
+  },
+  {
+   "group": "SERP上位:発達障害 家庭教師 料金",
+   "keywords": [
+    "発達障害",
+    "家庭教師",
+    "料金"
+   ],
+   "url": "https://kateikyoushi-pro.com/course/support/"
+  },
+  {
+   "group": "SERP上位:発達障害 家庭教師 料金",
+   "keywords": [
+    "発達障害",
+    "家庭教師",
+    "料金"
+   ],
+   "url": "https://coeteco.jp/articles/14795"
+  },
+  {
+   "group": "SERP上位:発達障害 家庭教師 料金",
+   "keywords": [
+    "発達障害",
+    "家庭教師",
+    "料金"
+   ],
+   "url": "https://k-runner.co.jp/course/developmental-disabilities/"
+  },
+  {
+   "group": "SERP上位:発達障害 家庭教師 おすすめ",
+   "keywords": [
+    "発達障害",
+    "家庭教師",
+    "おすすめ"
+   ],
+   "url": "https://coeteco.jp/articles/14795"
+  },
+  {
+   "group": "SERP上位:発達障害 家庭教師 おすすめ",
+   "keywords": [
+    "発達障害",
+    "家庭教師",
+    "おすすめ"
+   ],
+   "url": "https://www.kobekyo.com/column/tutor-developmental/"
+  },
+  {
+   "group": "SERP上位:発達障害 家庭教師 おすすめ",
+   "keywords": [
+    "発達障害",
+    "家庭教師",
+    "おすすめ"
+   ],
+   "url": "https://www.seisekiup.net/course/develop/"
+  },
+  {
+   "group": "SERP上位:発達障害 家庭教師 口コミ",
+   "keywords": [
+    "発達障害",
+    "家庭教師",
+    "口コミ"
+   ],
+   "url": "https://coeteco.jp/articles/14795"
+  },
+  {
+   "group": "SERP上位:発達障害 家庭教師 口コミ",
+   "keywords": [
+    "発達障害",
+    "家庭教師",
+    "口コミ"
+   ],
+   "url": "https://lifedesign-edu.jp/cram-school-syougai/"
+  },
+  {
+   "group": "SERP上位:発達障害 家庭教師 口コミ",
+   "keywords": [
+    "発達障害",
+    "家庭教師",
+    "口コミ"
+   ],
+   "url": "https://h-navi.jp/qa/questions/193711"
+  },
+  {
+   "group": "SERP上位:発達障害 家庭教師 無料体験",
+   "keywords": [
+    "発達障害",
+    "家庭教師",
+    "無料体験"
+   ],
+   "url": "https://www.jump-japan.co.jp/system/try"
+  },
+  {
+   "group": "SERP上位:発達障害 家庭教師 無料体験",
+   "keywords": [
+    "発達障害",
+    "家庭教師",
+    "無料体験"
+   ],
+   "url": "https://www.seisekiup.net/trial/"
+  },
+  {
+   "group": "SERP上位:発達障害 家庭教師 無料体験",
+   "keywords": [
+    "発達障害",
+    "家庭教師",
+    "無料体験"
+   ],
+   "url": "http://paskobetsu.net/course/trial.html"
+  },
+  {
+   "group": "SERP上位:放課後等デイサービス 学習支援",
+   "keywords": [
+    "放課後等デイサービス",
+    "学習支援"
+   ],
+   "url": "https://surala.jp/daysurala/column/after-school-day-service-study-support/"
+  },
+  {
+   "group": "SERP上位:放課後等デイサービス 学習支援",
+   "keywords": [
+    "放課後等デイサービス",
+    "学習支援"
+   ],
+   "url": "https://h-navi.jp/support_facility/tokyo/program/30"
+  },
+  {
+   "group": "SERP上位:放課後等デイサービス 学習支援",
+   "keywords": [
+    "放課後等デイサービス",
+    "学習支援"
+   ],
+   "url": "https://www.iku-den.co.jp/houday/tokyo/study/"
+  },
+  {
+   "group": "SERP上位:発達障害 学習支援 サービス",
+   "keywords": [
+    "発達障害",
+    "学習支援",
+    "サービス"
+   ],
+   "url": "https://h-navi.jp/support_facility/tokyo/program/30"
+  },
+  {
+   "group": "SERP上位:発達障害 学習支援 サービス",
+   "keywords": [
+    "発達障害",
+    "学習支援",
+    "サービス"
+   ],
+   "url": "https://ann-class.com/"
+  },
+  {
+   "group": "SERP上位:発達障害 学習支援 サービス",
+   "keywords": [
+    "発達障害",
+    "学習支援",
+    "サービス"
+   ],
+   "url": "https://surala.jp/type/disability"
+  },
+  {
+   "group": "SERP上位:療育 勉強 中学生",
+   "keywords": [
+    "療育",
+    "勉強",
+    "中学生"
+   ],
+   "url": "https://www.kobekyo.com/column/developmental-juku-juniorhigh/"
+  },
+  {
+   "group": "SERP上位:療育 勉強 中学生",
+   "keywords": [
+    "療育",
+    "勉強",
+    "中学生"
+   ],
+   "url": "https://life.litalico.jp/hattatsu/mailmag/067/"
+  },
+  {
+   "group": "SERP上位:療育 勉強 中学生",
+   "keywords": [
+    "療育",
+    "勉強",
+    "中学生"
+   ],
+   "url": "https://jollygoodplus.com/about/schoolage/case/teens/"
+  },
+  {
+   "group": "SERP上位:発達障害 子供 勉強 教え方 親",
+   "keywords": [
+    "発達障害",
+    "子供",
+    "勉強",
+    "教え方",
+    "親"
+   ],
+   "url": "https://www.manatera.com/blog/hattatsu-study-parent-support/"
+  },
+  {
+   "group": "SERP上位:発達障害 子供 勉強 教え方 親",
+   "keywords": [
+    "発達障害",
+    "子供",
+    "勉強",
+    "教え方",
+    "親"
+   ],
+   "url": "https://surala.jp/column/learning/25991/"
+  },
+  {
+   "group": "SERP上位:発達障害 子供 勉強 教え方 親",
+   "keywords": [
+    "発達障害",
+    "子供",
+    "勉強",
+    "教え方",
+    "親"
+   ],
+   "url": "https://www.kobekyo.com/column/adhd-study-methods/"
+  },
+  {
+   "group": "SERP上位:発達障害 勉強しない 中学生",
+   "keywords": [
+    "発達障害",
+    "勉強しない",
+    "中学生"
+   ],
+   "url": "https://www.kobekyo.com/column/donotstudy-juniorhigh-developmental/"
+  },
+  {
+   "group": "SERP上位:発達障害 勉強しない 中学生",
+   "keywords": [
+    "発達障害",
+    "勉強しない",
+    "中学生"
+   ],
+   "url": "https://www.with-ac.com/column/junior-high-school-students-who-do-not-study-may-be-developmentally-disabled-measures-to-help-them-study-introduction/"
+  },
+  {
+   "group": "SERP上位:発達障害 勉強しない 中学生",
+   "keywords": [
+    "発達障害",
+    "勉強しない",
+    "中学生"
+   ],
+   "url": "https://h-navi.jp/column/article/35027586"
+  },
+  {
+   "group": "SERP上位:通級 勉強 ついていけない",
+   "keywords": [
+    "通級",
+    "勉強",
+    "ついていけない"
+   ],
+   "url": "https://life.litalico.jp/hattatsu/mailmag/090/"
+  },
+  {
+   "group": "SERP上位:通級 勉強 ついていけない",
+   "keywords": [
+    "通級",
+    "勉強",
+    "ついていけない"
+   ],
+   "url": "https://h-navi.jp/qa/questions/200745"
+  },
+  {
+   "group": "SERP上位:通級 勉強 ついていけない",
+   "keywords": [
+    "通級",
+    "勉強",
+    "ついていけない"
+   ],
+   "url": "https://h-navi.jp/qa/questions/186335"
+  },
+  {
+   "group": "SERP上位:特別支援学級 中学 進路",
+   "keywords": [
+    "特別支援学級",
+    "中学",
+    "進路"
+   ],
+   "url": "https://h-navi.jp/column/article/35028228"
+  },
+  {
+   "group": "SERP上位:特別支援学級 中学 進路",
+   "keywords": [
+    "特別支援学級",
+    "中学",
+    "進路"
+   ],
+   "url": "https://www.treasure-max.fun/shinro_shien1/"
+  },
+  {
+   "group": "SERP上位:特別支援学級 中学 進路",
+   "keywords": [
+    "特別支援学級",
+    "中学",
+    "進路"
+   ],
+   "url": "https://sodachimap.com/"
+  },
+  {
+   "group": "SERP上位:発達障害 算数 苦手",
+   "keywords": [
+    "発達障害",
+    "算数",
+    "苦手"
+   ],
+   "url": "https://www.kobekyo.com/column/developmental-math-weak/"
+  },
+  {
+   "group": "SERP上位:発達障害 算数 苦手",
+   "keywords": [
+    "発達障害",
+    "算数",
+    "苦手"
+   ],
+   "url": "https://tokyo-brain.clinic/psychiatric-illness/ld/6183"
+  },
+  {
+   "group": "SERP上位:発達障害 算数 苦手",
+   "keywords": [
+    "発達障害",
+    "算数",
+    "苦手"
+   ],
+   "url": "https://www.z-kyosai.com/column/7357.html"
+  },
+  {
+   "group": "SERP上位:発達障害 英語 苦手",
+   "keywords": [
+    "発達障害",
+    "英語",
+    "苦手"
+   ],
+   "url": "https://desc-lab.com/pasteljump/9062/"
+  },
+  {
+   "group": "SERP上位:発達障害 英語 苦手",
+   "keywords": [
+    "発達障害",
+    "英語",
+    "苦手"
+   ],
+   "url": "https://greenwitch.jp/asd-adhd/3627/"
+  },
+  {
+   "group": "SERP上位:発達障害 英語 苦手",
+   "keywords": [
+    "発達障害",
+    "英語",
+    "苦手"
+   ],
+   "url": "https://www.seisekiup.net/column/develop/2276/"
+  },
+  {
+   "group": "SERP上位:発達障害 国語 読解",
+   "keywords": [
+    "発達障害",
+    "国語",
+    "読解"
+   ],
+   "url": "https://www.stella-edu.com/column/c_dokkairyoku/"
+  },
+  {
+   "group": "SERP上位:発達障害 国語 読解",
+   "keywords": [
+    "発達障害",
+    "国語",
+    "読解"
+   ],
+   "url": "https://www.jump-japan.co.jp/national-language"
+  },
+  {
+   "group": "SERP上位:発達障害 国語 読解",
+   "keywords": [
+    "発達障害",
+    "国語",
+    "読解"
+   ],
+   "url": "https://junior.litalico.jp/case/problem/bunshoudokkai/"
+  },
+  {
+   "group": "SERP上位:発達障害 定期テスト 対策",
+   "keywords": [
+    "発達障害",
+    "定期テスト",
+    "対策"
+   ],
+   "url": "https://www.seisekiup.net/column/develop/755/"
+  },
+  {
+   "group": "SERP上位:発達障害 定期テスト 対策",
+   "keywords": [
+    "発達障害",
+    "定期テスト",
+    "対策"
+   ],
+   "url": "https://studyhop.poka-step.jp/%E3%82%B3%E3%83%A9%E3%83%A0/regular-test-preparation/"
+  },
+  {
+   "group": "SERP上位:発達障害 定期テスト 対策",
+   "keywords": [
+    "発達障害",
+    "定期テスト",
+    "対策"
+   ],
+   "url": "https://www.teensmoon.com/staffblog/teens1-2/"
+  },
+  {
+   "group": "SERP上位:グレーゾーン 中学生 勉強",
+   "keywords": [
+    "グレーゾーン",
+    "中学生",
+    "勉強"
+   ],
+   "url": "https://www.welbe.co.jp/campus/case/grayzone.html"
+  },
+  {
+   "group": "SERP上位:グレーゾーン 中学生 勉強",
+   "keywords": [
+    "グレーゾーン",
+    "中学生",
+    "勉強"
+   ],
+   "url": "https://kizuki.or.jp/blog/dd/dd-grayzone-jhs-student/"
+  },
+  {
+   "group": "SERP上位:グレーゾーン 中学生 勉強",
+   "keywords": [
+    "グレーゾーン",
+    "中学生",
+    "勉強"
+   ],
+   "url": "https://bestjuku.com/shingaku/s-article/33372/"
+  }
+ ]
+}

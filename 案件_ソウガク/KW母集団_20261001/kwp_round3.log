@@ -1,0 +1,119 @@
+[round3] jobs 1350 / 残り 1350
+  20/1350 KW:競合:家庭教師のトライ|発達特性との相性|家庭教師のトライ                       15 
+  40/1350 KW:競合:個別教室のトライ|申込直前|トライ 個別                             17 
+  60/1350 KW:競合:トライのオンライン個別指導塾|不安・ネガティブ確認|トライのオンライン個別指導塾#2        6 
+  80/1350 KW:競合:オンラインプロ教師のメガスタ|不安・ネガティブ確認|メガスタ オンライン#1            7 
+  100/1350 KW:競合:家庭教師のあすなろ|比較・選択|家庭教師のあすなろ                         6 
+  120/1350 KW:競合:家庭教師のノーバス|料金・契約|家庭教師のノーバス                        11 
+  140/1350 KW:競合:家庭教師のランナー|評判・第三者評価|ランナー 家庭教師                     20 
+  160/1350 KW:競合:家庭教師ファースト|ブランド単体|家庭教師のファースト                      33 
+  180/1350 KW:競合:家庭教師のサクシード|発達特性×料金|サクシード                          6 
+  200/1350 KW:競合:学研の家庭教師|発達特性×評判|学研の家庭教師                          11 
+  220/1350 KW:競合:家庭教師のガンバ|発達特性×口コミ|家庭教師のガンバ                       10 
+  240/1350 KW:競合:家庭教師のやる気アシスト|対象・用途|やる気アシスト                        6 
+  260/1350 KW:競合:家庭教師のマスター|発達特性との相性|家庭教師のマスター                     10 
+  280/1350 KW:競合:全国家庭教師協会|申込直前|全国家庭教師協会                            7 
+  300/1350 KW:競合:TOS家庭教師センター|不安・ネガティブ確認|TOS 家庭教師#2                 6 
+  320/1350 KW:競合:家庭教師のコーチング1|不安・ネガティブ確認|コーチング1#1                   6 
+  340/1350 KW:競合:プロ家庭教師のジャンプ|比較・選択|家庭教師のジャンプ                       6 
+  360/1350 KW:競合:メガジュン|料金・契約|メガジュン                                 9 
+Request made: ClientCustomerId: 6661622672, Host: googleads.googleapis.com, Method: /google.ads.googleads.v25.services.KeywordPlanIdeaService/GenerateKeywordIdeas, RequestId: None, IsFault: True, FaultMessage: failed to connect to all addresses; last error: UNAVAILABLE: ipv4:172.217.112.4:443: WSAGetOverlappedResult: Network is unreachable (A socket operation was attempted to an unreachable network.
+ -- 10051)
+  363/1350 KW:競合:メガジュン|不安・ネガティブ確認|メガジュン#2                          0 ServiceUnavailable: 503 failed to connect to all addresses; last error: UNAVAILABLE: ipv4:172.217.112.4:443: WSAGetOverlappedResult: Network is unreachable (A socket operation was attempted to an unreachable network.
+ -
+Request made: ClientCustomerId: 6661622672, Host: googleads.googleapis.com, Method: /google.ads.googleads.v25.services.KeywordPlanIdeaService/GenerateKeywordIdeas, RequestId: None, IsFault: True, FaultMessage: failed to connect to all addresses; last error: UNAVAILABLE: ipv4:172.217.112.4:443: WSAGetOverlappedResult: Network is unreachable (A socket operation was attempted to an unreachable network.
+ -- 10051)
+  364/1350 KW:競合:メガジュン|申込直前|メガジュン                                  0 ServiceUnavailable: 503 failed to connect to all addresses; last error: UNAVAILABLE: ipv4:172.217.112.4:443: WSAGetOverlappedResult: Network is unreachable (A socket operation was attempted to an unreachable network.
+ -
+Request made: ClientCustomerId: 6661622672, Host: googleads.googleapis.com, Method: /google.ads.googleads.v25.services.KeywordPlanIdeaService/GenerateKeywordIdeas, RequestId: None, IsFault: True, FaultMessage: failed to connect to all addresses; last error: UNAVAILABLE: ipv4:172.217.112.4:443: WSAGetOverlappedResult: Network is unreachable (A socket operation was attempted to an unreachable network.
+ -- 10051)
+  365/1350 KW:競合:メガジュン|発達特性との相性|メガジュン                              0 ServiceUnavailable: 503 failed to connect to all addresses; last error: UNAVAILABLE: ipv4:172.217.112.4:443: WSAGetOverlappedResult: Network is unreachable (A socket operation was attempted to an unreachable network.
+ -
+Request made: ClientCustomerId: 6661622672, Host: googleads.googleapis.com, Method: /google.ads.googleads.v25.services.KeywordPlanIdeaService/GenerateKeywordIdeas, RequestId: None, IsFault: True, FaultMessage: failed to connect to all addresses; last error: UNAVAILABLE: ipv4:172.217.113.4:443: WSAGetOverlappedResult: Network is unreachable (A socket operation was attempted to an unreachable network.
+ -- 10051)
+  366/1350 KW:競合:メガジュン|対象・用途|メガジュン                                 0 ServiceUnavailable: 503 failed to connect to all addresses; last error: UNAVAILABLE: ipv4:172.217.113.4:443: WSAGetOverlappedResult: Network is unreachable (A socket operation was attempted to an unreachable network.
+ -
+Request made: ClientCustomerId: 6661622672, Host: googleads.googleapis.com, Method: /google.ads.googleads.v25.services.KeywordPlanIdeaService/GenerateKeywordIdeas, RequestId: None, IsFault: True, FaultMessage: failed to connect to all addresses; last error: UNAVAILABLE: ipv4:172.217.113.4:443: WSAGetOverlappedResult: Network is unreachable (A socket operation was attempted to an unreachable network.
+ -- 10051)
+  367/1350 KW:競合:メガジュン|発達特性×口コミ|メガジュン                              0 ServiceUnavailable: 503 failed to connect to all addresses; last error: UNAVAILABLE: ipv4:172.217.113.4:443: WSAGetOverlappedResult: Network is unreachable (A socket operation was attempted to an unreachable network.
+ -
+Request made: ClientCustomerId: 6661622672, Host: googleads.googleapis.com, Method: /google.ads.googleads.v25.services.KeywordPlanIdeaService/GenerateKeywordIdeas, RequestId: None, IsFault: True, FaultMessage: failed to connect to all addresses; last error: UNAVAILABLE: ipv4:172.217.113.4:443: WSAGetOverlappedResult: Network is unreachable (A socket operation was attempted to an unreachable network.
+ -- 10051)
+  368/1350 KW:競合:メガジュン|発達特性×評判|メガジュン                               0 ServiceUnavailable: 503 failed to connect to all addresses; last error: UNAVAILABLE: ipv4:172.217.113.4:443: WSAGetOverlappedResult: Network is unreachable (A socket operation was attempted to an unreachable network.
+ -
+Request made: ClientCustomerId: 6661622672, Host: googleads.googleapis.com, Method: /google.ads.googleads.v25.services.KeywordPlanIdeaService/GenerateKeywordIdeas, RequestId: None, IsFault: True, FaultMessage: failed to connect to all addresses; last error: UNAVAILABLE: ipv4:172.217.113.4:443: WSAGetOverlappedResult: Network is unreachable (A socket operation was attempted to an unreachable network.
+ -- 10051)
+  369/1350 KW:競合:メガジュン|発達特性×料金|メガジュン                               0 ServiceUnavailable: 503 failed to connect to all addresses; last error: UNAVAILABLE: ipv4:172.217.113.4:443: WSAGetOverlappedResult: Network is unreachable (A socket operation was attempted to an unreachable network.
+ -
+Request made: ClientCustomerId: 6661622672, Host: googleads.googleapis.com, Method: /google.ads.googleads.v25.services.KeywordPlanIdeaService/GenerateKeywordIdeas, RequestId: None, IsFault: True, FaultMessage: failed to connect to all addresses; last error: UNAVAILABLE: ipv4:172.217.113.4:443: WSAGetOverlappedResult: Network is unreachable (A socket operation was attempted to an unreachable network.
+ -- 10051)
+  370/1350 KW:競合:メガジュン|ブランド単体|プロ家庭教師 メガジュン                         0 ServiceUnavailable: 503 failed to connect to all addresses; last error: UNAVAILABLE: ipv4:172.217.113.4:443: WSAGetOverlappedResult: Network is unreachable (A socket operation was attempted to an unreachable network.
+ -
+Request made: ClientCustomerId: 6661622672, Host: googleads.googleapis.com, Method: /google.ads.googleads.v25.services.KeywordPlanIdeaService/GenerateKeywordIdeas, RequestId: None, IsFault: True, FaultMessage: failed to connect to all addresses; last error: UNAVAILABLE: ipv4:172.217.113.4:443: WSAGetOverlappedResult: Network is unreachable (A socket operation was attempted to an unreachable network.
+ -- 10051)
+  371/1350 KW:競合:メガジュン|評判・第三者評価|プロ家庭教師 メガジュン                       0 ServiceUnavailable: 503 failed to connect to all addresses; last error: UNAVAILABLE: ipv4:172.217.113.4:443: WSAGetOverlappedResult: Network is unreachable (A socket operation was attempted to an unreachable network.
+ -
+Request made: ClientCustomerId: 6661622672, Host: googleads.googleapis.com, Method: /google.ads.googleads.v25.services.KeywordPlanIdeaService/GenerateKeywordIdeas, RequestId: None, IsFault: True, FaultMessage: failed to connect to all addresses; last error: UNAVAILABLE: ipv4:172.217.113.4:443: WSAGetOverlappedResult: Network is unreachable (A socket operation was attempted to an unreachable network.
+ -- 10051)
+  372/1350 KW:競合:メガジュン|料金・契約|プロ家庭教師 メガジュン                          0 ServiceUnavailable: 503 failed to connect to all addresses; last error: UNAVAILABLE: ipv4:172.217.113.4:443: WSAGetOverlappedResult: Network is unreachable (A socket operation was attempted to an unreachable network.
+ -
+Request made: ClientCustomerId: 6661622672, Host: googleads.googleapis.com, Method: /google.ads.googleads.v25.services.KeywordPlanIdeaService/GenerateKeywordIdeas, RequestId: None, IsFault: True, FaultMessage: failed to connect to all addresses; last error: UNAVAILABLE: ipv4:172.217.113.4:443: WSAGetOverlappedResult: Network is unreachable (A socket operation was attempted to an unreachable network.
+ -- 10051)
+  373/1350 KW:競合:メガジュン|比較・選択|プロ家庭教師 メガジュン                          0 ServiceUnavailable: 503 failed to connect to all addresses; last error: UNAVAILABLE: ipv4:172.217.113.4:443: WSAGetOverlappedResult: Network is unreachable (A socket operation was attempted to an unreachable network.
+ -
+Request made: ClientCustomerId: 6661622672, Host: googleads.googleapis.com, Method: /google.ads.googleads.v25.services.KeywordPlanIdeaService/GenerateKeywordIdeas, RequestId: None, IsFault: True, FaultMessage: failed to connect to all addresses; last error: UNAVAILABLE: ipv4:172.217.113.4:443: WSAGetOverlappedResult: Network is unreachable (A socket operation was attempted to an unreachable network.
+ -- 10051)
+  374/1350 KW:競合:メガジュン|不安・ネガティブ確認|プロ家庭教師 メガジュン#1                   0 ServiceUnavailable: 503 failed to connect to all addresses; last error: UNAVAILABLE: ipv4:172.217.113.4:443: WSAGetOverlappedResult: Network is unreachable (A socket operation was attempted to an unreachable network.
+ -
+Request made: ClientCustomerId: 6661622672, Host: googleads.googleapis.com, Method: /google.ads.googleads.v25.services.KeywordPlanIdeaService/GenerateKeywordIdeas, RequestId: None, IsFault: True, FaultMessage: failed to connect to all addresses; last error: UNAVAILABLE: ipv4:172.217.113.4:443: WSAGetOverlappedResult: Network is unreachable (A socket operation was attempted to an unreachable network.
+ -- 10051)
+  375/1350 KW:競合:メガジュン|不安・ネガティブ確認|プロ家庭教師 メガジュン#2                   0 ServiceUnavailable: 503 failed to connect to all addresses; last error: UNAVAILABLE: ipv4:172.217.113.4:443: WSAGetOverlappedResult: Network is unreachable (A socket operation was attempted to an unreachable network.
+ -
+Request made: ClientCustomerId: 6661622672, Host: googleads.googleapis.com, Method: /google.ads.googleads.v25.services.KeywordPlanIdeaService/GenerateKeywordIdeas, RequestId: None, IsFault: True, FaultMessage: failed to connect to all addresses; last error: UNAVAILABLE: ipv4:172.217.113.4:443: WSAGetOverlappedResult: Network is unreachable (A socket operation was attempted to an unreachable network.
+ -- 10051)
+  376/1350 KW:競合:メガジュン|申込直前|プロ家庭教師 メガジュン                           0 ServiceUnavailable: 503 failed to connect to all addresses; last error: UNAVAILABLE: ipv4:172.217.113.4:443: WSAGetOverlappedResult: Network is unreachable (A socket operation was attempted to an unreachable network.
+ -
+Request made: ClientCustomerId: 6661622672, Host: googleads.googleapis.com, Method: /google.ads.googleads.v25.services.KeywordPlanIdeaService/GenerateKeywordIdeas, RequestId: None, IsFault: True, FaultMessage: failed to connect to all addresses; last error: UNAVAILABLE: ipv4:172.217.113.4:443: WSAGetOverlappedResult: Network is unreachable (A socket operation was attempted to an unreachable network.
+ -- 10051)
+  377/1350 KW:競合:メガジュン|発達特性との相性|プロ家庭教師 メガジュン                       0 ServiceUnavailable: 503 failed to connect to all addresses; last error: UNAVAILABLE: ipv4:172.217.113.4:443: WSAGetOverlappedResult: Network is unreachable (A socket operation was attempted to an unreachable network.
+ -
+  380/1350 KW:競合:キズキプロ家庭教師|評判・第三者評価|キズキプロ家庭教師                      6 
+  400/1350 KW:競合:ティントル|ブランド単体|ティントル                                2 
+  420/1350 KW:競合:ティントル|対象・用途|tintle                                6 
+  440/1350 KW:競合:ウォウフル|発達特性との相性|wowfull                            6 
+  460/1350 KW:競合:まなぶてらす|申込直前|マナブテラス                                7 
+  480/1350 KW:競合:マナリンク|不安・ネガティブ確認|manalink#2                       6 
+  500/1350 KW:競合:オンライン家庭教師GIPS|不安・ネガティブ確認|ジップス 家庭教師#1              6 
+  520/1350 KW:競合:オンライン個別指導塾リバランス|比較・選択|リバランス 塾                     6 
+  540/1350 KW:競合:Preステップオンライン|料金・契約|プレステップ オンライン                   9 
+  560/1350 KW:競合:個別指導の明光義塾|評判・第三者評価|明光                            94 
+  580/1350 KW:競合:東京個別指導学院|ブランド単体|東京個別                            610 
+  600/1350 KW:競合:ITTO個別指導学院|発達特性×料金|itto                           5 
+  620/1350 KW:競合:スクールIE|発達特性×評判|スクールie                             8 
+  640/1350 KW:競合:ナビ個別指導学院|発達特性×口コミ|ナビ個別指導学院                       10 
+  660/1350 KW:競合:栄光の個別ビザビ|対象・用途|ビザビ                               10 
+  680/1350 KW:競合:個別指導Axis|発達特性との相性|アクシス 塾                          5 
+  700/1350 KW:競合:森塾|申込直前|森塾                                        8 
+  720/1350 KW:競合:TOMAS|料金・契約|tomas                                78 
+  740/1350 KW:競合:フリーステップ|評判・第三者評価|フリーステップ                         18 
+  760/1350 KW:競合:京進スクール・ワン|発達特性×口コミ|スクールワン                         9 
+  780/1350 KW:競合:ECCベストワン|対象・用途|ベストワン                              6 
+  800/1350 KW:競合:キズキ共育塾|発達特性との相性|キズキ共育塾                           18 
+  820/1350 KW:競合:個別指導塾スタディホップ|申込直前|スタディホップ                         7 
+  840/1350 KW:競合:さくらOne個別指導塾|不安・ネガティブ確認|さくらone#2                   6 
+  860/1350 KW:競合:はなたに塾|不安・ネガティブ確認|はなたに塾#1                          6 
+  880/1350 KW:競合:四谷学院（療育・発達支援）|ブランド単体|四谷学院 発達支援                    1 
+  900/1350 KW:競合:LITALICOジュニア|発達特性×料金|リタリコジュニア                     5 
+  920/1350 KW:競合:LITALICO発達ナビ|発達特性×評判|発達ナビ                         5 
+  940/1350 KW:競合:スタジオそら|発達特性×口コミ|スタジオそら                            6 
+  960/1350 KW:競合:スタジオplus+|不安・ネガティブ確認|スタジオplus#2                   6 
+  980/1350 KW:競合:Branch|不安・ネガティブ確認|branch 発達障害#1                   0 
+  1000/1350 KW:競合:ウィズ・ユー|比較・選択|ウィズ・ユー                               6 
+  1020/1350 KW:競合:ティーンズ|料金・契約|teens 発達障害                            2 
+  1040/1350 KW:競合:コペルプラス|評判・第三者評価|コペルプラス                           14 
+  1060/1350 KW:競合:こぱんはうすさくら|発達特性×口コミ|こぱんはうすさくら                      9 
+  1080/1350 KW:競合:オンラインフリースクール シンガク|対象・用途|シンガク フリースクール              6 
+  1100/1350 KW:競合:学研WILL学園|発達特性との相性|WILL学園                          9 
+  1120/1350 KW:競合:クラスジャパン小中学園|申込直前|クラスジャパン                          7 
+  1140/1350 KW:競合:トウコベ|不安・ネガティブ確認|トウコベ#2                            6 
+  1160/1350 KW:競合:青楓館高等学院|評判・第三者評価|青楓館                              7 
