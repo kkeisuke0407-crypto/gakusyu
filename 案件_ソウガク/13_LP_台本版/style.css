@@ -26,3 +26,27 @@ a { color: var(--mt-blue); }
 /* 広告主バナー（300×250）は原寸で中央に置く（拡大するとぼやけるため） */
 .lp-banner { width: 300px; max-width: 100%; margin-inline: auto; }
 .lp-banner img { display: block; width: 100%; height: auto; }
+
+/* 公開前に埋める箇所の目印（埋めたら span ごと消す） */
+.lp-todo { padding: 0 .25em; border-radius: 3px; background: #fff3c4; color: #8a5300; font-weight: 700; }
+
+/* 運営者情報（LP本文の末尾） */
+.lp-operator { margin-top: 1.6em; padding: 1em 1.1em .6em; border: 1px solid var(--mt-rule); border-radius: 6px; background: #fafafa; }
+.lp-operator__ttl { margin: 0 0 .5em !important; font-size: 15px; font-weight: 900; }
+.lp-operator__list { display: grid; grid-template-columns: 6.5em 1fr; gap: .35em .8em; margin: 0 0 .8em; font-size: 14px; line-height: 1.7; }
+.lp-operator__list dt { color: var(--mt-sub); font-weight: 700; }
+.lp-operator__list dd { margin: 0; min-width: 0; overflow-wrap: anywhere; }
+
+/* サイト共通フッター */
+.lp-site-foot { padding: 1.4em 16px 1.6em; background: var(--mt-blue); color: #fff; text-align: center; font-family: var(--mt-font); }
+.lp-site-foot__nav { display: flex; flex-wrap: wrap; justify-content: center; gap: .4em 1.2em; margin-bottom: .8em; font-size: 13px; }
+.lp-site-foot__nav a { color: #fff; }
+.lp-site-foot__copy { margin: 0; font-size: 12px; opacity: .9; }
+.lp-site-foot .lp-todo { color: #8a5300; }
+
+/* 運営者情報・ポリシーなどの下層ページ */
+.lp-doc h1 { margin: .4em 0 .8em; font-size: 22px; font-weight: 900; line-height: 1.5; }
+.lp-doc .lp-operator__list { font-size: 15px; }
+.lp-doc ul { padding-left: 1.3em; }
+.lp-doc li { margin: 0 0 .4em; }
+.lp-doc__back { margin-top: 2em !important; font-size: 14px; }
