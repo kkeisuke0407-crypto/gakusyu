@@ -1,0 +1,52 @@
+/* ソウガクLP（台本版）専用。部品の見た目は parts.css（mt-*）、ここはページ枠とFVだけ */
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; padding-bottom: 90px; background: #fff; }
+a { color: var(--mt-blue); }
+
+.mt-wrap { max-width: 720px; margin: 0 auto; padding: 12px 16px 40px; }
+
+/* 改行位置を崩さないための塊 */
+.lp-nw { display: inline-block; }
+
+/* FV */
+.lp-fv { margin: 0 0 .6em; }
+.lp-fv__ttl { margin: .2em 0 .5em; font-size: min(25px, 6.6vw); font-weight: 900; line-height: 1.5; letter-spacing: .01em; }
+.lp-fv__key { color: var(--mt-blue); background: linear-gradient(transparent 62%, var(--mt-mark) 62%); }
+.lp-fv__sub { margin: 0 !important; padding: .55em .8em; border-radius: 6px 6px 0 0; background: var(--mt-blue); color: #fff; font-size: 15px; font-weight: 700; line-height: 1.6; }
+.lp-fv__lead { margin: 0 !important; padding: .6em .8em .7em; border: 2px solid var(--mt-blue); border-top: 0; border-radius: 0 0 6px 6px; background: var(--mt-blue-bg); font-size: 16.5px; font-weight: 900; line-height: 1.6; }
+.lp-fv .mt-img { margin: 1em 0 .4em; }
+
+/* 台本の小見出し（①〜④） */
+.lp-num { margin-right: .25em; color: var(--mt-blue); }
+
+/* 末尾の注記 */
+.lp-foot { margin-top: 2.4em; padding-top: 1em; border-top: 1px solid var(--mt-rule); }
+
+/* 広告主バナー（300×250）は原寸で中央に置く（拡大するとぼやけるため） */
+.lp-banner { width: 300px; max-width: 100%; margin-inline: auto; }
+.lp-banner img { display: block; width: 100%; height: auto; }
+
+/* 公開前に埋める箇所の目印（埋めたら span ごと消す） */
+.lp-todo { padding: 0 .25em; border-radius: 3px; background: #fff3c4; color: #8a5300; font-weight: 700; }
+
+/* 運営者情報（LP本文の末尾） */
+.lp-operator { margin-top: 1.6em; padding: 1em 1.1em .6em; border: 1px solid var(--mt-rule); border-radius: 6px; background: #fafafa; }
+.lp-operator__ttl { margin: 0 0 .5em !important; font-size: 15px; font-weight: 900; }
+.lp-operator__list { display: grid; grid-template-columns: 6.5em 1fr; gap: .35em .8em; margin: 0 0 .8em; font-size: 14px; line-height: 1.7; }
+.lp-operator__list dt { color: var(--mt-sub); font-weight: 700; }
+.lp-operator__list dd { margin: 0; min-width: 0; overflow-wrap: anywhere; }
+
+/* サイト共通フッター */
+.lp-site-foot { padding: 1.4em 16px 1.6em; background: var(--mt-blue); color: #fff; text-align: center; font-family: var(--mt-font); }
+.lp-site-foot__nav { display: flex; flex-wrap: wrap; justify-content: center; gap: .4em 1.2em; margin-bottom: .8em; font-size: 13px; }
+.lp-site-foot__nav a { color: #fff; }
+.lp-site-foot__copy { margin: 0; font-size: 12px; opacity: .9; }
+.lp-site-foot .lp-todo { color: #8a5300; }
+
+/* 運営者情報・ポリシーなどの下層ページ */
+.lp-doc h1 { margin: .4em 0 .8em; font-size: 22px; font-weight: 900; line-height: 1.5; }
+.lp-doc .lp-operator__list { font-size: 15px; }
+.lp-doc ul { padding-left: 1.3em; }
+.lp-doc li { margin: 0 0 .4em; }
+.lp-doc__back { margin-top: 2em !important; font-size: 14px; }
