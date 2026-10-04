@@ -1,0 +1,24 @@
+/* ソウガクLP（台本版）専用。部品の見た目は parts.css（mt-*）、ここはページ枠とFVだけ */
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; padding-bottom: 90px; background: #fff; }
+a { color: var(--mt-blue); }
+
+.mt-wrap { max-width: 720px; margin: 0 auto; padding: 12px 16px 40px; }
+
+/* 改行位置を崩さないための塊 */
+.lp-nw { display: inline-block; }
+
+/* FV */
+.lp-fv { margin: 0 0 .6em; }
+.lp-fv__ttl { margin: .2em 0 .5em; font-size: min(25px, 6.6vw); font-weight: 900; line-height: 1.5; letter-spacing: .01em; }
+.lp-fv__key { color: var(--mt-blue); background: linear-gradient(transparent 62%, var(--mt-mark) 62%); }
+.lp-fv__sub { margin: 0 !important; padding: .55em .8em; border-radius: 6px 6px 0 0; background: var(--mt-blue); color: #fff; font-size: 15px; font-weight: 700; line-height: 1.6; }
+.lp-fv__lead { margin: 0 !important; padding: .6em .8em .7em; border: 2px solid var(--mt-blue); border-top: 0; border-radius: 0 0 6px 6px; background: var(--mt-blue-bg); font-size: 16.5px; font-weight: 900; line-height: 1.6; }
+.lp-fv .mt-img { margin: 1em 0 .4em; }
+
+/* 台本の小見出し（①〜④） */
+.lp-num { margin-right: .25em; color: var(--mt-blue); }
+
+/* 末尾の注記 */
+.lp-foot { margin-top: 2.4em; padding-top: 1em; border-top: 1px solid var(--mt-rule); }
