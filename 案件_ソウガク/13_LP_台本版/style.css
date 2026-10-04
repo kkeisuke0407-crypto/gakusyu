@@ -22,3 +22,7 @@ a { color: var(--mt-blue); }
 
 /* 末尾の注記 */
 .lp-foot { margin-top: 2.4em; padding-top: 1em; border-top: 1px solid var(--mt-rule); }
+
+/* 広告主バナー（300×250）は原寸で中央に置く（拡大するとぼやけるため） */
+.lp-banner { width: 300px; max-width: 100%; margin-inline: auto; }
+.lp-banner img { display: block; width: 100%; height: auto; }
