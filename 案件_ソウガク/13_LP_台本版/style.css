@@ -16,7 +16,8 @@ a { color: var(--mt-blue); }
 .lp-fv__sub { margin: 0 !important; padding: .55em .8em; border-radius: 6px 6px 0 0; background: var(--mt-blue); color: #fff; font-size: 15px; font-weight: 700; line-height: 1.6; }
 .lp-fv__lead { margin: 0 !important; padding: .6em .8em .7em; border: 2px solid var(--mt-blue); border-top: 0; border-radius: 0 0 6px 6px; background: var(--mt-blue-bg); font-size: 16.5px; font-weight: 900; line-height: 1.6; }
 .lp-fv .mt-img { margin: 1em 0 .4em; }
-.lp-fv__hook { margin: .4em 0 0 !important; color: var(--mt-red); font-size: 17px; font-weight: 700; line-height: 1.6; }
+/* フック：小さめ・引用風 */
+.lp-fv__hook { margin: .5em 0 0 !important; padding-left: .7em; border-left: 3px solid #f0a9a5; color: var(--mt-red); font-size: 15px; font-weight: 700; line-height: 1.6; }
 /* サービス説明（FV本文の後に単独で置く箱） */
 .lp-fv__lead--solo { margin: 1.4em 0 !important; border-top: 2px solid var(--mt-blue); border-radius: 6px; }
 
@@ -26,6 +27,19 @@ a { color: var(--mt-blue); }
 .lp-cmp tbody th { width: 7.5em; font-size: 12.5px; text-align: left; }
 .lp-cmp th.is-pick { background: var(--mt-blue); color: #fff; }
 .lp-cmp td.is-pick { background: #fffdf0; font-weight: 700; }
+
+.lp-tbl-note { margin: .5em 0 0 !important; }
+
+/* 早期安心の小バッジ（主要CTA①の直前） */
+.lp-badge { margin: 1.2em 0 -.6em !important; text-align: center; line-height: 1.5 !important; }
+.lp-badge > span { display: inline-block; padding: .35em .9em; border: 2px solid var(--mt-blue); border-radius: 999px; background: var(--mt-blue-bg); color: var(--mt-blue); font-size: 14px; font-weight: 900; }
+
+/* ランキング2位・3位（短い説明） */
+.lp-rank-sm { margin: 0 0 .8em !important; padding: .8em 1em; border: 1px solid var(--mt-rule); border-radius: 8px; background: #fff; font-size: 15px; line-height: 1.8 !important; }
+
+/* 料金（mt-spec を見出しなしで使う） */
+.lp-fee .mt-spec__points { padding-bottom: .2em !important; }
+.lp-fee__note { margin: 0 !important; padding: 0 1em .8em; }
 
 /* 台本の小見出し（番号） */
 .lp-num { margin-right: .25em; color: var(--mt-blue); }
