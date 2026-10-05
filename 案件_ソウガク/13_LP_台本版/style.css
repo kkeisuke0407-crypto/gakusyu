@@ -49,9 +49,6 @@ a { color: var(--mt-blue); }
 
 /* ===== v6 画像・ロゴ（パーツ集にない部分だけ） ===== */
 /* 公式キービジュアル：公式LPと同じく写真レイヤーの上に文字レイヤー（透過PNG）を重ねる。どちらも縦横比そのまま・全幅 */
-.lp-kv { position: relative; }
-.lp-kv img { display: block; width: 100%; height: auto; }
-.lp-kv__text { position: absolute; inset: 0; }
 
 /* 比較表：左の列＝各社公式ロゴ＋サービス名（パーツ集の mt-ico の代わり）。ロゴは4社とも同じ最大高 */
 .lp-cmp { min-width: 720px; }
@@ -86,3 +83,6 @@ a { color: var(--mt-blue); }
 /* 比較表：推す行（ソウガク）をはっきり見せる */
 .lp-cmp tr.is-pick td, .lp-cmp tr.is-pick td:first-child { background: #fff6cc; }
 .lp-cmp .mt-badge { margin: 0 0 .4em; }
+
+/* 第1位おすすめ表：料金の枠は1行ぶち抜き */
+.mt-spec__cell.lp-spec-full { grid-column: 1 / -1; }
