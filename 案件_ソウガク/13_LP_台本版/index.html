@@ -16,12 +16,10 @@
   <!-- 組み方：hozon「体験談ランキング型LP パーツ集」（https://hakobu-family.com/lp-parts/）のHTML・ルールどおり -->
   <!-- 文言：王道LP_最終稿_v3.csv ＋ LP_体験談パーツ活用台本_v4.md ＋ LP_公式LP強訴求反映_v5.md／画像：LP画像素材_実装指示_v6.md（出典は 画像出典.md） -->
 
-  <!-- 01 FV：タイトル → PR帯 → アイキャッチ → 悩みの問いかけ → 共感 → サービス名の登場 → 大ボタン -->
-  <h1 class="lp-fv__ttl"><span class="lp-nw">教えているのに、</span><span class="lp-fv__key"><span class="lp-nw">なぜか進まない。</span></span><br><span class="lp-nw">そんな毎日を、</span><span class="lp-nw">親子だけで</span><span class="lp-nw">抱え込まなくても。</span></h1>
+  <!-- 01 FV：ヒーロー（見出し入り画像。h1 の中身は画像の alt＝見出し文言）→ PR帯 → 悩みの問いかけ → 共感 → サービス名の登場 → 大ボタン -->
+  <h1 class="lp-hero"><img src="images/gen/00_hero.webp" alt="教えているのに、なぜか進まない。そんな毎日を、親子だけで抱え込まなくても。" width="1200" height="675"></h1>
 
   <div class="mt-prbar"><span><b>PR</b>　本ページはプロモーションを含みます</span><span>更新日：2026年10月5日</span></div>
-
-  <figure class="mt-img" data-img="IMG-01"><img src="images/gen/01_fv_evening-desk.webp" alt="夕方、窓の外が暮れていく部屋の勉強机。開いたままのドリルと鉛筆・消しゴムが置かれ、椅子が少し引かれている" width="1200" height="800"></figure>
 
   <p class="mt-worry">「また、勉強のことで怒ってしまった。」</p>
 
@@ -70,12 +68,12 @@
 
   <!-- 迷いの会話（v4）。右＝悩む人（保護者）、左＝筆者（編集部）。よくある迷いを整理したもの -->
   <div class="mt-talk">
-    <div class="mt-talk__row mt-talk__row--r"><div class="mt-talk__who"><span class="mt-talk__icon">保護者</span><span class="mt-talk__name">保護者</span></div><div class="mt-talk__b">家庭教師は気になるけど、本人が「やりたくない」と言いそうで…。</div></div>
-    <div class="mt-talk__row"><div class="mt-talk__who"><span class="mt-talk__icon">編集部</span><span class="mt-talk__name">編集部</span></div><div class="mt-talk__b">最初からお子さんを参加させなくても、<span class="mt-mark">1回目を保護者と担当教師の面談に</span>できます。</div></div>
-    <div class="mt-talk__row mt-talk__row--r"><div class="mt-talk__who"><span class="mt-talk__icon">保護者</span><span class="mt-talk__name">保護者</span></div><div class="mt-talk__b">まだ診断もついていないんですが、それでも相談していいですか？</div></div>
-    <div class="mt-talk__row"><div class="mt-talk__who"><span class="mt-talk__icon">編集部</span><span class="mt-talk__name">編集部</span></div><div class="mt-talk__b">診断がなくても、グレーゾーンでも相談できます。<br>どこを見て選べばいいか、下で比べますね。</div></div>
+    <div class="mt-talk__row mt-talk__row--r"><div class="mt-talk__who"><span class="mt-talk__icon"><img src="images/gen/icon_parent.webp" alt="" width="240" height="240"></span><span class="mt-talk__name">保護者</span></div><div class="mt-talk__b">家庭教師は気になるけど、本人が「やりたくない」と言いそうで…。</div></div>
+    <div class="mt-talk__row"><div class="mt-talk__who"><span class="mt-talk__icon"><img src="images/gen/icon_editor.webp" alt="" width="240" height="240"></span><span class="mt-talk__name">編集部</span></div><div class="mt-talk__b">最初からお子さんを参加させなくても、<span class="mt-mark">1回目を保護者と担当教師の面談に</span>できます。</div></div>
+    <div class="mt-talk__row mt-talk__row--r"><div class="mt-talk__who"><span class="mt-talk__icon"><img src="images/gen/icon_parent.webp" alt="" width="240" height="240"></span><span class="mt-talk__name">保護者</span></div><div class="mt-talk__b">まだ診断もついていないんですが、それでも相談していいですか？</div></div>
+    <div class="mt-talk__row"><div class="mt-talk__who"><span class="mt-talk__icon"><img src="images/gen/icon_editor.webp" alt="" width="240" height="240"></span><span class="mt-talk__name">編集部</span></div><div class="mt-talk__b">診断がなくても、グレーゾーンでも相談できます。<br>どこを見て選べばいいか、下で比べますね。</div></div>
   </div>
-  <p class="mt-small">※利用者の体験談ではなく、保護者からよく聞く迷いを編集部が会話形式に整理したものです。</p>
+  <p class="mt-small">※利用者の体験談ではなく、保護者からよく聞く迷いを編集部が会話形式に整理したものです。人物の写真はイメージです。</p>
 
   <p>毎日そばで見ているからこそ、<br>「何が合っていないんだろう」と分からなくなることがあります。</p>
 
@@ -255,7 +253,7 @@
   <!-- 12 体験談A -->
   <h3 class="mt-h3">家で教えると、ケンカになってしまう</h3>
   <figure class="mt-img" data-img="IMG-12"><img src="images/gen/12_story-a_parent-burden.webp" alt="夕方の食卓で、教材を前に困った顔の保護者と、問題に手が止まっている子ども（イメージ）" width="1200" height="800" loading="lazy"><figcaption class="mt-img__note">※画像はイメージです</figcaption></figure>
-  <div class="mt-say"><span class="mt-say__icon">保護者</span><p class="mt-say__b">家で私が教えると、つい言いすぎてしまう…。</p></div>
+  <div class="mt-say"><span class="mt-say__icon"><img src="images/gen/icon_parent.webp" alt="" width="240" height="240"></span><p class="mt-say__b">家で私が教えると、つい言いすぎてしまう…。</p></div>
   <div class="mt-review"><div class="mt-review__head"><span class="mt-review__icon" aria-hidden="true"></span><p class="mt-review__who">「親が全部見なくていい」と思えた（小学4年生・ADHDの診断あり・保護者）</p></div><p>学校へ行ける日が減り、勉強の遅れが気になっていました。家で勉強を見ると、イライラして親子で言い合いになることもありました。オンラインで週1回学ぶ習慣ができ、「ずっと自分が見なければ」という負担が軽くなったそうです。</p></div>
   <p class="mt-small">※ソウガク公式サイト掲載の体験談を要約したものです。個人の感想です。</p>
   <p>親がもっと上手に教えられるようになることだけが答えではありません。<br><span class="mt-mark">家庭の外に、お子さんの困り方を一緒に見てくれる人を増やす。</span>それも一つの方法です。</p>
@@ -263,7 +261,7 @@
   <!-- 13 体験談B -->
   <h3 class="mt-h3">オンラインで、座っていられるか不安</h3>
   <figure class="mt-img" data-img="IMG-13"><img src="images/gen/13_story-b_online-desk.webp" alt="家の机でノートパソコンのオンライン授業を受けながら、ノートに書き込む子ども（イメージ）" width="1200" height="800" loading="lazy"><figcaption class="mt-img__note">※画像はイメージです</figcaption></figure>
-  <div class="mt-say"><span class="mt-say__icon">保護者</span><p class="mt-say__b">画面の前に座って、授業を受けられるのかな…。</p></div>
+  <div class="mt-say"><span class="mt-say__icon"><img src="images/gen/icon_parent.webp" alt="" width="240" height="240"></span><p class="mt-say__b">画面の前に座って、授業を受けられるのかな…。</p></div>
   <div class="mt-review"><div class="mt-review__head"><span class="mt-review__icon" aria-hidden="true"></span><p class="mt-review__who">関係づくりから始めてくれた（中学2年生・特別支援学級・保護者）</p></div><p>勉強への苦手意識があり、初回の体験では画面の前に座ることも難しかったそうです。先生は急がず時間をかけて関係をつくり、今では授業の時間を楽しみにしているという声です。</p></div>
   <p class="mt-small">※ソウガク公式サイト掲載の体験談を要約したものです。個人の感想です。</p>
   <p>無理に「大丈夫です」とは言いません。<br>子どもによって、先生との相性も、画面越しの授業が合うかどうかも違うからです。<br>だから、入会してから悩むのではなく、<span class="mt-mark">先に体験で見ておく。</span></p>
