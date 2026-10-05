@@ -72,3 +72,60 @@ a { color: var(--mt-blue); }
 .lp-doc ul { padding-left: 1.3em; }
 .lp-doc li { margin: 0 0 .4em; }
 .lp-doc__back { margin-top: 2em !important; font-size: 14px; }
+
+/* ===== v6 画像・ロゴ ===== */
+/* 公式キービジュアル：公式LPと同じく写真レイヤーの上に文字レイヤー（透過PNG）を重ねる。どちらも縦横比そのまま */
+.lp-kv { max-width: 420px; margin-inline: auto; }
+.lp-kv__stack { position: relative; }
+.lp-kv__stack img { display: block; width: 100%; height: auto; }
+.lp-kv__text { position: absolute; inset: 0; }
+
+/* 公式画像を中くらいの幅で（PCで縦に伸びすぎないように） */
+.lp-img-md { max-width: 480px; margin-inline: auto; }
+
+/* FV直下の実績（数値はHTMLで再掲） */
+.lp-proof { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 1em 0 .4em; }
+.lp-proof__cell { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: .7em .4em .6em; border: 2px solid #9cc3e8; border-radius: 8px; background: var(--mt-blue-bg); text-align: center; line-height: 1.35; }
+.lp-proof__k { color: #0d3c6e; font-size: 13.5px; font-weight: 900; }
+.lp-proof__v { margin: .1em 0; color: var(--mt-red); font-size: 30px; font-weight: 900; line-height: 1.15; }
+.lp-proof__v--txt { font-size: 22px; }
+.lp-proof__s { color: #333; font-size: 11.5px; font-weight: 700; }
+
+/* 4社ロゴ：比較表もランキングも同じ最大高。白地の枠で余白を確保し、ロゴは改変しない */
+.lp-logo { display: flex; align-items: center; justify-content: center; height: 46px; margin: 0 0 .35em; padding: 6px 8px; border-radius: 4px; background: #fff; }
+.lp-logo img { display: block; width: auto; height: auto; max-width: 100%; max-height: 32px; }
+.lp-cmp thead th { vertical-align: top; }
+.lp-rank-logo { display: flex; align-items: center; justify-content: center; height: 64px; margin: 0 0 1em !important; padding: 10px; border: 1px solid var(--mt-rule); border-radius: 6px; background: #fff; }
+.lp-rank-logo img { display: block; width: auto; height: auto; max-width: 70%; max-height: 40px; }
+
+/* 1位：公式イラスト4点（文字はHTML） */
+.lp-ill__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.lp-ill__grid li { margin: 0; padding: .5em .4em .6em; border: 1px solid var(--mt-rule); border-radius: 8px; background: #fff; text-align: center; }
+.lp-ill__grid img { display: block; width: 72%; max-width: 150px; height: auto; margin: 0 auto .3em; }
+.lp-ill__grid span { display: block; font-size: 13px; font-weight: 700; line-height: 1.45; }
+
+/* 料金：公式の小アイコン（文字はHTML） */
+.lp-icons { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin: 1em 0 .2em; padding: 0; list-style: none; }
+.lp-icons li { margin: 0; text-align: center; }
+.lp-icons img { display: block; width: 100%; max-width: 120px; height: auto; margin: 0 auto .2em; }
+.lp-icons span { display: block; font-size: 12px; font-weight: 700; line-height: 1.45; }
+.lp-icons__note { margin: 0 0 1em !important; }
+
+/* 17 返金保証（HTML/CSS図解。条件が多いので画像にしない） */
+.lp-flow { margin: 1.2em 0; padding: 0; list-style: none; }
+.lp-flow__step { position: relative; margin: 0 0 28px; padding: .7em .9em; border: 2px solid var(--mt-blue); border-radius: 8px; background: #fff; text-align: center; }
+.lp-flow__step:not(:last-child)::after { content: ""; position: absolute; left: 50%; bottom: -22px; margin-left: -11px; border-style: solid; border-width: 14px 11px 0; border-color: var(--mt-orange) transparent transparent; }
+.lp-flow__when { display: block; color: var(--mt-blue); font-size: 13px; font-weight: 900; }
+.lp-flow__what { display: block; font-size: 17px; font-weight: 900; line-height: 1.5; }
+.lp-flow__sub { display: block; margin-top: .2em; color: #555; font-size: 12.5px; font-weight: 700; }
+.lp-flow__step--goal { border-color: var(--mt-orange); background: var(--mt-yellow-bg); }
+
+/* 小さめの画像指示枠（FAQの区切りイラスト） */
+.lp-imgslot--sm { max-width: 360px; margin-inline: auto; }
+
+/* mt-caution 内のリスト */
+.mt-caution ul { margin: 0; padding-left: 1.2em; }
+.mt-caution li { margin: 0 0 .3em; font-size: 14px; line-height: 1.65; }
+
+/* mt-fit：スマホでは1列（parts.css本体は変えない） */
+@media (max-width: 480px) { .mt-fit { grid-template-columns: 1fr; } }
