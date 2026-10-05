@@ -80,3 +80,4 @@ a { color: var(--mt-blue); }
 
 .lp-nowrap { white-space: nowrap; }
 .lp-cmp td b { color: var(--mt-blue); }
+.lp-cmp .mt-mini-btn { margin-top: .3em; }
