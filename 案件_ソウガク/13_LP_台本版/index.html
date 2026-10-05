@@ -16,7 +16,7 @@
   <!-- 組み方：hozon「体験談ランキング型LP パーツ集」（https://hakobu-family.com/lp-parts/）のHTML・ルールどおり -->
   <!-- 文言：王道LP_最終稿_v3.csv ＋ LP_体験談パーツ活用台本_v4.md ＋ LP_公式LP強訴求反映_v5.md／画像：LP画像素材_実装指示_v6.md（出典は 画像出典.md） -->
 
-  <!-- 01 FV：ヒーロー（見出し入り画像。h1 の中身は画像の alt＝見出し文言）→ PR帯 → 悩みの問いかけ → 共感 → サービス名の登場 → 大ボタン -->
+  <!-- 01 FV（比較LPとして中立。ソウガクの名前・無料体験・実績はここでは出さない）：ヒーロー（見出し入り画像。h1 の中身は画像の alt＝見出し文言）→ PR帯 → 悩みの問いかけ → 共感 → 比較表へのボタン -->
   <h1 class="lp-hero"><img src="images/gen/00_hero.webp" alt="教えているのに、なぜか進まない。そんな毎日を、親子だけで抱え込まなくても。" width="1200" height="675"></h1>
 
   <div class="mt-prbar"><span><b>PR</b>　本ページはプロモーションを含みます</span><span>更新日：2026年10月5日</span></div>
@@ -25,90 +25,43 @@
 
   <p>宿題が進まない。集中が続かない。<br>何度説明しても、同じところで止まってしまう。</p>
 
-  <p>それは「やる気」だけではなく、<span class="mt-mark">今の学び方がお子さんに合っていない</span>こともあります。</p>
+  <p>それは「やる気」の問題ではなく、<br><span class="mt-mark">今の学び方がお子さんに合っていない</span>こともあります。</p>
 
-  <div class="mt-bridge"><p class="mt-bridge__s">発達障害・グレーゾーンなど、<br>一人ひとりの“つまずき方”に合わせて学ぶ<br>オンライン家庭教師</p><p class="mt-bridge__name">＼<span>ソウガク</span>／</p></div>
+  <p>発達特性のあるお子さんの家庭教師は、<br><b>「1対1ならどこでも同じ」ではありません。</b></p>
 
-  <div class="mt-cta" id="cta-early"><p class="mt-cta__micro">＼診断がなくても、グレーゾーンでも相談できます／</p><a class="mt-cta__btn" href="#" data-cta target="_blank" rel="sponsored nofollow noopener noreferrer">無料体験で相談してみる</a><p class="mt-cta__note">-無料体験は2回まで-</p></div>
-
-  <div class="mt-points"><ul>
-    <li>無料体験は2回まで。</li>
-    <li>1回目を保護者と担当教師の面談にすることもできます。</li>
-    <li>体験後の無理な勧誘はしないと公式FAQに明記されています。</li>
-  </ul></div>
-
-  <!-- 02 FV直下｜無料体験・実績・返金保証（v5）。公式画像で目を止め、数値・条件はHTMLで再掲 -->
-  <p class="mt-oneline"><span>いきなり入会を決めなくて大丈夫です。</span></p>
-  <p>ソウガクには、入会前にも入会後にも「合わなかったら」に備えた仕組みがある、ということ。</p>
-
-  <!-- ソウガク公式LPのキービジュアル。公式LPと同じく写真レイヤーの上に文字レイヤー（透過PNG）を重ねて表示（画像は改変しない） -->
-  <figure class="mt-img">
-    <div class="lp-kv">
-      <picture>
-        <source media="(min-width: 600px)" srcset="images/official/sogaku/eye-catch_pc_photo_online2.png" width="1920" height="1200">
-        <img src="images/official/sogaku/eye-catch_sp_photo_online2.png" alt="" width="600" height="1102" loading="lazy">
-      </picture>
-      <picture class="lp-kv__text">
-        <source media="(min-width: 600px)" srcset="images/official/sogaku/eye-catch_pc_text_online2.png" width="1920" height="1200">
-        <img src="images/official/sogaku/eye-catch_sp_text_online2.png" alt="ソウガク公式LPの画像：全国対応、小学生・中学生・高校生対象、発達障害・グレーゾーン専門オンライン家庭教師。この子に合う先生って、いるのかな。専門機関監修（発達凸凹アソシエーション）、入会後継続率96.7％（入会後も安心の実績）、認定講師100％（専門研修受講済み）。そんな不安を、無料体験2回＋1ヵ月全額返金保証で解消します。相性が合わなければ入会不要。安心して試せます。" width="600" height="1102" loading="lazy">
-      </picture>
-    </div>
-    <figcaption class="mt-img__note">画像：ソウガク公式LPより</figcaption>
-  </figure>
-
-  <div class="mt-points"><ul>
-    <li>無料体験は2回。相性を見てから入会を検討できる</li>
-    <li>入会後継続率96.7%・認定講師100%（公式LP掲載）</li>
-    <li>一般社団法人 発達凸凹アソシエーション監修</li>
-    <li>入会後も授業料1カ月分の全額返金保証（条件あり）</li>
-  </ul></div>
-  <p class="mt-small">※数値・表現はソウガク公式LP（2026年10月5日確認）掲載に基づきます。</p>
-
-  <div class="mt-caution"><p class="mt-caution__ttl">返金保証の条件に注意</p><p>初回授業日から30日以内に連絡した、初めて利用する家庭（1世帯1回）が対象です。最低1回の授業受講が必要で、返金されるのは1カ月分の受講料です（入会金は対象外）。</p><p>対象は小学生25分/50分、中学生・高校生35分/60分の各月4回までのコース。詳細は公式サイトで確認してください。</p></div>
-
-  <!-- 迷いの会話（v4）。右＝悩む人（保護者）、左＝筆者（編集部）。よくある迷いを整理したもの -->
-  <div class="mt-talk">
-    <div class="mt-talk__row mt-talk__row--r"><div class="mt-talk__who"><span class="mt-talk__icon"><img src="images/gen/icon_parent.webp" alt="" width="240" height="240"></span><span class="mt-talk__name">保護者</span></div><div class="mt-talk__b">家庭教師は気になるけど、本人が「やりたくない」と言いそうで…。</div></div>
-    <div class="mt-talk__row"><div class="mt-talk__who"><span class="mt-talk__icon"><img src="images/gen/icon_editor.webp" alt="" width="240" height="240"></span><span class="mt-talk__name">編集部</span></div><div class="mt-talk__b">最初からお子さんを参加させなくても、<span class="mt-mark">1回目を保護者と担当教師の面談に</span>できます。</div></div>
-    <div class="mt-talk__row mt-talk__row--r"><div class="mt-talk__who"><span class="mt-talk__icon"><img src="images/gen/icon_parent.webp" alt="" width="240" height="240"></span><span class="mt-talk__name">保護者</span></div><div class="mt-talk__b">まだ診断もついていないんですが、それでも相談していいですか？</div></div>
-    <div class="mt-talk__row"><div class="mt-talk__who"><span class="mt-talk__icon"><img src="images/gen/icon_editor.webp" alt="" width="240" height="240"></span><span class="mt-talk__name">編集部</span></div><div class="mt-talk__b">診断がなくても、グレーゾーンでも相談できます。<br>どこを見て選べばいいか、下で比べますね。</div></div>
-  </div>
-  <p class="mt-small">※利用者の体験談ではなく、保護者からよく聞く迷いを編集部が会話形式に整理したものです。人物の写真はイメージです。</p>
+  <!-- ページ内リンク（ASPではない）：比較表へ -->
+  <div class="mt-cta"><p class="mt-cta__micro">＼4社の違いを表で比べました／</p><a class="mt-cta__btn" href="#compare">発達特性に合う家庭教師を比較する</a></div>
 
   <p>毎日そばで見ているからこそ、<br>「何が合っていないんだろう」と分からなくなることがあります。</p>
 
-  <p>家庭教師を探しても、「マンツーマン」「個別対応」という言葉はどこも似ています。<br>だからこそ、名前や知名度より、<span class="mt-mark">“何を見て、どう支えてくれるか”</span>で比べてみました。</p>
+  <p>家庭教師を探しても、<br>「マンツーマン」「個別対応」という言葉はどこも似ています。</p>
 
-  <div class="mt-check"><p class="mt-check__ttl">こんな状況なら読んでみて</p><ul>
-    <li>宿題が進まず、毎日声をかけている</li>
-    <li>何度説明しても、同じところで止まってしまう</li>
-    <li>家で教えると、つい言い合いになる</li>
-    <li>塾や一般的な家庭教師が合わなかった</li>
-  </ul><p class="mt-check__foot">1つでも当てはまったら、<span class="mt-mark">学び方の合う先生</span>を探すタイミングです</p></div>
+  <p>そこで今回は、名前や知名度ではなく、<br><span class="mt-mark">“何を見て、どう支えてくれるか”</span>で比べました。</p>
 
-  <!-- 03 比較導入 → 04 比較表 → 結論 -->
-  <h2 class="mt-h2"><span class="lp-nw">発達特性のあるお子さんの</span><span class="lp-nw">家庭教師、</span><br><span class="lp-nw">「1対1」だけで</span><span class="lp-nw">選んでいませんか？</span></h2>
+  <!-- 03 比較導入 → 04 比較表 → 比べて分かったこと（比較表までは極力フラット） -->
+  <h2 class="mt-h2" id="compare"><span class="lp-nw">発達特性のあるお子さんの</span><span class="lp-nw">家庭教師、</span><br><span class="lp-nw">「1対1」だけで</span><span class="lp-nw">選んでいませんか？</span></h2>
   <figure class="mt-img" data-img="IMG-03"><img src="images/gen/03_compare_3points.webp" alt="家庭教師選びで見る3つのポイント：特性理解（お子さんの特性を理解してもらえるか）、つまずき把握（「どこで止まっているか」から学び方を考えてもらえるか）、家庭連携（家庭での困りごとも相談できるか）" width="1200" height="900" loading="lazy"></figure>
-  <p>見るなら、この3つです。</p>
-  <p>① お子さんの特性を理解してもらえるか<br>② 「どこで止まっているか」から学び方を考えてもらえるか<br>③ 家庭での困りごとも相談できるか</p>
+  <p><b>この3つを基準に、発達特性への学習サポートを行っている4社を比較します。</b></p>
 
-  <!-- 比較表：左の列（サービス名＝各社公式ロゴ）を固定、推す行に is-pick。記号評価なし・各社公式の事実を並列 -->
+  <!-- 比較表：左の列（サービス名＝各社公式ロゴ）を固定。比較前なので推す行の色・申込ボタンは付けない。記号評価なし・各社公式の事実を並列 -->
   <p class="mt-hint">表は横にスクロール可能</p>
   <div class="mt-scroll">
     <table class="mt-table lp-cmp">
       <thead><tr><th>サービス</th><th>発達特性への<br>位置づけ</th><th>先生側の<br>支援体制</th><th>つまずき把握→<br>学び方の設計</th><th>保護者への<br>継続サポート</th><th>入会前に<br>確認できること</th><th>試してから<br>決めやすいか</th></tr></thead>
       <tbody>
-        <tr class="is-pick"><td><span class="lp-logo"><img src="images/logos/sogaku-logo.svg" alt="ソウガク" width="500" height="186"></span><span class="mt-name">ソウガク</span><a class="mt-mini-btn" href="#" data-cta target="_blank" rel="sponsored nofollow noopener noreferrer">無料体験</a></td><td>発達障害・グレーゾーン専門</td><td>発達支援専門機関による教師研修＋マニュアル研修</td><td>専門家開発のアセスメント→個別指導計画</td><td>毎回の指導報告＋教師/本部チャット＋保護者向け勉強会・相談窓口</td><td>2回まで無料体験。体験後に個別指導計画</td><td>無料体験2回＋授業料1カ月全額返金保証（条件あり）</td></tr>
+        <tr><td><span class="lp-logo"><img src="images/logos/sogaku-logo.svg" alt="ソウガク" width="500" height="186"></span><span class="mt-name">ソウガク</span></td><td>発達障害・グレーゾーン専門</td><td>発達支援専門機関による教師研修＋マニュアル研修</td><td>専門家開発のアセスメント→個別指導計画</td><td>毎回の指導報告＋教師/本部チャット＋保護者向け勉強会・相談窓口</td><td>2回まで無料体験。体験後に個別指導計画</td><td>無料体験2回＋授業料1カ月全額返金保証（条件あり）</td></tr>
         <tr><td><span class="lp-logo"><img src="images/logos/runner-logo.svg" alt="家庭教師のランナー" width="406" height="141"></span><span class="mt-name">家庭教師のランナー</span></td><td>発達障害サポートコースあり</td><td>特性を共有し、指導方法をレクチャー</td><td>体験内容をもとに指導カルテ</td><td>保護者LINE＋本部から定期確認</td><td>90分無料体験</td><td>90分無料体験</td></tr>
         <tr><td><span class="lp-logo"><img src="images/logos/try-logo.svg" alt="家庭教師のトライ" width="220" height="28"></span><span class="mt-name">家庭教師のトライ</span></td><td>発達障害の指導経験がある教師を選定可能</td><td>教育プランナーが教師選定・学習をサポート</td><td>つまずきの原因までさかのぼり個別設計</td><td>教育プランナー＋定期面談</td><td>無料学習相談</td><td>無料学習相談／体験</td></tr>
         <tr><td><span class="lp-logo"><img src="images/logos/succeed-logo.png" alt="家庭教師のサクシード" width="270" height="47"></span><span class="mt-name">家庭教師のサクシード</span></td><td>LD・ADHD・ASDサポートコースあり</td><td>発達支援経験が豊富な教師から選抜</td><td>特性をヒアリングし個別カリキュラム</td><td>専任スタッフが相談対応</td><td>無料体験</td><td>無料体験</td></tr>
       </tbody>
     </table>
   </div>
-  <p class="mt-hint">表は横にスクロール可能</p>
   <p class="mt-small">※2026年10月5日時点の各社公式サイトで確認できた内容を、当サイトが整理したものです。サービス内容・条件は変更される場合があります。ロゴは各社公式サイトに掲載のものです。</p>
 
-  <div class="mt-conclusion"><p class="mt-conclusion__ttl">【結論】</p><p>比べてみると、どのサービスにも良さがあります。そのうえで、発達特性を前提にした教師研修から、アセスメントと個別指導計画、毎回の報告と保護者の相談先まで、<span class="mt-mark">ひとつの流れとして確認できた</span>のはソウガクでした。</p><p>発達特性のある子の家庭教師を“仕組み”で選ぶなら、<a href="#rank-1">「ソウガク」</a>がおすすめです。</p></div>
+  <h3 class="mt-h3">比べて分かったこと</h3>
+  <p>4社とも、発達特性のあるお子さんへの支援があります。</p>
+  <p>その中でもソウガクは、<span class="mt-mark">教師研修から個別指導計画、指導後の共有・保護者支援までが一つのサービス設計としてつながっている</span>のが特徴でした。</p>
+  <p>このあと、今回の3つの基準をもとにおすすめ順で詳しく見ていきます。</p>
 
   <!-- 05〜07 選び方 -->
   <h2 class="mt-h2"><span class="lp-nw">発達特性のある子の</span><span class="lp-nw">家庭教師選びで、</span><span class="lp-nw">見てほしい3つのこと</span></h2>
@@ -137,7 +90,7 @@
   <div class="mt-info"><p class="mt-info__ttl">ランキングの評価基準とは？</p><ul><li>発達特性を前提にした支援設計</li><li>つまずき把握と個別の学び方づくり</li><li>保護者との継続的な連携</li></ul></div>
   <p class="mt-small">※各社公式サイトで確認できる情報（2026年10月5日時点）をもとに、編集部が独自に評価しています。</p>
 
-  <!-- 09 第1位：ソウガク（順位見出し → バナー → サービス早見 → 本文 → 体験談 → ボタン） -->
+  <!-- 09 第1位：ソウガク（ここで初めて強く訴求。強い証拠＝実績・公式KV・指導画面・公式体験談・返金保証をここに集約） -->
   <h3 class="mt-h3" id="rank-1"><span class="mt-h3__rank">🥇</span>第1位：ソウガク｜発達特性の専門性だけでなく、「始めてから合わなかった」まで考えた設計</h3>
   <a class="mt-banner lp-banner" href="#" data-cta target="_blank" rel="sponsored nofollow noopener noreferrer"><img src="images/12158-1789468146.8095-4.jpg" alt="発達障害・グレーゾーン専門オンライン家庭教師ソウガク。「できた！」を実感できるスモールステップの授業を実施" width="300" height="250" loading="lazy"><span class="mt-banner__pr">PR</span></a>
   <p class="lp-rank-logo"><img src="images/logos/sogaku-logo.svg" alt="ソウガク" width="500" height="186" loading="lazy"></p>
@@ -157,25 +110,44 @@
       <div class="mt-spec__cell mt-spec__cell--wide"><dt class="mt-spec__k">認定講師</dt><dd class="mt-spec__mark">100%</dd><dd class="mt-spec__v">専門研修受講済み（公式LP掲載）</dd></div>
       <div class="mt-spec__cell mt-spec__cell--wide"><dt class="mt-spec__k">返金保証</dt><dd class="mt-spec__mark">1カ月</dd><dd class="mt-spec__v">授業料全額（条件あり・入会金は対象外）</dd></div>
     </dl>
-    <div class="mt-cta"><p class="mt-cta__micro">＼まずは無料体験2回から／</p><a class="mt-cta__btn" href="#" data-cta target="_blank" rel="sponsored nofollow noopener noreferrer">【1位】ソウガク 無料体験を申し込む</a></div>
+    <div class="mt-cta" id="cta-rank1"><p class="mt-cta__micro">＼まずは無料体験2回から／</p><a class="mt-cta__btn" href="#" data-cta target="_blank" rel="sponsored nofollow noopener noreferrer">【1位】ソウガク 無料体験を申し込む</a></div>
   </div>
+  <p class="mt-small">※数値・表現はソウガク公式LP（2026年10月5日確認）掲載に基づきます。</p>
 
-  <p>先生は、一般社団法人 発達凸凹アソシエーションによる教師研修と、座学のマニュアル研修を受けた社会人講師です。<br>保護者向けの勉強会や相談窓口もあり、入会後も同じ先生が担当します。</p>
+  <p class="mt-oneline"><span>いきなり入会を決めなくて大丈夫です。</span></p>
+  <p>ソウガクには、入会前にも入会後にも「合わなかったら」に備えた仕組みがある、ということ。</p>
 
-  <p>体験の2回だけで「合う・合わない」を決め切れなくても、</p>
-  <p class="mt-oneline"><span>入会後の最初の1カ月まで試せる</span></p>
-  <p>ということ。発達特性のある子の家庭にとって、かなり大きな安心材料です。</p>
+  <!-- ソウガク公式LPのキービジュアル。公式LPと同じく写真レイヤーの上に文字レイヤー（透過PNG）を重ねて表示（画像は改変しない） -->
+  <figure class="mt-img">
+    <div class="lp-kv">
+      <picture>
+        <source media="(min-width: 600px)" srcset="images/official/sogaku/eye-catch_pc_photo_online2.png" width="1920" height="1200">
+        <img src="images/official/sogaku/eye-catch_sp_photo_online2.png" alt="" width="600" height="1102" loading="lazy">
+      </picture>
+      <picture class="lp-kv__text">
+        <source media="(min-width: 600px)" srcset="images/official/sogaku/eye-catch_pc_text_online2.png" width="1920" height="1200">
+        <img src="images/official/sogaku/eye-catch_sp_text_online2.png" alt="ソウガク公式LPの画像：全国対応、小学生・中学生・高校生対象、発達障害・グレーゾーン専門オンライン家庭教師。この子に合う先生って、いるのかな。専門機関監修（発達凸凹アソシエーション）、入会後継続率96.7％（入会後も安心の実績）、認定講師100％（専門研修受講済み）。そんな不安を、無料体験2回＋1ヵ月全額返金保証で解消します。相性が合わなければ入会不要。安心して試せます。" width="600" height="1102" loading="lazy">
+      </picture>
+    </div>
+    <figcaption class="mt-img__note">画像：ソウガク公式LPより</figcaption>
+  </figure>
+
+  <p>先生は、一般社団法人 発達凸凹アソシエーションによる教師研修と、座学のマニュアル研修を受けた社会人講師です。公式LPでは「専門機関監修（一般社団法人 発達凸凹アソシエーション）」と案内されています。<br>保護者向けの勉強会や相談窓口もあり、入会後も同じ先生が担当します。</p>
 
   <figure class="mt-img">
     <img src="images/official/sogaku/course-top_tool_communication.png" alt="ソウガク公式サイトの指導コミュニケーションツール画面：指導報告の確認、画像・ファイルの送信、教師とチャットでやり取り、本部とチャットでやり取り" width="600" height="487" loading="lazy">
     <figcaption class="mt-img__note">毎回の指導報告と、教師・本部とのチャット（画像：ソウガク公式サイトより）</figcaption>
   </figure>
 
+  <p>体験の2回だけで「合う・合わない」を決め切れなくても、</p>
+  <p class="mt-oneline"><span>入会後の最初の1カ月まで試せる</span></p>
+  <p>ということ。発達特性のある子の家庭にとって、かなり大きな安心材料です。</p>
+
   <div class="mt-fit">
     <div class="mt-fit__col"><p class="mt-fit__ttl">向いている人</p><ul><li>塾が合わなかった</li><li>つまずきから見てほしい</li><li>授業後も相談したい</li></ul></div>
-    <div class="mt-fit__col mt-fit__col--ng"><p class="mt-fit__ttl">向いていない人</p><ul><li>対面で教えてほしい</li><li>画面越しが苦手</li></ul></div>
+    <div class="mt-fit__col"><p class="mt-fit__ttl">体験で確認したいこと</p><ul><li>オンラインとの相性</li><li>授業時間（25分・50分）</li><li>先生との相性</li></ul></div>
   </div>
-  <p>対面で探したいなら、2位のランナーや3位のサクシードも候補です。<br>画面越しの授業に抵抗がないか、集中しやすい授業時間（25分/50分など）、先生との相性は、無料体験で確かめられます。</p>
+  <p>画面越しの授業に抵抗がないか、集中しやすい授業時間はどれか、先生と話せそうか。<br>このあたりは、入会前の無料体験で確かめられます。</p>
 
   <h4 class="mt-h4">体験談｜「<em>その子に合う学び方</em>」を相談できたケース</h4>
   <div class="mt-story">
@@ -185,7 +157,16 @@
     <p class="mt-small">※ソウガク公式「生徒・保護者様の声」を当サイトで要約したものです。個人の感想です。</p>
   </div>
 
-  <div class="mt-caution"><p class="mt-caution__ttl">入会金と、オンラインとの相性に注意</p><p>入会金22,000円（税込）は別途かかります。料金やキャンペーンは最新の公式情報を確認してください。</p><p>オンラインが合うかどうかは、無料体験で確認しましょう。</p></div>
+  <!-- 迷いの会話（v4）。ソウガクを見たあとの「うちの場合は？」に答える位置。右＝悩む人（保護者）、左＝筆者（編集部）。よくある迷いを整理したもの -->
+  <div class="mt-talk">
+    <div class="mt-talk__row mt-talk__row--r"><div class="mt-talk__who"><span class="mt-talk__icon"><img src="images/gen/icon_parent.webp" alt="" width="240" height="240"></span><span class="mt-talk__name">保護者</span></div><div class="mt-talk__b">家庭教師は気になるけど、本人が「やりたくない」と言いそうで…。</div></div>
+    <div class="mt-talk__row"><div class="mt-talk__who"><span class="mt-talk__icon"><img src="images/gen/icon_editor.webp" alt="" width="240" height="240"></span><span class="mt-talk__name">編集部</span></div><div class="mt-talk__b">最初からお子さんを参加させなくても、<span class="mt-mark">1回目を保護者と担当教師の面談に</span>できます。</div></div>
+    <div class="mt-talk__row mt-talk__row--r"><div class="mt-talk__who"><span class="mt-talk__icon"><img src="images/gen/icon_parent.webp" alt="" width="240" height="240"></span><span class="mt-talk__name">保護者</span></div><div class="mt-talk__b">まだ診断もついていないんですが、それでも相談していいですか？</div></div>
+    <div class="mt-talk__row"><div class="mt-talk__who"><span class="mt-talk__icon"><img src="images/gen/icon_editor.webp" alt="" width="240" height="240"></span><span class="mt-talk__name">編集部</span></div><div class="mt-talk__b">診断がなくても、グレーゾーンでも相談できます。<br>まずは今の様子から、無料体験で相談してみてください。</div></div>
+  </div>
+  <p class="mt-small">※利用者の体験談ではなく、保護者からよく聞く迷いを編集部が会話形式に整理したものです。人物の写真はイメージです。</p>
+
+  <div class="mt-caution"><p class="mt-caution__ttl">返金保証の条件と入会金に注意</p><p>返金保証は、初回授業日から30日以内に連絡した、初めて利用する家庭（1世帯1回）が対象です。最低1回の授業受講が必要で、対象は1カ月分の受講料（小学生25分/50分、中学生・高校生35分/60分の各月4回までのコース）です。</p><p>入会金22,000円（税込）は別途かかり、返金の対象外です。オンラインが合うかどうかは、無料体験で確認しましょう。</p></div>
 
   <div class="mt-cta"><p class="mt-cta__micro">＼1回目は保護者だけの面談もOK／</p><a class="mt-cta__btn" href="#" data-cta target="_blank" rel="sponsored nofollow noopener noreferrer">【1位】ソウガクで「この子に合う学び方」を相談する</a><p class="mt-cta__note">-入会金22,000円（税込）は別途-</p></div>
 
@@ -208,9 +189,9 @@
 
   <div class="mt-fit">
     <div class="mt-fit__col"><p class="mt-fit__ttl">向いている人</p><ul><li>勉強の苦手意識が強い</li><li>先生の相性を重視</li><li>対面も検討したい</li></ul></div>
-    <div class="mt-fit__col mt-fit__col--ng"><p class="mt-fit__ttl">向いていない人</p><ul><li>特性専門で選びたい</li></ul></div>
+    <div class="mt-fit__col"><p class="mt-fit__ttl">選ぶ前に確認したいこと</p><ul><li>体験と担当の教師の関係</li><li>料金・教材の総額</li><li>発達サポートの内容</li></ul></div>
   </div>
-  <p>特性専門のサービスで選びたいなら、1位のソウガクが候補です。</p>
+  <p>体験を担当する人と入会後の担当教師の関係や、教材を含めた月々の総額は、申込前に確認しておきましょう。</p>
 
   <div class="mt-info"><p class="mt-info__ttl">ソウガクとの違いとは？</p><p>ランナーは「勉強が苦手な子」全体を広く支援し、その中に発達障害サポートコースがあります。ソウガクは、サービス全体が発達障害・グレーゾーン専門です。</p></div>
 
@@ -235,9 +216,9 @@
 
   <div class="mt-fit">
     <div class="mt-fit__col"><p class="mt-fit__ttl">向いている人</p><ul><li>特性がはっきりしている</li><li>経験ある教師がいい</li><li>対面を軸に考えたい</li></ul></div>
-    <div class="mt-fit__col mt-fit__col--ng"><p class="mt-fit__ttl">向いていない人</p><ul><li>仕組みで選びたい</li></ul></div>
+    <div class="mt-fit__col"><p class="mt-fit__ttl">選ぶ前に確認したいこと</p><ul><li>特性に合わせた指導の確認</li><li>体験と担当の教師が同じか</li><li>料金の総額</li></ul></div>
   </div>
-  <p>研修から保護者支援までの仕組みで選びたいなら、1位のソウガクが候補です。</p>
+  <p>無料体験で特性に合わせた指導をどこまで確かめられるか、オンラインの場合の条件や料金の総額も、申込前に確認しておきましょう。</p>
 
   <div class="mt-info"><p class="mt-info__ttl">ソウガクとの違いとは？</p><p>サクシードも専用コースと教師選抜が強みです。ソウガクは、専門機関の教師研修から個別指導計画、毎回の報告・保護者の相談先までを一続きで公式に明示しています。</p></div>
 
@@ -245,7 +226,7 @@
 
   <div class="mt-info"><p class="mt-info__ttl">家庭教師のトライとは？</p><p>発達障害の指導経験を持つ教師を選べ、教育プランナーによるサポートもある大手です。今回は「発達特性を前提にした支援設計」を最重視したため、ランキングの評価軸とは異なります。</p></div>
 
-  <!-- 12〜15 体験談パート（悩み別。つぶやき → 口コミカード → 本文） -->
+  <!-- 12〜15 体験談パート（v4：悩み別に mt-say → mt-story → mt-review、最後に mt-voice） -->
   <h2 class="mt-h2"><span class="lp-nw">実際の保護者は、</span><span class="lp-nw">どんなところで</span><span class="lp-nw">「助かった」と感じている？</span></h2>
 
   <p>ここからは、ソウガク公式サイトに掲載されている保護者・生徒の声を、今回の悩みに沿って紹介します。<br>成果を保証するものではありませんが、「どんなところに変化を感じたのか」を見る材料にはなります。</p>
@@ -254,7 +235,12 @@
   <h3 class="mt-h3">家で教えると、ケンカになってしまう</h3>
   <figure class="mt-img" data-img="IMG-12"><img src="images/gen/12_story-a_parent-burden.webp" alt="夕方の食卓で、教材を前に困った顔の保護者と、問題に手が止まっている子ども（イメージ）" width="1200" height="800" loading="lazy"><figcaption class="mt-img__note">※画像はイメージです</figcaption></figure>
   <div class="mt-say"><span class="mt-say__icon"><img src="images/gen/icon_parent.webp" alt="" width="240" height="240"></span><p class="mt-say__b">家で私が教えると、つい言いすぎてしまう…。</p></div>
-  <div class="mt-review"><div class="mt-review__head"><span class="mt-review__icon" aria-hidden="true"></span><p class="mt-review__who">「親が全部見なくていい」と思えた（小学4年生・ADHDの診断あり・保護者）</p></div><p>学校へ行ける日が減り、勉強の遅れが気になっていました。家で勉強を見ると、イライラして親子で言い合いになることもありました。オンラインで週1回学ぶ習慣ができ、「ずっと自分が見なければ」という負担が軽くなったそうです。</p></div>
+  <div class="mt-story">
+    <p class="mt-story__who">公式サイト掲載の保護者の声（小学4年生・ADHDの診断あり・普通級）</p>
+    <p>学校へ行ける日が減り、勉強の遅れが気になっていました。家で保護者が勉強を見ると、イライラして親子で言い合いになることもあったそうです。</p>
+    <p>オンラインで週1回学ぶ習慣ができたことで、保護者が「ずっと自分が見なければ」と抱えていた負担が軽くなった、と紹介されています。</p>
+  </div>
+  <div class="mt-review"><div class="mt-review__head"><span class="mt-review__icon" aria-hidden="true"></span><p class="mt-review__who">「親が全部見なくていい」と思えたことが助けになった</p></div><p>勉強の習慣だけでなく、保護者自身の負担にも変化があった例です。</p></div>
   <p class="mt-small">※ソウガク公式サイト掲載の体験談を要約したものです。個人の感想です。</p>
   <p>親がもっと上手に教えられるようになることだけが答えではありません。<br><span class="mt-mark">家庭の外に、お子さんの困り方を一緒に見てくれる人を増やす。</span>それも一つの方法です。</p>
 
@@ -262,16 +248,26 @@
   <h3 class="mt-h3">オンラインで、座っていられるか不安</h3>
   <figure class="mt-img" data-img="IMG-13"><img src="images/gen/13_story-b_online-desk.webp" alt="家の机でノートパソコンのオンライン授業を受けながら、ノートに書き込む子ども（イメージ）" width="1200" height="800" loading="lazy"><figcaption class="mt-img__note">※画像はイメージです</figcaption></figure>
   <div class="mt-say"><span class="mt-say__icon"><img src="images/gen/icon_parent.webp" alt="" width="240" height="240"></span><p class="mt-say__b">画面の前に座って、授業を受けられるのかな…。</p></div>
-  <div class="mt-review"><div class="mt-review__head"><span class="mt-review__icon" aria-hidden="true"></span><p class="mt-review__who">関係づくりから始めてくれた（中学2年生・特別支援学級・保護者）</p></div><p>勉強への苦手意識があり、初回の体験では画面の前に座ることも難しかったそうです。先生は急がず時間をかけて関係をつくり、今では授業の時間を楽しみにしているという声です。</p></div>
+  <div class="mt-story">
+    <p class="mt-story__who">公式サイト掲載の保護者の声（中学2年生・特別支援学級）</p>
+    <p>勉強への苦手意識があり、初回の体験では落ち着いて画面の前に座ることも難しかったそうです。先生は急いで授業を進めず、時間をかけて関係をつくりました。</p>
+    <p>その後は授業の時間を楽しみにするようになり、勉強への苦手意識にも変化を感じている、と紹介されています。</p>
+  </div>
+  <div class="mt-review"><div class="mt-review__head"><span class="mt-review__icon" aria-hidden="true"></span><p class="mt-review__who">最初から「ちゃんと受けられる子」でなくても、関係づくりから始めたケース</p></div><p>オンラインだから集中できる、とは限りません。合うかどうかは体験で見ておくのが確実です。</p></div>
   <p class="mt-small">※ソウガク公式サイト掲載の体験談を要約したものです。個人の感想です。</p>
   <p>無理に「大丈夫です」とは言いません。<br>子どもによって、先生との相性も、画面越しの授業が合うかどうかも違うからです。<br>だから、入会してから悩むのではなく、<span class="mt-mark">先に体験で見ておく。</span></p>
 
   <!-- 14 体験談C -->
   <h3 class="mt-h3">集中が切れそうなとき、先生はどう関わる？</h3>
   <figure class="mt-img" data-img="IMG-14"><img src="images/gen/14_story-c_refocus.webp" alt="集中が切れたときの関わり方：01 集中が切れる→02 短い声かけ→03 もう一度課題へ" width="1200" height="900" loading="lazy"></figure>
-  <div class="mt-review"><div class="mt-review__head"><span class="mt-review__icon" aria-hidden="true"></span><p class="mt-review__who">声かけで、もう一度勉強に戻れた（小学5年生・保護者）</p></div><p>授業中に集中が切れそうになる場面でも、先生の声かけで再び勉強に向かう様子があり、本人も先生との授業を楽しみにしているという声です。</p></div>
+  <div class="mt-story">
+    <p class="mt-story__who">公式サイト掲載の生徒・保護者の声（小学5年生）</p>
+    <p>授業中に集中が切れそうになる場面でも、先生の声かけで再び勉強に向かう様子があったそうです。</p>
+    <p>本人も先生との授業を楽しみにしている、と保護者の声が掲載されています。</p>
+  </div>
+  <div class="mt-review"><div class="mt-review__head"><span class="mt-review__icon" aria-hidden="true"></span><p class="mt-review__who">集中が切れたときに、もう一度戻れる声かけをしてくれた</p></div><p>集中が切れることを前提にした関わりがあるかは、体験で見ておきたいポイントです。</p></div>
   <p class="mt-small">※ソウガク公式サイト掲載の体験談を要約したものです。個人の感想です。</p>
-  <p>集中が切れることを前提に、もう一度課題へ戻れる関わりがあるか。<br>発達特性を理解した関わりかどうかは、こうした場面に表れます。</p>
+  <p>発達特性を理解した関わりかどうかは、こうした場面に表れます。</p>
 
   <details class="mt-more"><summary>ほかの保護者の声も見る▼</summary>
     <div class="mt-review"><div class="mt-review__head"><span class="mt-review__icon" aria-hidden="true"></span><p class="mt-review__who">毎回の指導報告も確認できる（中学3年生・保護者）</p></div><p>学校の授業についていけず意欲を失っていましたが、体験時にタブレット画面へ向き合う姿が見られたそうです。先生の声かけと、毎回の指導報告を確認できることも評価されています。</p></div>
@@ -282,13 +278,13 @@
   <!-- 15 体験談まとめ -->
   <h3 class="mt-h3">公式の声から見えた、4つの変化</h3>
   <figure class="mt-img" data-img="IMG-15"><img src="images/gen/15_story_4changes.webp" alt="体験談から見えた4つの変化：01 関係づくりから始める、02 特性に合った声かけ、03 授業を楽しみにする、04 親の負担が軽くなる" width="1200" height="900" loading="lazy"></figure>
-  <div class="mt-points"><ul>
-    <li>最初から50分集中できなくても、関係づくりから始めている</li>
-    <li>特性に合わせた声かけや学び方を、保護者が評価している</li>
-    <li>授業そのものを楽しみにするようになった例がある</li>
-    <li>親の「自分が全部見なければ」という負担が軽くなった例もある</li>
+  <div class="mt-voice"><span class="mt-voice__lbl"><i>○</i>公式の保護者・生徒の声から見えたこと</span><ul>
+    <li>最初から50分集中できなくても、関係づくりから始めている例がある<small>（中学2年生・保護者）</small></li>
+    <li>特性に合わせた声かけや学び方を、保護者が評価している<small>（小学5年生・保護者）</small></li>
+    <li>授業そのものを楽しみにするようになった例がある<small>（中学2年生・小学5年生）</small></li>
+    <li>親の「自分が全部見なければ」という負担が軽くなった例もある<small>（小学4年生・保護者）</small></li>
   </ul></div>
-  <p class="mt-small">※ソウガク公式「生徒・保護者様の声」を当サイトで要約。個人の感想で、成果には個人差があります。</p>
+  <p class="mt-small" style="text-align:right">※ソウガク公式「生徒・保護者様の声」を当サイトで要約。個人の感想です。</p>
 
   <p class="mt-textlink">▶<a href="#" data-cta target="_blank" rel="sponsored nofollow noopener noreferrer">ソウガクの無料体験で相談してみる</a><small>└1回目は保護者だけの面談にもできます</small></p>
 
@@ -363,7 +359,6 @@
       </tbody>
     </table>
   </div>
-  <p class="mt-hint">表は横にスクロール可能</p>
   <p class="mt-small">※すべて税込。2026年10月5日時点のソウガク公式サイトの料金です。</p>
 
   <div class="mt-points"><ul>
@@ -391,7 +386,7 @@
     <details><summary>1カ月全額返金保証は、本当に全額戻りますか？</summary><p class="mt-faq__a">対象は1カ月分の受講料で、入会金は対象外です。初回授業日から30日以内、最低1回の授業受講、保証期間内の連絡などの条件があります。対象コース・回数にも条件があるため、申込前に公式サイトで最新条件を確認してください。</p></details>
   </div>
 
-  <!-- 20 最終CTA（まとめ → 全順位のボタン） -->
+  <!-- 20 最終CTA（出口はソウガク1本） -->
   <h2 class="mt-h2"><span class="lp-nw">ここまで読んでも、</span><span class="lp-nw">まだ迷っていて</span><span class="lp-nw">大丈夫です。</span></h2>
   <figure class="mt-img" data-img="IMG-20"><img src="images/gen/20_final_morning-desk.webp" alt="朝の光が入る机に、ノートと鉛筆、マグカップが整えて置かれている" width="1200" height="800" loading="lazy"></figure>
   <p>お子さんのことだから、簡単には決められないと思います。</p>
@@ -409,11 +404,7 @@
     <li>授業料1カ月分返金保証※</li>
   </ul></div>
 
-  <div class="mt-cta-stack">
-    <div class="mt-cta"><p class="mt-cta__micro">＼2回無料で相性を確認。入会後も1カ月授業料全額返金保証※／</p><a class="mt-cta__btn" href="#" data-cta target="_blank" rel="sponsored nofollow noopener noreferrer">【1位】ソウガクの無料体験を申し込む</a><p class="mt-cta__note">-※保証には条件があります。入会金は返金対象外-</p></div>
-    <div class="mt-cta"><p class="mt-cta__micro">＼勉強の苦手意識から相談したいなら／</p><a class="mt-cta__btn" href="https://k-runner.co.jp/course/developmental-disabilities/" target="_blank" rel="nofollow noopener">【2位】家庭教師のランナー 公式サイト</a></div>
-    <div class="mt-cta"><p class="mt-cta__micro">＼特性がはっきりしていて対面も考えるなら／</p><a class="mt-cta__btn" href="https://www.benkyo.co.jp/course/ld-adhd-asd/" target="_blank" rel="nofollow noopener">【3位】家庭教師のサクシード 公式サイト</a></div>
-  </div>
+  <div class="mt-cta"><p class="mt-cta__micro">＼2回無料で相性を確認。入会後も1カ月授業料全額返金保証※／</p><a class="mt-cta__btn" href="#" data-cta target="_blank" rel="sponsored nofollow noopener noreferrer">【1位】ソウガクの無料体験を申し込む</a><p class="mt-cta__note">-※保証には条件があります。入会金は返金対象外-</p></div>
 
   <!-- 注記 -->
   <div class="lp-foot">
@@ -439,18 +430,18 @@
   <p class="lp-site-foot__copy">© わが子の学び方ガイド</p>
 </footer>
 
-<!-- 追従ボタン（1位のボタンだけ。最初の大ボタン #cta-early を過ぎたら出す） -->
+<!-- 追従ボタン（1位のボタンだけ。第1位の最初の大ボタン #cta-rank1 を過ぎたら出す＝比較前には出さない） -->
 <div class="mt-sticky"><p class="mt-sticky__micro">＼1位はこちら／</p><div class="mt-cta"><a class="mt-cta__btn" href="#" data-cta target="_blank" rel="sponsored nofollow noopener noreferrer">【1位】ソウガク 無料体験</a></div></div>
 
 <script>
-  /* 公式サイト（ASP計測リンク）：ここを1か所差し替えると全CTAに反映されます */
+  /* 【公開前に必ず変更】ASPの本番計測URL。ここを1か所差し替えると全CTA（data-cta）に反映されます。現在は仮の "#" */
   var CTA_URL = "#";
   document.querySelectorAll("[data-cta]").forEach(function (a) { a.href = CTA_URL; });
 </script>
 <script>
-/* パーツ集 mt-sticky のscript。監視対象は最初の大ボタン（#cta-early） */
+/* パーツ集 mt-sticky のscript。監視対象は第1位の最初の大ボタン（#cta-rank1） */
 (function () {
-  var s = document.querySelector('.mt-sticky'), t = document.querySelector('#cta-early');
+  var s = document.querySelector('.mt-sticky'), t = document.querySelector('#cta-rank1');
   if (!s || !t || !('IntersectionObserver' in window)) { if (s) s.classList.add('is-show'); return; }
   new IntersectionObserver(function (e) {
     s.classList.toggle('is-show', !e[0].isIntersecting && e[0].boundingClientRect.top < 0);
