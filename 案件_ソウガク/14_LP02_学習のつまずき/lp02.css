@@ -1,0 +1,25 @@
+/* LP02（発達特性×学習のつまずき）専用。parts.css・style.css は LP01 と同一ファイルのまま使い、ここには LP02 で増えた部分だけを書く */
+
+/* FV：LP01 は見出し入りのヒーロー画像。LP02 は画像を作るまでテキストの h1 */
+.lp02-fv { margin: .4em 0 .2em; }
+.lp02-fv__ttl { margin: 0 0 .2em; font-size: min(24px, 6.2vw); font-weight: 900; line-height: 1.55; letter-spacing: .01em; }
+.lp02-fv__ttl .lp02-fv__key { color: var(--mt-blue); background: linear-gradient(transparent 62%, var(--mt-mark) 62%); }
+
+/* ページ内ボタン（ASPリンクではない）：大ボタンと同じ形で色だけ変える */
+.lp02-anchor-btn { background: #fff !important; color: var(--mt-blue) !important; border: 2px solid var(--mt-blue); box-shadow: 0 4px 0 #9cc3e8 !important; }
+.lp02-anchor-btn::after { display: none; }
+
+/* 悩み別ナビ：5つのカード（各セクションへのページ内リンク） */
+.lp02-nav { display: grid; gap: 8px; margin: 1.2em 0 1.6em; padding: 0; list-style: none; }
+.lp02-nav a { position: relative; display: block; padding: .8em 2.2em .8em 1em; border: 2px solid #9cc3e8; border-radius: 10px; background: #fff; color: var(--mt-ink); text-decoration: none; }
+.lp02-nav a::after { content: "›"; position: absolute; right: .8em; top: 50%; transform: translateY(-52%); color: var(--mt-blue); font-size: 24px; font-weight: 900; }
+.lp02-nav b { display: block; color: var(--mt-blue); font-size: 15.5px; line-height: 1.5; }
+.lp02-nav span { display: block; margin-top: .2em; color: var(--mt-sub); font-size: 13px; line-height: 1.6; }
+
+/* ケース（G1）・たとえば（G3）の箱：見出し＋「→」の答え */
+.lp02-case { margin: 1em 0; padding: .9em 1em .8em; border-left: 5px solid var(--mt-blue); border-radius: 0 8px 8px 0; background: var(--mt-blue-bg); }
+.lp02-case__ttl { margin: 0 0 .3em !important; color: var(--mt-blue); font-size: 15.5px; font-weight: 900; line-height: 1.5; }
+.lp02-case p:last-child { margin-bottom: 0; }
+
+/* ページ内リンクの着地点が見出しに隠れないように */
+.lp02-target { scroll-margin-top: 12px; }
