@@ -55,7 +55,7 @@ a { color: var(--mt-blue); }
 .lp-kv__text { position: absolute; inset: 0; }
 
 /* 比較表：左の列＝各社公式ロゴ＋サービス名（パーツ集の mt-ico の代わり）。ロゴは4社とも同じ最大高 */
-.lp-cmp { min-width: 840px; }
+.lp-cmp { min-width: 720px; }
 .lp-cmp td { text-align: left; vertical-align: top; }
 .lp-cmp td:first-child { width: 10em; text-align: center; vertical-align: middle; }
 .lp-cmp .mt-name { display: block; margin-bottom: .3em; font-size: 12px; }
@@ -79,3 +79,4 @@ a { color: var(--mt-blue); }
 .lp-h3sub { display: block; margin-top: .15em; color: var(--mt-sub); font-size: 14px; font-weight: 400; line-height: 1.5; }
 
 .lp-nowrap { white-space: nowrap; }
+.lp-cmp td b { color: var(--mt-blue); }
