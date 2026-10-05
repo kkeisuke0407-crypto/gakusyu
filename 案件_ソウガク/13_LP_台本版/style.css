@@ -34,8 +34,6 @@ a { color: var(--mt-blue); }
 .lp-badge { margin: 1.2em 0 -.6em !important; text-align: center; line-height: 1.5 !important; }
 .lp-badge > span { display: inline-block; padding: .35em .9em; border: 2px solid var(--mt-blue); border-radius: 999px; background: var(--mt-blue-bg); color: var(--mt-blue); font-size: 14px; font-weight: 900; }
 
-/* ランキング2位・3位（短い説明） */
-.lp-rank-sm { margin: 0 0 .8em !important; padding: .8em 1em; border: 1px solid var(--mt-rule); border-radius: 8px; background: #fff; font-size: 15px; line-height: 1.8 !important; }
 
 /* 料金（mt-spec を見出しなしで使う） */
 .lp-fee .mt-spec__points { padding-bottom: .2em !important; }
