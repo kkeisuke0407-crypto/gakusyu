@@ -9,35 +9,9 @@ a { color: var(--mt-blue); }
 /* 改行位置を崩さないための塊 */
 .lp-nw { display: inline-block; }
 
-/* FV */
-.lp-fv { margin: 0 0 .6em; }
+/* FV（タイトル） */
 .lp-fv__ttl { margin: .2em 0 .5em; font-size: min(25px, 6.6vw); font-weight: 900; line-height: 1.5; letter-spacing: .01em; }
 .lp-fv__key { color: var(--mt-blue); background: linear-gradient(transparent 62%, var(--mt-mark) 62%); }
-.lp-fv__sub { margin: 0 !important; padding: .55em .8em; border-radius: 6px 6px 0 0; background: var(--mt-blue); color: #fff; font-size: 15px; font-weight: 700; line-height: 1.6; }
-.lp-fv__lead { margin: 0 !important; padding: .6em .8em .7em; border: 2px solid var(--mt-blue); border-top: 0; border-radius: 0 0 6px 6px; background: var(--mt-blue-bg); font-size: 16.5px; font-weight: 900; line-height: 1.6; }
-.lp-fv .mt-img { margin: 1em 0 .4em; }
-/* フック：小さめ・引用風 */
-.lp-fv__hook { margin: .5em 0 0 !important; padding-left: .7em; border-left: 3px solid #f0a9a5; color: var(--mt-red); font-size: 15px; font-weight: 700; line-height: 1.6; }
-/* サービス説明（FV本文の後に単独で置く箱） */
-.lp-fv__lead--solo { margin: 1.4em 0 !important; border-top: 2px solid var(--mt-blue); border-radius: 6px; }
-
-/* 4社比較表：記号評価は使わず事実を並べる。ソウガク列だけ薄く強調 */
-.lp-cmp { min-width: 760px; }
-.lp-cmp td { text-align: left; vertical-align: top; }
-.lp-cmp tbody th { width: 7.5em; font-size: 12.5px; text-align: left; }
-.lp-cmp th.is-pick { background: var(--mt-blue); color: #fff; }
-.lp-cmp td.is-pick { background: #fffdf0; font-weight: 700; }
-
-.lp-tbl-note { margin: .5em 0 0 !important; }
-
-/* 早期安心の小バッジ（主要CTA①の直前） */
-.lp-badge { margin: 1.2em 0 -.6em !important; text-align: center; line-height: 1.5 !important; }
-.lp-badge > span { display: inline-block; padding: .35em .9em; border: 2px solid var(--mt-blue); border-radius: 999px; background: var(--mt-blue-bg); color: var(--mt-blue); font-size: 14px; font-weight: 900; }
-
-
-/* 料金（mt-spec を見出しなしで使う） */
-.lp-fee .mt-spec__points { padding-bottom: .2em !important; }
-.lp-fee__note { margin: 0 !important; padding: 0 1em .8em; }
 
 /* 台本の小見出し（番号） */
 .lp-num { margin-right: .25em; color: var(--mt-blue); }
@@ -73,59 +47,23 @@ a { color: var(--mt-blue); }
 .lp-doc li { margin: 0 0 .4em; }
 .lp-doc__back { margin-top: 2em !important; font-size: 14px; }
 
-/* ===== v6 画像・ロゴ ===== */
-/* 公式キービジュアル：公式LPと同じく写真レイヤーの上に文字レイヤー（透過PNG）を重ねる。どちらも縦横比そのまま */
-.lp-kv { max-width: 420px; margin-inline: auto; }
-.lp-kv__stack { position: relative; }
-.lp-kv__stack img { display: block; width: 100%; height: auto; }
+/* ===== v6 画像・ロゴ（パーツ集にない部分だけ） ===== */
+/* 公式キービジュアル：公式LPと同じく写真レイヤーの上に文字レイヤー（透過PNG）を重ねる。どちらも縦横比そのまま・全幅 */
+.lp-kv { position: relative; }
+.lp-kv img { display: block; width: 100%; height: auto; }
 .lp-kv__text { position: absolute; inset: 0; }
 
-/* 公式画像を中くらいの幅で（PCで縦に伸びすぎないように） */
-.lp-img-md { max-width: 480px; margin-inline: auto; }
+/* 比較表：左の列＝各社公式ロゴ＋サービス名（パーツ集の mt-ico の代わり）。ロゴは4社とも同じ最大高 */
+.lp-cmp { min-width: 980px; }
+.lp-cmp td { text-align: left; vertical-align: top; }
+.lp-cmp td:first-child { width: 10em; text-align: center; vertical-align: middle; }
+.lp-cmp .mt-name { display: block; margin-bottom: .3em; font-size: 12px; }
+.lp-logo { display: flex; align-items: center; justify-content: center; height: 34px; margin: 0 0 .3em; }
+.lp-logo img { display: block; width: auto; height: auto; max-width: 100%; max-height: 26px; }
 
-/* FV直下の実績（数値はHTMLで再掲） */
-.lp-proof { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 1em 0 .4em; }
-.lp-proof__cell { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: .7em .4em .6em; border: 2px solid #9cc3e8; border-radius: 8px; background: var(--mt-blue-bg); text-align: center; line-height: 1.35; }
-.lp-proof__k { color: #0d3c6e; font-size: 13.5px; font-weight: 900; }
-.lp-proof__v { margin: .1em 0; color: var(--mt-red); font-size: 30px; font-weight: 900; line-height: 1.15; }
-.lp-proof__v--txt { font-size: 22px; }
-.lp-proof__s { color: #333; font-size: 11.5px; font-weight: 700; }
-
-/* 4社ロゴ：比較表もランキングも同じ最大高。白地の枠で余白を確保し、ロゴは改変しない */
-.lp-logo { display: flex; align-items: center; justify-content: center; height: 46px; margin: 0 0 .35em; padding: 6px 8px; border-radius: 4px; background: #fff; }
-.lp-logo img { display: block; width: auto; height: auto; max-width: 100%; max-height: 32px; }
-.lp-cmp thead th { vertical-align: top; }
+/* ランキング各順位のロゴ（v6：順位見出し付近に公式ロゴ）。2〜3位も同じ最大高 */
 .lp-rank-logo { display: flex; align-items: center; justify-content: center; height: 64px; margin: 0 0 1em !important; padding: 10px; border: 1px solid var(--mt-rule); border-radius: 6px; background: #fff; }
 .lp-rank-logo img { display: block; width: auto; height: auto; max-width: 70%; max-height: 40px; }
 
-/* 1位：公式イラスト4点（文字はHTML） */
-.lp-ill__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 0; padding: 0; list-style: none; }
-.lp-ill__grid li { margin: 0; padding: .5em .4em .6em; border: 1px solid var(--mt-rule); border-radius: 8px; background: #fff; text-align: center; }
-.lp-ill__grid img { display: block; width: 72%; max-width: 150px; height: auto; margin: 0 auto .3em; }
-.lp-ill__grid span { display: block; font-size: 13px; font-weight: 700; line-height: 1.45; }
-
-/* 料金：公式の小アイコン（文字はHTML） */
-.lp-icons { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin: 1em 0 .2em; padding: 0; list-style: none; }
-.lp-icons li { margin: 0; text-align: center; }
-.lp-icons img { display: block; width: 100%; max-width: 120px; height: auto; margin: 0 auto .2em; }
-.lp-icons span { display: block; font-size: 12px; font-weight: 700; line-height: 1.45; }
-.lp-icons__note { margin: 0 0 1em !important; }
-
-/* 17 返金保証（HTML/CSS図解。条件が多いので画像にしない） */
-.lp-flow { margin: 1.2em 0; padding: 0; list-style: none; }
-.lp-flow__step { position: relative; margin: 0 0 28px; padding: .7em .9em; border: 2px solid var(--mt-blue); border-radius: 8px; background: #fff; text-align: center; }
-.lp-flow__step:not(:last-child)::after { content: ""; position: absolute; left: 50%; bottom: -22px; margin-left: -11px; border-style: solid; border-width: 14px 11px 0; border-color: var(--mt-orange) transparent transparent; }
-.lp-flow__when { display: block; color: var(--mt-blue); font-size: 13px; font-weight: 900; }
-.lp-flow__what { display: block; font-size: 17px; font-weight: 900; line-height: 1.5; }
-.lp-flow__sub { display: block; margin-top: .2em; color: #555; font-size: 12.5px; font-weight: 700; }
-.lp-flow__step--goal { border-color: var(--mt-orange); background: var(--mt-yellow-bg); }
-
-/* 小さめの画像指示枠（FAQの区切りイラスト） */
-.lp-imgslot--sm { max-width: 360px; margin-inline: auto; }
-
-/* mt-caution 内のリスト */
-.mt-caution ul { margin: 0; padding-left: 1.2em; }
-.mt-caution li { margin: 0 0 .3em; font-size: 14px; line-height: 1.65; }
-
-/* mt-fit：スマホでは1列（parts.css本体は変えない） */
-@media (max-width: 480px) { .mt-fit { grid-template-columns: 1fr; } }
+/* 料金表（mt-table）：列が少ないので最小幅だけ下げる */
+.lp-fee { min-width: 100%; }
