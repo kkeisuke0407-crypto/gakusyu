@@ -9,15 +9,12 @@ a { color: var(--mt-blue); }
 /* 改行位置を崩さないための塊 */
 .lp-nw { display: inline-block; }
 
-/* FV */
-.lp-fv { margin: 0 0 .6em; }
-.lp-fv__ttl { margin: .2em 0 .5em; font-size: min(25px, 6.6vw); font-weight: 900; line-height: 1.5; letter-spacing: .01em; }
-.lp-fv__key { color: var(--mt-blue); background: linear-gradient(transparent 62%, var(--mt-mark) 62%); }
-.lp-fv__sub { margin: 0 !important; padding: .55em .8em; border-radius: 6px 6px 0 0; background: var(--mt-blue); color: #fff; font-size: 15px; font-weight: 700; line-height: 1.6; }
-.lp-fv__lead { margin: 0 !important; padding: .6em .8em .7em; border: 2px solid var(--mt-blue); border-top: 0; border-radius: 0 0 6px 6px; background: var(--mt-blue-bg); font-size: 16.5px; font-weight: 900; line-height: 1.6; }
-.lp-fv .mt-img { margin: 1em 0 .4em; }
+/* FV：ヒーロー画像（見出し入り）。全幅 */
+.lp-hero { margin: 0 -16px .8em; line-height: 0; }
+.lp-hero img { display: block; width: 100%; height: auto; }
+@media (min-width: 752px) { .lp-hero { margin-inline: 0; } }
 
-/* 台本の小見出し（①〜④） */
+/* 台本の小見出し（番号） */
 .lp-num { margin-right: .25em; color: var(--mt-blue); }
 
 /* 末尾の注記 */
@@ -50,3 +47,24 @@ a { color: var(--mt-blue); }
 .lp-doc ul { padding-left: 1.3em; }
 .lp-doc li { margin: 0 0 .4em; }
 .lp-doc__back { margin-top: 2em !important; font-size: 14px; }
+
+/* ===== v6 画像・ロゴ（パーツ集にない部分だけ） ===== */
+/* 公式キービジュアル：公式LPと同じく写真レイヤーの上に文字レイヤー（透過PNG）を重ねる。どちらも縦横比そのまま・全幅 */
+.lp-kv { position: relative; }
+.lp-kv img { display: block; width: 100%; height: auto; }
+.lp-kv__text { position: absolute; inset: 0; }
+
+/* 比較表：左の列＝各社公式ロゴ＋サービス名（パーツ集の mt-ico の代わり）。ロゴは4社とも同じ最大高 */
+.lp-cmp { min-width: 980px; }
+.lp-cmp td { text-align: left; vertical-align: top; }
+.lp-cmp td:first-child { width: 10em; text-align: center; vertical-align: middle; }
+.lp-cmp .mt-name { display: block; margin-bottom: .3em; font-size: 12px; }
+.lp-logo { display: flex; align-items: center; justify-content: center; height: 34px; margin: 0 0 .3em; }
+.lp-logo img { display: block; width: auto; height: auto; max-width: 100%; max-height: 26px; }
+
+/* ランキング各順位のロゴ（v6：順位見出し付近に公式ロゴ）。2〜3位も同じ最大高 */
+.lp-rank-logo { display: flex; align-items: center; justify-content: center; height: 64px; margin: 0 0 1em !important; padding: 10px; border: 1px solid var(--mt-rule); border-radius: 6px; background: #fff; }
+.lp-rank-logo img { display: block; width: auto; height: auto; max-width: 70%; max-height: 40px; }
+
+/* 料金表（mt-table）：列が少ないので最小幅だけ下げる */
+.lp-fee { min-width: 100%; }
