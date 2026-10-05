@@ -54,8 +54,9 @@ def say(text):
 
 
 def talk(side, text):
-    if side == 'parent':
-        return (f'    <div class="mt-talk__row mt-talk__row--r"><div class="mt-talk__who"><span class="mt-talk__icon">{ICON_PARENT}</span>'
+    if side in ('parent', 'parent_think'):
+        think = ' mt-talk__row--think' if side == 'parent_think' else ''
+        return (f'    <div class="mt-talk__row mt-talk__row--r{think}"><div class="mt-talk__who"><span class="mt-talk__icon">{ICON_PARENT}</span>'
                 f'<span class="mt-talk__name">保護者</span></div><div class="mt-talk__b">{text}</div></div>')
     return (f'    <div class="mt-talk__row"><div class="mt-talk__who"><span class="mt-talk__icon">{ICON_EDITOR}</span>'
             f'<span class="mt-talk__name">編集部</span></div><div class="mt-talk__b">{text}</div></div>')
@@ -75,8 +76,8 @@ HEAD = '''<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>発達特性のある子の勉強法｜宿題・集中・読み書きのつまずきを実例から見る</title>
-<meta name="description" content="発達障害・グレーゾーンなど、発達特性のあるお子さんの勉強法を、宿題・集中・読み書き・漢字・算数の実例から整理。先生がどう関わったかを見ながら、その子に合う学び方を考えます。">
+<title>発達特性のある子の勉強法｜集中・計算・宿題のつまずきにどう向き合う？</title>
+<meta name="description" content="発達障害・グレーゾーンなど、発達特性のあるお子さんの勉強法を実例から紹介。集中が切れる、計算で止まる、家で教えるとケンカになる。先生がどう関わったか、ソウガクは何をしてくれるのかまで分かります。">
 <link rel="stylesheet" href="parts.css">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="lp02.css">
@@ -89,45 +90,41 @@ HEAD = '''<!doctype html>
   <!-- 組み方：hozon「体験談ランキング型LP パーツ集」の部品とルール。画像はLP01の既存画像と公式画像だけ（画像指示枠なし） -->'''
 
 TOP = f'''
-  <!-- 01 FV：タイトル → PR帯 → アイキャッチ → 悩みの問いかけ → 3つの実例の予告（mt-summary）→ ページ内ボタン（#sogaku） -->
-  <h1 class="lp-ttl"><span class="lp-nw">発達特性のある子の勉強法。</span><br><span class="lp-nw">何度やっても進まないなら、</span><br><span class="lp-nw">「教え方」より先に</span><span class="lp-nw">見たいことがあります。</span></h1>
+  <!-- 01 FV：検索意図をそのまま拾い、実例→ソウガクまで読む理由をつくる（タイトル → PR帯 → アイキャッチ → 悩み → 答えの予告 → 3つのケース → ページ内ボタン） -->
+  <h1 class="lp-ttl"><span class="lp-nw">発達特性のある子の勉強法。</span><br><span class="lp-nw">何度教えても進まないなら、</span><br><span class="lp-nw">同じやり方を</span><span class="lp-nw">続けなくていい。</span></h1>
 
 {PRBAR}
 
   <figure class="mt-img"><img src="images/gen/01_fv_evening-desk.webp" alt="夕方の子ども部屋の机に、開いたままの問題集と鉛筆（イメージ）" width="1200" height="800"></figure>
 
-  <p>宿題に取りかかれない。<br>漢字がなかなか覚えられない。<br>算数だけ、いつも<br>同じところで止まってしまう。</p>
+  <p>宿題に取りかかれない。<br>漢字がなかなか覚えられない。<br>算数だけ、いつも同じところで止まる。</p>
 
-  <p>同じ「勉強が進まない」でも、<br>困っている場所は一人ひとり違います。</p>
+  <p>同じ「勉強が進まない」でも、<br><span class="mt-mark">合う声かけも、教え方も同じとは限りません。</span></p>
 
-  <div class="mt-summary"><p class="mt-summary__ttl">このあと見ていく、3つの実例</p><ul>
-    <li>集中が切れそうになった子</li>
-    <li>数の理解・計算につまずいた子</li>
-    <li>家で教えるとケンカになる家庭</li>
+  <div class="mt-summary"><p class="mt-summary__ttl">ソウガク公式の声にあった3つのケース</p><ul>
+    <li>集中が切れても、声かけで戻れた子</li>
+    <li>計算は、毎回伝え方を変えた子</li>
+    <li>親が全部見なくてよくなった家庭</li>
   </ul></div>
 
-  <p>3つの実例を追うと、ただ「もっと勉強させる」のとは違う共通点が見えてきます。</p>
+  <p>この3つを見たあとに、<b>ソウガクが実際に何をしてくれるのか</b>も紹介します。</p>
 
-  <p>そのうえで、<span class="mt-mark">発達障害・グレーゾーン専門のオンライン家庭教師「ソウガク」が、どうやってその子に合う学び方を組み立てているのか</span>まで見ていきます。</p>
+  <div class="mt-cta"><p class="mt-cta__micro">＼先にサービス内容を見たい方はこちら／</p><a class="mt-cta__btn" href="#sogaku">ソウガクは何をしてくれる？ ↓</a></div>
 
-  <div class="mt-cta"><p class="mt-cta__micro">＼先に仕組みを見たい方はこちら／</p><a class="mt-cta__btn" href="#sogaku">ソウガクの「学び方の組み立て方」を見る ↓</a></div>
-
-  <!-- 02 導入の会話（mt-talk）：読者の迷い → 実例へ渡す。会話の中でサービス名は出さない -->
+  <!-- 02 導入の会話：短く、実例へ渡す（サービス名は出さない） -->
   <div class="mt-talk">
-{talk('parent', '勉強法はいろいろ試したのに…<br>毎日「早くやって」ばかり。')}
-{talk('editor', '止まる場所が違えば、<br>合う関わり方も変わります。')}
-{talk('parent', 'でも、家で見分けて<br>毎回変えるのは難しくて…。')}
-{talk('editor', 'まずは<span class="mt-mark">先生の関わり方</span>を、<br>実際の声で見てみましょう。')}
+{talk('parent', '何度説明しても、<br>同じところで止まります…。')}
+{talk('editor', '同じやり方を<br>続けなくていいんです。')}
+{talk('parent_think', '（じゃあ、どうすれば…？）')}
+{talk('editor', 'まずは<span class="mt-mark">先生がどう関わったか</span>を<br>実際の声で見てみましょう。')}
   </div>
   <p class="mt-small">※よくある迷いを編集部が会話形式にしたものです（人物はイメージ）。</p>
 
-  <!-- 03 実例A：集中が切れる子（mt-say → mt-story → mt-review） -->
-  <h2 class="mt-h2">集中が切れたとき、先生はどうした？</h2>
+  <!-- 03 実例A：集中が切れる子（mt-say → mt-story → mt-review → mt-oneline） -->
+  <h2 class="mt-h2">集中が切れても、戻れる声かけがあった</h2>
   <figure class="mt-img" data-img="IMG-14"><img src="images/gen/14_story-c_refocus.webp" alt="集中が切れたときの関わり方：01 集中が切れる→02 短い声かけ→03 もう一度課題へ" width="1200" height="900" loading="lazy"></figure>
 
 {say('宿題を始めても、すぐ集中が切れる…。')}
-
-  <p>「集中して」と言い続けても、なかなか続きません。<br>「集中できない」を、ずっと集中させることだけで解決しようとすると苦しくなります。</p>
 
   <div class="mt-story">
     <p class="mt-story__who">公式サイト掲載の生徒・保護者の声（小学5年生）</p>
@@ -137,19 +134,15 @@ TOP = f'''
 {review('小学5年生・保護者', '集中力が切れそうになっても、先生の言葉で、また頑張って、勉強できている姿に感動しています。')}
 {SRC_NOTE}
 
-  <p>この例では、「一度も集中を切らさない」ことではなく、切れそうな場面からもう一度戻る関わりがありました。</p>
-  <p>「集中できる・できない」の二択ではなく、<span class="mt-mark">始める／続ける／切れたあとに戻る</span>のどこで困っているかを見ると、必要な関わり方を考えやすくなります。</p>
+  <p>ずっと集中できなくてもいい。</p>
+  <p class="mt-oneline"><span>切れたあとに、戻れるか。</span></p>
+  <p>この子の場合は、「集中し続ける」より、<b>集中が切れそうなときの戻し方</b>がポイントでした。</p>
 
-  <p><b>では、集中ではなく「漢字・計算など一部だけ強くつまずく」場合はどうでしょう。</b></p>
-
-  <!-- 04 実例B：計算につまずく子（mt-say → mt-story → mt-review） -->
-  <h2 class="mt-h2">同じ説明を繰り返しても進まないとき</h2>
+  <!-- 04 実例B：計算につまずく子 -->
+  <h2 class="mt-h2">同じ説明で進まないなら、伝え方を変える</h2>
   <figure class="mt-img" data-img="IMG-05"><img src="images/gen/05_stuck_4types.webp" alt="同じ『勉強が苦手』でも、止まる場所はそれぞれ違います：読むところで止まる、書くところで止まる、始めるまで時間がかかる、途中で集中が切れる" width="1200" height="900" loading="lazy"></figure>
 
 {say('何度説明しても、同じところで止まる…。')}
-
-  <p>同じ「勉強が苦手」でも、止まる場所はそれぞれ違います。</p>
-  <p>教科名だけで「苦手」とまとめず、読む・書く・覚える・手順を追うなど、どの作業で止まるかまで見ると、変えるべきところが見えやすくなります。</p>
 
   <div class="mt-story">
     <p class="mt-story__who">公式サイト掲載の保護者の声（小学2年生）</p>
@@ -159,13 +152,12 @@ TOP = f'''
 {review('小学2年生・保護者', '先生が毎回色々なやり方で、娘が分かりやすいように丁寧な指導をしてくださいますのでとてもありがたいです。')}
 {SRC_NOTE}
 
-  <p>同じ説明を繰り返すのではなく、その子の様子を見ながら伝え方を変えている例です。</p>
-  <p>漢字なら「読む・書く・覚える」、算数なら「計算・文章題・手順」。<br><span class="mt-mark">どこで止まっているのかを分けて考える</span>と、学び方を変えるヒントになります。</p>
+  <p>同じ説明を繰り返すのではなく、</p>
+  <p class="mt-oneline"><span>その子に伝わるやり方を探す。</span></p>
+  <p>同じ「勉強が苦手」でも、止まる場所はそれぞれ違います。<br>「算数が苦手」で終わらせず、計算なのか、文章題なのか、手順なのか。<br>どこで止まっているかまで見れば、変える場所が分かります。</p>
 
-  <p><b>ただ、家庭で毎回それを考えて、教え方まで変え続けるのは簡単ではありません。</b></p>
-
-  <!-- 05 実例C：家で教えるとケンカになる家庭（mt-say → mt-story → mt-review）→ 3つの声の共通点（mt-voice） -->
-  <h2 class="mt-h2">親が教えるほど、親子でぶつかってしまうとき</h2>
+  <!-- 05 実例C：家で教えるとケンカになる家庭 -->
+  <h2 class="mt-h2">家で教えるとケンカになるなら、親が先生役を降りてもいい</h2>
   <figure class="mt-img" data-img="IMG-12"><img src="images/gen/12_story-a_parent-burden.webp" alt="夕方の食卓で、教材を前に困った顔の保護者と、問題に手が止まっている子ども（イメージ）" width="1200" height="800" loading="lazy"></figure>
 
 {say('家で私が教えると、つい言いすぎてしまう…。')}
@@ -178,42 +170,37 @@ TOP = f'''
 {review('小学4年生・保護者', '何より私がずっと見なくては・・というプレッシャーから開放されたことが、とても助かっています。')}
 {SRC_NOTE}
 
-  <p>親がもっと上手に教えられるようになることだけが答えではありません。</p>
-  <p class="mt-oneline"><span>親が先生役を続けなくてもいい。</span></p>
-  <p>家庭の外に、お子さんの困り方を一緒に見てくれる人を増やす。<br>それも一つの方法です。</p>
+  <p class="mt-oneline"><span>親が全部教えなくてもいい。</span></p>
+  <p>勉強を見る人を、家庭の外にもつくる。<br>それだけで、親子の役割を少し戻せる家庭もあります。</p>
 
   <figure class="mt-img" data-img="IMG-07"><img src="images/gen/07_after_lesson_share.webp" alt="授業のあとも、家庭とつながれるか：授業→指導報告→保護者→教師・本部へ相談。親がひとりで抱えこまない仕組み" width="1200" height="900" loading="lazy"></figure>
   <p>そのとき見ておきたいのは、授業のあとも、家庭とつながれるか。<br>親がひとりで抱えこまない仕組みがあるかどうかです。</p>
 
-  <div class="mt-voice"><span class="mt-voice__lbl"><i>○</i>3つの公式の声から見えてきたこと</span><ul>
-    <li>集中が切れそうな場面でも、声かけで再び勉強に向かった例がある<small>（小学5年生）</small></li>
-    <li>数の理解・計算に難しさがある子へ、毎回やり方を変えて伝えている例がある<small>（小学2年生）</small></li>
-    <li>家で教えると親子で言い合いになっていた家庭で、保護者の負担が軽くなった例がある<small>（小学4年生）</small></li>
-    <li>学校へ行ける日が減った時期に、オンラインで週1回学ぶ習慣ができた例もある<small>（小学4年生）</small></li>
+  <!-- 06 3ケースをまとめて、ソウガクへ -->
+  <div class="mt-voice"><span class="mt-voice__lbl"><i>○</i>3つのケースで違っていたのは「対応」</span><ul>
+    <li>集中が切れたら、<b>声をかけて戻す</b><small>（小学5年生）</small></li>
+    <li>伝わらなければ、<b>教え方を変える</b><small>（小学2年生）</small></li>
+    <li>家庭で抱えきれない部分は、<b>先生に任せる</b><small>（小学4年生）</small></li>
   </ul></div>
+  <p class="mt-small">※ソウガク公式サイト掲載の声をもとに、編集部がまとめたものです。個人の感想です。</p>
 
-  <p>3つに共通していたのは、「もっとやらせる」ことではありませんでした。</p>
-  <p><span class="mt-mark">その子が止まっている場所や、そのときの様子に合わせて、関わり方を変えている。</span></p>
-  <p>では、それを毎回「先生個人の経験」だけに任せず、サービスとして続けるには何が必要なのでしょうか。</p>
+  <p>子どもに合わせるのは、教材だけではありません。<br><span class="mt-mark">声かけも、教え方も、家庭との関わり方も変える。</span></p>
 
-  <!-- 06 ソウガク登場（mt-bridge で画面を切り替える。ページに1回）→ 公式KV -->
-  <div class="mt-bridge" id="sogaku"><p class="mt-bridge__s">ここまでの「その子に合わせる」を、<br>仕組みにしているのが、</p><p class="mt-bridge__name">＼<span>ソウガク</span>／</p></div>
+  <p><b>これを最初から「発達特性がある子」を前提にやっているのが、ソウガクです。</b></p>
 
+  <!-- 07 ソウガク：mt-bridge で切り替え → H2 → 扉＝公式KV → 早見（mt-spec。中に最初のASPボタン #cta-sogaku）→ 合う家庭 → 中身 → 無料体験 -->
+  <div class="mt-bridge" id="sogaku"><p class="mt-bridge__s">発達障害・グレーゾーン専門の<br>オンライン家庭教師</p><p class="mt-bridge__name">＼<span>ソウガク</span>／</p></div>
+
+  <h2 class="mt-h2">ソウガクは、何をしてくれるの？</h2>
 {KV}
 
-  <!-- 07 なぜ合わせられるのか：扉＝公式の指導コミュニケーションツール画面 → mt-spec（中に最初のASPボタン #cta-sogaku） -->
-  <h2 class="mt-h2">なぜ、その子ごとに学び方を変えられるの？</h2>
-{TOOL}
-
-  <p>その子に合わせた関わり方を、先生個人の経験だけに頼らず続けるための仕組みがあります。</p>
-
   <div class="mt-spec">
-    <p class="mt-spec__ttl">ソウガクの仕組み</p>
+    <p class="mt-spec__ttl">まずは、ここだけ見ればOK</p>
     <ul class="mt-spec__points">
-      <li><em>アセスメント</em>から個別指導計画を作成</li>
-      <li>発達凸凹アソシエーションの<em>教師研修</em></li>
-      <li>毎回の<em>指導報告</em>＋教師/本部とチャット</li>
-      <li>発達障害・グレーゾーン<em>専門</em></li>
+      <li><em>今どこで困っているか</em>を見る</li>
+      <li><em>発達特性を学んだ先生</em>が担当</li>
+      <li>授業のあとも<em>相談できる</em></li>
+      <li>入会前に<em>相性を見られる</em></li>
     </ul>
     <dl class="mt-spec__grid">
       <div class="mt-spec__cell mt-spec__cell--wide"><dt class="mt-spec__k">無料体験</dt><dd class="mt-spec__mark">2回</dd><dd class="mt-spec__v">1回目は保護者面談も可</dd></div>
@@ -221,25 +208,62 @@ TOP = f'''
       <div class="mt-spec__cell mt-spec__cell--wide"><dt class="mt-spec__k">認定講師</dt><dd class="mt-spec__mark">100%</dd><dd class="mt-spec__v">専門研修受講済み（公式LP掲載）</dd></div>
       <div class="mt-spec__cell mt-spec__cell--wide"><dt class="mt-spec__k">返金保証</dt><dd class="mt-spec__mark">1カ月</dd><dd class="mt-spec__v">授業料全額（条件あり・入会金は対象外）</dd></div>
     </dl>
-    <div class="mt-cta" id="cta-sogaku"><p class="mt-cta__micro">＼まずは「どこで困っているか」を相談／</p><a class="mt-cta__btn" href="{CTA_HREF}" data-cta target="_blank" rel="sponsored nofollow noopener">公式サイトで無料体験を見る</a></div>
+    <div class="mt-cta" id="cta-sogaku"><p class="mt-cta__micro">＼まずは今の困りごとを話してみる／</p><a class="mt-cta__btn" href="{CTA_HREF}" data-cta target="_blank" rel="sponsored nofollow noopener">無料体験で相談してみる</a></div>
   </div>
 
-  <!-- 08 読者の最大の反論を4つ目の実例で処理（mt-say → mt-story → mt-review）→ テキストリンク → 無料体験 -->
-  <h2 class="mt-h2">でも、オンラインで座っていられる？</h2>
+  <h3 class="mt-h3"><span class="lp-num">1.</span>まず、今どこで困っているかを見る</h3>
+  <p>「算数が苦手」で終わらせず、計算なのか、文章題なのか、手順なのか。<br>今どこで止まっているかを見てから、進め方を考えます。</p>
+  <p class="mt-small">※公式では、この最初の確認を「アセスメント」と案内しています。ここでは、<b>「どこで困っているかを整理する確認」</b>と考えると分かりやすいです。</p>
+
+  <h3 class="mt-h3"><span class="lp-num">2.</span>その子用の進め方を作る</h3>
+  <p>確認した内容をもとに、体験後にお子さん用の個別指導計画を作成します。</p>
+  <p>「みんな同じカリキュラム」ではなく、今の困りごとをもとに進め方を決めます。</p>
+
+  <h3 class="mt-h3"><span class="lp-num">3.</span>先生任せにしない</h3>
+  <p>先生は、一般社団法人 発達凸凹アソシエーションによる教師研修と、座学のマニュアル研修を受けた社会人講師です。</p>
+
+  <h3 class="mt-h3"><span class="lp-num">4.</span>家で困ったことも相談できる</h3>
+{TOOL}
+  <p>毎回の指導報告があり、家で困ったことがあれば教師や本部にチャットで共有できます。</p>
+  <p><b>授業をお願いしたあと、また親だけで先生役に戻らなくていい。</b></p>
+
+  <div class="mt-check"><p class="mt-check__ttl">こんな家庭に合いやすい</p><ul>
+    <li>塾や一般的な家庭教師で、うまくいかなかった</li>
+    <li>何をどう教えればいいか、分からなくなってきた</li>
+    <li>家で教えると、つい親子でぶつかってしまう</li>
+    <li>授業が終わったあとも、相談できる相手がほしい</li>
+  </ul><p class="mt-check__foot">1つでも当てはまったら、<span class="mt-mark">無料体験で今の困りごとを話してみる</span>のがおすすめです</p></div>
+
+  <h3 class="mt-h3">無料体験は「授業を試す」だけではありません</h3>
+  <p>無料体験は2回まで。1回目を保護者と先生の面談にすることもできます。</p>
+  <p><b>体験後には、お子さん用の個別指導計画。</b><br>入会するかどうかは、それを見てから考えられます。</p>
+
+  <div class="mt-points"><ul>
+    <li>無料体験2回（1回目は保護者面談も可）</li>
+    <li>入会後継続率96.7％（公式LP掲載）</li>
+    <li>専門研修を受けた講師100％（公式LP掲載）</li>
+    <li>授業料1カ月分返金保証※</li>
+  </ul></div>
+  <p class="mt-small">※返金保証には条件があります。入会金は対象外です。</p>
+
+  <div class="mt-cta"><p class="mt-cta__micro">＼体験後に、お子さん用の個別指導計画／</p><a class="mt-cta__btn" href="{CTA_HREF}" data-cta target="_blank" rel="sponsored nofollow noopener">ソウガクの公式サイトを見てみる</a></div>
+
+  <!-- 08 いちばん大きい反論を、4つ目の体験談で処理 -->
+  <h2 class="mt-h2"><span class="lp-nw">「家でも集中できないのに、</span><span class="lp-nw">オンラインで大丈夫？」</span></h2>
   <figure class="mt-img" data-img="IMG-13"><img src="images/gen/13_story-b_online-desk.webp" alt="家の机でノートパソコンのオンライン授業を受けながら、ノートに書き込む子ども（イメージ）" width="1200" height="800" loading="lazy"></figure>
 
-{say('画面の前に座って、授業を受けられるのかな…。')}
+  <p>無理に「大丈夫です」とは言いません。<br>子どもによって、先生との相性も、画面越しの授業が合うかどうかも違うからです。</p>
 
   <div class="mt-story">
     <p class="mt-story__who">公式サイト掲載の保護者の声（中学2年生・特別支援学級）</p>
-    <p>勉強への苦手意識があり、初回の体験では落ち着いて画面の前に座ることも難しかったそうです。先生は急いで授業を進めず、時間をかけて関係をつくりました。</p>
-    <p>その後は授業の時間を楽しみにするようになり、勉強への苦手意識にも変化を感じている、と紹介されています。</p>
+    <p>勉強への苦手意識があり、初回の体験では落ち着いて画面の前に座ることも難しかったそうです。</p>
+    <p>先生は急いで授業を進めず、時間をかけて関係をつくりました。その後は授業の時間を楽しみにするようになった、と紹介されています。</p>
   </div>
 {review('中学2年生・保護者', 'でも先生が時間をかけて信頼関係を築く努力をしてくださり、今ではこの時間を楽しみにしています。')}
 {SRC_NOTE}
 
-  <p>オンラインだから集中できる、とは限りません。<br>子どもによって、先生との相性も、画面越しの授業が合うかどうかも違います。</p>
-  <p>だから、入会してから悩むのではなく、<span class="mt-mark">先に体験で見ておく。</span></p>
+  <p>最初から「オンライン授業をちゃんと受けられる子」でなくてもいい。</p>
+  <p><span class="mt-mark">合うかどうかは、入会を決める前に体験で見ればいい。</span></p>
 
 {TEXTLINK}
 
@@ -262,7 +286,7 @@ checks = {
     'mt-talk は1つ・吹き出し4〜6個・アイコンは画像': top.count('class="mt-talk"') == 1 and 4 <= top.count('class="mt-talk__row') <= 6
     and top.count('mt-talk__icon"><img') == top.count('class="mt-talk__row'),
     'mt-talk にサービス名なし': 'ソウガク' not in top[top.index('class="mt-talk"'):top.index('</div>\n  <p class="mt-small">※よくある迷い')],
-    '実例4つ（mt-say → mt-story → mt-review）': top.count('class="mt-story"') == 4 and top.count('class="mt-review"') == 4 and top.count('class="mt-say"') == 4,
+    '実例4つ（mt-story → mt-review）・mt-say 3つ': top.count('class="mt-story"') == 4 and top.count('class="mt-review"') == 4 and top.count('class="mt-say"') >= 3,
     'mt-voice で共通点': top.count('class="mt-voice"') == 1,
     'mt-bridge はページに1回・＼／つき': top.count('class="mt-bridge"') == 1 and '＼<span>ソウガク</span>／' in top,
     'mt-spec の中に #cta-sogaku': re.search(r'class="mt-spec".*?id="cta-sogaku".*?</div>\n  </div>', top, re.S) is not None,
