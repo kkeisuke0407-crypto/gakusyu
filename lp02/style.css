@@ -1,0 +1,83 @@
+/* ソウガクLP（台本版）専用。部品の見た目は parts.css（mt-*）、ここはページ枠とFVだけ */
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; padding-bottom: 90px; background: #fff; }
+a { color: var(--mt-blue); }
+
+.mt-wrap { max-width: 720px; margin: 0 auto; padding: 12px 16px 40px; }
+
+/* 改行位置を崩さないための塊 */
+.lp-nw { display: inline-block; }
+
+/* FV：ヒーロー画像（見出し入り）。全幅 */
+.lp-hero { margin: 0 -16px .8em; line-height: 0; }
+.lp-hero img { display: block; width: 100%; height: auto; }
+@media (min-width: 752px) { .lp-hero { margin-inline: 0; } }
+
+/* 台本の小見出し（番号） */
+.lp-num { margin-right: .25em; color: var(--mt-blue); }
+
+/* 末尾の注記 */
+.lp-foot { margin-top: 2.4em; padding-top: 1em; border-top: 1px solid var(--mt-rule); }
+
+/* 広告主バナー（300×250）は原寸で中央に置く（拡大するとぼやけるため） */
+.lp-banner { width: 300px; max-width: 100%; margin-inline: auto; }
+.lp-banner img { display: block; width: 100%; height: auto; }
+
+/* 公開前に埋める箇所の目印（埋めたら span ごと消す） */
+.lp-todo { padding: 0 .25em; border-radius: 3px; background: #fff3c4; color: #8a5300; font-weight: 700; }
+
+/* 運営者情報（LP本文の末尾） */
+.lp-operator { margin-top: 1.6em; padding: 1em 1.1em .6em; border: 1px solid var(--mt-rule); border-radius: 6px; background: #fafafa; }
+.lp-operator__ttl { margin: 0 0 .5em !important; font-size: 15px; font-weight: 900; }
+.lp-operator__list { display: grid; grid-template-columns: 6.5em 1fr; gap: .35em .8em; margin: 0 0 .8em; font-size: 14px; line-height: 1.7; }
+.lp-operator__list dt { color: var(--mt-sub); font-weight: 700; }
+.lp-operator__list dd { margin: 0; min-width: 0; overflow-wrap: anywhere; }
+
+/* サイト共通フッター */
+.lp-site-foot { padding: 1.4em 16px 1.6em; background: var(--mt-blue); color: #fff; text-align: center; font-family: var(--mt-font); }
+.lp-site-foot__nav { display: flex; flex-wrap: wrap; justify-content: center; gap: .4em 1.2em; margin-bottom: .8em; font-size: 13px; }
+.lp-site-foot__nav a { color: #fff; }
+.lp-site-foot__copy { margin: 0; font-size: 12px; opacity: .9; }
+.lp-site-foot .lp-todo { color: #8a5300; }
+
+/* 運営者情報・ポリシーなどの下層ページ */
+.lp-doc h1 { margin: .4em 0 .8em; font-size: 22px; font-weight: 900; line-height: 1.5; }
+.lp-doc .lp-operator__list { font-size: 15px; }
+.lp-doc ul { padding-left: 1.3em; }
+.lp-doc li { margin: 0 0 .4em; }
+.lp-doc__back { margin-top: 2em !important; font-size: 14px; }
+
+/* ===== v6 画像・ロゴ（パーツ集にない部分だけ） ===== */
+/* 公式キービジュアル：公式LPと同じく写真レイヤーの上に文字レイヤー（透過PNG）を重ねる。どちらも縦横比そのまま・全幅 */
+.lp-kv { position: relative; }
+.lp-kv img { display: block; width: 100%; height: auto; }
+.lp-kv__text { position: absolute; inset: 0; }
+
+/* 比較表：左の列＝各社公式ロゴ＋サービス名（パーツ集の mt-ico の代わり）。ロゴは4社とも同じ最大高 */
+.lp-cmp { min-width: 720px; }
+.lp-cmp td { text-align: left; vertical-align: top; }
+.lp-cmp td:first-child { width: 10em; text-align: center; vertical-align: middle; }
+.lp-cmp .mt-name { display: block; margin-bottom: .3em; font-size: 12px; }
+.lp-logo { display: flex; align-items: center; justify-content: center; height: 34px; margin: 0 0 .3em; }
+.lp-logo img { display: block; width: auto; height: auto; max-width: 100%; max-height: 26px; }
+
+/* ランキング各順位のロゴ（v6：順位見出し付近に公式ロゴ）。2〜3位も同じ最大高 */
+.lp-rank-logo { display: flex; align-items: center; justify-content: center; height: 64px; margin: 0 0 1em !important; padding: 10px; border: 1px solid var(--mt-rule); border-radius: 6px; background: #fff; }
+.lp-rank-logo img { display: block; width: auto; height: auto; max-width: 70%; max-height: 40px; }
+
+/* 料金表（mt-table）：列が少ないので最小幅だけ下げる */
+.lp-fee { min-width: 100%; }
+
+/* スクリーンリーダー・機械可読用のテキスト（画面には出さない）。ヒーロー画像の見出し文言に使う */
+.lp-sr { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
+/* PR表記：FV直下に1回だけ。背景・枠なしで普通に読める大きさ（薄く・小さくしすぎない）。「PR」だけ太字 */
+.mt-prbar { display: block; margin: .4em 0 1em; padding: 0; border-radius: 0; background: none; color: var(--mt-sub); font-size: 13px; line-height: 1.6; }
+
+/* ランキング見出しの2行目（ひとこと） */
+.lp-h3sub { display: block; margin-top: .15em; color: var(--mt-sub); font-size: 14px; font-weight: 400; line-height: 1.5; }
+
+.lp-nowrap { white-space: nowrap; }
+.lp-cmp td b { color: var(--mt-blue); }
+.lp-cmp .mt-mini-btn { margin-top: .3em; }
