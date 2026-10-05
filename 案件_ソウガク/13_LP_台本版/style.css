@@ -10,9 +10,8 @@ a { color: var(--mt-blue); }
 .lp-nw { display: inline-block; }
 
 /* FV：ヒーロー画像（見出し入り）。全幅 */
-.lp-hero { margin: 0 -16px .8em; line-height: 0; }
+.lp-hero { margin: 0 0 1em; line-height: 0; border: 1px solid var(--mt-rule); border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,.08); }
 .lp-hero img { display: block; width: 100%; height: auto; }
-@media (min-width: 752px) { .lp-hero { margin-inline: 0; } }
 
 /* 台本の小見出し（番号） */
 .lp-num { margin-right: .25em; color: var(--mt-blue); }
@@ -57,8 +56,7 @@ a { color: var(--mt-blue); }
 /* 比較表：左の列＝各社公式ロゴ＋サービス名（パーツ集の mt-ico の代わり）。ロゴは4社とも同じ最大高 */
 .lp-cmp { min-width: 720px; }
 .lp-cmp td { text-align: left; vertical-align: top; }
-.lp-cmp td:first-child { width: 10em; text-align: center; vertical-align: middle; }
-.lp-cmp .mt-name { display: block; margin-bottom: .3em; font-size: 12px; }
+.lp-cmp td:first-child { width: 9em; text-align: center; vertical-align: middle; }
 .lp-logo { display: flex; align-items: center; justify-content: center; height: 34px; margin: 0 0 .3em; }
 .lp-logo img { display: block; width: auto; height: auto; max-width: 100%; max-height: 26px; }
 
@@ -73,7 +71,7 @@ a { color: var(--mt-blue); }
 .lp-sr { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
 
 /* PR表記：FV直下に1回だけ。背景・枠なしで普通に読める大きさ（薄く・小さくしすぎない）。「PR」だけ太字 */
-.mt-prbar { display: block; margin: .4em 0 1em; padding: 0; border-radius: 0; background: none; color: var(--mt-sub); font-size: 13px; line-height: 1.6; }
+.mt-prbar { display: block; margin: 0 0 .6em; padding: 0; border-radius: 0; background: none; color: var(--mt-sub); font-size: 13px; line-height: 1.6; }
 
 /* ランキング見出しの2行目（ひとこと） */
 .lp-h3sub { display: block; margin-top: .15em; color: var(--mt-sub); font-size: 14px; font-weight: 400; line-height: 1.5; }
@@ -81,3 +79,6 @@ a { color: var(--mt-blue); }
 .lp-nowrap { white-space: nowrap; }
 .lp-cmp td b { color: var(--mt-blue); }
 .lp-cmp .mt-mini-btn { margin-top: .3em; }
+
+/* PR帯：スマホでは区切り線を出さず「PR表記」「更新日」を2行に分ける */
+@media (max-width: 599px) { .lp-prsep { display: none; } .mt-prbar .lp-nowrap { display: block; } }
