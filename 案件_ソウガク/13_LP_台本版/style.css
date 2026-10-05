@@ -82,3 +82,7 @@ a { color: var(--mt-blue); }
 
 /* PR帯：スマホでは区切り線を出さず「PR表記」「更新日」を2行に分ける */
 @media (max-width: 599px) { .lp-prsep { display: none; } .mt-prbar .lp-nowrap { display: block; } }
+
+/* 比較表：推す行（ソウガク）をはっきり見せる */
+.lp-cmp tr.is-pick td, .lp-cmp tr.is-pick td:first-child { background: #fff6cc; }
+.lp-cmp .mt-badge { margin: 0 0 .4em; }
