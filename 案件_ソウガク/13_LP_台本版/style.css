@@ -107,3 +107,13 @@ a { color: var(--mt-blue); }
 .lp-eval { margin-top: .8em; }
 .lp-eval p { font-size: 14px; }
 .lp-eval .lp-eval__note { margin: .4em 0 0; color: var(--mt-sub); font-size: 12px; }
+
+/* 1位：3つの選定基準での評価 */
+.lp-judge { margin: 1em 0 1.4em; padding: 0; list-style: none; border: 2px solid var(--mt-orange); border-radius: 8px; background: var(--mt-yellow-bg); }
+.lp-judge li { display: flex; align-items: center; gap: .7em; margin: 0; padding: .7em .9em; border-top: 1px dashed #f0d58a; }
+.lp-judge li:first-child { border-top: 0; }
+.lp-judge .mt-mk { flex: 0 0 auto; font-size: 26px; }
+.lp-judge b { display: block; font-size: 15.5px; line-height: 1.5; }
+.lp-judge span:not(.mt-mk) { display: block; color: var(--mt-sub); font-size: 13px; line-height: 1.5; }
+/* CTA下の返金保証の一文 */
+.lp-refund-note { margin-top: -.6em !important; text-align: center; }
