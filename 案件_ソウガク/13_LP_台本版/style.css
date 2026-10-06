@@ -122,26 +122,5 @@ a { color: var(--mt-blue); }
 /* 決め手を言うCTAの一言（長いので少し小さく1行に） */
 .mt-cta__micro.lp-micro-key { font-size: 13.5px; letter-spacing: -.02em; }
 
-/* ===== LP02（家庭教師→オンライン家庭教師 導線）専用：比較表より上だけ ===== */
-.lp2-fv { margin: 0 0 1.2em; padding: 1.2em 1.1em 1.1em; border-radius: 10px; background: linear-gradient(160deg, #eef5fc 0%, #fdf6e9 100%); border: 1px solid #d8e6f5; }
-.lp2-fv__label { display: inline-block; margin: 0 0 .7em !important; padding: .25em .8em; border-radius: 999px; background: var(--mt-blue); color: #fff; font-size: 12px; font-weight: 700; line-height: 1.5; }
-.lp2-fv__h1 { margin: 0 0 .7em; color: var(--mt-ink); font-size: 23px; font-weight: 900; line-height: 1.5; }
-.lp2-fv__em { color: var(--mt-blue); background: linear-gradient(transparent 62%, var(--mt-mark) 62%); }
-.lp2-fv__sub { margin: 0 !important; font-size: 15px; line-height: 1.85; }
-.lp2-grades { display: grid; gap: .7em; margin: 1.2em 0 1.4em; }
-.lp2-grade { padding: .8em 1em; border-radius: 8px; background: var(--mt-red-bg); border-left: 4px solid var(--mt-red); }
-.lp2-grade p { margin: 0; font-size: 14.5px; line-height: 1.7; }
-.lp2-grade .lp2-grade__ttl { margin: 0 0 .2em; color: var(--mt-red); font-size: 14px; font-weight: 900; }
-.lp2-conds { margin: 1.2em 0 1.4em; padding: 0; list-style: none; display: grid; gap: .7em; }
-.lp2-conds li { display: flex; gap: .8em; align-items: flex-start; padding: .85em 1em; border: 1px solid #cfe0f2; border-radius: 10px; background: #fff; box-shadow: 0 2px 6px rgba(0, 102, 191, .07); }
-.lp2-conds__no { flex: 0 0 auto; display: grid; place-items: center; width: 2em; height: 2em; border-radius: 50%; background: var(--mt-blue); color: #fff; font-size: 15px; font-weight: 900; }
-.lp2-conds p { margin: 0; font-size: 15px; line-height: 1.7; }
-.lp2-conds b { color: var(--mt-blue); }
-.lp2-vs { table-layout: fixed; }
-.lp2-vs thead th:first-child { width: 30%; }
-.lp2-vs thead th:not(:first-child) { background: var(--mt-blue-bg); color: var(--mt-blue); }
-.lp2-vs td { font-size: 13.5px; line-height: 1.55; }
-.lp2-six { margin: 1em 0; padding: 0; list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: .6em; }
-.lp2-six li { display: flex; align-items: center; gap: .55em; min-height: 3.4em; padding: .6em .7em; border-radius: 8px; background: var(--mt-yellow-bg); border: 1px solid #f3dc8f; font-size: 14.5px; font-weight: 700; line-height: 1.45; }
-.lp2-six__no { flex: 0 0 auto; display: grid; place-items: center; width: 1.7em; height: 1.7em; border-radius: 50%; background: var(--mt-orange); color: #fff; font-size: 13px; font-weight: 900; }
-@media (min-width: 600px) { .lp2-six { grid-template-columns: repeat(3, 1fr); } .lp2-grades { grid-template-columns: repeat(3, 1fr); } }
+/* LP02：ページタイトル（h1）。パーツ集にタイトル部品がないため、本文の見出しとしての最低限の見た目だけ */
+.mt-body > h1 { margin: .6em 0 .7em; font-size: 23px; font-weight: 900; line-height: 1.5; }

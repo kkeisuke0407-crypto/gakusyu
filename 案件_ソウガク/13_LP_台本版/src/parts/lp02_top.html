@@ -3,14 +3,11 @@
        ここ（比較表より上）だけがLP02専用。CTA・申込誘導は置かない。比較表から下は王道LPと共通の部品（common_compare.html／common_after.html）。
        台本の差し替え条件（オンラインKW・学年KW）は URL パラメータで切り替え：?kw=online ／ ?grade=sho|chu|ko -->
 
-  <!-- 01 FV（台本 No.1〜4）：CTAなし -->
+  <!-- 01 FV（台本 No.1〜4）：CTAなし。パーツ集にタイトル部品がないため「タイトル（h1）→本文→要点ボックス mt-summary」。ラベル（No.1）はサブコピーの書き出しに入れた -->
   <p class="mt-prbar"><span class="lp-nowrap"><b>PR</b>　本ページはプロモーションを含みます</span><span class="lp-prsep">　｜　</span><span class="lp-nowrap">更新日：2026年10月6日</span></p>
 
-  <div class="lp2-fv">
-    <p class="lp2-fv__label">発達障害・グレーゾーンのお子さまの家庭教師選び</p>
-    <h1 class="lp2-fv__h1"><span data-v="default">発達特性のあるお子さまの家庭教師は、<span class="lp2-fv__em">「1対1」だけで選ばないでください。</span></span><span data-v="online" hidden>発達特性のあるお子さまに合うオンライン家庭教師は、<span class="lp2-fv__em">何を基準に選ぶ？</span></span></h1>
-    <p class="lp2-fv__sub">大切なのは、特性を理解してくれる先生、その子に合わせて教え方を変えられること、そして無理なく続けられる学習環境です。<span data-v="default">訪問型だけで探している方も、オンライン家庭教師まで比べると選択肢が広がります。</span><span data-v="online" hidden>オンラインだからこそ、先生の専門性やサポート体制まで比べることが大切です。</span></p>
-  </div>
+  <h1><span data-v="default">発達特性のあるお子さまの家庭教師は、「1対1」だけで選ばないでください。</span><span data-v="online" hidden>発達特性のあるお子さまに合うオンライン家庭教師は、何を基準に選ぶ？</span></h1>
+  <p><b>発達障害・グレーゾーンのお子さまの家庭教師選び</b>で大切なのは、特性を理解してくれる先生、その子に合わせて教え方を変えられること、そして無理なく続けられる学習環境です。<br><span data-v="default">訪問型だけで探している方も、<span class="mt-mark">オンライン家庭教師まで比べると選択肢が広がります。</span></span><span data-v="online" hidden><span class="mt-mark">オンラインだからこそ、先生の専門性やサポート体制まで比べることが大切です。</span></span></p>
 
   <div class="mt-summary"><p class="mt-summary__ttl">このページでわかること</p><ul>
     <li>小学生〜高校生の家庭教師選びを整理</li>
@@ -25,27 +22,25 @@
   <p>学校や塾ではついていけない。家で教えると親子でぶつかる。<br>だから家庭教師を考えたのに、先生が特性を理解していなければ、同じ説明を繰り返すだけになってしまうことがあります。</p>
   <p>大事なのは<span class="mt-mark">“家庭教師をつけること”ではなく、“その子に合う学び方を一緒に作れること”</span>です。</p>
 
-  <div class="lp2-grades">
-    <div class="lp2-grade" data-grade="sho"><p class="lp2-grade__ttl">小学生なら</p><p>宿題に取りかかれない／集中が続かない／できない経験が重なり自信をなくしている</p></div>
-    <div class="lp2-grade" data-grade="chu"><p class="lp2-grade__ttl">中学生なら</p><p>授業のスピードが上がり、定期テスト・提出物・複数教科の管理まで一気に負担が増えている</p></div>
-    <div class="lp2-grade" data-grade="ko"><p class="lp2-grade__ttl">高校生なら</p><p>教科が難しくなり、自分で計画を立てて勉強することまで求められ、苦手が広がっている</p></div>
-  </div>
+  <div data-grade="sho"><h3 class="mt-h3">小学生なら</h3><p>宿題に取りかかれない／集中が続かない／できない経験が重なり自信をなくしている</p></div>
+  <div data-grade="chu"><h3 class="mt-h3">中学生なら</h3><p>授業のスピードが上がり、定期テスト・提出物・複数教科の管理まで一気に負担が増えている</p></div>
+  <div data-grade="ko"><h3 class="mt-h3">高校生なら</h3><p>教科が難しくなり、自分で計画を立てて勉強することまで求められ、苦手が広がっている</p></div>
 
   <!-- 03 結論・選び方（台本 No.11〜16）：5つの条件 -->
   <h2 class="mt-h2">発達特性のある子の家庭教師は、5つの条件で選ぶ。</h2>
 <!--SLOT:IMG-06-->
-  <ol class="lp2-conds">
-    <li><span class="lp2-conds__no">1</span><p>「発達障害にも対応」ではなく、<b>特性理解を前提にした研修や仕組み</b>があるか</p></li>
-    <li><span class="lp2-conds__no">2</span><p>最初に<b>“どこでつまずいているか”</b>を見て、指導計画を変えられるか</p></li>
-    <li><span class="lp2-conds__no">3</span><p><b>集中時間・説明方法・進む速さ</b>を、その子に合わせて調整できるか</p></li>
-    <li><span class="lp2-conds__no">4</span><p>先生との相性が合わない時に、<b>相談・交代できる仕組み</b>があるか</p></li>
-    <li><span class="lp2-conds__no">5</span><p>授業後の様子や宿題を、<b>保護者が把握できる</b>か</p></li>
+  <ol class="mt-steps">
+    <li>「発達障害にも対応」ではなく、特性理解を前提にした研修や仕組みがあるか</li>
+    <li>最初に“どこでつまずいているか”を見て、指導計画を変えられるか</li>
+    <li>集中時間・説明方法・進む速さを、その子に合わせて調整できるか</li>
+    <li>先生との相性が合わない時に、相談・交代できる仕組みがあるか</li>
+    <li>授業後の様子や宿題を、保護者が把握できるか</li>
   </ol>
 
   <!-- 04 橋渡し（台本 No.17〜19）：訪問型／オンライン。どちらかを推す記号は付けない -->
   <h2 class="mt-h2">では、訪問型とオンライン。発達特性のある子にはどちらが合う？</h2>
   <p>どちらが絶対に上、という話ではありません。<br>対面でそばにいてもらう方が安心する子もいます。<br>一方で、先生の選択肢や環境変化への負担を考えると、オンラインの方が合う家庭もあります。</p>
-  <table class="mt-vs lp2-vs">
+  <table class="mt-vs">
     <thead><tr><th>比較軸</th><th>訪問型</th><th>オンライン</th></tr></thead>
     <tbody>
       <tr><th>先生の選択肢</th><td>地域内が中心</td><td>地域に縛られにくい</td></tr>
@@ -71,13 +66,13 @@
   <!-- 06 オンライン家庭教師の選び方（台本 No.22〜23）：6項目カード -->
   <h2 class="mt-h2">オンライン家庭教師も、“オンラインだから”ではなく仕組みで比べる。</h2>
   <p>見るべきは、次の6つです。</p>
-  <ol class="lp2-six">
-    <li><span class="lp2-six__no">1</span>発達特性への専門性</li>
-    <li><span class="lp2-six__no">2</span>教師の研修</li>
-    <li><span class="lp2-six__no">3</span>アセスメントと個別計画</li>
-    <li><span class="lp2-six__no">4</span>先生との相性確認</li>
-    <li><span class="lp2-six__no">5</span>保護者との情報共有</li>
-    <li><span class="lp2-six__no">6</span>料金の分かりやすさ</li>
+  <ol class="mt-steps">
+    <li>発達特性への専門性</li>
+    <li>教師の研修</li>
+    <li>アセスメントと個別計画</li>
+    <li>先生との相性確認</li>
+    <li>保護者との情報共有</li>
+    <li>料金の分かりやすさ</li>
   </ol>
   <p>ここまで確認してからサービスを比べます。</p>
 
@@ -90,7 +85,7 @@
     }
     var g = q.get('grade');
     if (/^(sho|chu|ko)$/.test(g || '')) {
-      document.querySelectorAll('.lp2-grade').forEach(function (el) { el.hidden = el.getAttribute('data-grade') !== g; });
+      document.querySelectorAll('[data-grade]').forEach(function (el) { el.hidden = el.getAttribute('data-grade') !== g; });
     }
   })();
   </script>
