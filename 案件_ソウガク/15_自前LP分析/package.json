@@ -1,0 +1,1 @@
+{"name":"sogaku-lp-analytics","private":true,"scripts":{"deploy":"wrangler deploy","db:remote":"wrangler d1 execute sogaku-lp-analytics --remote --file=schema.sql"},"devDependencies":{"wrangler":"^4.0.0"}}
