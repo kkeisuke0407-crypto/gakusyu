@@ -123,4 +123,4 @@ a { color: var(--mt-blue); }
 .mt-cta__micro.lp-micro-key { font-size: 13.5px; letter-spacing: -.02em; }
 
 /* LP02：ページタイトル（h1）。パーツ集にタイトル部品がないため、本文の見出しとしての最低限の見た目だけ */
-.mt-body > h1 { margin: .6em 0 .7em; font-size: 23px; font-weight: 900; line-height: 1.5; }
+.mt-body > h1:not([class]) { margin: .6em 0 .7em; font-size: 23px; font-weight: 900; line-height: 1.5; }
