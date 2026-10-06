@@ -98,3 +98,12 @@ a { color: var(--mt-blue); }
 .lp-basic { width: 100%; min-width: 0; margin: 1.2em 0; font-size: 13.5px; line-height: 1.6; }
 .lp-basic th { width: 6.2em; background: var(--mt-blue-bg) !important; color: var(--mt-blue); font-weight: 700; position: static !important; min-width: 0 !important; }
 .lp-basic td { text-align: left; }
+
+/* 比較表（mt-cmpv）のLP用調整：入会前に確認できること・無料体験ボタン */
+.lp-cmpv-strong { display: block; color: var(--mt-ink); font-size: 12.5px; font-weight: 900; line-height: 1.4; }
+.mt-cmpv small.lp-cmpv-sub { margin-top: .2em; font-size: 10px; color: var(--mt-sub); }
+.mt-cmpv .is-pick .mt-cmpv__btn.lp-cmpv-btn2 { white-space: normal; padding: .6em .15em; font-size: 12px; line-height: 1.35; }
+/* 評価について */
+.lp-eval { margin-top: .8em; }
+.lp-eval p { font-size: 14px; }
+.lp-eval .lp-eval__note { margin: .4em 0 0; color: var(--mt-sub); font-size: 12px; }
