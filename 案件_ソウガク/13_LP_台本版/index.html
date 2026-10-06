@@ -14,7 +14,7 @@
 <article class="mt-body">
 
   <!-- 組み方：hozon「体験談ランキング型LP パーツ集」（https://hakobu-family.com/lp-parts/）のHTML・ルールどおり -->
-  <!-- 構成（2026-10-06）：PR → タイトル → ヒーロー → 3社比較表（◎○△×）→ 結論 → 選ぶ3つのポイント → ランキングTOP3 → ソウガクのメリット → 無料体験 → FAQ → 最後のCTA。競合の事実は各社公式サイト（出典は 画像出典.md）。競合へのリンクは置かない -->
+  <!-- 構成（2026-10-06）：PR → タイトル → ヒーロー → 3社比較表（◎○△×）→ 結論 → 選ぶ3つのポイント → ランキングTOP3 → ソウガクのメリット → 無料体験 → FAQ → 最後のCTA。競合の事実は各社公式サイト（出典は 画像出典.md）。競合へのリンクは比較表の公式サイトボタンだけ（nofollow） -->
 
   <!-- 01 FV -->
   <p class="mt-prbar"><span class="lp-nowrap"><b>PR</b>　本ページはプロモーションを含みます</span><span class="lp-prsep">　｜　</span><span class="lp-nowrap">更新日：2026年10月6日</span></p>
@@ -65,11 +65,12 @@
   <p>塾が合わなかった。家で教えると、ついケンカになる。<br>そんなときの選択肢が、家で受けられるオンライン家庭教師です。</p>
   <p><b>発達障害・グレーゾーンの子に対応した3社を、先生・授業の長さ・料金・親へのサポートで比べました。</b></p>
 
-  <!-- 02 比較表（3社・◎○△×。推す列に is-pick） -->
+  <!-- 02 比較表：パーツ「縦型比較表（3社・総合評価つき）mt-cmpv」。推す列に is-pick、一番下に公式サイトボタン（競合は通常リンク・nofollow） -->
   <h2 class="mt-h2" id="compare">オンライン家庭教師3社を比較</h2>
-  <table class="mt-vs lp-vs3">
-    <thead><tr><th></th><th class="is-pick"><span class="mt-badge">おすすめ</span><span class="lp-vs3__logo"><img src="images/logos/sogaku-logo.svg" alt="ソウガク" width="500" height="186"></span><a class="mt-mini-btn" href="https://t.felmat.net/fmcl?ak=C12158L.1.I1680104.D1416296&amp;pb=" data-cta target="_blank" rel="sponsored nofollow noopener">公式サイト</a></th><th><span class="lp-vs3__logo"><img src="images/logos/tintle-logo.png" alt="ティントル" width="498" height="108"></span><span class="lp-vs3__name">ティントル</span></th><th><span class="lp-vs3__logo"><img src="images/logos/coaching1-logo.png" alt="家庭教師のコーチング1" width="293" height="27"></span><span class="lp-vs3__name">コーチング1</span></th></tr></thead>
+  <table class="mt-cmpv">
+    <thead><tr><th></th><th class="is-pick"><span class="mt-cmpv__rank">1位</span><span class="mt-cmpv__logo"><img src="images/logos/sogaku-logo.svg" alt="ソウガク" width="500" height="186"></span><span class="mt-cmpv__name">ソウガク</span></th><th><span class="mt-cmpv__rank">2位</span><span class="mt-cmpv__logo"><img src="images/logos/tintle-logo.png" alt="ティントル" width="498" height="108"></span><span class="mt-cmpv__name">ティントル</span></th><th><span class="mt-cmpv__rank">3位</span><span class="mt-cmpv__logo"><img src="images/logos/coaching1-logo.png" alt="家庭教師のコーチング1" width="293" height="27"></span><span class="mt-cmpv__name">コーチング1</span></th></tr></thead>
     <tbody>
+      <tr class="mt-cmpv__total"><th>総合評価</th><td class="is-pick"><span class="mt-cmpv__score">4.7</span><span class="mt-cmpv__stars"><span style="width:94%">★★★★★</span>★★★★★</span></td><td><span class="mt-cmpv__score">3.6</span><span class="mt-cmpv__stars"><span style="width:72%">★★★★★</span>★★★★★</span></td><td><span class="mt-cmpv__score">3.1</span><span class="mt-cmpv__stars"><span style="width:62%">★★★★★</span>★★★★★</span></td></tr>
       <tr><th>発達特性への対応</th><td class="is-pick"><span class="mt-mk mt-mk--best">◎</span><small>専門（専門機関監修）</small></td><td><span class="mt-mk mt-mk--good">◯</span><small>不登校専門・特性も対応</small></td><td><span class="mt-mk mt-mk--best">◎</span><small>専門・発達検査あり</small></td></tr>
       <tr><th>先生</th><td class="is-pick"><span class="mt-mk mt-mk--best">◎</span><small>研修を受けた社会人講師</small></td><td><span class="mt-mk mt-mk--fair">△</span><small>現役の大学生</small></td><td><span class="mt-mk mt-mk--good">◯</span><small>独自研修・選抜</small></td></tr>
       <tr><th>授業の長さ</th><td class="is-pick"><span class="mt-mk mt-mk--best">◎</span><small>25分から</small></td><td><span class="mt-mk mt-mk--best">◎</span><small>30分単位</small></td><td><span class="mt-mk mt-mk--fair">△</span><small>90分から</small></td></tr>
@@ -77,8 +78,9 @@
       <tr><th>授業の報告・親の相談</th><td class="is-pick"><span class="mt-mk mt-mk--best">◎</span><small>毎回の報告＋チャット</small></td><td><span class="mt-mk mt-mk--good">◯</span><small>相談士が面談・LINE</small></td><td><span class="mt-mk mt-mk--good">◯</span><small>毎回の報告書</small></td></tr>
       <tr><th>お試し</th><td class="is-pick"><span class="mt-mk mt-mk--best">◎</span><small>体験2回＋返金保証</small></td><td><span class="mt-mk mt-mk--good">◯</span><small>無料相談・体験</small></td><td><span class="mt-mk mt-mk--good">◯</span><small>無料体験（約120分）</small></td></tr>
     </tbody>
+    <tfoot><tr><th>公式</th><td class="is-pick"><a class="mt-cmpv__btn" href="https://t.felmat.net/fmcl?ak=C12158L.1.I1680104.D1416296&amp;pb=" data-cta target="_blank" rel="sponsored nofollow noopener">公式サイト</a></td><td><a class="mt-cmpv__btn" href="https://tintle.net/" target="_blank" rel="nofollow noopener">公式サイト</a></td><td><a class="mt-cmpv__btn" href="https://coaching01.com/type/ldadhdas.html" target="_blank" rel="nofollow noopener">公式サイト</a></td></tr></tfoot>
   </table>
-  <p class="mt-small">※◎◯△は、2026年10月6日時点の各社公式サイトの情報をもとにした編集部の評価です。料金は各社のいちばん安いプランの例（税込・入会金などは別）で、授業時間や回数が違うため単純には比べられません。</p>
+  <p class="mt-small">※◎◯△は、2026年10月6日時点の各社公式サイトの情報をもとにした編集部の評価です。総合評価は◎3点・◯2点・△1点の合計を5点満点に換算しています。料金は各社のいちばん安いプランの例（税込・入会金などは別）で、授業時間や回数が違うため単純には比べられません。</p>
 
   <div class="mt-conclusion"><p class="mt-conclusion__ttl">【結論】</p><p>3社とも、発達特性のある子に対応したオンライン家庭教師です。</p><p>その中で、授業を25分から選べて、毎回の報告で親も様子が分かり、体験2回＋返金保証で試しやすいのが<a href="https://t.felmat.net/fmcl?ak=C12158L.1.I1680104.D1416296&amp;pb=" data-cta target="_blank" rel="sponsored nofollow noopener">「ソウガク」</a>。初めてのオンライン家庭教師なら、まずはソウガクの無料体験から確かめるのがおすすめです。</p></div>
   <p class="mt-textlink">▶<a href="https://t.felmat.net/fmcl?ak=C12158L.1.I1680104.D1416296&amp;pb=" data-cta target="_blank" rel="sponsored nofollow noopener">ソウガクの無料体験を公式サイトで見る</a><small>└無料体験は2回。1回目は保護者面談にもできます</small></p>
