@@ -27,9 +27,11 @@ PAGES = {
 }
 
 def lp02_only(t, keep):
-    """共通部品の中の <!--LP02-ONLY-->〜<!--/LP02-ONLY--> は LP02 にだけ出す（王道LPは変えない）"""
-    pat = r"[ \t]*<!--LP02-ONLY-->\n(.*?)[ \t]*<!--/LP02-ONLY-->\n"
-    return re.sub(pat, (lambda m: m.group(1)) if keep else "", t, flags=re.S)
+    """共通部品の中の <!--LP02-ONLY-->〜<!--/LP02-ONLY--> は LP02 にだけ、<!--LP01-ONLY-->〜<!--/LP01-ONLY--> は王道LPにだけ出す"""
+    for tag, show in (("LP02-ONLY", keep), ("LP01-ONLY", not keep)):
+        pat = r"[ \t]*<!--%s-->\n(.*?)[ \t]*<!--/%s-->\n" % (tag, tag)
+        t = re.sub(pat, (lambda m: m.group(1)) if show else "", t, flags=re.S)
+    return t
 
 def add_prefix(t, prefix):
     """サブフォルダのページ用に、相対パス（画像・CSS・運営者ページなど）の頭に ../ を付ける"""
