@@ -3,21 +3,22 @@
        ここ（比較表より上）だけがLP02専用。CTA・申込誘導は置かない。比較表から下は王道LPと共通の部品（common_compare.html／common_after.html）。
        台本の差し替え条件（オンラインKW・学年KW）は URL パラメータで切り替え：?kw=online ／ ?grade=sho|chu|ko -->
 
-  <!-- 01 FV（台本 No.1〜4）：スマホ1画面以内・CTAなし。チップ部品がパーツ集にないため、チップは注記（mt-small）の横並び1行にした -->
+  <!-- 01 FV（台本 No.1〜3）：スマホ1画面以内・CTAなし。ラベル（mt-small）→ H1 -->
   <p class="mt-prbar"><span class="lp-nowrap"><b>PR</b>　本ページはプロモーションを含みます</span><span class="lp-prsep">　｜　</span><span class="lp-nowrap">更新日：2026年10月6日</span></p>
 
   <p class="mt-small"><b>発達障害・グレーゾーンのお子さまの家庭教師選び</b></p>
   <h1><span data-v="default">発達特性のあるお子さまの家庭教師は、「1対1」だけで選ばないでください。</span><span data-v="online" hidden>発達特性のあるお子さまに合うオンライン家庭教師は、何を基準に選ぶ？</span></h1>
-  <p>特性を理解してくれる先生か、その子に合わせて教え方を変えられるか。<span data-v="default"><span class="mt-mark">訪問型だけでなく、オンラインまで含めて比べると選択肢が広がります。</span></span><span data-v="online" hidden><span class="mt-mark">オンラインだからこそ、先生の専門性やサポート体制まで比べることが大切です。</span></span></p>
-  <p class="mt-small"><b><span data-grade="ko" hidden>高校生｜</span>特性理解｜先生との相性｜訪問型とオンラインの違い</b></p>
 
-  <!-- 02 共感（台本 No.6〜10）：0.5画面程度。学年KWのときだけ、その学年の1行を本文末尾に出す（H3・カードにしない） -->
-  <h2 class="mt-h2">「家庭教師なら1対1だから大丈夫」と思っても、合わないことがあります。</h2>
-  <p>学校や塾で合わず、家で教えるとぶつかる。だから家庭教師を探しているご家庭もあります。</p>
-  <p>大切なのは<span class="mt-mark">“1対1”そのものではなく、その子に合う先生と学び方を選ぶこと</span>です。</p>
-  <p data-grade="sho" hidden>小学生なら、宿題に取りかかれない／集中が続きにくい／できない経験で自信をなくしている。</p>
-  <p data-grade="chu" hidden>中学生なら、定期テスト・提出物・複数教科の管理まで負担が増えている。</p>
-  <p data-grade="ko" hidden>高校生なら、教科が難しくなり、学習計画まで自分で立てる負担が増えている。</p>
+  <!-- 02 導入の会話（mt-talk・FV直下）：台本 No.3 サブコピー＋No.6〜10 共感を会話にした。黄マーカーは答えの予告（⑥）の1か所だけ。
+       学年KWは①だけ差し替え、オンラインKWは⑥の2文目を差し替え（台本 No.3 の差し替え条件） -->
+  <div class="mt-talk">
+    <div class="mt-talk__row mt-talk__row--r"><div class="mt-talk__who"><span class="mt-talk__icon"><img src="images/gen/icon_parent.webp" alt="" width="240" height="240"></span><span class="mt-talk__name">保護者</span></div><div class="mt-talk__b"><span data-grade="">学校や塾で合わず、家で教えるとぶつかってしまって…。</span><span data-grade="sho" hidden>宿題に取りかかれず、できない経験で自信もなくしていて…。</span><span data-grade="chu" hidden>定期テストや提出物、複数教科の管理まで負担が増えていて…。</span><span data-grade="ko" hidden>教科が難しくなって、学習計画まで自分で立てるのが負担で…。</span></div></div>
+    <div class="mt-talk__row"><div class="mt-talk__who"><span class="mt-talk__icon"><img src="images/gen/icon_editor.webp" alt="" width="240" height="240"></span><span class="mt-talk__name">編集部</span></div><div class="mt-talk__b">それで家庭教師を探しているご家庭もありますよね。</div></div>
+    <div class="mt-talk__row mt-talk__row--r"><div class="mt-talk__who"><span class="mt-talk__icon"><img src="images/gen/icon_parent.webp" alt="" width="240" height="240"></span><span class="mt-talk__name">保護者</span></div><div class="mt-talk__b">家庭教師なら1対1だから、大丈夫ですよね？</div></div>
+    <div class="mt-talk__row"><div class="mt-talk__who"><span class="mt-talk__icon"><img src="images/gen/icon_editor.webp" alt="" width="240" height="240"></span><span class="mt-talk__name">編集部</span></div><div class="mt-talk__b">1対1でも、合わないことはあります。<br>大切なのは、その子に合う先生と学び方です。</div></div>
+    <div class="mt-talk__row mt-talk__row--r"><div class="mt-talk__who"><span class="mt-talk__icon"><img src="images/gen/icon_parent.webp" alt="" width="240" height="240"></span><span class="mt-talk__name">保護者</span></div><div class="mt-talk__b">合う先生って、どうやって選べばいいんでしょう？</div></div>
+    <div class="mt-talk__row"><div class="mt-talk__who"><span class="mt-talk__icon"><img src="images/gen/icon_editor.webp" alt="" width="240" height="240"></span><span class="mt-talk__name">編集部</span></div><div class="mt-talk__b">特性を理解して、教え方を変えられるか。<br><span data-v="default"><span class="mt-mark">訪問型だけでなくオンラインまで比べると、選択肢が広がります。</span></span><span data-v="online" hidden><span class="mt-mark">オンラインだからこそ、先生の専門性やサポート体制まで比べることが大切です。</span></span></div></div>
+  </div>
 
   <!-- 03 結論・選び方（台本 No.11〜16）：5つの条件。1項目＝見出し（mt-h3：h2の中の小分け）＋1文の縦リスト。図解・補足カードは足さない -->
   <h2 class="mt-h2">発達特性のある子の家庭教師は、「1対1」より“合う先生・合う学び方”で選ぶ。</h2>
@@ -60,13 +61,14 @@
   <p>家庭教師を選ぶ基準が見えたら、次は実際のオンライン家庭教師を比べます。</p>
 
   <script>
-  /* 台本の差し替え条件：?kw=online（オンラインKW）でH1・サブコピー後半・結論ボックスの書き出しを差し替え、?grade=sho|chu|ko（学年KW）でその学年の1行だけ表示（指定なしなら学年の行は出さない） */
+  /* 台本の差し替え条件：?kw=online（オンラインKW）でH1・会話⑥の2文目・結論ボックスの書き出しを差し替え、?grade=sho|chu|ko（学年KW）で会話①をその学年の悩みに差し替え */
   (function () {
     var q = new URLSearchParams(location.search);
     if (q.get('kw') === 'online') {
       document.querySelectorAll('[data-v]').forEach(function (el) { el.hidden = el.getAttribute('data-v') !== 'online'; });
     }
     var g = q.get('grade');
+    if (!/^(sho|chu|ko)$/.test(g || '')) g = '';
     document.querySelectorAll('[data-grade]').forEach(function (el) { el.hidden = el.getAttribute('data-grade') !== g; });
   })();
   </script>
