@@ -19,7 +19,7 @@
 - `<!--SLOT:IMG-xx-->` は `build.py`（画像指示）と `gen_map.json`（完成画像）で画像に置き換わる。
 - サブLPはサブフォルダなので、画像・CSS などの相対パスに自動で `../` を付けて出力する。
 - 差し替え条件は URL パラメータ。
-  - LP02：`?kw=online`（H1・会話⑥）、`?grade=sho|chu|ko`（会話①を学年の悩みに）
+  - LP02：`?kw=online`（H1・会話⑥）、`?grade=sho|chu|ko`（会話①を学年の悩みに）。学年＋オンラインのKWは `?kw=online&grade=chu` のように両方つける
   - LP03：`?kw=method`（会話の保護者①②を勉強法KW向けに）
   - LP04：`?kw=math`／`?kw=english`（会話の保護者①とKW別カードを算数・英語向けに。指定なしは読み書き）
   - LP05：`?kw=individual`／`?kw=concern`／`?kw=subject`（会話の保護者①とKW別カードを個別指導・受入れ不安・教科特化向けに。指定なし・学年別KWは default）

@@ -19,7 +19,7 @@ const PAGES = ['index.html', ...fs.readdirSync(ROOT).filter(d => /^lp\d+$/.test(
 // KW・学年の差し替え（URLパラメータ）も1つずつ確認する。文字量が変わって崩れるケースを拾うため。
 // サブLPに差し替え条件を足したら、ここにも足す。
 const VARIANTS = {
-  'lp02/index.html': ['?kw=online', '?grade=sho', '?grade=chu', '?grade=ko'],
+  'lp02/index.html': ['?kw=online', '?grade=sho', '?grade=chu', '?grade=ko', '?kw=online&grade=sho', '?kw=online&grade=chu', '?kw=online&grade=ko'],
   'lp03/index.html': ['?kw=method'],
   'lp04/index.html': ['?kw=math', '?kw=english'],
   'lp05/index.html': ['?kw=individual', '?kw=concern', '?kw=subject'],
@@ -78,10 +78,9 @@ const server = http.createServer((req, res) => {
         const longH2 = [...document.querySelectorAll('h2.mt-h2')].filter(e => e.offsetParent && lines(e) > 2).map(e => e.textContent.trim());
         const text = document.body.innerText;
         const pts = sub ? ['3つのポイント', '3つの選定基準'].filter(s => text.includes(s)) : [];
-        // 差し替え：?名前=X なら、data-kw / data-v / data-grade / data-名前 が X の要素が表示されているか
-        let switched = true;
-        const m = query.match(/^\?(\w+)=(\w+)$/);
-        if (m) switched = [...document.querySelectorAll(`[data-kw="${m[2]}"],[data-v="${m[2]}"],[data-grade="${m[2]}"],[data-${m[1]}="${m[2]}"]`)].some(e => !e.hidden && e.offsetParent);
+        // 差し替え：?名前=X なら、data-kw / data-v / data-grade / data-名前 が X の要素が表示されているか（&でつないだ複数指定は1つずつ）
+        const switched = [...new URLSearchParams(query)].every(([k, v]) =>
+          [...document.querySelectorAll(`[data-kw="${v}"],[data-v="${v}"],[data-grade="${v}"],[data-${k}="${v}"]`)].some(e => !e.hidden && e.offsetParent));
         return { hasCompare: !!cmp, links, broken, over: document.documentElement.scrollWidth - innerWidth, longH2, pts, switched, screens: cmp ? +(cy / innerHeight).toFixed(1) : null };
       }, [sub, query]);
       const tag = `${page}${query} ${w}px`;
