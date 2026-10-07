@@ -12,9 +12,9 @@
   <!-- 02 導入の会話（mt-talk・FV直下、台本 No.2〜7）：黄マーカーは④の後半だけ -->
   <div class="mt-talk">
     <div class="mt-talk__row mt-talk__row--r"><div class="mt-talk__who"><span class="mt-talk__icon"><img src="images/gen/icon_parent.webp" alt="" width="240" height="240"></span><span class="mt-talk__name">保護者</span></div><div class="mt-talk__b"><span data-kw="default subject">うちの子に合う塾を探しているんですが、やっぱり個別指導の方がいいんでしょうか？</span><span data-kw="individual" hidden>集団塾だとついていけるか心配で、個別指導塾を探していて…。</span><span data-kw="concern" hidden>塾に断られたり、周りに迷惑をかけたりしないか心配で…。</span></div></div>
-    <div class="mt-talk__row"><div class="mt-talk__who"><span class="mt-talk__icon"><img src="images/gen/icon_editor.webp" alt="" width="240" height="240"></span><span class="mt-talk__name">編集部</span></div><div class="mt-talk__b">個別指導といっても、先生1人が複数の生徒を見る教室もあります。<br>それに、発達特性のある子の場合、大事なのは人数だけではありません。</div></div>
+    <div class="mt-talk__row"><div class="mt-talk__who"><span class="mt-talk__icon"><img src="images/gen/icon_editor.webp" alt="" width="240" height="240"></span><span class="mt-talk__name">編集部</span></div><div class="mt-talk__b"><span data-kw="default individual subject">個別指導といっても、先生1人が複数の生徒を見る教室もあります。<br>それに、発達特性のある子の場合、大事なのは人数だけではありません。</span><span data-kw="concern" hidden>発達特性のある子への対応は、教室によってかなり違います。<br>それに、大事なのは受け入れてもらえるかだけではありません。</span></div></div>
     <div class="mt-talk__row mt-talk__row--r"><div class="mt-talk__who"><span class="mt-talk__icon"><img src="images/gen/icon_parent.webp" alt="" width="240" height="240"></span><span class="mt-talk__name">保護者</span></div><div class="mt-talk__b">じゃあ、何を見て選べばいいんでしょう？</div></div>
-    <div class="mt-talk__row"><div class="mt-talk__who"><span class="mt-talk__icon"><img src="images/gen/icon_editor.webp" alt="" width="240" height="240"></span><span class="mt-talk__name">編集部</span></div><div class="mt-talk__b">先生の人数だけでなく、<span class="mt-mark">つまずきを見て、説明やペースを変えてくれるかまで確認しましょう。</span></div></div>
+    <div class="mt-talk__row"><div class="mt-talk__who"><span class="mt-talk__icon"><img src="images/gen/icon_editor.webp" alt="" width="240" height="240"></span><span class="mt-talk__name">編集部</span></div><div class="mt-talk__b">先生1人が何人を担当するかだけでなく、<span class="mt-mark">つまずきに合わせて説明やペースを変えてくれるかまで確認しましょう。</span></div></div>
   </div>
 
   <!-- 03 中心回答（台本 No.8〜10）：塾を選ぶ前に確認したい4つの図解（mt-img）＋補足 -->
@@ -60,7 +60,7 @@
   <p>ここからは、実際のオンライン家庭教師3社を比較します。</p>
 
   <script>
-  /* 台本の差し替え条件：?kw=individual／concern／subject で会話の保護者①とKW別の補足ボックスを差し替え（指定なしは default） */
+  /* 台本の差し替え条件：?kw=individual／concern／subject で会話の保護者①・編集部①（concernのみ）とKW別の補足ボックスを差し替え（指定なしは default） */
   (function () {
     var k = new URLSearchParams(location.search).get('kw');
     if (['individual', 'concern', 'subject'].indexOf(k) < 0) k = 'default';
