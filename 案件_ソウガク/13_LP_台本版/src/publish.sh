@@ -28,7 +28,10 @@ for f in "${PAGES[@]}" style.css parts.css disclosure.html operator.html privacy
   mkdir -p "$WT/$(dirname "$f")"
   cp "$LP/$f" "$WT/$f"
 done
-cp -r "$LP/images/." "$WT/images/"
+# 画像ファイルだけをコピー（images/ 内のメモ・JSON などは公開しない）
+(cd "$LP" && find images -type f \( -name '*.webp' -o -name '*.png' -o -name '*.jpg' -o -name '*.jpeg' -o -name '*.svg' -o -name '*.gif' \) -print0) |
+  while IFS= read -r -d '' f; do mkdir -p "$WT/$(dirname "$f")"; cp "$LP/$f" "$WT/$f"; done
+rm -f "$WT/images/_picked_meta.json"
 git -C "$WT" add -A
 if git -C "$WT" diff --cached --quiet; then
   echo "公開ブランチに変更なし"
