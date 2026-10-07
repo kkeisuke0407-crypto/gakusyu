@@ -34,6 +34,11 @@ while todo:
         else:
             missing.append(f"{f} → {ref}")
 
+# 計測の仕様書とテスト（ページからは参照されないが、公開ブランチに置いて管理しているので残す）
+for p in ["MEASUREMENT.md", "tests/measurement.test.cjs"]:
+    if os.path.isfile(os.path.join(LP, p)):
+        seen.add(p)
+
 if missing:
     print("参照先のファイルがありません:\n  " + "\n  ".join(sorted(set(missing))), file=sys.stderr)
     sys.exit(1)
