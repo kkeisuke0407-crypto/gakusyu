@@ -1,4 +1,0 @@
-/* LP02 専用。部品はすべて parts.css（hozon「体験談ランキング型LP パーツ集」）と style.css（LP01 と同一）を使う。
-   ここに置くのは、パーツ集に部品がないテキストのタイトル（h1）の文字の大きさだけ。
-   FVのアイキャッチ画像（LP02-01）ができたら、LP01 と同じ「見出し入りヒーロー画像（.lp-hero）」に置き換えるかを決める */
-.lp-ttl { margin: .4em 0 .2em; font-size: min(24px, 6.2vw); font-weight: 900; line-height: 1.55; letter-spacing: .01em; }
