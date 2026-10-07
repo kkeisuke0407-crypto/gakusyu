@@ -16,7 +16,7 @@
   if (disabled || navigator.globalPrivacyControl === true) return;
 
   var page = new URL(location.origin + path);
-  ['utm_source', 'utm_medium', 'utm_campaign', 'utm_id', 'utm_content', 'gclid', 'gbraid', 'wbraid'].forEach(function (key) {
+  ['utm_source', 'utm_medium', 'utm_campaign', 'utm_id', 'utm_content', 'gclid', 'gbraid', 'wbraid', 'kw', 'grade', 'exam'].forEach(function (key) {
     var value = query.get(key);
     if (value && /^[a-zA-Z0-9_.~+\-]{1,200}$/.test(value)) page.searchParams.set(key, value);
   });
@@ -35,11 +35,14 @@
   gtag('config', GA, {
     page_location: page.href, page_referrer: referrer,
     page_title: 'わが子の学び方ガイド | ' + lp,
-    send_page_view: true, allow_google_signals: false,
+    lp_id: lp, measurement_mode: debug ? 'debug' : 'live',
+    send_page_view: false, allow_google_signals: false,
     allow_ad_personalization_signals: false, debug_mode: debug
   });
   gtag('config', ADS, { page_location: page.href, page_referrer: referrer,
     page_title: 'わが子の学び方ガイド | ' + lp, allow_ad_personalization_signals: false });
+  // Explicitly attach the same LP context to the initial page view exactly once.
+  event('page_view', { page_referrer: referrer, debug_mode: debug });
   var loader = document.createElement('script');
   loader.async = true;
   loader.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA;

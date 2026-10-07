@@ -32,6 +32,13 @@ MCVは紹介先への遷移であり、無料体験申込・承認成果では�
 
 - 共通スクリプト: lp-measurement.js。HTMLの data-cta-id / data-section-id / data-faq-id は改稿しても意味を保持する。
 - felmatの ak / pb とリンク先・targetは変更しない。GCLIDのASP側取得とオフライン成果送信はASPに確認。
-- 任意のURL引数・検索語・フォーム値・質問文を送らない。広告パーソナライズ・Googleシグナルは無効。プライバシーページでブラウザごとの計測停止が可能。EEA等では同意未取得状態のストレージ利用を拒否。
+- GA4へ送るURL引数は既存の広告識別子と `kw / grade / exam` のみ。値は英数字と `_.~+-` の1〜200文字に制限し、その他のURL引数・フォーム値・質問文を送らない。広告パーソナライズ・Googleシグナルは無効。プライバシーページでブラウザごとの計測停止が可能。EEA等では同意未取得状態のストレージ利用を拒否。
 - 本番相当の動作テスト: node tests/measurement.test.cjs。
 - 公開ブランチ: codex/online-tutor-pages（GitHub Pagesルート）。別ブランチの古いHTMLを上書きしない。
+
+## 2026-10-07 追加改善
+
+- 初回 `page_view` は自動送信を無効にし、`lp_id / measurement_mode / page_location / page_referrer` を指定して1回送信。既存カスタムイベントと同じLP識別情報を使用する。
+- `?kw=math` と `?kw=english`、`?grade=chu`、`?exam=junior` などの内部切替をGA4のURLに保持。`measurement_debug` はURLに残さず `measurement_mode=debug` として区別する。
+- `lp_other_service_click` の `destination=tintle.net / coaching01.com` と、`sougaku_mcv` の `destination=sougaku` を維持。GA4ではイベントスコープの「遷移先」カスタムディメンションとして使う。
+- 初回page_viewの重複、全8LPとdebug/live識別、許可パラメータの保持、任意・不正値の除外を追加テスト。既存のクリック、スクロール、到達、実読、FAQ、計測停止、Google広告MCV送信も継続して検証。
