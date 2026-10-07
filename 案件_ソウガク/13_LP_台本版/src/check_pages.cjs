@@ -14,7 +14,7 @@ const path = require('path');
 const { chromium } = require('playwright');
 
 const ROOT = path.resolve(__dirname, '..');
-const PAGES = ['index.html', 'lp02/index.html', 'lp03/index.html'].filter(p => fs.existsSync(path.join(ROOT, p)));
+const PAGES = ['index.html', ...fs.readdirSync(ROOT).filter(d => /^lp\d+$/.test(d)).sort().map(d => d + '/index.html')].filter(p => fs.existsSync(path.join(ROOT, p)));
 const SIZES = [[375, 667], [1280, 800]];
 const TYPES = { '.html': 'text/html', '.css': 'text/css', '.js': 'text/javascript', '.webp': 'image/webp', '.png': 'image/png', '.jpg': 'image/jpeg', '.svg': 'image/svg+xml' };
 const CHROME = fs.existsSync('/opt/pw-browsers/chromium-1194/chrome-linux/chrome') ? '/opt/pw-browsers/chromium-1194/chrome-linux/chrome' : undefined;
