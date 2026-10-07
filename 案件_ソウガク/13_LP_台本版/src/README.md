@@ -10,6 +10,7 @@
 | LP04（教科・読み書き/LD → 個別支援 導線） | `lp04/index.html` | `lp04_top` → **`common_compare`** → **`common_after`**（3つのポイントだけ除外） |
 | LP05（塾・個別指導 → オンライン家庭教師 導線） | `lp05/index.html` | `lp05_top` → **`common_compare`** → **`common_after`**（3つのポイントだけ除外） |
 | LP06（通信教育・教材 → 個別支援 導線） | `lp06/index.html` | `lp06_top` → **`common_compare`** → **`common_after`**（3つのポイントだけ除外。KWの差し替えなし） |
+| LP07（受験 × 家庭教師 → オンライン家庭教師 導線） | `lp07/index.html` | `lp07_top` → **`common_compare`** → **`common_after`**（3つのポイントだけ除外） |
 
 - **太字の `common_*` は全ページ共通**。比較の見出し「オンライン家庭教師3社を比較」〜比較表〜結論CTA（`common_compare`）と、ランキング以降（体験談・無料体験・料金・FAQ・最終CTA・追従ボタンまで／`common_after`）。ここを直せば全ページに同じ変更が入る。
 - 共通部品の中の出し分け：`<!--OUDOU-ONLY-->〜<!--/OUDOU-ONLY-->` は王道LPだけ、`<!--SUB-ONLY-->〜<!--/SUB-ONLY-->` はサブLP（`build_pages.py` の `sub=True`）だけに出る。「3つのポイント」に触れる文や、体験談の形（王道＝mt-story／サブLP＝mt-review）はこれで分けている。
@@ -21,6 +22,7 @@
   - LP03：`?kw=method`（会話の保護者①②を勉強法KW向けに）
   - LP04：`?kw=math`／`?kw=english`（会話の保護者①とKW別カードを算数・英語向けに。指定なしは読み書き）
   - LP05：`?kw=individual`／`?kw=concern`／`?kw=subject`（会話の保護者①とKW別カードを個別指導・受入れ不安・教科特化向けに。指定なし・学年別KWは default）
+  - LP07：`?kw=online`（会話の保護者①と結論ボックスをオンライン明示KW向けに）／`?exam=junior`（中学受験の補足ボックスを表示）
 
 ## 作り方の流れ（全LP共通のルール）
 

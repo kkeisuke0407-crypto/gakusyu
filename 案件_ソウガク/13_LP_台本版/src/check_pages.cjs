@@ -23,6 +23,7 @@ const VARIANTS = {
   'lp03/index.html': ['?kw=method'],
   'lp04/index.html': ['?kw=math', '?kw=english'],
   'lp05/index.html': ['?kw=individual', '?kw=concern', '?kw=subject'],
+  'lp07/index.html': ['?kw=online', '?exam=junior'],
 };
 const TARGETS = PAGES.flatMap(p => [[p, ''], ...(VARIANTS[p] || []).map(q => [p, q])]);
 const SIZES = [[375, 667], [1280, 800]];
@@ -76,10 +77,10 @@ const server = http.createServer((req, res) => {
         const longH2 = [...document.querySelectorAll('h2.mt-h2')].filter(e => e.offsetParent && lines(e) > 2).map(e => e.textContent.trim());
         const text = document.body.innerText;
         const pts = sub ? ['3つのポイント', '3つの選定基準'].filter(s => text.includes(s)) : [];
-        // 差し替え：?kw=X / ?grade=X なら、data-kw / data-v / data-grade が X の要素が表示されているか
+        // 差し替え：?名前=X なら、data-kw / data-v / data-grade / data-名前 が X の要素が表示されているか
         let switched = true;
-        const m = query.match(/^\?(kw|grade)=(\w+)$/);
-        if (m) switched = [...document.querySelectorAll(`[data-kw="${m[2]}"],[data-v="${m[2]}"],[data-grade="${m[2]}"]`)].some(e => !e.hidden && e.offsetParent);
+        const m = query.match(/^\?(\w+)=(\w+)$/);
+        if (m) switched = [...document.querySelectorAll(`[data-kw="${m[2]}"],[data-v="${m[2]}"],[data-grade="${m[2]}"],[data-${m[1]}="${m[2]}"]`)].some(e => !e.hidden && e.offsetParent);
         return { hasCompare: !!cmp, links, broken, over: document.documentElement.scrollWidth - innerWidth, longH2, pts, switched, screens: cmp ? +(cy / innerHeight).toFixed(1) : null };
       }, [sub, query]);
       const tag = `${page}${query} ${w}px`;
