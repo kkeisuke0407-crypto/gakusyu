@@ -30,14 +30,11 @@ trap 'git -C "$REPO" worktree remove --force "$WT" >/dev/null 2>&1 || true' EXIT
 git -C "$REPO" fetch -q origin "$BRANCH"
 git -C "$REPO" worktree add -q --detach "$WT" "origin/$BRANCH"
 PAGES=(index.html $(cd "$LP" && ls -d lp*/index.html))
-for f in "${PAGES[@]}" style.css parts.css disclosure.html operator.html privacy.html; do
-  mkdir -p "$WT/$(dirname "$f")"
-  cp "$LP/$f" "$WT/$f"
-done
-# 画像ファイルだけをコピー（images/ 内のメモ・JSON などは公開しない）
-(cd "$LP" && find images -type f \( -name '*.webp' -o -name '*.png' -o -name '*.jpg' -o -name '*.jpeg' -o -name '*.svg' -o -name '*.gif' \) -print0) |
-  while IFS= read -r -d '' f; do mkdir -p "$WT/$(dirname "$f")"; cp "$LP/$f" "$WT/$f"; done
-rm -f "$WT/images/_picked_meta.json"
+# 公開するのは、ページと法務ページから実際に参照されている CSS・画像だけ（publish_files.py が一覧を出す）。
+# それ以外（旧ページの残り・使わなくなった画像・メモ・JSON）は公開ブランチから消す。CNAME だけは残す。
+FILES="$(python3 "$SRC/publish_files.py")"
+git -C "$WT" ls-files -z | grep -zv '^CNAME$' | xargs -0 -r git -C "$WT" rm -q --
+while IFS= read -r f; do mkdir -p "$WT/$(dirname "$f")"; cp "$LP/$f" "$WT/$f"; done <<< "$FILES"
 git -C "$WT" add -A
 if git -C "$WT" diff --cached --quiet; then
   echo "公開ブランチに変更なし"
