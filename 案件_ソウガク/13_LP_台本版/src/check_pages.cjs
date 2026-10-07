@@ -6,6 +6,7 @@
  *   - 画像切れ・横はみ出し・JSエラーがない
  *   - 大見出し（h2.mt-h2）がスマホで2行以内
  *   - サブLPに「3つのポイント」「3つの選定基準」が残っていない
+ *   - KW・学年の差し替え（VARIANTS）も同じ項目を確認し、URLパラメータで実際に差し替わるか
  * 1つでも引っかかれば終了コード1。
  */
 const http = require('http');
@@ -15,6 +16,14 @@ const { chromium } = require('playwright');
 
 const ROOT = path.resolve(__dirname, '..');
 const PAGES = ['index.html', ...fs.readdirSync(ROOT).filter(d => /^lp\d+$/.test(d)).sort().map(d => d + '/index.html')].filter(p => fs.existsSync(path.join(ROOT, p)));
+// KW・学年の差し替え（URLパラメータ）も1つずつ確認する。文字量が変わって崩れるケースを拾うため。
+// サブLPに差し替え条件を足したら、ここにも足す。
+const VARIANTS = {
+  'lp02/index.html': ['?kw=online', '?grade=sho', '?grade=chu', '?grade=ko'],
+  'lp03/index.html': ['?kw=method'],
+  'lp04/index.html': ['?kw=math', '?kw=english'],
+};
+const TARGETS = PAGES.flatMap(p => [[p, ''], ...(VARIANTS[p] || []).map(q => [p, q])]);
 const SIZES = [[375, 667], [1280, 800]];
 const TYPES = { '.html': 'text/html', '.css': 'text/css', '.js': 'text/javascript', '.webp': 'image/webp', '.png': 'image/png', '.jpg': 'image/jpeg', '.svg': 'image/svg+xml' };
 const CHROME = fs.existsSync('/opt/pw-browsers/chromium-1194/chrome-linux/chrome') ? '/opt/pw-browsers/chromium-1194/chrome-linux/chrome' : undefined;
@@ -33,13 +42,13 @@ const server = http.createServer((req, res) => {
   const base = `http://localhost:${server.address().port}/`;
   const browser = await chromium.launch({ executablePath: CHROME });
   const ng = [];
-  for (const page of PAGES) {
+  for (const [page, query] of TARGETS) {
     const sub = page !== 'index.html';
     for (const [w, h] of SIZES) {
       const p = await browser.newPage({ viewport: { width: w, height: h } });
       const errs = [];
       p.on('pageerror', e => errs.push(e.message));
-      await p.goto(base + page.replace('index.html', ''), { waitUntil: 'load' });
+      await p.goto(base + page.replace('index.html', '') + query, { waitUntil: 'load' });
       await p.waitForTimeout(300);
       // 追従CTA：600pxずつホイールでスクロールし、比較表より前では出ず、最初のCTA（#cta-first）を過ぎたら出るか
       const pos = await p.evaluate(() => { const y = id => { const e = document.getElementById(id); return e ? e.getBoundingClientRect().top + scrollY : 0; }; return { cy: y('compare'), ctaY: y('cta-first'), H: document.documentElement.scrollHeight }; });
@@ -54,7 +63,7 @@ const server = http.createServer((req, res) => {
       // 遅延読み込みの画像も読ませるため、最後までスクロールしてから戻る
       await p.evaluate(async () => { for (let y = 0; y < document.body.scrollHeight; y += 600) { scrollTo(0, y); await new Promise(r => setTimeout(r, 30)); } scrollTo(0, 0); });
       await p.waitForTimeout(500);
-      const r = await p.evaluate((sub) => {
+      const r = await p.evaluate(([sub, query]) => {
         const top = el => el.getBoundingClientRect().top + scrollY;
         const cmp = document.getElementById('compare');
         const cy = cmp ? top(cmp) : 0;
@@ -66,9 +75,13 @@ const server = http.createServer((req, res) => {
         const longH2 = [...document.querySelectorAll('h2.mt-h2')].filter(e => e.offsetParent && lines(e) > 2).map(e => e.textContent.trim());
         const text = document.body.innerText;
         const pts = sub ? ['3つのポイント', '3つの選定基準'].filter(s => text.includes(s)) : [];
-        return { hasCompare: !!cmp, links, broken, over: document.documentElement.scrollWidth - innerWidth, longH2, pts, screens: cmp ? +(cy / innerHeight).toFixed(1) : null };
-      }, sub);
-      const tag = `${page} ${w}px`;
+        // 差し替え：?kw=X / ?grade=X なら、data-kw / data-v / data-grade が X の要素が表示されているか
+        let switched = true;
+        const m = query.match(/^\?(kw|grade)=(\w+)$/);
+        if (m) switched = [...document.querySelectorAll(`[data-kw="${m[2]}"],[data-v="${m[2]}"],[data-grade="${m[2]}"]`)].some(e => !e.hidden && e.offsetParent);
+        return { hasCompare: !!cmp, links, broken, over: document.documentElement.scrollWidth - innerWidth, longH2, pts, switched, screens: cmp ? +(cy / innerHeight).toFixed(1) : null };
+      }, [sub, query]);
+      const tag = `${page}${query} ${w}px`;
       const fail = [];
       if (!r.hasCompare) fail.push('#compare がない');
       if (r.links.length) fail.push('比較表より前のリンク: ' + r.links.join(' / '));
@@ -76,6 +89,7 @@ const server = http.createServer((req, res) => {
       if (r.over > 0) fail.push('横はみ出し ' + r.over + 'px');
       if (w < 600 && r.longH2.length) fail.push('H2が3行以上: ' + r.longH2.join(' / '));
       if (r.pts.length) fail.push('残っている文言: ' + r.pts.join(' / '));
+      if (!r.switched) fail.push('URLパラメータで差し替わっていない');
       if (early) fail.push('追従CTAが比較表より前に出る');
       if (!late) fail.push('追従CTAが比較表のあとに出ない');
       if (errs.length) fail.push('JSエラー: ' + errs.join(' / '));
