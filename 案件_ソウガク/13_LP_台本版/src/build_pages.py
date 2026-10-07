@@ -17,19 +17,19 @@ PAGES = {
     "index.html": dict(
         title="【2026年】発達障害・グレーゾーンの子向けオンライン家庭教師ランキングTOP3｜3社を比較",
         desc="発達障害・グレーゾーンの子に対応したオンライン家庭教師3社（ソウガク・ティントル・家庭教師のコーチング1）を、先生・授業時間・料金・保護者サポート・無料体験で比較。各社の料金と無料体験もまとめました。",
-        parts=["lp01_top.html", "lp01_compare_h2.html", "common_compare.html", "lp01_points.html", "common_after.html"],
+        parts=["lp01_top.html", "common_compare.html", "lp01_points.html", "common_after.html"],
         prefix="", sub=False),
     # LP02：家庭教師→オンライン家庭教師 導線（台本 LP02_台本_v1＝v2）。比較表より上だけ独自、「3つのポイント」は除外
     "lp02/index.html": dict(
         title="発達特性のあるお子さまの家庭教師は「1対1」だけで選ばない｜訪問型とオンラインを比較",
         desc="発達障害・グレーゾーンのお子さまの家庭教師選び。特性を理解してくれる先生の見分け方、訪問型とオンラインの違い、オンライン家庭教師の選び方を整理し、サービスを比較しました。",
-        parts=["lp02_top.html", "lp02_compare_h2.html", "common_compare.html", "common_after.html"],
+        parts=["lp02_top.html", "common_compare.html", "common_after.html"],
         prefix="../", sub=True),
     # LP03：勉強法・宿題 → 個別支援 導線（台本 LP03_台本_v1）。比較表より上だけ独自、「3つのポイント」は除外
     "lp03/index.html": dict(
         title="家庭学習は「やる気」だけで片づけない｜発達特性のある子の勉強・宿題が進まないとき",
         desc="発達障害・グレーゾーンのお子さんの勉強や宿題が進まないとき、どこで止まっているかで最初に試すことが変わります。家庭での工夫と、勉強を見る人を頼るときの選び方、オンライン家庭教師の比較をまとめました。",
-        parts=["lp03_top.html", "lp03_compare_h2.html", "common_compare.html", "common_after.html"],
+        parts=["lp03_top.html", "common_compare.html", "common_after.html"],
         prefix="../", sub=True),
 }
 
