@@ -1,0 +1,42 @@
+
+  <!-- LP08｜不登校 × 家庭教師 → オンライン家庭教師 導線LP（台本：スプレッドシート「LP08_台本_v1」v1＋v2修正）。
+       ここ（比較の見出しより上）だけがLP08専用。CTA・申込誘導・テキストリンクは置かない。比較の見出しから下は全ページ共通の部品（common_compare.html／common_after.html）。
+       台本の差し替え条件は URL パラメータ：?kw=online（オンライン明示KW：会話の保護者①と結論ボックス）。
+       不登校の原因・学校復帰・改善には踏み込まず、約束もしない。比較以降に不登校専門のティントルが出るため、前半の図解②で一度だけ発達特性の判断軸を作る（ソウガクの優位とは断定しない） -->
+
+  <!-- 01 FV（台本 No.1）：スマホ1画面以内・CTAなし。FVの文章はヒーロー画像内のH1だけ（lp-hero。見出し文言は lp-sr、画像と同じ『』表記） -->
+  <p class="mt-prbar"><span class="lp-nowrap"><b>PR</b>　本ページはプロモーションを含みます</span><span class="lp-prsep">　｜　</span><span class="lp-nowrap">更新日：2026年10月7日</span></p>
+
+  <h1 class="lp-hero"><span class="lp-sr">不登校の家庭教師は、『勉強を教える』だけで選ばないでください。</span><img src="images/gen/lp08_hero.webp" alt="" width="1200" height="675"></h1>
+
+  <!-- 02 導入の会話（mt-talk・FV直下、台本 No.2〜6）：黄マーカーは④の後半だけ。「学校に行けない」と責める言い方にしない -->
+  <div class="mt-talk">
+    <div class="mt-talk__row mt-talk__row--r"><div class="mt-talk__who"><span class="mt-talk__icon"><img src="images/gen/icon_parent.webp" alt="" width="240" height="240"></span><span class="mt-talk__name">保護者</span></div><div class="mt-talk__b"><span data-kw="default">学校に行きづらい日が続いていて、勉強の遅れも心配で。家庭教師なら家で見てもらえるかなと思って…。</span><span data-kw="online" hidden>不登校でも続けやすいオンライン家庭教師を探しているんですが、何を見て選べばいいのか分からなくて…。</span></div></div>
+    <div class="mt-talk__row"><div class="mt-talk__who"><span class="mt-talk__icon"><img src="images/gen/icon_editor.webp" alt="" width="240" height="240"></span><span class="mt-talk__name">編集部</span></div><div class="mt-talk__b">自宅で学べるのは大きなメリットです。<br>ただ、勉強の遅れを取り戻すことだけを急ぐと、負担になる子もいます。</div></div>
+    <div class="mt-talk__row mt-talk__row--r"><div class="mt-talk__who"><span class="mt-talk__icon"><img src="images/gen/icon_parent.webp" alt="" width="240" height="240"></span><span class="mt-talk__name">保護者</span></div><div class="mt-talk__b">じゃあ、不登校の家庭教師は何を見ればいいんでしょう？</div></div>
+    <div class="mt-talk__row"><div class="mt-talk__who"><span class="mt-talk__icon"><img src="images/gen/icon_editor.webp" alt="" width="240" height="240"></span><span class="mt-talk__name">編集部</span></div><div class="mt-talk__b">今の状態に合わせて始められるか、分からないところを見てもらえるか、<span class="mt-mark">先生との関わり方や親への共有まで見ておきましょう。</span></div></div>
+  </div>
+
+  <!-- 03 中心回答（台本 No.7〜10）：不登校の家庭教師を見る4つのポイントの図解（mt-img）＋補足2文＋注意書き（常に表示。比較以降にティントルの出席扱い申請が出るため前半で一度だけ整理） -->
+  <h2 class="mt-h2">不登校の家庭教師は、<span class="lp-nowrap">この4つを確認</span></h2>
+  <figure class="mt-img"><img src="images/gen/lp08_check4.webp" alt="不登校の家庭教師を見る4つのポイント　①始めやすさ：短い時間から始められる？　②学び方：特性や理解度に合わせて進められる？　③先生との関係：急かさず関わってくれる？　④共有：授業後の様子を親にも伝えてくれる？" width="1200" height="675" loading="lazy"></figure>
+  <p>家庭教師をつける目的は、遅れを一気に取り戻すことだけではありません。<br>今のお子さんが始めやすく、分からないところで止まりっぱなしにならない形かどうかを確認します。</p>
+  <p class="mt-small">※出席扱い・学校との連携などの対応範囲は、サービスや学校によって異なります。希望する場合は、申込前に学校と各サービスへ確認してください。</p>
+
+  <!-- 04 橋渡し（台本 No.11）：結論ボックス（mt-conclusion）。中身は ?kw=online で差し替え。「オンラインなら不登校が改善する」とは書かない。訪問型を否定しない -->
+  <div class="mt-conclusion"><p class="mt-conclusion__ttl">【結論】</p>
+    <div data-kw="default"><p>家庭教師は、訪問型だけが選択肢ではありません。<br>通塾や人を家に迎えることが負担なら、オンラインまで含めて比べる方法もあります。</p><p>オンライン家庭教師なら、自宅から受けられ、<span class="mt-mark">地域に縛られず先生の選択肢を広げやすくなります</span>。</p></div>
+    <div data-kw="online" hidden><p>オンライン家庭教師でも、授業時間や先生の体制、保護者への共有はサービスごとに違います。</p><p>条件だけで決めず、<span class="mt-mark">入会前に先生との相性まで確かめられるか</span>も見ておきましょう。</p></div>
+  </div>
+
+  <!-- 05 つなぎ（台本 No.12）：1文だけで比較へ。CTAなし -->
+  <p>ここからは、実際のオンライン家庭教師3社を比較します。</p>
+
+  <script>
+  /* 台本の差し替え条件：?kw=online（会話の保護者①・結論ボックス） */
+  (function () {
+    var k = new URLSearchParams(location.search).get('kw') === 'online' ? 'online' : 'default';
+    document.querySelectorAll('[data-kw]').forEach(function (el) { el.hidden = el.getAttribute('data-kw') !== k; });
+  })();
+  </script>
+

@@ -24,6 +24,7 @@ const VARIANTS = {
   'lp04/index.html': ['?kw=math', '?kw=english'],
   'lp05/index.html': ['?kw=individual', '?kw=concern', '?kw=subject'],
   'lp07/index.html': ['?kw=online', '?exam=junior'],
+  'lp08/index.html': ['?kw=online'],
 };
 const TARGETS = PAGES.flatMap(p => [[p, ''], ...(VARIANTS[p] || []).map(q => [p, q])]);
 const SIZES = [[375, 667], [1280, 800]];
