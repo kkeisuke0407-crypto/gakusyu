@@ -15,6 +15,12 @@ REPO="$(git -C "$LP" rev-parse --show-toplevel)"
 echo "== 1. ビルド"
 (cd "$SRC" && python3 build_pages.py && rm -rf __pycache__)
 
+# 生成済みページが元データと食い違ったまま開発ブランチに残らないよう、変わっていればコミットして push する
+GEN=$(cd "$LP" && ls index.html lp*/index.html)
+if [ -n "$(cd "$LP" && git status --porcelain -- $GEN)" ]; then
+  (cd "$LP" && git add -- $GEN && git commit -q -m "生成済みページを元データから再生成" && git push -q origin HEAD && git log --oneline -1)
+fi
+
 echo "== 2. 公開前チェック"
 NODE_PATH="${NODE_PATH:-$(npm root -g)}" node "$SRC/check_pages.cjs"
 
