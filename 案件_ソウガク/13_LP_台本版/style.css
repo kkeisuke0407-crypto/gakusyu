@@ -13,6 +13,8 @@ a { color: var(--mt-blue); }
 .lp-hero { margin: 0 0 1em; line-height: 0; border: 1px solid var(--mt-rule); border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,.08); }
 .lp-hero img { display: block; width: 100%; height: auto; }
 .lp-hero img[hidden] { display: none; } /* LP02 の ?kw=online で差し替えるヒーロー画像（hidden を display:block が上書きしないように） */
+/* スマホ（本文の幅＝画面幅のとき）は左右の余白をなくして画面いっぱいに。.mt-wrap の左右 padding 16px ぶん外へ出す */
+@media (max-width: 751px) { .lp-hero { margin-left: -16px; margin-right: -16px; border: 0; border-radius: 0; box-shadow: none; } }
 
 /* 台本の小見出し（番号） */
 .lp-num { margin-right: .25em; color: var(--mt-blue); }
