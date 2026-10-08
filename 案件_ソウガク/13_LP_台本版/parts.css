@@ -6,7 +6,7 @@
   --mt-blue: #0066bf; --mt-blue-2: #007bff; --mt-blue-bg: #eef5fc;
   --mt-red: #e2231a; --mt-red-bg: #fdeeee;
   --mt-mark: #fff100; --mt-yellow-bg: #fffbe0; --mt-orange: #f5a623;
-  --mt-ink: #222; --mt-sub: #777; --mt-rule: #dcdcdc;
+  --mt-ink: #222; --mt-sub: #666; --mt-rule: #dcdcdc;
   --mt-font: "Hiragino Sans", "ヒラギノ角ゴ ProN W3", "Noto Sans JP", Meiryo, sans-serif;
 }
 .mt-body { font-family: var(--mt-font); color: var(--mt-ink); font-size: 16px; line-height: 1.9; }
@@ -53,7 +53,7 @@
 
 /* 結論ボックス */
 .mt-conclusion { margin: 1.4em 0; padding: 1em 1.1em; border: 2px dashed var(--mt-orange); border-radius: 6px; background: var(--mt-yellow-bg); }
-.mt-conclusion__ttl { margin: 0 0 .4em !important; color: var(--mt-red); font-weight: 900; }
+.mt-conclusion__ttl { margin: 0 0 .4em !important; color: #c81e16; font-weight: 900; }
 .mt-conclusion p { margin: 0 0 .6em; font-size: 15px; line-height: 1.8; }
 .mt-conclusion p:last-child { margin: 0; }
 .mt-conclusion a { color: var(--mt-blue); font-weight: 700; }
@@ -110,7 +110,7 @@
 /* 光が走るアニメーション（動きを減らす設定の人には出さない） */
 .mt-cta__btn { position: relative; overflow: hidden; isolation: isolate; }
 .mt-cta__btn::after { content: ""; position: absolute; top: 0; left: -80%; z-index: -1; width: 50%; height: 100%; background: linear-gradient(100deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.6) 50%, rgba(255,255,255,0) 100%); transform: skewX(-20deg); animation: mt-shine 2.8s ease-in-out infinite; }
-@keyframes mt-shine { 0% { left: -80%; } 55%, 100% { left: 130%; } }
+@keyframes mt-shine { 0% { transform: translateX(0) skewX(-20deg); } 55%, 100% { transform: translateX(420%) skewX(-20deg); } }
 @media (prefers-reduced-motion: reduce) { .mt-cta__btn::after { animation: none; display: none; } }
 .mt-cta__note { margin: .5em 0 0 !important; font-size: 12px; font-weight: 700; color: var(--mt-red); }
 .mt-textlink { margin: 1.2em 0 !important; font-weight: 700; line-height: 1.6 !important; }
