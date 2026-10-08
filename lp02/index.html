@@ -16,17 +16,17 @@
 
   <!-- LP02｜家庭教師→オンライン家庭教師 導線LP（台本：スプレッドシート「LP02_台本_v1」＝中身は v4「比較まで短縮」）。
        ここ（比較表より上）だけがLP02専用。CTA・申込誘導は置かない。比較表から下は王道LPと共通の部品（common_compare.html／common_after.html）。
-       台本の差し替え条件（オンラインKW・学年KW）は URL パラメータで切り替え：?kw=online ／ ?grade=sho|chu|ko -->
+       台本の差し替え条件（オンラインKW・学年KW）は URL パラメータで切り替え：?kw=online ／ ?grade=sho|chu|ko（両方つけたときは、会話①を学年の悩み＋オンラインの一言にする） -->
 
   <!-- 01 FV（台本 No.1〜3）：スマホ1画面以内・CTAなし。FVの文章はヒーロー画像内のH1だけ（王道LPと同じヒーロー画像の形 lp-hero。見出し文言は lp-sr。オンラインKWでも同じヒーロー画像を出す。LP07・LP08と同じ） -->
-  <p class="mt-prbar"><span class="lp-nowrap"><b>PR</b>　本ページはプロモーションを含みます</span><span class="lp-prsep">　｜　</span><span class="lp-nowrap">更新日：2026年10月7日</span></p>
+  <p class="mt-prbar"><span class="lp-nowrap"><b>PR</b>　本ページはプロモーションを含みます</span><span class="lp-prsep">　｜　</span><span class="lp-nowrap">更新日：2026年10月8日</span></p>
 
   <h1 class="lp-hero"><span class="lp-sr">発達特性のあるお子さまの家庭教師は、『1対1』だけで選ばないでください。</span><img src="../images/gen/lp02_hero.webp" alt="" width="1200" height="675"></h1>
 
   <!-- 02 導入の会話（mt-talk・FV直下）：台本 No.3 サブコピー＋No.6〜10 共感を会話にした。黄マーカーは答えの予告（⑥）の1か所だけ。
        学年KWは①だけ差し替え、オンラインKWは⑥の2文目を差し替え（台本 No.3 の差し替え条件） -->
   <div class="mt-talk">
-    <div class="mt-talk__row mt-talk__row--r"><div class="mt-talk__who"><span class="mt-talk__icon"><img src="../images/gen/icon_parent.webp" alt="" width="240" height="240"></span><span class="mt-talk__name">保護者</span></div><div class="mt-talk__b"><span data-grade="">学校や塾が合わなくて。家で教えると、つい言い合いになってしまって…。<span data-v="online" hidden><br>オンラインの家庭教師も考えているんです。</span></span><span data-grade="sho" hidden>宿題になかなか取りかかれなくて。「できない」が続いて、自信もなくしている気がして…。</span><span data-grade="chu" hidden>定期テストに提出物、複数教科の管理まで増えて、本人もいっぱいいっぱいで…。</span><span data-grade="ko" hidden>勉強が難しくなって、学習計画まで自分で立てるのがかなり負担そうで…。</span></div></div>
+    <div class="mt-talk__row mt-talk__row--r"><div class="mt-talk__who"><span class="mt-talk__icon"><img src="../images/gen/icon_parent.webp" alt="" width="240" height="240"></span><span class="mt-talk__name">保護者</span></div><div class="mt-talk__b"><span data-grade="">学校や塾が合わなくて。家で教えると、つい言い合いになってしまって…。</span><span data-grade="sho" hidden>宿題になかなか取りかかれなくて。「できない」が続いて、自信もなくしている気がして…。</span><span data-grade="chu" hidden>定期テストに提出物、複数教科の管理まで増えて、本人もいっぱいいっぱいで…。</span><span data-grade="ko" hidden>勉強が難しくなって、学習計画まで自分で立てるのがかなり負担そうで…。</span><span data-v="online" hidden><br>オンラインの家庭教師も考えているんです。</span></div></div>
     <div class="mt-talk__row"><div class="mt-talk__who"><span class="mt-talk__icon"><img src="../images/gen/icon_editor.webp" alt="" width="240" height="240"></span><span class="mt-talk__name">編集部</span></div><div class="mt-talk__b">そういうとき、「1対1で見てもらえる家庭教師なら」と考えますよね。</div></div>
     <div class="mt-talk__row mt-talk__row--r"><div class="mt-talk__who"><span class="mt-talk__icon"><img src="../images/gen/icon_parent.webp" alt="" width="240" height="240"></span><span class="mt-talk__name">保護者</span></div><div class="mt-talk__b">はい。家庭教師なら1対1だし、うまくいくかなって。</div></div>
     <div class="mt-talk__row"><div class="mt-talk__who"><span class="mt-talk__icon"><img src="../images/gen/icon_editor.webp" alt="" width="240" height="240"></span><span class="mt-talk__name">編集部</span></div><div class="mt-talk__b">ただ、発達特性のある子の場合、1対1なら誰でも合うわけではありません。<br>大事なのは、その子に合わせて教え方を変えられる先生かどうかです。</div></div>
@@ -44,24 +44,22 @@
     <li><small>授業そのものだけでなく、</small><br><b>“始めるまでの負担”が少ないか</b><br><small>来客の準備や部屋の片づけ、在宅の調整も、続けるうえでは意外と負担になります。</small></li>
   </ol>
 
-  <!-- 04 橋渡し（台本 No.17）：結論ボックス（mt-conclusion）。5条件の説明は繰り返さない -->
-  <div class="mt-conclusion"><p class="mt-conclusion__ttl">【結論】</p><div data-v="default"><p>この5つで考えると、“家まで来てくれること”が一番大事とは限りません。</p><p>先生の候補を広げやすく、いつもの自宅で始められる。そう考えると、<span class="mt-mark">オンラインの方が合うご家庭もあります</span>。</p></div><div data-v="online" hidden><p>オンラインかどうかより、<span class="mt-mark">この5つで先生を比べること</span>が大切です。</p></div></div>
-
-  <!-- 05 訪問型／オンライン（台本 No.18〜20）：5行・3列固定で横スクロールなし（mt-vs）。どちらかを推す記号・is-pick は付けない -->
+  <!-- 04 訪問型／オンライン（台本 No.18〜20、v5で結論の前へ移動）：通常版だけ。5行・3列固定で横スクロールなし（mt-vs）。どちらかを推す記号・is-pick は付けず、訪問型の強みも書く -->
+  <div data-v="default">
   <h2 data-section-id="intro_2" class="mt-h2">訪問型とオンライン、うちの子に合うのは？</h2>
-  <p>対面の安心感は、訪問型の大きな強みです。一方で、先生の探しやすさや相性、時間の調整しやすさには違いが出ます。</p>
+  <p>どちらにも強みがあります。お子さんの様子に近い方を見てみてください。</p>
   <table class="mt-vs">
     <thead><tr><th>比較軸</th><th>訪問型</th><th>オンライン</th></tr></thead>
     <tbody>
-      <tr><th>特性に合う先生</th><td>地域内の候補が中心</td><td>地域に縛られず探しやすい</td></tr>
-      <tr><th>先生との相性</th><td>候補数が地域に左右される</td><td>候補を広げやすい</td></tr>
-      <tr><th>環境変化</th><td>先生が自宅に来る</td><td>いつもの自宅環境で受けられる</td></tr>
-      <tr><th>時間の柔軟さ</th><td>講師の移動と調整</td><td>移動がない分、調整しやすい</td></tr>
-      <tr><th>対面の安心感</th><td>強み</td><td>画面越しが合うかはお子さんによる</td></tr>
+      <tr><th>様子の見え方</th><td>手元やノートを横で直接見てもらえる</td><td>画面越し<small>手元の見せ方に工夫がいる</small></td></tr>
+      <tr><th>先生の候補</th><td>通える範囲の先生から</td><td>地域の外の先生も候補にできる</td></tr>
+      <tr><th>家の負担</th><td>先生を家に迎える<small>来客の準備・在宅の調整</small></td><td>先生を家に迎えなくてよい</td></tr>
+      <tr><th>時間の調整</th><td>先生の移動時間も含めて調整</td><td>移動がない分、調整しやすい</td></tr>
+      <tr><th>合いやすい子</th><td>画面より対面の方が集中しやすい子</td><td>知らない人が家に来ると緊張しやすい子</td></tr>
     </tbody>
   </table>
 
-  <!-- 06 自己診断（台本 No.21〜22）：比較表の直下。見出しはチェックリストのタイトルに入れ、独立した大セクションにしない。診断の閾値は作らない -->
+  <!-- 05 自己診断（台本 No.21〜22）：比較表の直下。見出しはチェックリストのタイトルに入れ、独立した大セクションにしない。診断の閾値は作らない -->
   <div class="mt-check"><p class="mt-check__ttl">こんなお子さんなら、オンラインも候補に</p><ul>
     <li>知らない人が家に来ると緊張しやすい</li>
     <li>集中できる時間に波がある</li>
@@ -69,12 +67,26 @@
     <li>これまで先生との相性でうまくいかなかった</li>
     <li>自宅だと比較的落ち着いて学習できる</li>
   </ul></div>
+  </div>
 
-  <!-- 07 つなぎ（台本 No.23）：1文だけで比較表へ。CTAなし -->
-  <p>ここからは、実際のオンライン家庭教師3社を比較します。</p>
+  <!-- 04 オンライン版（?kw=online）：オンラインの必要性は説明し直さない。「画面越しでも取り組めそうか」「特性を理解してくれるか」「入会前に相性を確かめられるか」の3つで比較へ -->
+  <div data-v="online" hidden>
+  <h2 data-section-id="intro_2" class="mt-h2">オンライン家庭教師は、この3つで比べる</h2>
+  <ol class="mt-steps">
+    <li><b>画面越しでも取り組めそうか</b><br><small>集中できる授業の長さや、ノート・手元の見せ方は、サービスや先生によって違います。</small></li>
+    <li><b>発達特性を理解したうえで教えてくれるか</b><br><small>「発達障害対応」という言葉だけでなく、先生がどんな研修や経験を持っているかまで見ておきたいところです。</small></li>
+    <li><b>入会前に、担当する先生との相性を確かめられるか</b><br><small>話しやすさやテンポが合うかは、プロフィールだけでは分かりません。</small></li>
+  </ol>
+  </div>
+
+  <!-- 06 橋渡し（台本 No.17、v5で表の後ろへ移動）：結論ボックス（mt-conclusion）。どちらが合うかは子どもによると明記し、オンラインを押しつけない -->
+  <div class="mt-conclusion"><p class="mt-conclusion__ttl">【結論】</p><div data-v="default"><p>発達特性のある子に合う家庭教師を選ぶには、1対1かどうかだけでは判断できません。</p><p>訪問型なら先生に直接様子を見てもらえる一方、オンラインなら<span class="mt-mark">先生の候補を地域外まで広げられ、知らない人を家に迎える必要もありません</span>。</p><p>どちらが合うかは、お子さんによって違います。</p></div><div data-v="online" hidden><p>オンラインでも、先生の特性理解や授業の長さ、入会前に試せることはサービスごとに違います。</p><p>条件だけで決めず、<span class="mt-mark">この3つを軸に比べてみましょう</span>。</p></div></div>
+
+  <!-- 07 つなぎ（台本 No.23）：1文だけで比較表へ。比較表の「発達特性への対応」「授業時間」「入会前に確認できること」につなぐ。CTAなし -->
+  <p><span data-v="default">オンラインも候補に入れるなら、発達特性への対応や授業時間、入会前に先生を試せるかまで、3社を比べてみましょう。</span><span data-v="online" hidden>ここからは、オンライン家庭教師3社を比較します。</span></p>
 
   <script>
-  /* 台本の差し替え条件：?kw=online（オンラインKW）でH1・会話⑥の2文目・結論ボックスの書き出しを差し替え、?grade=sho|chu|ko（学年KW）で会話①をその学年の悩みに差し替え */
+  /* 台本の差し替え条件：?kw=online（オンラインKW）で会話①の最後の1文・会話⑥の2文目・訪問型との比較→選ぶ軸3つ・結論ボックス・つなぎを差し替え、?grade=sho|chu|ko（学年KW）で会話①をその学年の悩みに差し替え */
   (function () {
     var q = new URLSearchParams(location.search);
     if (q.get('kw') === 'online') {

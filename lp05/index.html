@@ -17,10 +17,10 @@
   <!-- LP05｜塾・個別指導 → オンライン家庭教師 導線LP（台本：スプレッドシート「LP05_台本_v1」v1＋実装時のv2修正）。
        ここ（比較の見出しより上）だけがLP05専用。CTA・申込誘導・テキストリンクは置かない。比較の見出しから下は全ページ共通の部品（common_compare.html／common_after.html）。
        台本の差し替え条件は URL パラメータ：?kw=individual（個別指導）／?kw=concern（受入れ不安）／?kw=subject（教科特化）。指定なし（学年別KWも含む）は default。
-       差し替えるのは会話の保護者①とKW別の補足ボックスだけ（kw=subject の会話は default と同じ） -->
+       差し替えるのは会話の保護者①、KW別の補足ボックス、concern のときの会話の編集部①④と結論（kw=subject の会話は default と同じ） -->
 
   <!-- 01 FV（台本 No.1）：スマホ1画面以内・CTAなし。FVの文章はヒーロー画像内のH1だけ（lp-hero。見出し文言は lp-sr、画像と同じ『』表記） -->
-  <p class="mt-prbar"><span class="lp-nowrap"><b>PR</b>　本ページはプロモーションを含みます</span><span class="lp-prsep">　｜　</span><span class="lp-nowrap">更新日：2026年10月7日</span></p>
+  <p class="mt-prbar"><span class="lp-nowrap"><b>PR</b>　本ページはプロモーションを含みます</span><span class="lp-prsep">　｜　</span><span class="lp-nowrap">更新日：2026年10月8日</span></p>
 
   <h1 class="lp-hero"><span class="lp-sr">発達特性のある子の塾は、『個別指導』だけで選ばないでください。</span><img src="../images/gen/lp05_hero.webp" alt="" width="1200" height="675"></h1>
 
@@ -29,7 +29,7 @@
     <div class="mt-talk__row mt-talk__row--r"><div class="mt-talk__who"><span class="mt-talk__icon"><img src="../images/gen/icon_parent.webp" alt="" width="240" height="240"></span><span class="mt-talk__name">保護者</span></div><div class="mt-talk__b"><span data-kw="default subject">うちの子に合う塾を探しているんですが、やっぱり個別指導の方がいいんでしょうか？</span><span data-kw="individual" hidden>集団塾だとついていけるか心配で、個別指導塾を探していて…。</span><span data-kw="concern" hidden>塾に断られたり、周りに迷惑をかけたりしないか心配で…。</span></div></div>
     <div class="mt-talk__row"><div class="mt-talk__who"><span class="mt-talk__icon"><img src="../images/gen/icon_editor.webp" alt="" width="240" height="240"></span><span class="mt-talk__name">編集部</span></div><div class="mt-talk__b"><span data-kw="default individual subject">個別指導といっても、先生1人が複数の生徒を見る教室もあります。<br>それに、発達特性のある子の場合、大事なのは人数だけではありません。</span><span data-kw="concern" hidden>発達特性のある子への対応は、教室によってかなり違います。<br>それに、大事なのは受け入れてもらえるかだけではありません。</span></div></div>
     <div class="mt-talk__row mt-talk__row--r"><div class="mt-talk__who"><span class="mt-talk__icon"><img src="../images/gen/icon_parent.webp" alt="" width="240" height="240"></span><span class="mt-talk__name">保護者</span></div><div class="mt-talk__b">じゃあ、何を見て選べばいいんでしょう？</div></div>
-    <div class="mt-talk__row"><div class="mt-talk__who"><span class="mt-talk__icon"><img src="../images/gen/icon_editor.webp" alt="" width="240" height="240"></span><span class="mt-talk__name">編集部</span></div><div class="mt-talk__b">先生1人が何人を担当するかだけでなく、<span class="mt-mark">つまずきに合わせて説明やペースを変えてくれるかまで確認しましょう。</span></div></div>
+    <div class="mt-talk__row"><div class="mt-talk__who"><span class="mt-talk__icon"><img src="../images/gen/icon_editor.webp" alt="" width="240" height="240"></span><span class="mt-talk__name">編集部</span></div><div class="mt-talk__b"><span data-kw="default individual subject">先生1人が何人を担当するかだけでなく、<span class="mt-mark">つまずきに合わせて説明やペースを変えてくれるかまで確認しましょう。</span></span><span data-kw="concern" hidden>受け入れてもらえるかは、申込前に発達特性への対応範囲を聞けば確かめられます。<br>そのうえで、<span class="mt-mark">つまずきに合わせて説明やペースを変えてくれるかまで確認しましょう。</span></span></div></div>
   </div>
 
   <!-- 03 中心回答（台本 No.8〜10）：塾を選ぶ前に確認したい4つの図解（mt-img）＋補足 -->
@@ -40,15 +40,15 @@
   <!-- 04 KW別補足（台本 No.11〜14）：補足ボックス（mt-info--tip）。KWに合わせて1枚だけ出す。4枚とも「〜まで確認します。」の同じ型 -->
   <div class="mt-info mt-info--tip" data-kw="default"><p class="mt-info__ttl">発達特性に合う塾を探しているなら</p><p>「発達障害対応」という言葉だけでなく、実際にどんな人数で、どんな教え方をするのかまで確認します。</p></div>
   <div class="mt-info mt-info--tip" data-kw="individual" hidden><p class="mt-info__ttl">個別指導塾を探しているなら</p><p>1対1なのか、先生1人が複数の生徒を見るのかで、授業の受け方は変わります。体験のときに、実際の人数まで確認します。</p></div>
-  <div class="mt-info mt-info--tip" data-kw="concern" hidden><p class="mt-info__ttl">塾が合わない・断られないか心配なら</p><p>申込前に、発達特性への対応範囲や困ったときの相談先、体験授業での様子まで確認します。</p></div>
-  <div class="mt-info mt-info--tip" data-kw="subject" hidden><p class="mt-info__ttl">英語など特定の教科で探しているなら</p><p>その教科に対応しているかだけでなく、どこでつまずいているかに合わせて説明を変えられるかまで確認します。</p></div>
+  <div class="mt-info mt-info--tip" data-kw="concern" hidden><p class="mt-info__ttl">塾が合わない・断られないか心配なら</p><p>申込前に、発達特性への対応範囲や困ったときの相談先まで確認します。体験授業でお子さんの様子を見てもらってから決めると、通い始めてから合わなかったということを避けやすくなります。</p></div>
+  <div class="mt-info mt-info--tip" data-kw="subject" hidden><p class="mt-info__ttl">英語など特定の教科で探しているなら</p><p>その教科に対応しているかだけでなく、どこでつまずいているかに合わせて説明を変えられるかまで確認します。塾でもオンライン家庭教師でも、対応教科は教室・サービスごとに違うため、申込前に確かめておきましょう。</p></div>
 
   <!-- 05 塾が合いにくいサイン（台本 No.15〜16）：導入＋チェックリスト（mt-check）。塾そのものは否定しない。診断の閾値は作らない -->
   <p>条件が良さそうな塾でも、通い始めると合わないことがあります。<br>大切なのは「塾に通うこと」ではなく、<span class="mt-mark">お子さんが学びやすい形を選ぶこと</span>です。</p>
   <div class="mt-check"><p class="mt-check__ttl">こんな様子が気になっていませんか？</p><ul>
     <li>周りのペースが気になって手が止まる</li>
     <li>分からなくても質問できず、そのまま進む</li>
-    <li>教室に行くだけで疲れてしまう</li>
+    <li>教室の音や人の多さ、通塾だけで疲れてしまう</li>
     <li>宿題や課題の量が合っていない</li>
     <li>授業後、どこで困ったのか親にも分からない</li>
   </ul></div>
@@ -60,22 +60,22 @@
     <tbody>
       <tr><th>授業の人数</th><td>集団は複数人<small>個別も教室により1対1〜複数</small></td><td>1対1が中心</td></tr>
       <tr><th>進め方</th><td>カリキュラムや教室の方針に沿うことが多い</td><td>先生と相談しながら調整しやすい</td></tr>
-      <tr><th>先生選び</th><td>教室にいる先生から</td><td>地域に縛られず探しやすい</td></tr>
-      <tr><th>通塾</th><td>必要</td><td>不要<small>自宅で受けられる</small></td></tr>
+      <tr><th>先生選び・相性</th><td>教室にいる先生から</td><td>地域に縛られず探しやすい</td></tr>
+      <tr><th>通塾</th><td>必要<small>移動や教室の刺激が負担になる子も</small></td><td>不要<small>自宅で受けられる</small></td></tr>
       <tr><th>対面のサポート</th><td>教室で直接見てもらえる</td><td>画面越しが合うかはお子さんによる</td></tr>
     </tbody>
   </table>
   <p class="mt-small">※一般的な傾向です。実際の仕組みは教室・サービスごとに異なります。</p>
-  <p>集団塾や個別指導塾が合う子もいます。<br>一方で、通塾や教室の人数が負担になるなら、オンラインで1対1で見てもらう方法もあります。</p>
+  <p>先生に直接見てもらえる教室の方が、学びやすい子もいます。<br>一方で、通塾の疲れや教室の刺激が負担になっているなら、自宅から1対1で授業を受ける方法もあります。</p>
 
   <!-- 07 橋渡し（台本 No.20）：結論ボックス（mt-conclusion）。「必ず合う」とは言わない（LP02〜04と同じ温度感） -->
-  <div class="mt-conclusion"><p class="mt-conclusion__ttl">【結論】</p><p>塾に通うかどうかより、つまずきに合わせて見てもらえるかで選ぶことが大切です。</p><p>オンライン家庭教師なら、通塾の負担がなく、<span class="mt-mark">地域に縛られず先生の選択肢を広げやすくなります</span>。</p></div>
+  <div class="mt-conclusion"><p class="mt-conclusion__ttl">【結論】</p><div data-kw="default individual subject"><p>塾に通うかどうかより、つまずきに合わせて見てもらえるかで選ぶことが大切です。</p><p>オンライン家庭教師なら、通塾の負担がなく、<span class="mt-mark">地域に縛られず先生の選択肢を広げやすくなります</span>。</p></div><div data-kw="concern" hidden><p>周りに迷惑をかけないかが心配なら、ほかの生徒がいない環境で学ぶ方法もあります。</p><p>オンライン家庭教師なら、周りの生徒を気にせず、<span class="mt-mark">自宅から先生と1対1で進められます</span>。</p></div><p>画面越しの授業が合うか、先生と相性が合うかは、入会前の体験で確かめましょう。</p></div>
 
-  <!-- 08 つなぎ（台本 No.21）：1文だけで比較へ。CTAなし -->
-  <p>ここからは、実際のオンライン家庭教師3社を比較します。</p>
+  <!-- 08 つなぎ（台本 No.21、v3修正）：1文だけで比較へ。比較表の「発達特性への対応」「入会前に確認できること」につなぐ。CTAなし -->
+  <p>ここからは、発達特性への対応や入会前の体験も含めて、オンライン家庭教師3社を比較します。</p>
 
   <script>
-  /* 台本の差し替え条件：?kw=individual／concern／subject で会話の保護者①・編集部①（concernのみ）とKW別の補足ボックスを差し替え（指定なしは default） */
+  /* 台本の差し替え条件：?kw=individual／concern／subject で会話の保護者①・編集部①④（concernのみ）・KW別の補足ボックス・結論（concernのみ）を差し替え（指定なしは default） */
   (function () {
     var k = new URLSearchParams(location.search).get('kw');
     if (['individual', 'concern', 'subject'].indexOf(k) < 0) k = 'default';
