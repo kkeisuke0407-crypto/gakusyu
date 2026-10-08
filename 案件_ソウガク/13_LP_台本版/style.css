@@ -12,6 +12,7 @@ a { color: var(--mt-blue); }
 /* FV：ヒーロー画像（見出し入り）。全幅 */
 .lp-hero { margin: 0 0 1em; line-height: 0; border: 1px solid var(--mt-rule); border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,.08); }
 .lp-hero img { display: block; width: 100%; height: auto; }
+.lp-hero img[hidden] { display: none; } /* LP02 の ?kw=online で差し替えるヒーロー画像（hidden を display:block が上書きしないように） */
 
 /* 台本の小見出し（番号） */
 .lp-num { margin-right: .25em; color: var(--mt-blue); }
