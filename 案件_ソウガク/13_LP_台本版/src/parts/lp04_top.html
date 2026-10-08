@@ -1,10 +1,10 @@
 
   <!-- LP04｜教科・読み書き/LD → 個別支援 導線LP（台本：スプレッドシート「LP04_台本_v1」v1＋実装時のv2修正）。
        ここ（比較の見出しより上）だけがLP04専用。CTA・申込誘導・テキストリンクは置かない。比較の見出しから下は全ページ共通の部品（common_compare.html／common_after.html）。
-       台本の差し替え条件は URL パラメータで切り替え：?kw=math（算数）／?kw=english（英語）。指定なしは読み書き。差し替えるのは会話の保護者①とKW別カードだけ -->
+       台本の差し替え条件は URL パラメータで切り替え：?kw=math（算数）／?kw=english（英語）。指定なしは読み書き。差し替えるのは会話の保護者①・編集部②、KW別カード、選び方①の補足、結論の手元の例 -->
 
   <!-- 01 FV（台本 No.1）：スマホ1画面以内・CTAなし。FVの文章はヒーロー画像内のH1だけ（lp-hero。見出し文言は lp-sr、画像と同じ『』表記） -->
-  <p class="mt-prbar"><span class="lp-nowrap"><b>PR</b>　本ページはプロモーションを含みます</span><span class="lp-prsep">　｜　</span><span class="lp-nowrap">更新日：2026年10月7日</span></p>
+  <p class="mt-prbar"><span class="lp-nowrap"><b>PR</b>　本ページはプロモーションを含みます</span><span class="lp-prsep">　｜　</span><span class="lp-nowrap">更新日：2026年10月8日</span></p>
 
   <h1 class="lp-hero"><span class="lp-sr">発達障害・グレーゾーンの子の苦手教科は、『練習不足』だけで片づけないでください。</span><img src="images/gen/lp04_hero_v2.webp" alt="" width="1200" height="675"></h1>
 
@@ -13,7 +13,7 @@
     <div class="mt-talk__row mt-talk__row--r"><div class="mt-talk__who"><span class="mt-talk__icon"><img src="images/gen/icon_parent.webp" alt="" width="240" height="240"></span><span class="mt-talk__name">保護者</span></div><div class="mt-talk__b"><span data-kw="read">漢字を何度書いても覚えられなくて。読むのも書くのも時間がかかって…。</span><span data-kw="math" hidden>計算を何度やっても間違えて、文章題になると手が止まってしまって…。</span><span data-kw="english" hidden>英単語を覚えてもすぐ抜けて、読むのも書くのも苦手で…。</span></div></div>
     <div class="mt-talk__row"><div class="mt-talk__who"><span class="mt-talk__icon"><img src="images/gen/icon_editor.webp" alt="" width="240" height="240"></span><span class="mt-talk__name">編集部</span></div><div class="mt-talk__b">苦手なら練習を増やそう、と考えますよね。<br>ただ、発達特性のある子の場合、同じ練習を増やすだけではうまくいかないことがあります。</div></div>
     <div class="mt-talk__row mt-talk__row--r"><div class="mt-talk__who"><span class="mt-talk__icon"><img src="images/gen/icon_parent.webp" alt="" width="240" height="240"></span><span class="mt-talk__name">保護者</span></div><div class="mt-talk__b">じゃあ、どこを見ればいいんでしょう？</div></div>
-    <div class="mt-talk__row"><div class="mt-talk__who"><span class="mt-talk__icon"><img src="images/gen/icon_editor.webp" alt="" width="240" height="240"></span><span class="mt-talk__name">編集部</span></div><div class="mt-talk__b"><span data-kw="read english">読む・書く・覚える・考えるの、どこで止まっているかを分けてみましょう。</span><span data-kw="math" hidden>計算の手順か、文章を式にするところか。どこで止まっているかを分けてみましょう。</span><br><span class="mt-mark">止まる場所が違えば、最初に変えることも変わります。</span></div></div>
+    <div class="mt-talk__row"><div class="mt-talk__who"><span class="mt-talk__icon"><img src="images/gen/icon_editor.webp" alt="" width="240" height="240"></span><span class="mt-talk__name">編集部</span></div><div class="mt-talk__b"><span data-kw="read">読む・書く・覚える・考えるの、どこで止まっているかを分けてみましょう。</span><span data-kw="english" hidden>文字と音か、単語か、語順か、書くところか。どこで止まっているかを分けてみましょう。</span><span data-kw="math" hidden>計算の手順か、文章を式にするところか。どこで止まっているかを分けてみましょう。</span><br><span class="mt-mark">止まる場所が違えば、最初に変えることも変わります。</span></div></div>
   </div>
 
   <!-- 03 中心回答（台本 No.8〜10）：止まる場所×最初に変えることの図解（mt-img）＋補足1文 -->
@@ -39,20 +39,20 @@
   <!-- 06 外部支援の選び方（台本 No.16〜20）：4条件。番号付きの箱（mt-steps）に見出し（太字）＋補足1文（small）。共通部分のソウガク詳細で裏付けられることだけを条件にする -->
   <h2 data-section-id="intro_2" class="mt-h2">家庭教師に頼むなら、「正解を教えてくれるか」だけで選ばない</h2>
   <ol class="mt-steps">
-    <li><b>どこでつまずいているかを細かく見てくれるか</b><br><small>正解・不正解だけでなく、読む・書く・覚える・考えるのどこで止まっているかまで見てもらえると、教え方を変えやすくなります。</small></li>
+    <li><b>どこでつまずいているかを細かく見てくれるか</b><br><small>正解・不正解だけでなく、<span data-kw="read">読む・書く・覚える・考えるのどこで</span><span data-kw="math" hidden>計算の手順か、文章を式にするところか、どこで</span><span data-kw="english" hidden>単語か、語順か、書くところか、どこで</span>止まっているかまで見てもらえると、教え方を変えやすくなります。</small></li>
     <li><b>その子に合わせて説明ややり方を変えてくれるか</b><br><small>同じ説明を繰り返すより、図や具体例、声かけを変えた方が進みやすい子もいます。</small></li>
     <li><b>苦手なところも、できる課題から少しずつ進めてくれるか</b><br><small>最初から難しい課題を続けるより、できるところから段階を上げた方が取り組みやすい子もいます。</small></li>
     <li><b>授業後の様子を親にも伝えてくれるか</b><br><small>どこで困り、どんな説明なら進めたかが分かると、家庭で全部聞き出す必要がありません。</small></li>
   </ol>
 
-  <!-- 07 橋渡し（台本 No.21）：結論ボックス（mt-conclusion）。オンラインが必ず最適とは断定しない（LP02/LP03と同じ温度感） -->
-  <div class="mt-conclusion"><p class="mt-conclusion__ttl">【結論】</p><p>お子さんのつまずき方に合わせて教え方を変えてくれる先生が、近くで見つかるとは限りません。</p><p>オンライン家庭教師なら、<span class="mt-mark">住んでいる地域に関係なく先生を探せます</span>。</p></div>
+  <!-- 07 橋渡し（台本 No.21、v3修正）：結論ボックス（mt-conclusion）。地域外も候補にできる → 画面越しの手元の確認はサービス・先生で違う → 体験で確かめる。オンラインが必ず最適とは断定しない -->
+  <div class="mt-conclusion"><p class="mt-conclusion__ttl">【結論】</p><p>お子さんのつまずき方に合わせて教え方を変えてくれる先生が、近くで見つかるとは限りません。</p><p>オンライン家庭教師なら、<span class="mt-mark">住んでいる地域に関係なく先生を探せます</span>。</p><p>ただ、画面越しに<span data-kw="read">ノートや書いた字</span><span data-kw="math" hidden>ノートや計算の途中</span><span data-kw="english" hidden>ノートや書いた英文</span>をどう見てもらうかは、サービスや先生によって違います。教え方や画面越しの学びやすさは、入会前の体験で確かめておきましょう。</p></div>
 
-  <!-- 08 つなぎ（台本 No.22）：1文だけで比較へ。CTAなし -->
-  <p>ここからは、実際のオンライン家庭教師3社を比較します。</p>
+  <!-- 08 つなぎ（台本 No.22、v3修正）：1文だけで比較へ。比較表の「先生の体制」「入会前に確認できること」につなぐ。CTAなし -->
+  <p>ここからは、先生の体制や入会前の体験も含めて、オンライン家庭教師3社を比較します。</p>
 
   <script>
-  /* 台本の差し替え条件：?kw=math（算数）／?kw=english（英語）で会話の保護者①・編集部②（mathのみ）とKW別カードを差し替え（指定なしは読み書き） */
+  /* 台本の差し替え条件：?kw=math（算数）／?kw=english（英語）で会話の保護者①・編集部②・KW別カード・選び方①の補足・結論の手元の例を差し替え（指定なしは読み書き） */
   (function () {
     var k = new URLSearchParams(location.search).get('kw');
     if (k !== 'math' && k !== 'english') k = 'read';

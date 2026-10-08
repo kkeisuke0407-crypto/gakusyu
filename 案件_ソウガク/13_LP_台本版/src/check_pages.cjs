@@ -7,6 +7,7 @@
  *   - 大見出し（h2.mt-h2）がスマホで2行以内
  *   - サブLPに「3つのポイント」「3つの選定基準」が残っていない
  *   - KW・学年の差し替え（VARIANTS）も同じ項目を確認し、URLパラメータで実際に差し替わるか
+ *   - 差し替えた文言が見えているか、ほかの出し分けの文言が残っていないか（EXPECT）
  * 1つでも引っかかれば終了コード1。
  */
 const http = require('http');
@@ -25,6 +26,25 @@ const VARIANTS = {
   'lp05/index.html': ['?kw=individual', '?kw=concern', '?kw=subject'],
   'lp07/index.html': ['?kw=online', '?exam=junior'],
   'lp08/index.html': ['?kw=online'],
+};
+// 差し替えた文言が実際に見えているか（must）／ほかのKW向けの文言が見えていないか（never）。
+// 「どれか1つ差し替わった」だけでは、入れ子の出し分けで文が消える不具合（例：LP02 の ?kw=online&grade=…）を拾えないため。
+const EXPECT = {
+  'lp02/index.html': { must: ['学校や塾が合わなくて', '訪問型とオンライン、うちの子に合うのは？', 'どちらが合うかは、お子さんによって違います'], never: ['オンラインの家庭教師も考えているんです', 'この3つで比べる'] },
+  'lp02/index.html?kw=online': { must: ['オンラインの家庭教師も考えているんです', 'オンライン家庭教師は、この3つで比べる', '画面越しでも取り組めそうか'], never: ['訪問型とオンライン、うちの子に合うのは？', 'こんなお子さんなら、オンラインも候補に'] },
+  'lp02/index.html?grade=sho': { must: ['宿題になかなか取りかかれなくて'], never: ['学校や塾が合わなくて', 'オンラインの家庭教師も考えているんです'] },
+  'lp02/index.html?kw=online&grade=sho': { must: ['宿題になかなか取りかかれなくて', 'オンラインの家庭教師も考えているんです', 'この3つで比べる'], never: ['学校や塾が合わなくて'] },
+  'lp02/index.html?kw=online&grade=chu': { must: ['定期テストに提出物', 'オンラインの家庭教師も考えているんです'], never: ['学校や塾が合わなくて'] },
+  'lp02/index.html?kw=online&grade=ko': { must: ['学習計画まで自分で立てる', 'オンラインの家庭教師も考えているんです'], never: ['学校や塾が合わなくて'] },
+  'lp03/index.html?kw=method': { must: ['いろいろ勉強法を試している', '勉強法より前に見ておきたいこと'], never: ['宿題をやらないんです'] },
+  'lp04/index.html': { must: ['漢字を何度書いても', 'ノートや書いた字'], never: ['計算の途中', '書いた英文'] },
+  'lp04/index.html?kw=math': { must: ['計算を何度やっても', '算数が苦手なら', 'ノートや計算の途中', '文章を式にするところか、どこで'], never: ['漢字を何度書いても', '英語が苦手なら'] },
+  'lp04/index.html?kw=english': { must: ['英単語を覚えても', '英語が苦手なら', 'ノートや書いた英文', '文字と音か、単語か'], never: ['漢字を何度書いても', '算数が苦手なら'] },
+  'lp05/index.html?kw=concern': { must: ['塾に断られたり', '受け入れてもらえるかは、申込前に', '周りに迷惑をかけないかが心配なら'], never: ['やっぱり個別指導の方がいい'] },
+  'lp05/index.html?kw=subject': { must: ['英語など特定の教科で探しているなら', '対応教科は教室・サービスごとに違う'], never: ['周りに迷惑をかけないかが心配なら'] },
+  'lp07/index.html?kw=online': { must: ['受験に向けてオンラインの家庭教師を探している', '過去問への対応範囲や先生の体制はサービスごとに違います'], never: ['住んでいる地域に関係なく先生を探せます'] },
+  'lp08/index.html': { must: ['始める前に確かめたいこと', '最初は保護者だけで相談できるか'], never: ['オンラインも考えているんですが'] },
+  'lp08/index.html?kw=online': { must: ['オンラインも考えているんですが', '最初は保護者だけで相談できるか'], never: ['家に人を迎えることが負担になりそうなら'] },
 };
 const TARGETS = PAGES.flatMap(p => [[p, ''], ...(VARIANTS[p] || []).map(q => [p, q])]);
 const SIZES = [[375, 667], [1280, 800]];
@@ -66,7 +86,7 @@ const server = http.createServer((req, res) => {
       // 遅延読み込みの画像も読ませるため、最後までスクロールしてから戻る
       await p.evaluate(async () => { for (let y = 0; y < document.body.scrollHeight; y += 600) { scrollTo(0, y); await new Promise(r => setTimeout(r, 30)); } scrollTo(0, 0); });
       await p.waitForTimeout(500);
-      const r = await p.evaluate(([sub, query]) => {
+      const r = await p.evaluate(([sub, query, EXP]) => {
         const top = el => el.getBoundingClientRect().top + scrollY;
         const cmp = document.getElementById('compare');
         const cy = cmp ? top(cmp) : 0;
@@ -81,8 +101,11 @@ const server = http.createServer((req, res) => {
         // 差し替え：?名前=X なら、data-kw / data-v / data-grade / data-名前 が X の要素が表示されているか（&でつないだ複数指定は1つずつ）
         const switched = [...new URLSearchParams(query)].every(([k, v]) =>
           [...document.querySelectorAll(`[data-kw="${v}"],[data-v="${v}"],[data-grade="${v}"],[data-${k}="${v}"]`)].some(e => !e.hidden && e.offsetParent));
-        return { hasCompare: !!cmp, links, broken, over: document.documentElement.scrollWidth - innerWidth, longH2, pts, switched, screens: cmp ? +(cy / innerHeight).toFixed(1) : null };
-      }, [sub, query]);
+        const exp = EXP || { must: [], never: [] };
+        const missing = exp.must.filter(t => !text.includes(t));
+        const leaked = exp.never.filter(t => text.includes(t));
+        return { missing, leaked, hasCompare: !!cmp, links, broken, over: document.documentElement.scrollWidth - innerWidth, longH2, pts, switched, screens: cmp ? +(cy / innerHeight).toFixed(1) : null };
+      }, [sub, query, EXPECT[page + query] || null]);
       const tag = `${page}${query} ${w}px`;
       const fail = [];
       if (!r.hasCompare) fail.push('#compare がない');
@@ -92,6 +115,8 @@ const server = http.createServer((req, res) => {
       if (w < 600 && r.longH2.length) fail.push('H2が3行以上: ' + r.longH2.join(' / '));
       if (r.pts.length) fail.push('残っている文言: ' + r.pts.join(' / '));
       if (!r.switched) fail.push('URLパラメータで差し替わっていない');
+      if (r.missing.length) fail.push('見えていない文言: ' + r.missing.join(' / '));
+      if (r.leaked.length) fail.push('ほかの出し分けの文言が見えている: ' + r.leaked.join(' / '));
       if (early) fail.push('追従CTAが比較表より前に出る');
       if (!late) fail.push('追従CTAが比較表のあとに出ない');
       if (errs.length) fail.push('JSエラー: ' + errs.join(' / '));
