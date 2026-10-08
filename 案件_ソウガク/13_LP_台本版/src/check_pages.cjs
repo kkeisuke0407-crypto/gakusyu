@@ -105,7 +105,8 @@ const server = http.createServer((req, res) => {
           [...document.querySelectorAll(`[data-kw="${v}"],[data-v="${v}"],[data-grade="${v}"],[data-${k}="${v}"]`)].some(e => !e.hidden && e.offsetParent));
         const exp = EXP || { must: [], never: [] };
         const heroes = [...document.querySelectorAll('h1 img')].filter(i => i.offsetParent && i.getBoundingClientRect().height > 0).map(i => i.currentSrc || i.src);
-        const heroNg = exp.hero ? !(heroes.length === 1 && heroes[0].endsWith('/' + exp.hero) && document.querySelector('h1 img[src$="' + exp.hero + '"]').naturalWidth > 0) : false;
+        // srcset の縮小版（build_pages.py が作る「元の名前-幅.webp」）が選ばれていても、同じ画像なら OK
+        const heroNg = exp.hero ? !(heroes.length === 1 && heroes[0].replace(/-\d+(\.webp)$/, '$1').endsWith('/' + exp.hero) && document.querySelector('h1 img[src$="' + exp.hero + '"]').naturalWidth > 0) : false;
         const missing = exp.must.filter(t => !text.includes(t));
         const leaked = exp.never.filter(t => text.includes(t));
         return { missing, leaked, heroNg, heroes, hasCompare: !!cmp, links, broken, over: document.documentElement.scrollWidth - innerWidth, longH2, pts, switched, screens: cmp ? +(cy / innerHeight).toFixed(1) : null };
