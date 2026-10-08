@@ -44,16 +44,18 @@ else
   git -C "$WT" log --oneline -1
 fi
 
-echo "== 4. 実サイトで一致を確認（最大4分）"
-for i in $(seq 1 24); do
-  ok=1
-  for f in "${PAGES[@]}"; do
+echo "== 4. 実サイトで一致を確認（最大6分）"
+# ページだけでなく、CSS・JS・画像など公開した全ファイルを比べる（ページが変わらずCSSだけ変えたときに、反映前のまま「OK」と出さないため）
+for i in $(seq 1 36); do
+  ok=1; stale=""
+  while IFS= read -r f; do
     a=$(curl -s "$SITE/$f?t=$RANDOM$i" | md5sum | cut -c1-32)
     b=$(md5sum < "$LP/$f" | cut -c1-32)
-    [ "$a" = "$b" ] || ok=0
-  done
-  if [ $ok = 1 ]; then echo "実サイト反映OK（${PAGES[*]}）"; exit 0; fi
+    [ "$a" = "$b" ] || { ok=0; stale="$stale $f"; }
+  done <<< "$FILES"
+  if [ $ok = 1 ]; then echo "実サイト反映OK（公開ファイル $(wc -l <<< "$FILES") 件すべて一致。ページ：${PAGES[*]}）"; exit 0; fi
   sleep 10
 done
+echo "まだ古いファイル:$stale" >&2
 echo "実サイトがまだ古いままです。GitHub Pages のデプロイ状況を確認してください。" >&2
 exit 1

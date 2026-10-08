@@ -103,17 +103,23 @@ def resized(src, w):
         Image.open(a).resize((w, H * w // W), Image.LANCZOS).save(b, "WEBP", quality=80, method=6)
     return out, w
 
+HERO_SIZES = "(max-width: 751px) 100vw, 688px"  # スマホではヒーロー画像を画面幅いっぱいに出す（style.css の .lp-hero）
+
 def responsive(t):
-    def fix(m):
+    def fix(m, hero=False):
         tag, src, w = m.group(0), m.group(1), int(m.group(2))
         if "srcset=" in tag or w not in SIZES:
             return tag
         widths, sizes = SIZES[w]
         cands = ", ".join("%s %dw" % resized(src, x) for x in widths) + f", {src} {w}w"
-        return tag.replace(f'src="{src}"', f'src="{src}" srcset="{cands}" sizes="{sizes}"', 1)
-    t = re.sub(r'<img src="(images/gen/[^"]+\.webp)"[^>]*\bwidth="(\d+)"[^>]*>', fix, t)
-    # ヒーロー画像（LCP）は最初に読み込ませる
-    return re.sub(r'(<h1 class="lp-hero"[^>]*>(?:(?!</h1>).)*?<img )', r'\1fetchpriority="high" ', t, flags=re.S)
+        return tag.replace(f'src="{src}"', f'src="{src}" srcset="{cands}" sizes="{HERO_SIZES if hero else sizes}"', 1)
+    IMG = r'<img\b[^>]*?\bsrc="(images/gen/[^"]+\.webp)"[^>]*\bwidth="(\d+)"[^>]*>'
+    def hero(m):
+        h = re.sub(IMG, lambda x: fix(x, hero=True), m.group(0))
+        # ヒーロー画像（LCP）は最初に読み込ませる。LP02 の ?kw=online 用など hidden の差し替え画像には付けない
+        return re.sub(r'<img (?![^>]*\bhidden\b)', '<img fetchpriority="high" ', h, count=1)
+    t = re.sub(r'<h1 class="lp-hero"[^>]*>.*?</h1>', hero, t, flags=re.S)
+    return re.sub(IMG, fix, t)
 
 for out, d in PAGES.items():
     head = P("head.html").replace("{{TITLE}}", d["title"]).replace("{{DESC}}", d["desc"])
