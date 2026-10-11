@@ -40,7 +40,7 @@ assert.equal(t.events('page_view').length,1);
 assert.equal(t.events('page_view')[0][2].lp_id,'LP08');
 assert.equal(t.events('page_view')[0][2].measurement_mode,'live');
 assert.equal(t.events('page_view')[0][2].send_to,'G-FQS2SK5HNF');
-for (const [path, expected] of [['/','LP01'],['/index.html','LP01'],...Array.from({length:7},(_,i)=>[`/lp0${i+2}/`,'LP0'+(i+2)]),['/lp04/index.html','LP04']]) {
+for (const [path, expected] of [['/','LP01'],['/index.html','LP01'],...Array.from({length:8},(_,i)=>[`/lp0${i+2}/`,'LP0'+(i+2)]),['/lp04/index.html','LP04'],['/lp09/index.html','LP09'],['/lp10/','LP01']]) {
   const page=boot({path,search:'?kw=math&grade=chu&exam=junior&utm_source=google&gclid=abc-123&measurement_debug=1&email=secret@example.com&arbitrary=hidden#anchor'});
   const view=page.events('page_view')[0][2];
   const url=new URL(view.page_location);
@@ -82,10 +82,10 @@ for(let i=0;i<30;i++){t.advance(1000);t.intervals[0]();}assert.equal(t.events('l
 t.document.hidden=true;for(let i=0;i<60;i++){t.advance(1000);t.intervals[0]();}assert.equal(t.events('lp_active_read').length,1);
 vm.runInNewContext(source,t.context);assert.equal(t.window.dataLayer.filter(x=>x[0]==='js').length,1);
 assert.equal(boot({optout:true}).document.loaded,undefined);assert.equal(boot({gpc:true}).document.loaded,undefined);
-for(const path of ['index.html',...Array.from({length:7},(_,i)=>`lp0${i+2}/index.html`)]) {
+for(const path of ['index.html',...Array.from({length:8},(_,i)=>`lp0${i+2}/index.html`)]) {
   const html=fs.readFileSync(path,'utf8');
   assert.equal((html.match(/lp-measurement\.js/g)||[]).length,1,path);
   assert.equal((html.match(/data-cta-id=/g)||[]).length,9,path);
   assert.equal((html.match(/data-faq-id=/g)||[]).length,8,path);
 }
-console.log('PASS: explicit single page_view, LP/debug context on all 8 pages, safe variants, unknown/private query removal, matching, click deduplication, middle-click, scroll milestones, visibility, active time, destination, opt-out.');
+console.log('PASS: explicit single page_view, LP/debug context on all 9 pages, safe variants, unknown/private query removal, matching, click deduplication, middle-click, scroll milestones, visibility, active time, destination, opt-out.');
