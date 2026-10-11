@@ -1,4 +1,4 @@
-/* Shared measurement for LP01–LP08. No form data or unrestricted URL parameters. */
+/* Shared measurement for LP01–LP09. No form data or unrestricted URL parameters. */
 (function () {
   'use strict';
   if (window.__souMeasurement) return;
@@ -7,7 +7,7 @@
   var ADS = 'AW-18494858300';
   var MCV = ADS + '/Mt8tCJijlZQdELzIhPNE';
   var path = location.pathname;
-  var match = path.match(/^\/lp(0[2-8])\/(?:index\.html)?$/);
+  var match = path.match(/^\/lp(0[2-9])\/(?:index\.html)?$/);
   var lp = match ? 'LP' + match[1] : 'LP01';
   var query = new URLSearchParams(location.search);
   var debug = query.get('measurement_debug') === '1';

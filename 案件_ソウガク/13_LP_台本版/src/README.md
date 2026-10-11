@@ -12,6 +12,7 @@
 | LP06（通信教育・教材 → 個別支援 導線） | `lp06/index.html` | `lp06_top` → **`common_compare`** → **`common_after`**（3つのポイントだけ除外。KWの差し替えなし） |
 | LP07（受験 × 家庭教師 → オンライン家庭教師 導線） | `lp07/index.html` | `lp07_top` → **`common_compare`** → **`common_after`**（3つのポイントだけ除外） |
 | LP08（不登校 × 家庭教師 → オンライン家庭教師 導線） | `lp08/index.html` | `lp08_top` → **`common_compare`** → **`common_after`**（3つのポイントだけ除外） |
+| LP09（書くのが苦手 → オンライン家庭教師 導線の記事LP） | `lp09/index.html` | `lp09_top` → **`common_compare`** → **`common_after`**（3つのポイントだけ除外。KWの差し替えなし。ヒーローは文字なし背景画像＋見えるHTMLのH1） |
 
 - **太字の `common_*` は全ページ共通**。比較の見出し「オンライン家庭教師3社を比較」〜比較表〜結論CTA（`common_compare`）と、ランキング以降（体験談・無料体験・料金・FAQ・最終CTA・追従ボタンまで／`common_after`）。ここを直せば全ページに同じ変更が入る。
 - 共通部品の中の出し分け：`<!--OUDOU-ONLY-->〜<!--/OUDOU-ONLY-->` は王道LPだけ、`<!--SUB-ONLY-->〜<!--/SUB-ONLY-->` はサブLP（`build_pages.py` の `sub=True`）だけに出る。「3つのポイント」に触れる文や、体験談の形（王道＝mt-story／サブLP＝mt-review）はこれで分けている。
@@ -25,6 +26,8 @@
   - LP05：`?kw=individual`／`?kw=concern`／`?kw=subject`（会話の保護者①とKW別カードを個別指導・受入れ不安・教科特化向けに。指定なし・学年別KWは default）
   - LP07：`?kw=online`（会話の保護者①と結論ボックスをオンライン明示KW向けに）／`?exam=junior`（中学受験の補足ボックスを表示）
   - LP08：`?kw=online`（会話の保護者①と結論ボックスをオンライン明示KW向けに）
+  - LP09：なし
+- ヒーローの作り方は2通り。LP01〜LP08 は見出し入りのヒーロー画像（`<h1 class="lp-hero">` の中に隠しテキスト `lp-sr` と画像）。LP09 からは、文字なしの背景画像の上に見えるHTMLのH1を重ねる（`<div class="lp-hero lp-hero--text">` に画像と `h1.lp-hero__ttl`、説明文はヒーロー下の `p.lp-hero__lead`。スタイルは style.css）。H1は1ページに1つ
 - 表示速度のために `build_pages.py` が自動でやっていること（parts 側では書かない）
   - `images/gen` の画像（横1200px・会話アイコン240px）に縮小版（16:9 は `-608`・`-912`、3:2 は `-600`・`-900`、アイコンは `-120`。縦横比が元と完全に一致する幅）を作り、`srcset` を付ける。縮小版は元画像から作るので、画像を差し替えたら元画像だけ置けばよい
   - ヒーロー画像に `fetchpriority="high"` を付ける

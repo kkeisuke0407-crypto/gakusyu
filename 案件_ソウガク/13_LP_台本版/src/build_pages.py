@@ -61,6 +61,13 @@ PAGES = {
         desc="学校に行きづらい日が続く、発達障害・グレーゾーンのお子さんの家庭教師選び。短い時間から始められるか、発達特性やつまずき方に合わせてもらえるか、急かさずに関わってくれるかを入会前に確かめられるか、授業後の様子を親にも共有してくれるかを確認します。オンライン家庭教師3社の比較もまとめました。",
         parts=["lp08_top.html", "common_compare.html", "common_after.html"],
         prefix="../", sub=True),
+    # LP09：書くのが苦手（学習障害 書くのが苦手）→ オンライン家庭教師 導線の記事LP（台本 hozon「LP09_書くのが苦手_専用記事LP_台本_v1.md」）。
+    # 比較の見出しより上だけ独自、「3つのポイント」は除外。ヒーローは文字なし背景画像＋見えるHTMLのH1（lp-hero--text）
+    "lp09/index.html": dict(
+        title="学習障害で書くのが苦手な子への教え方｜オンライン家庭教師3社比較",
+        desc="学習障害や発達特性のある子が、漢字・作文・板書でつまずく場面別の教え方を紹介。オンライン家庭教師の選び方と3社比較も掲載。",
+        parts=["lp09_top.html", "common_compare.html", "common_after.html"],
+        prefix="../", sub=True),
 }
 
 def page_only(t, sub):
@@ -119,6 +126,8 @@ def responsive(t):
         # ヒーロー画像（LCP）は最初に読み込ませる。LP02 の ?kw=online 用など hidden の差し替え画像には付けない
         return re.sub(r'<img (?![^>]*\bhidden\b)', '<img fetchpriority="high" ', h, count=1)
     t = re.sub(r'<h1 class="lp-hero"[^>]*>.*?</h1>', hero, t, flags=re.S)
+    # LP09 以降のヒーロー（背景画像＋見えるHTMLのH1）：<div class="lp-hero lp-hero--text"> の中の画像
+    t = re.sub(r'<div class="lp-hero lp-hero--text"[^>]*>.*?</div>', hero, t, flags=re.S)
     return re.sub(IMG, fix, t)
 
 for out, d in PAGES.items():

@@ -1,6 +1,6 @@
 # ソクガクLP 計測
 
-対象: https://online-tutor.navolio.net/ と /lp02/〜/lp08/。2026-10-07導入。
+対象: https://online-tutor.navolio.net/ と /lp02/〜/lp09/。2026-10-07導入（LP09 は 2026-10-11 追加）。
 
 - GA4: 「ソクガクLP」プロパティ 557942591、測定ID G-FQS2SK5HNF（日本時間・日本円）。
 - Google広告: ソウガク 507-589-9384。
@@ -42,3 +42,9 @@ MCVは紹介先への遷移であり、無料体験申込・承認成果では�
 - `?kw=math` と `?kw=english`、`?grade=chu`、`?exam=junior` などの内部切替をGA4のURLに保持。`measurement_debug` はURLに残さず `measurement_mode=debug` として区別する。
 - `lp_other_service_click` の `destination=tintle.net / coaching01.com` と、`sougaku_mcv` の `destination=sougaku` を維持。GA4ではイベントスコープの「遷移先」カスタムディメンションとして使う。
 - 初回page_viewの重複、全8LPとdebug/live識別、許可パラメータの保持、任意・不正値の除外を追加テスト。既存のクリック、スクロール、到達、実読、FAQ、計測停止、Google広告MCV送信も継続して検証。
+
+## 2026-10-11 LP09 追加
+
+- `/lp09/` を `lp_id=LP09` として計測（lp-measurement.js のLP判定を /lp02/〜/lp09/ に拡張。/lp10/ など未対応のパスは従来どおり LP01 扱い）。スクリプトの読み込みは `?v=20261011` に更新。
+- イベント名・パラメータは既存のまま（page_view / lp_section_view / lp_cta_view / sougaku_mcv / lp_other_service_click / lp_scroll / lp_active_read / lp_faq_open）。新しいイベントは追加していない。
+- LP09 独自のセクション: intro_1（書けないにも、いろいろな困り方）／intro_2（家で教えるのが難しいとき）／intro_3（先生を選ぶなら）。比較表以降は全LP共通（comparison〜final）。

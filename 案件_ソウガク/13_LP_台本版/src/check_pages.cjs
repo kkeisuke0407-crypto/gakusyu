@@ -46,6 +46,8 @@ const EXPECT = {
   'lp05/index.html?kw=subject': { must: ['英語など特定の教科で探しているなら', '対応教科は教室・サービスごとに違う'], never: ['周りに迷惑をかけないかが心配なら'] },
   'lp07/index.html?kw=online': { must: ['受験に向けてオンラインの家庭教師を探している', '過去問への対応範囲や先生の体制はサービスごとに違います'], never: ['住んでいる地域に関係なく先生を探せます'] },
   'lp08/index.html': { hero: 'lp08_hero_v5.webp', must: ['『勉強を教えてくれるか』だけで決めないでください', '始める前に確かめたいこと', '最初は保護者だけで相談できるか'], never: ['オンラインも考えているんですが'] },
+  // LP09 はヒーローが「文字なし背景画像＋見えるHTMLのH1」（lp-hero--text）。h1Text はH1が実際に画面に見えているかも確認する
+  'lp09/index.html': { hero: 'lp09_hero.webp', h1Text: '学習障害で「書くのが苦手」な子、どう教える？', must: ['漢字が書けない、作文が進まない、板書が追いつかない。', '「書けない」にも、いろいろな困り方があります', '家で教えるのが難しいときは', '先生を選ぶなら、ここを確認', 'ここからは、発達特性への対応や授業の進め方も含めて、オンライン家庭教師3社を比べます。'], never: [] },
   'lp08/index.html?kw=online': { hero: 'lp08_hero_v5.webp', must: ['『勉強を教えてくれるか』だけで決めないでください', 'オンラインも考えているんですが', '最初は保護者だけで相談できるか'], never: ['家に人を迎えることが負担になりそうなら'] },
 };
 const TARGETS = PAGES.flatMap(p => [[p, ''], ...(VARIANTS[p] || []).map(q => [p, q])]);
@@ -104,12 +106,17 @@ const server = http.createServer((req, res) => {
         const switched = [...new URLSearchParams(query)].every(([k, v]) =>
           [...document.querySelectorAll(`[data-kw="${v}"],[data-v="${v}"],[data-grade="${v}"],[data-${k}="${v}"]`)].some(e => !e.hidden && e.offsetParent));
         const exp = EXP || { must: [], never: [] };
-        const heroes = [...document.querySelectorAll('h1 img')].filter(i => i.offsetParent && i.getBoundingClientRect().height > 0).map(i => i.currentSrc || i.src);
+        const heroes = [...document.querySelectorAll('.lp-hero img')].filter(i => i.offsetParent && i.getBoundingClientRect().height > 0).map(i => i.currentSrc || i.src);
         // srcset の縮小版（build_pages.py が作る「元の名前-幅.webp」）が選ばれていても、同じ画像なら OK
-        const heroNg = exp.hero ? !(heroes.length === 1 && heroes[0].replace(/-\d+(\.webp)$/, '$1').endsWith('/' + exp.hero) && document.querySelector('h1 img[src$="' + exp.hero + '"]').naturalWidth > 0) : false;
+        const heroNg = exp.hero ? !(heroes.length === 1 && heroes[0].replace(/-\d+(\.webp)$/, '$1').endsWith('/' + exp.hero) && document.querySelector('.lp-hero img[src$="' + exp.hero + '"]').naturalWidth > 0) : false;
+        // H1は1ページに1つ。h1Text があるページは、その文がH1として画面に見えているか（隠しテキストではないか）
+        const h1s = [...document.querySelectorAll('h1')];
+        const h1 = h1s[0];
+        const h1Rect = h1 ? h1.getBoundingClientRect() : null;
+        const h1Ng = h1s.length !== 1 || (exp.h1Text ? !(h1.textContent.replace(/\s+/g, '') === exp.h1Text && h1.checkVisibility() && h1Rect.width > 100 && h1Rect.height > 30 && parseFloat(getComputedStyle(h1).fontSize) >= 16) : false);
         const missing = exp.must.filter(t => !text.includes(t));
         const leaked = exp.never.filter(t => text.includes(t));
-        return { missing, leaked, heroNg, heroes, hasCompare: !!cmp, links, broken, over: document.documentElement.scrollWidth - innerWidth, longH2, pts, switched, screens: cmp ? +(cy / innerHeight).toFixed(1) : null };
+        return { missing, leaked, heroNg, heroes, h1Ng, h1Count: h1s.length, hasCompare: !!cmp, links, broken, over: document.documentElement.scrollWidth - innerWidth, longH2, pts, switched, screens: cmp ? +(cy / innerHeight).toFixed(1) : null };
       }, [sub, query, EXPECT[page + query] || null]);
       const tag = `${page}${query} ${w}px`;
       const fail = [];
@@ -122,6 +129,7 @@ const server = http.createServer((req, res) => {
       if (!r.switched) fail.push('URLパラメータで差し替わっていない');
       if (r.missing.length) fail.push('見えていない文言: ' + r.missing.join(' / '));
       if (r.heroNg) fail.push('ヒーロー画像が想定と違う: ' + r.heroes.join(' '));
+      if (r.h1Ng) fail.push('H1が1つでない、または見えていない（H1の数 ' + r.h1Count + '）');
       if (r.leaked.length) fail.push('ほかの出し分けの文言が見えている: ' + r.leaked.join(' / '));
       if (early) fail.push('追従CTAが比較表より前に出る');
       if (!late) fail.push('追従CTAが比較表のあとに出ない');
