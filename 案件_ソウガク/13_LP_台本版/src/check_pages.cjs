@@ -116,7 +116,9 @@ const server = http.createServer((req, res) => {
         const h1Ng = h1s.length !== 1 || (exp.h1Text ? !(h1.textContent.replace(/\s+/g, '') === exp.h1Text && h1.checkVisibility() && h1Rect.width > 100 && h1Rect.height > 30 && parseFloat(getComputedStyle(h1).fontSize) >= 16) : false);
         const missing = exp.must.filter(t => !text.includes(t));
         const leaked = exp.never.filter(t => text.includes(t));
-        return { missing, leaked, heroNg, heroes, h1Ng, h1Count: h1s.length, hasCompare: !!cmp, links, broken, over: document.documentElement.scrollWidth - innerWidth, longH2, pts, switched, screens: cmp ? +(cy / innerHeight).toFixed(1) : null };
+        // Google広告のサイトリンクの着地先（#compare／#rank-1／#sl-price／#sl-trial）が各ページに1つずつあるか
+        const anchorsNg = ['compare', 'rank-1', 'sl-price', 'sl-trial'].filter(id => document.querySelectorAll('#' + id).length !== 1);
+        return { missing, leaked, heroNg, heroes, h1Ng, h1Count: h1s.length, anchorsNg, hasCompare: !!cmp, links, broken, over: document.documentElement.scrollWidth - innerWidth, longH2, pts, switched, screens: cmp ? +(cy / innerHeight).toFixed(1) : null };
       }, [sub, query, EXPECT[page + query] || null]);
       const tag = `${page}${query} ${w}px`;
       const fail = [];
@@ -129,6 +131,7 @@ const server = http.createServer((req, res) => {
       if (!r.switched) fail.push('URLパラメータで差し替わっていない');
       if (r.missing.length) fail.push('見えていない文言: ' + r.missing.join(' / '));
       if (r.heroNg) fail.push('ヒーロー画像が想定と違う: ' + r.heroes.join(' '));
+      if (r.anchorsNg.length) fail.push('サイトリンクの着地先がない・重複: #' + r.anchorsNg.join(' #'));
       if (r.h1Ng) fail.push('H1が1つでない、または見えていない（H1の数 ' + r.h1Count + '）');
       if (r.leaked.length) fail.push('ほかの出し分けの文言が見えている: ' + r.leaked.join(' / '));
       if (early) fail.push('追従CTAが比較表より前に出る');
