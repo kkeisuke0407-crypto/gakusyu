@@ -13,23 +13,24 @@ LP="$(dirname "$SRC")"
 REPO="$(git -C "$LP" rev-parse --show-toplevel)"
 
 echo "== 1. ビルド"
-(cd "$SRC" && python3 build_pages.py && rm -rf __pycache__)
+(cd "$SRC" && python3 build_pages.py && python3 build_ranking.py >/dev/null && rm -rf __pycache__)
 
 # 生成済みページが元データと食い違ったまま開発ブランチに残らないよう、変わっていればコミットして push する
-GEN=$(cd "$LP" && ls index.html lp*/index.html)
+GEN=$(cd "$LP" && ls index.html lp*/index.html ranking/*.html)
 if [ -n "$(cd "$LP" && git status --porcelain -- $GEN)" ]; then
   (cd "$LP" && git add -- $GEN && git commit -q -m "生成済みページを元データから再生成" && git push -q origin HEAD && git log --oneline -1)
 fi
 
 echo "== 2. 公開前チェック"
 NODE_PATH="${NODE_PATH:-$(npm root -g)}" node "$SRC/check_pages.cjs"
+NODE_PATH="${NODE_PATH:-$(npm root -g)}" node "$SRC/check_ranking.cjs"
 
 echo "== 3. 公開ブランチへ反映"
 WT="$(mktemp -d)"
 trap 'git -C "$REPO" worktree remove --force "$WT" >/dev/null 2>&1 || true' EXIT
 git -C "$REPO" fetch -q origin "$BRANCH"
 git -C "$REPO" worktree add -q --detach "$WT" "origin/$BRANCH"
-PAGES=(index.html $(cd "$LP" && ls -d lp*/index.html))
+PAGES=(index.html $(cd "$LP" && ls -d lp*/index.html) ranking/index.html)
 # 公開するのは、ページと法務ページから実際に参照されている CSS・画像だけ（publish_files.py が一覧を出す）。
 # それ以外（旧ページの残り・使わなくなった画像・メモ・JSON）は公開ブランチから消す。CNAME だけは残す。
 FILES="$(python3 "$SRC/publish_files.py")"

@@ -9,7 +9,7 @@ import re
 import sys
 
 LP = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-START = ["index.html", "disclosure.html", "operator.html", "privacy.html"] + sorted(
+START = ["index.html", "disclosure.html", "operator.html", "privacy.html", "ranking/index.html"] + sorted(
     d + "/index.html" for d in os.listdir(LP) if re.fullmatch(r"lp\d+", d))
 # 引用符・url() の中にある、ローカルのファイルへの参照（http・data: は対象外）
 REF = re.compile(r"""(?:["'(]|,\s*)([^"'()\s,]+?\.(?:webp|png|jpe?g|svg|gif|ico|css|html|js))(?=[?#"')\s,])""")
