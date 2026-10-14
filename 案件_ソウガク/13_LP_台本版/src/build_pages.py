@@ -61,6 +61,13 @@ PAGES = {
         desc="学校に行きづらい日が続く、発達障害・グレーゾーンのお子さんの家庭教師選び。短い時間から始められるか、発達特性やつまずき方に合わせてもらえるか、急かさずに関わってくれるかを入会前に確かめられるか、授業後の様子を親にも共有してくれるかを確認します。オンライン家庭教師3社の比較もまとめました。",
         parts=["lp08_top.html", "common_compare.html", "common_after.html"],
         prefix="../", sub=True),
+    # LP09：書くのが苦手（学習障害 書くのが苦手）→ オンライン家庭教師 導線の記事LP（台本 hozon「LP09_書くのが苦手_専用記事LP_台本_v1.md」）。
+    # 比較の見出しより上だけ独自、「3つのポイント」は除外。ヒーローは文字なし背景画像＋見えるHTMLのH1（lp-hero--text）
+    "lp09/index.html": dict(
+        title="学習障害で書くのが苦手な子への教え方｜オンライン家庭教師3社比較",
+        desc="学習障害や発達特性のある子が、漢字・作文・板書でつまずく場面別の教え方を紹介。オンライン家庭教師の選び方と3社比較も掲載。",
+        parts=["lp09_top.html", "common_compare.html", "common_after.html"],
+        prefix="../", sub=True),
 }
 
 def page_only(t, sub):
@@ -71,20 +78,71 @@ def page_only(t, sub):
     return t
 
 def add_prefix(t, prefix):
-    """サブフォルダのページ用に、相対パス（画像・CSS・運営者ページなど）の頭に ../ を付ける"""
+    """サブフォルダのページ用に、相対パス（画像・CSS・運営者ページなど）の頭に ../ を付ける。srcset は候補の1つずつに付ける"""
     if not prefix:
         return t
+    def one(url):
+        return url if re.match(r"^(https?:|#|/|mailto:|tel:|data:|\.\./)", url) else prefix + url
     def fix(m):
-        attr, q, url = m.group(1), m.group(2), m.group(3)
-        if re.match(r"^(https?:|#|/|mailto:|tel:|data:|\.\./)", url):
-            return m.group(0)
-        return f"{attr}={q}{prefix}{url}"
+        attr, q, val = m.group(1), m.group(2), m.group(3)
+        if attr == "srcset":
+            val = ", ".join(" ".join([one(c.split()[0])] + c.split()[1:]) for c in val.split(","))
+            return f"{attr}={q}{val}"
+        return f"{attr}={q}{one(val)}"
     return re.sub(r'\b(src|href|srcset)=(["\'])([^"\']+)', fix, t)
+
+# スマホで大きすぎる画像を送らないよう、images/gen の画像には縮小版（-600・-900 など）を作って srcset を付ける。
+# 縮小版は元画像から自動で作る（元画像の方が新しければ作り直す）。表示幅は本文の幅（最大 688px）、会話アイコンは 56px。
+SIZES = {1200: ([600, 900], "(max-width: 720px) calc(100vw - 34px), 688px"), 240: ([120], "56px")}
+
+def resized(src, w):
+    """縮小版を作って (パス, 実際の幅) を返す。縦横比が元とずれると後ろの要素の位置が1px未満ずれ、
+    比較表の固定列（position: sticky）の罫線が消えるので、高さが割り切れる幅（w 以上で一番近いもの）にする"""
+    from PIL import Image
+    a = os.path.join(ROOT, src)
+    W, H = Image.open(a).size
+    while H * w % W:
+        w += 1
+    base, ext = os.path.splitext(src)
+    out = f"{base}-{w}{ext}"
+    b = os.path.join(ROOT, out)
+    if not os.path.exists(b) or os.path.getmtime(b) < os.path.getmtime(a):
+        Image.open(a).resize((w, H * w // W), Image.LANCZOS).save(b, "WEBP", quality=80, method=6)
+    return out, w
+
+HERO_SIZES = "(max-width: 751px) 100vw, 688px"  # スマホではヒーロー画像を画面幅いっぱいに出す（style.css の .lp-hero）
+
+def responsive(t):
+    def fix(m, hero=False):
+        tag, src, w = m.group(0), m.group(1), int(m.group(2))
+        if "srcset=" in tag or w not in SIZES:
+            return tag
+        widths, sizes = SIZES[w]
+        cands = ", ".join("%s %dw" % resized(src, x) for x in widths) + f", {src} {w}w"
+        return tag.replace(f'src="{src}"', f'src="{src}" srcset="{cands}" sizes="{HERO_SIZES if hero else sizes}"', 1)
+    IMG = r'<img\b[^>]*?\bsrc="(images/gen/[^"]+\.webp)"[^>]*\bwidth="(\d+)"[^>]*>'
+    def hero(m):
+        h = re.sub(IMG, lambda x: fix(x, hero=True), m.group(0))
+        # ヒーロー画像（LCP）は最初に読み込ませる。LP02 の ?kw=online 用など hidden の差し替え画像には付けない
+        return re.sub(r'<img (?![^>]*\bhidden\b)', '<img fetchpriority="high" ', h, count=1)
+    t = re.sub(r'<h1 class="lp-hero"[^>]*>.*?</h1>', hero, t, flags=re.S)
+    # LP09 以降のヒーロー（背景画像＋見えるHTMLのH1）：<div class="lp-hero lp-hero--text"> の中の画像
+    t = re.sub(r'<div class="lp-hero lp-hero--text"[^>]*>.*?</div>', hero, t, flags=re.S)
+    return re.sub(IMG, fix, t)
 
 for out, d in PAGES.items():
     head = P("head.html").replace("{{TITLE}}", d["title"]).replace("{{DESC}}", d["desc"])
-    t = render(head + "".join(P(x) for x in d["parts"]))
+    # 差し替え条件の script（各LPの parts 内）は </body> の直前へ移す。ページの途中に置くと CSS の読み込み待ちで
+    # HTML の解析が止まり、残り全体のレイアウトが1回の重い処理になって操作できるまでが遅れる（Lighthouse の TBT）
+    parts = [P(x) for x in d["parts"]]
+    moved = re.findall(r"[ \t]*<script>.*?</script>\n", parts[0], flags=re.S)
+    parts[0] = re.sub(r"[ \t]*<script>.*?</script>\n", "", parts[0], flags=re.S)
+    t = render(head + "".join(parts))
+    if moved:
+        assert t.count("</body>") == 1
+        t = t.replace("</body>", "".join(moved) + "</body>")
     t = page_only(t, d["sub"])
+    t = responsive(t)
     t = add_prefix(t, d["prefix"])
     path = os.path.join(ROOT, out)
     os.makedirs(os.path.dirname(path), exist_ok=True)

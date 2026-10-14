@@ -15,6 +15,12 @@ a { color: var(--mt-blue); }
 .lp-hero img[hidden] { display: none; } /* LP02 の ?kw=online で差し替えるヒーロー画像（hidden を display:block が上書きしないように） */
 /* スマホ（本文の幅＝画面幅のとき）は左右の余白をなくして画面いっぱいに。.mt-wrap の左右 padding 16px ぶん外へ出す */
 @media (max-width: 751px) { .lp-hero { margin-left: -16px; margin-right: -16px; border: 0; border-radius: 0; box-shadow: none; } }
+/* LP09〜：文字なしのヒーロー背景画像＋見えるHTMLのH1（画像左側の白い余白に重ねる）。説明文はヒーローの下（.lp-hero__lead） */
+.lp-hero--text { position: relative; margin-bottom: .8em; }
+.lp-hero__ttl { position: absolute; left: 4.5%; top: 45%; transform: translateY(-50%); width: 58%; margin: 0; color: #17305e; font-size: min(5vw, 34px); font-weight: 900; line-height: 1.4; letter-spacing: .02em; font-feature-settings: "palt"; text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 8px #fff, 0 0 14px rgba(255,255,255,.9); }
+.lp-hero__ttl > span { display: block; white-space: nowrap; }
+.lp-hero__ttl em { font-style: normal; color: #d65500; }
+.lp-hero__lead { margin: 0 0 1.4em; font-size: 15.5px; line-height: 1.8; }
 
 /* 台本の小見出し（番号） */
 .lp-num { margin-right: .25em; color: var(--mt-blue); }
