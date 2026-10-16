@@ -69,7 +69,7 @@ S["sogaku"] = dict(
              "学校へ行ける日が減り、家で勉強を見ると親子で言い合いになっていた。週1回オンラインで学ぶ習慣ができ、「ずっと自分が見なければ」という負担が軽くなった。"),
             ("中学2年生の保護者（岡山県）",
              "子どものタイプに合わせた学び方を相談できる先生に初めて出会えた。他社と違って、体験を何回か受けられたのも助かった。")],
-    voice_src="https://sogaku.jp/online/voice.html",
+    voice_src="https://sogaku.jp/online/voice.html", voice_pick=1,
     operator=None,
 )
 S["runner"] = dict(
@@ -306,6 +306,13 @@ def banner(s, cls, cta):
     return f'<span class="{cls} rk-logobox">{logo_img(s)}</span>'
 
 
+def topshot(s, cta):
+    """各社公式サイトのトップページの画面（CHECKED時点、images/official/top/）。ランキングのイチオシタブに置く"""
+    img = f'<img src="{IMG}official/top/{s["id"]}.webp" alt="{esc(s["name"])}公式サイトのトップページの画面" width="960" height="600" loading="lazy">'
+    return (f'<figure class="rk-topshot"><a {link_attrs(s, cta)}>{img}</a>'
+            f'<figcaption>{esc(s["short"])}公式サイトのトップページ（{CHECKED}時点）</figcaption></figure>')
+
+
 def head(title, desc):
     return f"""<!doctype html>
 <html lang="ja">
@@ -385,8 +392,9 @@ def jobex(s):
 def voices(s):
     if not s["voices"]:
         return ""
-    lis = "".join(f'<li><div class="yk-voice__who"><span class="yk-voice__face"><img src="{IMG}gen/icon_parent_illust.webp" alt="" width="240" height="240" loading="lazy"></span>{esc(w)}</div><p>{esc(t)}</p></li>'
-                  for w, t in s["voices"])
+    i = s.get("voice_pick", 0)
+    lis = "".join(f'<li><div class="yk-voice__who"><span class="yk-voice__face"><img src="{IMG}gen/icon_parent2.webp" alt="" width="240" height="240" loading="lazy"></span>{esc(w)}</div><p>{esc(t)}</p></li>'
+                  for w, t in s["voices"][i:i + 1])
     return (f'<h4 class="yk-voice__ttl">{esc(s["short"])}の口コミ</h4>\n<ul class="yk-voice">{lis}</ul>\n'
             f'<p class="yk-small">※<a href="{s["voice_src"]}" target="_blank" rel="nofollow noopener">{esc(s["short"])}公式サイト</a>掲載の声を当サイトで要約。個人の感想です。アイコンはイメージです。</p>')
 
@@ -397,7 +405,7 @@ def btn_main(s, cta, text=None):
 
 # ---------------------------------------------------------------- トップ
 def talk_row(who, text, right):
-    icon = "icon_parent_illust" if who == "保護者" else "icon_editor_illust"
+    icon = "icon_parent2" if who == "保護者" else "icon_editor2"
     r = " mt-talk__row--r" if right else ""
     return (f'<div class="mt-talk__row{r}"><div class="mt-talk__who"><span class="mt-talk__icon"><img src="{IMG}gen/{icon}.webp" '
             f'srcset="{IMG}gen/{icon}-120.webp 120w, {IMG}gen/{icon}.webp 240w" sizes="56px" alt="" width="240" height="240"></span>'
@@ -658,7 +666,7 @@ def top():
     o += f"""
 <!-- D ランキング：順位見出し→赤キャッチ→タブ（イチオシ／基本情報／料金プラン例）→特徴→編集部→口コミ→2ボタン -->
 <h2 class="yk-sec-ttl" id="ranking">発達特性に強いオンライン家庭教師<br><em>おすすめランキング</em></h2>
-<div class="mt-say"><span class="mt-say__icon"><img src="{IMG}gen/icon_editor_illust.webp" alt="" width="240" height="240" loading="lazy"></span><p class="mt-say__b">先生との相性は、体験してみないと分かりません。ソウガクは入会後に担当する予定の先生と2回体験できるので、まずはそこで確かめるのがおすすめです。</p></div>
+<div class="mt-say"><span class="mt-say__icon"><img src="{IMG}gen/icon_editor2.webp" alt="" width="240" height="240" loading="lazy"></span><p class="mt-say__b">先生との相性は、体験してみないと分かりません。ソウガクは入会後に担当する予定の先生と2回体験できるので、まずはそこで確かめるのがおすすめです。</p></div>
 """
     for s in R:
         n = s["rank"]
@@ -670,14 +678,14 @@ def top():
   <input type="radio" name="rk{n}" id="rk{n}-1" checked><input type="radio" name="rk{n}" id="rk{n}-2"><input type="radio" name="rk{n}" id="rk{n}-3">
   <div class="yk-tabs__labels"><label for="rk{n}-1">イチオシ<br>ポイント</label><label for="rk{n}-2">基本情報</label><label for="rk{n}-3">料金<br>プラン例</label></div>
   <div class="yk-tabs__panels" style="background:#fff;padding:10px">
-    <div>{banner(s, "rk-tabbanner", "rank_banner")}{btn_main(s, "rank_tab")}
+    <div>{topshot(s, "rank_topshot")}{btn_main(s, "rank_tab")}
     {features(s)}</div>
     <div>{radar(s)}
     {info_table(s)}</div>
     <div>{jobex(s)}</div>
   </div>
 </div>
-<div class="yk-editor"><p class="yk-editor__ttl">編集部の<em>イチオシ</em>ポイント</p><img class="yk-editor__chara" src="{IMG}gen/icon_editor_illust.webp" alt="" width="240" height="240" loading="lazy">
+<div class="yk-editor"><p class="yk-editor__ttl">編集部の<em>イチオシ</em>ポイント</p><img class="yk-editor__chara" src="{IMG}gen/icon_editor2.webp" alt="" width="240" height="240" loading="lazy">
 <div class="yk-editor__body"><p>{s["editor"][0]}</p>{('<p class="yk-small" style="text-align:right">' + s["editor"][1] + '</p>') if s["editor"][1] else ""}</div></div>
 {voices(s)}
 <div class="yk-btnpair"><a class="yk-btn yk-btn--sub" href="{s["id"]}.html">詳細は<br>こちら</a><div>{btn_main(s, "rank")}</div></div>
