@@ -37,9 +37,9 @@ S["sogaku"] = dict(
     official="https://sogaku.jp/online/",
     scores=dict(support=5, teacher=5, trial=5, time=5, parent=5, price=4, contract=5),
     price_month=13200, min_minutes=25,
-    best3=("発達障害・グレーゾーン専門", "担当予定の先生と無料体験2回", "専門機関の研修を受けた社会人講師が、小学生なら25分から教えます。"),
+    best3=("発達障害・グレーゾーン専門", "担当予定の先生と2回体験できます", "先生は専門機関の研修を受けた社会人で、小学生は25分から受けられます。"),
     target="小学生〜高校生", btn_catch="診断なし・グレーゾーンでも相談OK", btn="無料体験を公式で見る",
-    catch="発達特性を学んだ社会人講師が1回25分（小学生）から教える！<br>担当予定の先生と無料体験2回",
+    catch="発達特性を学んだ社会人講師。授業は小学生25分から！<br>担当予定の先生と無料体験2回",
     cmp_text="サービス全体が発達障害・グレーゾーン専門。先生は全員、専門機関の研修を受けた社会人。担当予定の先生と2回の無料体験で相性を確かめられる。",
     chips=[("is-pink", "25分から"), ("", "毎回の報告"), ("", "体験2回"), ("", "違約金0円")],
     features=[
@@ -291,7 +291,7 @@ CATCH = {
                "detail_strength": "先生は全員、研修を受けた社会人", "detail_fit": "当てはまったら、まず体験で相性を確認",
                "detail_fee": "入会金はキャンペーンで無料の場合あり", "detail_flow": "申込フォームは簡単3分（公式）",
                "detail_voice": "担当予定の先生と無料体験2回", "detail_faq": "違約金・途中解約料0円"},
-    "runner": {"rank_tab": "勉強が苦手な子専門の家庭教師", "plan": "指導料は1コマ30分900円（小中学生）",
+    "runner": {"rank_tab": "勉強が苦手な子専門の家庭教師", "plan": "休んだ分は指導料から差し引かれる",
                "detail_strength": "合わなければ先生の交代は何度でも無料", "detail_fit": "体験レッスンは90分程度",
                "detail_fee": "指導した分だけの支払い", "detail_flow": "土日祝日も体験レッスンを受けられる",
                "detail_voice": "分からない問題はLINEで質問できる"},
@@ -304,8 +304,8 @@ CATCH = {
     "try": {"rank_tab": "教育プランナーが専任でつく", "plan": "教材費・年会費なしと公式に記載",
             "detail_strength": "WISC検査の結果を学習に活かす", "detail_fee": "前月までの申し出で解約金なし",
             "detail_flow": "保護者だけの面談もできる", "detail_faq": "前日22時までの連絡で振替できる"},
-    "coaching1": {"rank_tab": "発達特性のある子の受験に対応", "plan": "教材費なし（年会費は別途）",
-                  "detail_strength": "提携する臨床心理士の発達検査あり", "detail_fee": "教材費なし（年会費は別途）",
+    "coaching1": {"rank_tab": "発達特性のある子の受験に対応", "plan": "教材費・ファイル代はかからない",
+                  "detail_strength": "提携する臨床心理士の発達検査あり", "detail_fee": "教材は市販のものをすすめる方針",
                   "detail_flow": "体験はオンラインでも受けられる", "detail_faq": "毎回の指導報告書あり"},
 }
 
@@ -590,7 +590,7 @@ def top():
         ("保護者", "宿題を見ると、すぐ親子げんかに…。<span class='mt-mark'>発達特性を分かってくれる先生</span>って、どう選べばいいんでしょう？", True),
         ("編集部", "見るのは3つ。<b>先生が発達特性を学んでいるか</b>、<b>授業の長さ</b>、<b>入会前に実際の先生と試せるか</b>です。", False),
         ("保護者", "30分も座っていられるか心配で…。診断もまだなんです。", True),
-        ("編集部", f"それなら、小学生は25分から選べて診断なしでも相談できる<span class='mt-mark'>ソウガク</span>から。6社を{n_ax}つの基準で採点したTOP3を下にまとめました。", False),
+        ("編集部", f"それなら、小学生は25分から選べて、診断なしでも相談できる<span class='mt-mark'>ソウガク</span>から試すのがおすすめです。6社を{n_ax}つの基準で採点したTOP3を下にまとめました。", False),
     ]
     o += ('\n<!-- A-2 導入会話（mt-talk）：FV直下。画像なし。よくある迷いを編集部が会話例にしたもの（実在の発言ではない） -->\n<div class="mt-talk" data-section-id="talk">'
           + "".join(talk_row(w, t, r) for w, t, r in rows) + '</div>\n<p class="yk-small">※よくある迷いを編集部が会話形式にしたものです（人物はイメージ）。</p>\n')
@@ -607,7 +607,7 @@ def top():
     sg = S["sogaku"]
     jobs = [
         ("集中が続きにくい・低学年", "05_online_home.webp", "家のノートパソコンで学ぶ子ども", "小学生", "25分×月4回", "13,200円", ["25分から", "体験2回", "毎回の報告"]),
-        ("小学生でしっかり学びたい", "08_calm_home.webp", "落ち着いた部屋の机に向かう子ども", "小学生", "50分×月4回（公式のおすすめ）", "22,000円", ["5教科", "科目数で料金同じ", "教材購入なし"]),
+        ("小学生でしっかり学びたい", "08_calm_home.webp", "落ち着いた部屋の机に向かう子ども", "小学生", "50分×月4回（公式のおすすめ）", "22,000円", ["5教科", "毎回の報告", "教材購入なし"]),
         ("中学生・受験も見据えて", "04_one_on_one.webp", "机で勉強する子ども", "中学生", "35分×月4回（60分は26,400円）", "18,480円", ["受験対策にも対応", "受験生割増なし", "振替あり"]),
         ("高校生・得意を活かしたい", "01_fv_study.webp", "机でノートに書く子ども", "高校生", "35分×月4回（60分は29,920円）", "21,560円", ["得意を活かす", "学年で料金アップなし", "違約金0円"]),
     ]
@@ -728,7 +728,7 @@ def top():
 <!-- E-1 迷ったらまずは（yk-pickup）：ソウガク1社 -->
 <section class="yk-pickup"><h2 class="yk-pickup__ttl" data-section-id="pickup"><small>迷ったらまずは</small><br><em>ソウガク</em>の無料体験から！</h2>
 <ul class="yk-pickup__list">
-  <li class="yk-pickup__item"><p class="yk-pickup__name">ソウガク</p>{banner(sg, "yk-pickup__img", "pickup_banner")}<p class="yk-pickup__text">発達特性を学んだ社会人講師と、短い授業（小学生25分・中高生35分）から。担当予定の先生と2回試してから決められます。違約金・途中解約料は0円です。</p><p class="yk-catch">{esc(catch(sg, "pickup"))}</p><a class="yk-btn yk-btn--sm" {link_attrs(sg, "pickup")}>無料体験を公式で見る</a></li>
+  <li class="yk-pickup__item"><p class="yk-pickup__name">ソウガク</p>{banner(sg, "yk-pickup__img", "pickup_banner")}<p class="yk-pickup__text">発達特性を学んだ社会人講師が担当し、授業は小学生25分・中高生35分から選べます。担当予定の先生と2回試してから決められます。違約金・途中解約料は0円です。</p><p class="yk-catch">{esc(catch(sg, "pickup"))}</p><a class="yk-btn yk-btn--sm" {link_attrs(sg, "pickup")}>無料体験を公式で見る</a></li>
 </ul></section>
 """
     # E-2 診断
