@@ -74,3 +74,12 @@ body { margin: 0; background: #f3f5f8; }
 /* 無料体験2回のカードの見出しラベル */
 .rk-step { display: inline-block; margin-right: .5em; padding: .1em .55em; border-radius: 4px; background: #d65500; color: #fff; font-size: .82em; }
 .rk-detail-cmp th.is-pick { background: #d65500; color: #fff; }
+/* 比較表のタブを4つに（yk-parts.css は3つまでなので4つ目だけ足す） */
+.rk-tabs4 > input:nth-of-type(4):checked ~ .yk-tabs__labels label:nth-child(4) { background: var(--yk-blue); color: #fff; }
+.rk-tabs4 > input:nth-of-type(4):checked ~ .yk-tabs__panels > div:nth-child(4) { display: block; }
+.rk-tabs4 .yk-tabs__labels label { font-size: 12.5px; }
+/* 詳細比較：6社なので横スクロール。項目名の列は固定 */
+.rk-tabs4 .rk-detail-cmp { min-width: 860px; font-size: 12.5px; }
+.rk-detail-cmp th:first-child { position: sticky; left: 0; z-index: 1; }
+/* 迷ったらまずは：1社だけのときは中央に広げる */
+.yk-pickup__list:has(> li:only-child) { grid-template-columns: minmax(0, 440px); justify-content: center; }

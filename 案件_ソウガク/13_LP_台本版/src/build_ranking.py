@@ -146,11 +146,118 @@ S["tintle"] = dict(
     voice_src="https://tintle.net/flow/",
     operator="LIVE株式会社",
 )
+S["succeed"] = dict(
+    name="家庭教師のサクシード", short="サクシード", full="家庭教師のサクシード（LD・ADHD・ASDサポートコース／オンライン家庭教師）",
+    logo=("logos/succeed-logo.png", 270, 47), url="https://www.benkyo.co.jp/course/ld-adhd-asd/", sponsored=False,
+    official="https://www.benkyo.co.jp/course/ld-adhd-asd/",
+    scores=dict(support=4, teacher=4, trial=4, time=3, parent=5, price=4, contract=3),
+    price_month=12320, min_minutes=60,
+    best3=("LD・ADHD・ASDサポートコース", "毎回の授業報告＋月1回の面談", "オンラインは60分の無料体験授業があります。"),
+    target="小学生〜高校生", btn_catch="無料体験は通常と同じ60分", btn="無料体験授業を公式で見る",
+    catch="LD・ADHD・ASDサポートコースあり<br>オンラインは毎回の報告と月1回の保護者面談",
+    cmp_text="専門スタッフが特性を聞き取り、発達支援の指導経験が豊富な先生から選ぶ。",
+    chips=[("is-pink", "月1回の面談"), ("", "毎回の報告"), ("is-gray", "訪問も可")],
+    features=[
+        ('<span class="yk-mark">専門スタッフ</span>が親子と面談して特性を聞き取る', "https://www.benkyo.co.jp/course/ld-adhd-asd/"),
+        ("発達支援の指導経験が豊富な先生から選抜", "https://www.benkyo.co.jp/course/ld-adhd-asd/"),
+        ('オンラインは<span class="yk-red">毎回の授業報告＋月1回の保護者面談</span>', "https://www.benkyo.co.jp/course/online/"),
+        ("先生の交代は何度でも無料。退会費・違約金なし", "https://www.benkyo.co.jp/course/online/"),
+    ],
+    editor=('サクシードには、LD・ADHD・ASDサポートコースがあります。専門スタッフが親子と面談して特性を聞き取り、発達支援の指導経験が豊富な先生から担当を選ぶ方針です。'
+            'オンライン家庭教師では、毎回の授業報告に加えて<span class="yk-red">月に1回の保護者面談</span>があります。'
+            '<span class="yk-mark">授業の様子を定期的に聞きながら進めたい家庭</span>に合います。', ""),
+    info=[("料金の目安", "オンライン小学生 1時間3,080円〜<small>税込。月4回なら12,320円〜（当サイト計算）</small>"),
+          ("対応学年", "小学生〜高校生<small>オンラインは全国・海外から</small>"),
+          ("1回の授業", "1時間単位の料金<small>1コマの時間・回数で見積もり</small>"),
+          ("先生", "発達支援の指導経験が豊富な先生から選抜"),
+          ("保護者サポート", "毎回の授業報告・月1回の保護者面談"),
+          ("無料体験", "オンラインは60分の無料体験授業")],
+    plans=[("小学生", "オンライン・1時間あたり", "3,080円〜", "月4回なら12,320円〜（当サイト計算）"),
+           ("中学生", "オンライン・1時間あたり", "4,070円〜", "月4回なら16,280円〜（当サイト計算）"),
+           ("高校生", "オンライン・1時間あたり", "5,280円〜", "月4回なら21,120円〜（当サイト計算）")],
+    plan_src="https://www.benkyo.co.jp/course/online/", plan_note="すべて税込。LD・ADHD・ASDサポートコース（訪問）の指導料は1時間5,830円〜（税込）",
+    voices=[("読み書きに苦手がある子の保護者（公式サイト掲載）",
+             "学習障がいにも対応していると知って選んだ。先生が「楽しく学ぶ」環境をつくってくれて、いつも部屋から笑い声が聞こえていた。"),
+            ("中学2年生の保護者（公式サイト掲載）",
+             "オンライン授業をきっかけに、少しずつ前向きな姿勢が戻ってきた。今は自分から机に向かうようになった。")],
+    voice_src="https://www.benkyo.co.jp/course/ld-adhd-asd/",
+    operator="株式会社サクシード",
+)
+S["try"] = dict(
+    name="トライのオンライン個別指導塾", short="トライ", full="トライのオンライン個別指導塾（発達特性サポートコース）",
+    logo=("logos/try-logo.svg", 220, 28), url="https://www.try-online.jp/kobetsu/tokusei/", sponsored=False,
+    official="https://www.try-online.jp/kobetsu/tokusei/",
+    scores=dict(support=4, teacher=4, trial=4, time=3, parent=5, price=4, contract=3),
+    price_month=14960, min_minutes=60,
+    best3=("発達特性サポートコース", "WISCの結果を学習に活かす", "教師とは別に教育プランナーが専任でつきます。"),
+    target="小学生〜高校生", btn_catch="学習面談は入会しなくても受けられる", btn="無料の学習面談を公式で見る",
+    catch="発達特性サポートコースあり<br>WISC検査の結果をもとに学習をサポート",
+    cmp_text="正社員の教育プランナーが専任でつき、WISCの結果をもとに学習計画を立てる。",
+    chips=[("is-pink", "WISC活用"), ("", "教育プランナー"), ("", "カメラオフ可")],
+    features=[
+        ('教師とは別に、正社員の<span class="yk-mark">教育プランナー</span>が専任でつく', "https://www.try-online.jp/kobetsu/tokusei/"),
+        ('<span class="yk-red">WISC検査の結果</span>をもとに、得意を伸ばし苦手をカバー', "https://www.try-online.jp/kobetsu/tokusei/"),
+        ("保護者の同席・カメラオフでの受講もできる", "https://www.try-online.jp/kobetsu/tokusei/"),
+        ("学習管理アプリで、毎回の授業の進捗が見える", "https://www.try-online.jp/kobetsu/price/"),
+    ],
+    editor=('トライのオンライン個別指導塾には発達特性サポートコースがあり、<span class="yk-red">WISC検査の結果</span>をもとに学習を組み立てます。'
+            '教師とは別に正社員の教育プランナーが専任でつき、定期的な面談や電話・LINEで相談できます。'
+            '<span class="yk-mark">検査結果をどう勉強に活かせばいいか迷っている家庭</span>に向いています。', ""),
+    info=[("料金の目安", "小学生 60分×月4回 14,960円〜<small>税込。別途入会金11,000円</small>"),
+          ("対応学年", "小学生〜高校生<small>高卒生も相談可</small>"),
+          ("1回の授業", "1コマ60分（料金例）<small>時間・回数・教科は変更できる</small>"),
+          ("先生", "33万人の登録教師から選ぶ。専任制で原則同じ教師"),
+          ("保護者サポート", "教育プランナーの定期面談・電話・LINE、学習管理アプリ"),
+          ("無料体験", "無料の学習面談と、約30分の体験授業（英語か数学）")],
+    plans=[("小学生", "1コマ60分×月4回", "14,960円〜", "入会金11,000円は別途"),
+           ("中学生", "1コマ60分×月4回", "17,600円〜", "入会金11,000円は別途"),
+           ("高校生", "1コマ60分×月4回", "21,120円〜", "入会金11,000円は別途")],
+    plan_src="https://www.try-online.jp/kobetsu/price/", plan_note="すべて税込。年会費・登録料はなし（公式）",
+    voices=[],
+    voice_src=None,
+    operator="株式会社トライグループ",
+)
+S["coaching1"] = dict(
+    name="家庭教師のコーチング1", short="コーチング1", full="家庭教師のコーチング1（発達障害・グレーゾーン専門）",
+    logo=("logos/coaching1-logo.png", 293, 27), url="https://coaching01.com/type/ldadhdas.html", sponsored=False,
+    official="https://coaching01.com/type/ldadhdas.html",
+    scores=dict(support=5, teacher=4, trial=4, time=2, parent=5, price=1, contract=4),
+    price_month=30690, min_minutes=90,
+    best3=("発達障害・グレーゾーン専門", "中学・高校受験に対応", "提携する臨床心理士の発達検査を受けられます。"),
+    target="小学1年生〜高校3年生", btn_catch="無料の体験学習・学習カウンセリングあり", btn="無料体験を公式で見る",
+    catch="発達障害・グレーゾーン専門の家庭教師<br>発達特性のある子の中学・高校受験に対応",
+    cmp_text="発達障害・グレーゾーン専門。臨床心理士の発達検査と、受験対策が特徴。授業は90分から。",
+    chips=[("is-pink", "受験対策"), ("", "発達検査"), ("is-gray", "90分から")],
+    features=[
+        ('提携する<span class="yk-mark">臨床心理士の発達検査</span>を受けられる', "https://coaching01.com/type/ldadhdas.html"),
+        ('発達特性のある子の<span class="yk-red">中学受験・高校受験</span>に対応', "https://coaching01.com/type/ldadhdas.html"),
+        ("独自の研修を受けた先生が担当。毎回の指導報告書", "https://coaching01.com/starting.html"),
+        ("授業以外のことも教務部に相談できる", "https://coaching01.com/starting.html"),
+    ],
+    editor=('コーチング1は、発達障害・グレーゾーン専門の家庭教師です。提携する臨床心理士の発達検査を受けられること、'
+            '<span class="yk-red">発達特性のある子の中学受験・高校受験</span>に対応していることが、6社の中でも目立つ特徴です。'
+            '授業は1回90分からで料金は6社で最も高めですが、<span class="yk-mark">受験まで見据えて専門の家庭教師に任せたい家庭</span>には候補になります。', ""),
+    info=[("料金の目安", "週1回90分 月30,690円〜<small>税込。別途入会金18,700円・年会費</small>"),
+          ("対応学年", "小学1年生〜高校3年生<small>オンラインは全国から</small>"),
+          ("1回の授業", "90分〜<small>回数・時間は目的に合わせて相談</small>"),
+          ("先生", "独自の研修を受けた先生"),
+          ("保護者サポート", "毎回の指導報告書・教務部に相談"),
+          ("無料体験", "体験学習・学習カウンセリング（約120分）")],
+    plans=[("小学生〜高校生", "週1回90分〜", "30,690円〜", "入会金18,700円・年会費は別途")],
+    plan_src="https://coaching01.com/price.html", plan_note="すべて税込。交通費は訪問の場合のみ実費",
+    voices=[],
+    voice_src=None,
+    operator="株式会社AXT",
+)
+
 # 採点の根拠（method.html の根拠表。各社公式サイトの記載、2026-10-14確認）
 WHY = {
     "sogaku": dict(support="発達障害・グレーゾーン専門。発達凸凹アソシエーションが講師研修・アセスメントシート・教材アドバイスに関わる", teacher="先生は全員社会人で、専門機関の教師研修とマニュアル研修を受けている（臨床心理士・作業療法士などの資格者も在籍）", trial="無料体験2回。入会後に担当する予定の先生が体験を担当と明記", time="小学生25分・中高生35分のコース", parent="毎回の指導報告＋先生・本部とチャット、定期的な保護者面談、保護者向け勉強会", price="小学生25分×月4回 13,200円（税込）", contract="入会金22,000円（税込）、年会費・保証金・更新費・違約金・途中解約料0円、契約期間の縛りなし、月単位の休会・退会、退会は前月10日までと本体ページに明記"),
     "runner": dict(support="勉強が苦手な子専門の中に発達障害サポートのコース。発達障害コミュニケーション指導者のスタッフが先生を指導", teacher="カルテから10〜20名の候補→面談で決定、指導前に特性と指導法を研修（先生紹介は大学生・大学院生が中心）", trial="90分の無料体験レッスン（学習アドバイザーが担当、先生は申込後に選考）", time="1コマ30分単位", parent="毎月の指導報告書、公式LINEで相談、本部から定期的に状況確認", price="小学生 9,000円〜（1コマ30分900円）", contract="入会金・税込かどうか・最低契約期間・解約の決まりは本体ページに記載なし（広告用LPに「1ヶ月ごとの更新制、違約金は基本的になし」）"),
     "tintle": dict(support="不登校専門。発達障がい・グレーゾーン・支援級も対象、不登校心理相談士が家庭を担当", teacher="全員が現役の大学生。初任者研修（発達障害の特性を含む）と担当生徒ごとの研修", trial="保護者の個別相談会（約1時間・サポートスタッフ）。子どもの体験は希望制で、担当講師は入会書類の返送後に決定", time="1コマ30分", parent="不登校心理相談士がオンライン面談・LINE・電話で相談（毎回の授業報告の記載なし）", price="小学生 週1回1時間 月10,560円〜（4週換算・税込）", contract="入会金・教材費・最低契約期間・解約・休会の決まりは公式サイトに記載なし（キャンセルは1時間前まで無料と記載）"),
+    "succeed": dict(support="LD・ADHD・ASDサポートコース。専門スタッフが親子と面談", teacher="発達支援の指導経験が豊富な先生から選抜", time="1時間単位の料金", price="オンライン小学生 1時間3,080円×月4回＝12,320円", parent="毎回の授業報告＋月1回の保護者面談", trial="オンラインは60分の無料体験授業", contract="（調査中）"),
+    "try": dict(support="発達特性サポートコース。教育プランナーが専任、WISCの結果を活用", teacher="不登校・発達特性の指導実績がある教師が在籍、ヒアリングをもとに選定", time="料金例は1コマ60分", price="小学生 60分×月4回 14,960円", parent="アプリで毎回の進捗＋教育プランナーの定期面談・電話・LINE", trial="約30分の無料体験授業（英語か数学）＋無料学習面談", contract="（調査中）"),
+    "coaching1": dict(support="発達障害・グレーゾーン専門。提携する臨床心理士の発達検査", teacher="独自の研修を受けた先生", time="1回90分から", price="週1回90分 月30,690円〜", parent="毎回の指導報告書＋教務部に相談", trial="約120分の無料体験学習・学習カウンセリング（担当教務）", contract="（調査中）"),
 }
 
 ORDER_TIE = ["support", "teacher"]
@@ -278,7 +385,7 @@ def jobex(s):
 def voices(s):
     if not s["voices"]:
         return ""
-    lis = "".join(f'<li><div class="yk-voice__who"><span class="yk-voice__face"><img src="{IMG}gen/icon_parent.webp" alt="" width="240" height="240" loading="lazy"></span>{esc(w)}</div><p>{esc(t)}</p></li>'
+    lis = "".join(f'<li><div class="yk-voice__who"><span class="yk-voice__face"><img src="{IMG}gen/icon_parent_illust.webp" alt="" width="240" height="240" loading="lazy"></span>{esc(w)}</div><p>{esc(t)}</p></li>'
                   for w, t in s["voices"])
     return (f'<h4 class="yk-voice__ttl">{esc(s["short"])}の口コミ</h4>\n<ul class="yk-voice">{lis}</ul>\n'
             f'<p class="yk-small">※<a href="{s["voice_src"]}" target="_blank" rel="nofollow noopener">{esc(s["short"])}公式サイト</a>掲載の声を当サイトで要約。個人の感想です。アイコンはイメージです。</p>')
@@ -290,41 +397,88 @@ def btn_main(s, cta, text=None):
 
 # ---------------------------------------------------------------- トップ
 def talk_row(who, text, right):
-    icon = "icon_parent" if who == "保護者" else "icon_editor"
+    icon = "icon_parent_illust" if who == "保護者" else "icon_editor_illust"
     r = " mt-talk__row--r" if right else ""
     return (f'<div class="mt-talk__row{r}"><div class="mt-talk__who"><span class="mt-talk__icon"><img src="{IMG}gen/{icon}.webp" '
             f'srcset="{IMG}gen/{icon}-120.webp 120w, {IMG}gen/{icon}.webp 240w" sizes="56px" alt="" width="240" height="240"></span>'
             f'<span class="mt-talk__name">{who}</span></div><div class="mt-talk__b">{text}</div></div>')
 
 
-# 項目別の詳細比較（各社公式サイトの記載、CHECKED確認）。記号は当サイトの判断：◎＝3社の中で最も手厚い／○＝ある／△＝限られる・記載が少ない／－＝公式に記載なし
-DETAIL_CMP = [
-    ("専門の範囲", [("◎", "発達障害・グレーゾーン専門"), ("○", "勉強が苦手な子専門。発達障害サポートはコースの一つ"), ("○", "不登校専門。発達障がい・グレーゾーンも対象")]),
-    ("専門家の関わり", [("◎", "専門機関（発達凸凹アソシエーション）が講師研修・アセスメントシート・教材アドバイス"), ("○", "「発達障害コミュニケーション指導者」の本部スタッフが先生を指導"), ("○", "不登校心理相談士の本部スタッフが家庭を担当")]),
-    ("先生", [("◎", "全員が社会人。全員が専門機関の研修を受講。臨床心理士・作業療法士などの資格者も在籍"), ("○", "大学生〜社会人の登録者から本部が選考（紹介ページは大学生・大学院生が中心）"), ("△", "全員が現役の大学生")]),
-    ("指導計画", [("◎", "専門家が開発したアセスメントシートで一人ずつ作成。体験後に受け取れる"), ("○", "決まったカリキュラムを置かず、特性に合わせて教え方を変える"), ("○", "入会前のカウンセリングをもとに決める")]),
-    ("最短の授業", [("◎", "小学生25分・中高生35分"), ("○", "1コマ30分単位"), ("○", "1コマ30分")]),
-    ("体験を担当する人", [("◎", "入会後に担当する予定の先生"), ("△", "学習アドバイザー（先生は申込後に選考）"), ("△", "サポートスタッフ（講師は入会書類の返送後に決定）")]),
-    ("体験の回数・時間", [("◎", "2回。小学生25分か50分（中高生35分か60分）。1回目を保護者面談にもできる"), ("○", "1回・90分程度"), ("○", "保護者の相談会 約1時間（何度でも）。子どもの体験は希望制")]),
-    ("授業の報告", [("◎", "毎回、アプリで指導報告"), ("○", "毎月の指導報告書"), ("－", "保護者向けの定期報告の頻度は記載なし")]),
-    ("保護者の相談", [("◎", "先生・本部にチャット。定期的な保護者面談、保護者向け勉強会"), ("○", "公式LINE・電話・メール・Web面談"), ("◎", "不登校心理相談士がLINE・電話・オンライン面談（無料）")]),
-    ("診断・手帳", [("◎", "不要（診断名の申告・手帳の提出も不要）"), ("○", "グレーゾーンも対象と記載"), ("○", "検査を受けていない子も対応と記載")]),
-    ("時間の融通", [("○", "土日・夜21時〜・午前も可。回数・時間は月ごとに変更、同じ月内で振替"), ("○", "指導した分だけ支払い。20時・21時開始も可"), ("◎", "曜日・時間・回数を固定しない。1時間前までキャンセル無料")]),
-    ("学校に行きづらい子", [("○", "午前中の授業に対応"), ("○", "不登校のコースあり"), ("◎", "不登校専門。出席扱いの申請オプション（有料）")]),
-    ("小学生の料金", [("○", "25分×月4回 13,200円（税込）"), ("◎", "1コマ30分900円。9,000円〜（税込・税抜の記載なし）"), ("◎", "1コマ30分1,320円〜。週1回1時間で月10,560円〜（税込）")]),
-    ("入会金", [("○", "22,000円（税込）。キャンペーンで無料の場合あり"), ("－", "公式に記載なし"), ("－", "公式に記載なし")]),
-    ("教材費", [("◎", "購入不要。学習ツール（映像授業2,000本など）も追加費用なし"), ("○", "高額教材の販売なし（広告用LPの記載）"), ("－", "公式に記載なし")]),
-    ("解約・違約金", [("◎", "違約金・途中解約料0円、契約期間の縛りなし、月単位で休会・退会"), ("△", "本体ページに記載なし（広告用LPに「1ヶ月ごとの更新制、違約金は基本的になし」）"), ("－", "公式に記載なし")]),
-    ("先生の交代", [("◎", "何度でも無料。性別の希望も伝えられる"), ("○", "何度でも無料"), ("－", "公式に記載なし")]),
+# 項目別の詳細比較（各社公式サイトの記載、CHECKED確認）。記号は当サイトの判断：◎＝特に手厚い／○＝ある／△＝限られる／－＝公式に記載なし
+# グループ＝比較表のタブ。各項目は会社ID→（記号, 短い説明）
+CMP_GROUPS = [
+    ("特性・先生", ["専門の範囲", "専門家の関わり", "先生", "指導計画", "診断・手帳"]),
+    ("体験・授業", ["最短の授業", "体験を担当する人", "体験の回数・時間", "授業の報告", "保護者の相談", "時間の融通", "学校に行きづらい子"]),
+    ("料金・契約", ["小学生の料金", "入会金", "教材費", "解約・違約金", "先生の交代"]),
 ]
+CMP = {
+    "sogaku": {
+        "専門の範囲": ("◎", "発達障害・グレーゾーン専門"),
+        "専門家の関わり": ("◎", "専門機関（発達凸凹アソシエーション）が講師研修・アセスメントシート・教材アドバイス"),
+        "先生": ("◎", "全員が社会人。全員が専門機関の研修を受講。臨床心理士・作業療法士などの資格者も在籍"),
+        "指導計画": ("◎", "専門家が開発したアセスメントシートで一人ずつ作成。体験後に受け取れる"),
+        "診断・手帳": ("◎", "不要（診断名の申告・手帳の提出も不要）と明記"),
+        "最短の授業": ("◎", "小学生25分・中高生35分"),
+        "体験を担当する人": ("◎", "入会後に担当する予定の先生"),
+        "体験の回数・時間": ("◎", "2回。小学生25分か50分（中高生35分か60分）。1回目を保護者面談にもできる"),
+        "授業の報告": ("◎", "毎回、アプリで指導報告"),
+        "保護者の相談": ("◎", "先生・本部にチャット。定期的な保護者面談、保護者向け勉強会"),
+        "時間の融通": ("○", "土日・夜21時〜・午前も可。回数・時間は月ごとに変更、同じ月内で振替"),
+        "学校に行きづらい子": ("○", "午前中の授業に対応"),
+        "小学生の料金": ("○", "25分×月4回 13,200円（税込）"),
+        "入会金": ("○", "22,000円（税込）。キャンペーンで無料の場合あり"),
+        "教材費": ("◎", "購入不要。学習ツール（映像授業2,000本など）も追加費用なし"),
+        "解約・違約金": ("◎", "違約金・途中解約料0円、契約期間の縛りなし、月単位で休会・退会"),
+        "先生の交代": ("◎", "何度でも無料。性別の希望も伝えられる"),
+    },
+    "runner": {
+        "専門の範囲": ("○", "勉強が苦手な子専門。発達障害サポートはコースの一つ"),
+        "専門家の関わり": ("○", "「発達障害コミュニケーション指導者」の本部スタッフが先生を指導"),
+        "先生": ("○", "大学生〜社会人の登録者から本部が選考（紹介ページは大学生・大学院生が中心）"),
+        "指導計画": ("○", "決まったカリキュラムを置かず、特性に合わせて教え方を変える"),
+        "診断・手帳": ("○", "グレーゾーンも対象と記載"),
+        "最短の授業": ("○", "1コマ30分単位"),
+        "体験を担当する人": ("△", "学習アドバイザー（先生は申込後に選考）"),
+        "体験の回数・時間": ("○", "1回・90分程度"),
+        "授業の報告": ("○", "毎月の指導報告書"),
+        "保護者の相談": ("○", "公式LINE・電話・メール・Web面談"),
+        "時間の融通": ("○", "指導した分だけ支払い。20時・21時開始も可"),
+        "学校に行きづらい子": ("○", "不登校のコースあり"),
+        "小学生の料金": ("◎", "1コマ30分900円。9,000円〜（税込・税抜の記載なし）"),
+        "入会金": ("－", "公式に記載なし"),
+        "教材費": ("○", "高額教材の販売なし（広告用LPの記載）"),
+        "解約・違約金": ("△", "本体ページに記載なし（広告用LPに「1ヶ月ごとの更新制、違約金は基本的になし」）"),
+        "先生の交代": ("○", "何度でも無料"),
+    },
+    "tintle": {
+        "専門の範囲": ("○", "不登校専門。発達障がい・グレーゾーンも対象"),
+        "専門家の関わり": ("○", "不登校心理相談士の本部スタッフが家庭を担当"),
+        "先生": ("△", "全員が現役の大学生"),
+        "指導計画": ("○", "入会前のカウンセリングをもとに決める"),
+        "診断・手帳": ("○", "検査を受けていない子も対応と記載"),
+        "最短の授業": ("○", "1コマ30分"),
+        "体験を担当する人": ("△", "サポートスタッフ（講師は入会書類の返送後に決定）"),
+        "体験の回数・時間": ("○", "保護者の相談会 約1時間（何度でも）。子どもの体験は希望制"),
+        "授業の報告": ("－", "保護者向けの定期報告の頻度は記載なし"),
+        "保護者の相談": ("◎", "不登校心理相談士がLINE・電話・オンライン面談（無料）"),
+        "時間の融通": ("◎", "曜日・時間・回数を固定しない。1時間前までキャンセル無料"),
+        "学校に行きづらい子": ("◎", "不登校専門。出席扱いの申請オプション（有料）"),
+        "小学生の料金": ("◎", "1コマ30分1,320円〜。週1回1時間で月10,560円〜（税込）"),
+        "入会金": ("－", "公式に記載なし"),
+        "教材費": ("－", "公式に記載なし"),
+        "解約・違約金": ("－", "公式に記載なし"),
+        "先生の交代": ("－", "公式に記載なし"),
+    },
+}
+N_ITEMS = sum(len(items) for _, items in CMP_GROUPS)
 
 
 def top():
     R = [S[k] for k in RANK]
     names = "・".join(s["short"] for s in R)
     n_ax = len(AXES)
-    o = head("【2026年10月】発達障害・グレーゾーンの子に合うオンライン家庭教師ランキングTOP3｜3社を比較",
-             f"発達障害・グレーゾーンの子に対応したオンライン家庭教師3社（{names}）を、発達特性への対応・先生・入会前の確認・授業時間・保護者サポート・料金・費用と契約の{n_ax}項目で採点し、{len(DETAIL_CMP)}項目で比較しました。")
+    o = head("【2026年10月】発達障害・グレーゾーンの子に合うオンライン家庭教師ランキングTOP3｜6社を比較",
+             f"発達障害・グレーゾーンの子に対応したオンライン家庭教師6社（{names}）を、発達特性への対応・先生・入会前の確認・授業時間・保護者サポート・料金・費用と契約の{n_ax}項目で採点し、{N_ITEMS}項目で比較しました。")
     # A-0 PR（FVの上）
     o += '\n<!-- A-0 PR表記（yk-pr）：FVの上。FV直下は会話にするため -->\n<p class="yk-pr"><b>PR</b><span>当サイトはアフィリエイト広告を利用しており、ソウガクのプロモーションを含みます。順位は広告の有無ではなく、<a href="method.html">公開している採点基準</a>で決めています（' + UPDATED + '最新版）。</span></p>\n'
     # A-1 FV ヒーロー画像
@@ -339,13 +493,13 @@ def top():
         ("保護者", "うちの子、30分も座っていられるか心配で…。診断もまだ受けていないんです。", True),
         ("編集部", "それなら、小学生は25分から選べて、診断なしでも相談できる<span class='mt-mark'>ソウガク</span>から見てみてください。入会後に担当する予定の先生と、無料体験を2回受けられます。", False),
         ("保護者", "ほかの家庭教師とも比べてから決めたいです。", True),
-        ("編集部", f"発達特性に対応したオンライン家庭教師3社の公式サイトを{CHECKED}に確認して、{n_ax}つの基準で採点しました。比べた結果をランキングにまとめています。", False),
+        ("編集部", f"発達特性に対応したオンライン家庭教師6社の公式サイトを{CHECKED}に確認して、{n_ax}つの基準で採点しました。上位3社をTOP3として紹介しています。", False),
     ]
     o += ('\n<!-- A-2 導入会話（mt-talk）：FV直下。画像なし。よくある迷いを編集部が会話例にしたもの（実在の発言ではない） -->\n<div class="mt-talk">'
           + "".join(talk_row(w, t, r) for w, t, r in rows) + '</div>\n<p class="yk-small">※よくある迷いを編集部が会話形式にしたものです（人物はイメージ）。</p>\n')
     # B-1 BEST3
     items = ""
-    for s in R:
+    for s in R[:3]:
         r, m, t = s["best3"]
         items += (f'<li class="yk-best3__item"><span class="yk-best3__crown">{s["rank"]}</span><span class="yk-best3__logo">{logo_img(s, lazy=False)}</span>'
                   f'<p class="yk-best3__text"><span class="yk-red">{r}</span><br><span class="yk-mark">{m}</span>。{t}</p>'
@@ -374,56 +528,48 @@ def top():
 <div class="yk-hscroll">{cards}</div>
 <p class="yk-small">※月額は<a href="{sg["plan_src"]}" target="_blank" rel="nofollow noopener">ソウガク公式サイト</a>の料金表（月4回・税込、{CHECKED}確認）。入会金22,000円（税込）は別途（キャンペーンで無料の場合あり）。月8回のコースもあります。写真はイメージです。</p>
 """
-    # C-1 比較表（タブ）
+    # C-1 比較表（タブ：総合＋17項目を3つのタブに）
+    def mk(v):
+        return {5: "◎", 4: "○", 3: "△", 2: "△", 1: "×"}[v]
     rows = ""
     for s in R:
-        maru = "◎" if s["scores"]["price"] >= 5 else "○" if s["scores"]["price"] >= 4 else "△"
         chips = "".join(f'<li class="{c}">{t}</li>' if c else f"<li>{t}</li>" for c, t in s["chips"])
         rows += (f'<tr{" class=" + chr(34) + "is-pick" + chr(34) if s["rank"] == 1 else ""}><td><span class="yk-cmp__rank">{s["rank"]}</span><span class="yk-cmp__logo" style="display:block">{logo_img(s)}</span>'
                  f'<a class="yk-cmp__name" href="{s["id"]}.html">{esc(s["short"])}</a><span class="yk-stars">{stars(s["total"])}</span><span class="yk-grade">総合評価 <b>{s["total"]}</b></span></td>'
-                 f'<td><span class="yk-maru">{maru}</span>月{s["price_month"]:,}円〜<br><span class="yk-pink">{s["min_minutes"]}分から</span></td>'
+                 f'<td><span class="yk-maru">{mk(s["scores"]["trial"])}</span>{CMP[s["id"]]["体験を担当する人"][1]}</td>'
                  f'<td class="is-left">{s["cmp_text"]}<ul class="yk-chips">{chips}</ul></td>'
                  f'<td><a class="yk-btn yk-btn--sm" {link_attrs(s, "comparison")}>公式</a></td></tr>')
-    def mk(v):
-        return {5: "◎", 4: "○", 3: "△", 2: "△", 1: "×"}[v]
-    t2 = "".join(f'<tr><td>{esc(s["short"])}</td>' + "".join(f'<td><span class="yk-maru">{mk(s["scores"][a])}</span><small>{s["scores"][a]}</small></td>' for a in ("support", "teacher", "parent")) + "</tr>" for s in R)
-    t3 = "".join(f'<tr><td>{esc(s["short"])}</td><td>{s["info"][2][1].split("<small>")[0]}</td><td>{s["info"][5][1]}</td><td><span class="yk-maru">{mk(s["scores"]["contract"])}</span><small>{s["scores"]["contract"]}</small></td></tr>' for s in R)
+    heads = "".join(f'<th{" class=" + chr(34) + "is-pick" + chr(34) if s["rank"] == 1 else ""}>{s["rank"]}位<br>{esc(s["short"])}</th>' for s in R)
+    panels = ""
+    for _, items in CMP_GROUPS:
+        body = ""
+        for it in items:
+            tds = "".join(f'<td class="is-left{" is-pick" if s["rank"] == 1 else ""}"><span class="yk-maru">{CMP[s["id"]][it][0]}</span>{CMP[s["id"]][it][1]}</td>' for s in R)
+            body += f"<tr><th>{it}</th>{tds}</tr>"
+        panels += f'\n    <div><p class="yk-hint">横にスクロールできます</p><div class="rk-scroll"><table class="yk-cmp rk-detail-cmp"><tr><th>項目</th>{heads}</tr>{body}</table></div></div>'
+    labels = "".join(f'<label for="cmp1-{i}">{g}</label>' for i, (g, _) in enumerate(CMP_GROUPS, 2))
+    radios = "".join(f'<input type="radio" name="cmp1" id="cmp1-{i}">' for i in range(2, len(CMP_GROUPS) + 2))
+    win = sum(1 for _, items in CMP_GROUPS for it in items if CMP["sogaku"][it][0] == "◎")
     o += f"""
-<!-- C-1 タブ切替の比較表（yk-tabs + yk-cmp + yk-fold）。評価の基準は method.html -->
-<h2 class="yk-sec-ttl" id="compare"><em>3社</em>を{n_ax}項目で採点</h2>
-<div class="yk-tabs">
-  <input type="radio" name="cmp1" id="cmp1-1" checked><input type="radio" name="cmp1" id="cmp1-2"><input type="radio" name="cmp1" id="cmp1-3">
-  <div class="yk-tabs__labels"><label for="cmp1-1">総合</label><label for="cmp1-2">特性・先生</label><label for="cmp1-3">体験・契約</label></div>
+<!-- C-1 タブ切替の比較表（yk-tabs + yk-cmp + yk-fold）：総合（6社・採点）＋{N_ITEMS}項目を3つのタブに。各社公式サイトの記載（{CHECKED}確認）。採点の基準は method.html -->
+<h2 class="yk-sec-ttl" id="compare"><em>6社</em>を{N_ITEMS}項目で比較</h2>
+<p>先生・体験・授業の長さ・報告・費用や契約まで、各社の公式サイトに書かれていることを並べました。<span class="yk-mark">1位のソウガクは{N_ITEMS}項目のうち{win}項目で◎</span>です。</p>
+<div class="yk-tabs rk-tabs4">
+  <input type="radio" name="cmp1" id="cmp1-1" checked>{radios}
+  <div class="yk-tabs__labels"><label for="cmp1-1">総合</label>{labels}</div>
   <div class="yk-tabs__panels">
     <div><div class="yk-fold"><input type="checkbox" id="cmp1-more"><div class="yk-fold__body">
       <table class="yk-cmp"><colgroup><col class="c1"><col class="c2"><col><col class="c4"></colgroup>
-        <tr><th>サービス</th><th>月額の目安</th><th>編集部のひとこと</th><th>公式</th></tr>
+        <tr><th>サービス</th><th>入会前の体験</th><th>編集部のひとこと</th><th>公式</th></tr>
         {rows}
-      </table></div><label class="yk-fold__btn" for="cmp1-more">もっと見る</label></div></div>
-    <div><table class="yk-cmp"><tr><th>サービス</th><th>発達特性への対応</th><th>先生</th><th>保護者サポート</th></tr>{t2}</table></div>
-    <div><table class="yk-cmp rk-cmp-text"><tr><th>サービス</th><th>1回の授業</th><th>入会前の体験</th><th>費用・契約</th></tr>{t3}</table></div>
+      </table></div><label class="yk-fold__btn" for="cmp1-more">もっと見る</label></div></div>{panels}
   </div>
 </div>
-<p class="yk-small">※月額の目安は小学生の公式の最安表示。◎＝11,000円未満、○＝11,000〜14,999円、△＝15,000円以上。数字（5点満点）と星・総合評価の付け方は<a href="method.html">ランキング調査概要</a>に公開しています。各社公式サイトの記載をもとにした当サイト独自の評価です（{CHECKED}確認）。</p>
-"""
-    # C-1b 項目別の詳細比較
-    head_cells = "".join(f'<th{" class=" + chr(34) + "is-pick" + chr(34) if s["rank"] == 1 else ""}>{s["rank"]}位<br>{esc(s["short"])}</th>' for s in R)
-    body = ""
-    for label, cells in DETAIL_CMP:
-        tds = "".join(f'<td class="is-left{" is-pick" if i == 0 else ""}"><span class="yk-maru">{m}</span>{t}</td>' for i, (m, t) in enumerate(cells))
-        body += f"<tr><th>{label}</th>{tds}</tr>"
-    win = sum(1 for _, c in DETAIL_CMP if c[0][0] == "◎")
-    o += f"""
-<!-- C-1b 項目別の詳細比較（yk-cmp、横スクロール）：各社公式サイトの記載。◎は3社の中で最も手厚いと当サイトが判断した項目 -->
-<h2 class="yk-sec-ttl">発達特性の子に大事な<em>{len(DETAIL_CMP)}項目</em>で詳しく比較</h2>
-<p>先生・体験・授業の長さ・報告・費用や契約まで、各社の公式サイトに書かれていることを並べました。<span class="yk-mark">ソウガクは{len(DETAIL_CMP)}項目のうち{win}項目で◎</span>。料金の安さと、学校に行きづらい子向けの仕組みは、ランナー・ティントルに◎を付けています。</p>
-<p class="yk-hint">横にスクロールできます</p>
-<div class="rk-scroll"><table class="yk-cmp rk-detail-cmp"><tr><th>項目</th>{head_cells}</tr>{body}</table></div>
-<p class="yk-small">※◎＝3社の中で最も手厚い、○＝ある、△＝限られる、－＝公式に記載なし（当サイトの判断）。各社公式サイトの記載（{CHECKED}確認）。ランナーは本体ページに書かれていない項目を、広告用LPの記載で補った箇所があります（その旨を表に記載）。</p>
-{btn_main(sg, "detail_compare")}
+<p class="yk-small">※◎＝特に手厚い、○＝ある、△＝限られる、－＝公式に記載なし（各社公式サイトの記載をもとにした当サイトの判断、{CHECKED}確認）。「総合」の入会前の体験の記号と総合評価は、<a href="method.html">ランキング調査概要</a>で公開している{n_ax}項目の採点によります。ランナーの解約・教材の欄は、本体ページにない内容を広告用LPの記載で補っています。</p>
+{btn_main(sg, "compare")}
 """
     # C-2 2軸マップ（縦＝入会前の確認、横＝特性への対応＋先生）
-    pos = {"sogaku": (80, 16), "runner": (34, 46), "tintle": (34, 80)}
+    pos = {"sogaku": (80, 16), "coaching1": (82, 52), "runner": (14, 50), "succeed": (36, 50), "try": (58, 50), "tintle": (30, 84)}
     items = ""
     for s in R:
         x, y = pos[s["id"]]
@@ -434,31 +580,28 @@ def top():
             items += f'<span class="yk-matrix__item" style="--x:{x}%;--y:{y}%">{logo_img(s)}</span>'
     o += f"""
 <!-- C-2 2軸の早見表（yk-matrix）：縦＝採点「入会前に確かめられること」、横＝採点「特性への対応＋先生」（method.html） -->
-<h2 class="yk-sec-ttl">ひと目でわかる<em>3社の位置</em></h2>
+<h2 class="yk-sec-ttl">ひと目でわかる<em>6社の位置</em></h2>
 <div class="yk-matrix">
   <span class="yk-matrix__ax yk-matrix__ax--t">担当の先生と試せる</span><span class="yk-matrix__ax yk-matrix__ax--b">相談が中心</span><span class="yk-matrix__ax yk-matrix__ax--l">特性への支援 標準</span><span class="yk-matrix__ax yk-matrix__ax--r">特性への支援 厚い</span>
   {items}
 </div>
-<p class="yk-small">※縦は当サイトの採点「入会前に確かめられること」、横は「発達特性への対応」と「先生の体制」の合計（<a href="method.html">基準</a>）。</p>
+<p class="yk-small">※縦は当サイトの採点「入会前に確かめられること」、横は「発達特性への対応」と「先生の体制」の合計（<a href="method.html">基準</a>）。同じ値の会社は重ならないよう横にずらしています。</p>
 """
     # C-3 ソウガクの無料体験2回（yk-combo の型をソウガク1社で使う）
     o += f"""
-<!-- C-3 無料体験のすすめ（yk-combo）：ソウガク1社だけ。2枚のカード＝体験1回目／2回目（公式 faq.html・trial-flow.html、{CHECKED}確認） -->
+<!-- C-3 無料体験のすすめ（yk-combo）：ソウガク1社・カード1枚（公式 faq.html・trial-flow.html、{CHECKED}確認） -->
 <section class="yk-combo"><h2 class="yk-combo__ttl"><em>ソウガク</em>の無料体験2回で<br>先生との相性を確かめましょう！</h2>
-  <div class="yk-combo__card"><p class="yk-combo__head"><span class="rk-step">体験1回目</span>保護者と先生の面談にもできる</p><span class="yk-combo__logo" style="display:block">{logo_img(sg)}</span><a class="yk-combo__link" href="sogaku.html">ソウガクの詳細</a>
-    <ul class="yk-combo__points"><li><b>担当予定の先生と話せる！</b><br>体験を担当するのは、入会後に担当する予定の先生。子どもの様子や苦手なことを、先に保護者から伝えられます。</li><li><b>体験の前に教務担当がヒアリング</b><br>学習状況や希望の先生・日時を聞いたうえで、先生が選ばれます。</li></ul>
-    {btn_main(sg, "combo1")}</div>
-  <div class="yk-combo__card"><p class="yk-combo__head"><span class="rk-step">体験2回目</span>子どもが実際の授業を受ける</p><span class="yk-combo__logo" style="display:block">{logo_img(sg)}</span><a class="yk-combo__link" href="sogaku.html#f3">体験の流れ</a>
-    <ul class="yk-combo__points"><li><b>小学生は25分か50分！</b><br>中高生は35分か60分。最初に流れを説明して、できることから始めます。</li><li><b>体験後に指導計画がもらえる</b><br>得意・不得意をまとめた、その子だけの指導計画を受け取れます。相性が合えば、そのまま同じ先生が担当します。</li></ul>
-    {btn_main(sg, "combo2")}</div>
+  <div class="yk-combo__card"><p class="yk-combo__head">担当予定の先生と、2回試してから決められる</p><span class="yk-combo__logo" style="display:block">{logo_img(sg)}</span><a class="yk-combo__link" href="sogaku.html#f3">体験の流れを見る</a>
+    <ul class="yk-combo__points"><li><b>1回目は保護者と先生の面談にもできる！</b><br>体験を担当するのは、入会後に担当する予定の先生。子どもの様子や苦手なことを先に伝えてから、2回目に授業を受けられます。</li><li><b>小学生は25分か50分！</b><br>中高生は35分か60分。最初に流れを説明して、できることから始めます。</li><li><b>体験後に指導計画がもらえる</b><br>得意・不得意をまとめた、その子だけの指導計画を受け取れます。相性が合えば、そのまま同じ先生が担当します。</li></ul>
+    {btn_main(sg, "combo")}</div>
 </section>
-<p class="yk-small">※体験は無料・2回まで（1回目から子どもの授業にすることもできます）。申込フォームは「簡単3分。無理な入会・教材販売はございません」と公式に記載（<a href="https://sogaku.jp/online/faq.html" target="_blank" rel="nofollow noopener">公式のよくある質問</a>、{CHECKED}確認）。</p>
+<p class="yk-small">※体験は無料・2回まで（1回目から子どもの授業にすることもできます）。体験の前に教務担当が学習状況や希望を聞きます。申込フォームは「簡単3分。無理な入会・教材販売はございません」と公式に記載（<a href="https://sogaku.jp/online/faq.html" target="_blank" rel="nofollow noopener">公式のよくある質問</a>、{CHECKED}確認）。</p>
 """
     # D ランキング
     o += f"""
 <!-- D ランキング：順位見出し→赤キャッチ→タブ（イチオシ／基本情報／料金プラン例）→特徴→編集部→口コミ→2ボタン -->
 <h2 class="yk-sec-ttl" id="ranking">発達特性に強いオンライン家庭教師<br><em>ランキングTOP3</em></h2>
-<div class="mt-say"><span class="mt-say__icon"><img src="{IMG}gen/icon_editor.webp" alt="" width="240" height="240" loading="lazy"></span><p class="mt-say__b">先生との相性は、体験してみないと分かりません。ソウガクは入会後に担当する予定の先生と2回体験できるので、まずはそこで確かめるのがおすすめです。</p></div>
+<div class="mt-say"><span class="mt-say__icon"><img src="{IMG}gen/icon_editor_illust.webp" alt="" width="240" height="240" loading="lazy"></span><p class="mt-say__b">先生との相性は、体験してみないと分かりません。ソウガクは入会後に担当する予定の先生と2回体験できるので、まずはそこで確かめるのがおすすめです。</p></div>
 """
     for s in R:
         n = s["rank"]
@@ -477,7 +620,7 @@ def top():
     <div>{jobex(s)}</div>
   </div>
 </div>
-<div class="yk-editor"><p class="yk-editor__ttl">編集部の<em>イチオシ</em>ポイント</p><img class="yk-editor__chara" src="{IMG}gen/icon_editor.webp" alt="" width="240" height="240" loading="lazy">
+<div class="yk-editor"><p class="yk-editor__ttl">編集部の<em>イチオシ</em>ポイント</p><img class="yk-editor__chara" src="{IMG}gen/icon_editor_illust.webp" alt="" width="240" height="240" loading="lazy">
 <div class="yk-editor__body"><p>{s["editor"][0]}</p>{('<p class="yk-small" style="text-align:right">' + s["editor"][1] + '</p>') if s["editor"][1] else ""}</div></div>
 {voices(s)}
 <div class="yk-btnpair"><a class="yk-btn yk-btn--sub" href="{s["id"]}.html">詳細は<br>こちら</a><div>{btn_main(s, "rank")}</div></div>
@@ -496,8 +639,8 @@ def top():
 <!-- E-2 診断フォーム（yk-finder）：結果は下の rk-result にその場で表示。判定は各社公式の記載で決められる条件だけ（rules は ranking.js） -->
 <form class="yk-finder" id="finder" action="#finder-result"><p class="yk-finder__ttl">オンライン家庭教師<br><em>かんたん</em>診断</p>
   <label class="yk-finder__row">学年<select name="grade"><option value="">指定なし</option><option value="pre">未就学</option><option value="es">小学生</option><option value="jhs">中学生</option><option value="hs">高校生</option></select></label>
-  <label class="yk-finder__row">いちばん気になること<select name="concern"><option value="">指定なし</option><option value="focus">集中が続きにくい</option><option value="match">先生との相性</option><option value="nodiag">診断を受けていない</option><option value="school">学校に行きづらい</option><option value="cost">費用を抑えたい</option></select></label>
-  <label class="yk-finder__row">1回の授業の長さ<select name="length"><option value="">指定なし</option><option value="short">30分くらいまで</option><option value="mid">60分くらい</option></select></label>
+  <label class="yk-finder__row">いちばん気になること<select name="concern"><option value="">指定なし</option><option value="focus">集中が続きにくい</option><option value="match">先生との相性</option><option value="nodiag">診断を受けていない</option><option value="school">学校に行きづらい</option><option value="exam">受験を考えている</option><option value="cost">費用を抑えたい</option></select></label>
+  <label class="yk-finder__row">1回の授業の長さ<select name="length"><option value="">指定なし</option><option value="short">30分くらいまで</option><option value="mid">60分くらい</option><option value="long">90分でもよい</option></select></label>
   <fieldset><legend>こだわり条件</legend><div class="yk-finder__checks"><label><input type="checkbox" name="report">毎回の報告がほしい</label><label><input type="checkbox" name="adult">社会人の先生がいい</label><label><input type="checkbox" name="contract">解約のルールが明確</label><label><input type="checkbox" name="flex">回数を固定したくない</label></div></fieldset>
   <button class="yk-finder__submit" type="submit">診断する</button></form>
 <div class="rk-result" id="finder-result" aria-live="polite" hidden></div>
@@ -600,6 +743,77 @@ DETAIL["tintle"] = dict(
     faq_src="https://tintle.net/flow/",
 )
 
+DETAIL["succeed"] = dict(
+    strengths=[
+        ("専門スタッフが特性を聞き取ってから始める",
+         "<p>特性が強い子の場合は、専門スタッフが保護者と子どもに面談し、学校や家での様子、特性からくる行動を聞き取ります。診断を受けている場合は、差し支えない範囲で検査結果も共有します。担当の先生は、専門スタッフから引き継ぎを受けてから指導を始めます。</p>", None),
+        ("発達支援の指導経験が豊富な先生から選ぶ",
+         "<p>専任スタッフが特性を聞いたうえで、発達支援の指導経験が豊富な先生から担当を選びます。絵や図で説明する、短い言葉で伝えるなど、その子が学びやすい方法でカリキュラムを組む方針です。</p>", None),
+        ("オンラインは毎回の報告と月1回の面談",
+         "<p>オンライン家庭教師では、毎回の授業報告とは別に、月に1回の保護者面談があります。先生への要望もこの面談で伝えられます。</p>", None),
+        ("月謝制で、退会費・違約金なし",
+         "<p>支払いは月謝制で、一括前払いやローン契約ではありません。申込日を含め8日以内なら無条件で解約でき、1カ月前までに伝えれば月末で退会できます。先生の交代は何度でも無料です。</p>", None),
+    ],
+    fit=["LD・ADHD・ASDなど、特性がある程度分かっている", "発達支援の経験がある先生を選びたい", "授業の様子を毎月聞きながら進めたい", "訪問とオンラインの両方を候補にしたい"],
+    check=["オンラインの料金は1時間単位（短い授業の設定は要確認）", "入会後、先生の選考に10営業日ほどかかる", "LD・ADHD・ASDサポートコース（訪問）は1時間5,830円〜"],
+    steps=[("問い合わせ", "電話かWebのフォームから問い合わせます。"),
+           ("無料体験授業（60分）", "通常と同じ60分の授業を受け、手持ちの機器で授業を受けられるかも確認します。"),
+           ("申し込み・先生の指定", "候補の先生の中から選べます。"),
+           ("授業スタート", "入会後、先生の選考に10営業日ほどかかります。")],
+    steps_src="https://www.benkyo.co.jp/course/online/",
+    faq=[("先生が合わなかったら変更できますか？", "はい。講師の変更は無料で何回でもできます。"),
+         ("特別な機器は必要ですか？", "普段使っているパソコン・タブレット・スマホのいずれかがあれば受講できます。機器の貸し出しはありません。"),
+         ("苦手な科目だけ受講できますか？", "はい。希望の科目だけ受けられ、途中で変えることもできます。")],
+    faq_src="https://www.benkyo.co.jp/course/online/",
+)
+DETAIL["try"] = dict(
+    strengths=[
+        ("教師とは別に、教育プランナーが専任でつく",
+         "<p>トライでは、教師とは別に正社員の「教育プランナー」が家庭ごとにつきます。保護者との面談で悩みや学習状況を聞き、得意・苦手や理解のスピードに合わせたカリキュラムを作ります。先生に直接言いづらい配慮の相談もできます。</p>", None),
+        ("WISC検査の結果をもとに学習をサポート",
+         "<p>WISCの検査結果をもとに、得意な分野を伸ばし、苦手な部分を無理なくカバーできるよう学習を組み立てます。</p>", None),
+        ("カメラオフや保護者同席でも受けられる",
+         "<p>子どもが落ち着く場所で受講でき、保護者が同席して見守ることもできます。カメラはオンが推奨ですが、難しければオフでも受講できます。話すのが難しい子は、Zoomのチャットでやりとりすることもできます。</p>", None),
+        ("アプリで毎回の授業の進捗が見える",
+         "<p>無料の学習管理アプリで、毎回の授業の進捗や教師のコメントを確認できます。教材費は無料で、中高生向けの映像授業「Try IT」も見放題です。</p>", None),
+    ],
+    fit=["WISCなどの検査結果を勉強に活かしたい", "先生とは別に、相談できる担当者がほしい", "カメラオフや保護者同席から始めたい", "受験や英検の対策も考えている"],
+    check=["入会金11,000円（税込）が別にかかる", "料金例は1コマ60分（短い授業は学習面談で要確認）", "体験授業は約30分・英語か数学"],
+    steps=[("学習面談の案内", "電話で、無料の学習面談（Zoom）が案内されます。"),
+           ("無料学習面談", "教育プランナーが悩みや目標を聞き、コースや学習法、料金を提案します。入会しなくても受けられます。"),
+           ("教師決定", "33万人の登録教師から選ばれ、授業の前に教師から挨拶があります。"),
+           ("授業スタート", "アプリから自動で発行されるZoomで授業に入ります。")],
+    steps_src="https://www.try-online.jp/kobetsu/tokusei/",
+    faq=[("発達障がい・学習障がいがあっても入会できますか？", "はい。マンツーマンなので、子どもが理解できるペースで授業を行うと公式に書かれています。不安な場合は入会前の無料体験授業がすすめられています。"),
+         ("学習面談は親だけでも受けられますか？", "通常は親子での参加ですが、難しい場合は保護者だけでも面談できます。"),
+         ("授業の振り替えはできますか？", "前日22時までの連絡で振り替えられます。")],
+    faq_src="https://www.try-online.jp/kobetsu/tokusei/",
+)
+DETAIL["coaching1"] = dict(
+    strengths=[
+        ("提携する臨床心理士の発達検査を受けられる",
+         "<p>コーチング1グループでは、提携している臨床心理士による発達検査を受けられます。子どもの能力の全体像や得意・不得意を客観的に知り、関わり方の工夫につなげることができます。</p>", None),
+        ("発達特性のある子の中学受験・高校受験に対応",
+         "<p>発達障害・グレーゾーンの子の多くは、適切な学習指導を行えば中学受験・高校受験が可能だという考えで、進学家庭教師として受験対策を行っています。</p>", None),
+        ("「コーチング」で家での学習習慣をつくる",
+         "<p>問題の解説だけでなく、子どもの特性や目標に合わせた学習計画を作り、学習を管理しながら家での学習習慣づくりを目指します。先生は独自の研修を受けてから指導に入ります。</p>", None),
+        ("毎回の指導報告書と、教務部への相談",
+         "<p>授業の終わりに指導報告書で当日の内容を報告します。授業以外のことも教務部に相談でき、教務は担当の先生と毎月の報告書でやりとりしています。</p>", None),
+    ],
+    fit=["発達特性があっても受験を目指したい", "発達検査で得意・不得意を知りたい", "家での学習習慣までつくってほしい", "1回の授業が長めでも取り組める"],
+    check=["授業は1回90分から", "料金は6社で最も高め（月30,690円〜・入会金18,700円・年会費）", "体験学習は自宅での面談が基本で、対象エリアがある"],
+    steps=[("資料請求・問い合わせ", "Webか電話で問い合わせます。"),
+           ("無料体験学習・カウンセリング（約120分）", "担当教務との面談（授業と相談を含む）で学習状況を分析し、指導案が提案されます。完全予約制です。"),
+           ("申し込み", "専属教務が学習計画を立て、子どもに合う先生と料金プランを決めます。"),
+           ("指導開始", "申し込み手続き完了の翌月から始まります（15日以降の申し込みは間に合わない場合あり）。")],
+    steps_src="https://coaching01.com/starting.html",
+    faq=[("体験学習・カウンセリングはどこで受けますか？", "公式の流れでは自宅で行い、対象エリアは東京都・神奈川県・千葉県・埼玉県・愛知県・大阪府・京都府・兵庫県・奈良県です。エリア外でオンラインを希望する場合は、問い合わせ時に確認してください。"),
+         ("教材費はかかりますか？", "教材費・ファイル代などはかからず、教材は市販のものをすすめる方針です。"),
+         ("料金はいくらですか？", "入会金18,700円（税込）、週1回90分〜で月30,690円〜（税込）、別途申込期間に応じた年会費があります。")],
+    faq_src="https://coaching01.com/price.html",
+)
+
+
 def shot(img, cls="yk-shot"):
     f, w, h, alt, src = img
     return (f'<figure class="{cls}"><img class="yk-shot__img rk-shotimg" src="{IMG}{f}" alt="{esc(alt)}" width="{w}" height="{h}" loading="lazy">'
@@ -699,12 +913,12 @@ def method():
     for s in R:
         trs = "".join(f'<tr><th>{a[2]}</th><td><b>{s["scores"][a[0]]}</b></td><td class="is-left">{esc(WHY[s["id"]][a[0]])}</td></tr>' for a in AXES)
         why += f'<h3 class="rk-h3">{s["rank"]}位 {esc(s["name"])}（総合評価 {s["total"]}）</h3>\n<table class="yk-cmp rk-why"><colgroup><col class="c1"><col class="rk-c-score"><col></colgroup>{trs}</table>\n'
-    o = head("ランキング調査概要｜オンライン家庭教師3社の比較", "オンライン家庭教師3社の順位・総合評価・星・比較表の記号の決め方と、確認した公式情報の一覧です。")
+    o = head("ランキング調査概要｜オンライン家庭教師6社の比較", "オンライン家庭教師6社の順位・総合評価・星・比較表の記号の決め方と、確認した公式情報の一覧です。")
     o += f"""
 <nav class="yk-crumb"><a href="./">TOP</a><span>ランキング調査概要</span></nav>
 <h1 class="rk-h1">ランキング調査概要</h1>
 <h2 class="yk-sec-ttl">調べたもの</h2>
-<ul class="rk-list"><li>対象：発達障害・グレーゾーン・不登校の子に対応すると公式サイトに書かれ、オンラインで受講できる家庭教師・個別指導のうち、当サイトが比較したTOP3の3社（ソウガク・家庭教師のランナー・ティントル）</li>
+<ul class="rk-list"><li>対象：発達障害・グレーゾーン・不登校の子に対応すると公式サイトに書かれ、オンラインで受講できる家庭教師・個別指導 6社（上位3社をトップページでTOP3として紹介）</li>
 <li>方法：各社の公式サイトを{CHECKED}に確認（料金・授業時間・先生・研修・体験・保護者サポート・費用と契約・よくある質問）。口コミサイトや利用者アンケートの点数は使っていません</li>
 <li>広告：ソウガクのみアフィリエイト広告の契約があります。順位は契約の有無ではなく、下の基準で決めています</li></ul>
 <h2 class="yk-sec-ttl">採点の基準（各5点満点）</h2>

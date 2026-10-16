@@ -6,7 +6,7 @@
 const path = require('path');
 const { chromium } = require('playwright');
 const DIR = 'file://' + path.resolve(__dirname, '..', 'ranking') + '/';
-const PAGES = ['index', 'sogaku', 'runner', 'tintle', 'method'];
+const PAGES = ['index', 'sogaku', 'runner', 'tintle', 'succeed', 'try', 'coaching1', 'method'];
 // パーツ集の29部品（image-1 の画像指示枠 mt-imgslot は制作中だけ使い、公開ページに残してはいけない）
 const PARTS = {
   'FV ヒーロー画像': 'h1.lp-hero img', '導入会話': '.lp-hero ~ .mt-talk', 'fv-3 PR表記': '.yk-pr', 'top-1 BEST3': '.yk-best3', 'top-2 求人の例カード': '.yk-hscroll .yk-jobcard',
@@ -58,7 +58,7 @@ const NG = ['#sample', 'yk-ph', '◯', 'サービスA', 'mt-imgslot', '薬剤師
         if (!require('fs').existsSync(f)) fails.push(`${tag}: 画像ファイルがない ${s}`);
       }
       if (n === 'index') {
-        if (r.radarSvg !== 3) fails.push(`${tag}: レーダーは3社ぶん必要（${r.radarSvg}）`);
+        if (r.radarSvg !== 6) fails.push(`${tag}: レーダーは6社ぶん必要（${r.radarSvg}）`);
         await p.selectOption('#finder select[name=concern]', 'focus');
         await p.selectOption('#finder select[name=length]', 'short');
         await p.click('#finder button[type=submit]');
@@ -66,7 +66,7 @@ const NG = ['#sample', 'yk-ph', '◯', 'サービスA', 'mt-imgslot', '薬剤師
         if (res.hidden || !/ソウガク/.test(res.first) || res.links.length !== 2) fails.push(`${tag}: 診断の結果が出ない・想定と違う ${JSON.stringify(res)}`);
         await p.click('label[for=cmp1-more]');
         const rows = await p.evaluate(() => document.querySelectorAll('#cmp1-more ~ .yk-fold__body tr').length);
-        if (rows !== 4) fails.push(`${tag}: 比較表の行数 ${rows}（見出し＋3社）`);
+        if (rows !== 7) fails.push(`${tag}: 比較表の行数 ${rows}（見出し＋6社）`);
       }
     }
     if (errs.length) fails.push(`${w}px: スクリプトのエラー ${errs.join(' / ')}`);
