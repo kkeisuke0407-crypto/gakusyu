@@ -1,20 +1,21 @@
-// 6社比較・ランキング版（/ranking/）の公開前チェック。1つでもNGなら終了コード1（publish.sh が止まる）
+// TOP3比較・ランキング版（/ranking/）の公開前チェック。1つでもNGなら終了コード1（publish.sh が止まる）
 //   NODE_PATH=$(npm root -g) node src/check_ranking.cjs
 // 見ること：375px・1280pxで横はみ出しなし／画像が読める・alt・width・height／パーツ集の見本の残り（#sample・yk-ph・◯・サービスA・画像指示枠）なし／
-// パーツ集 yk-* の全パーツ（画像指示枠を除く28）が使われている／レーダー6つ／診断フォームで結果が出る
+// 使うと決めたパーツが使われている／レーダー3つ／診断フォームで結果が出る
+// 2026-10-16 ユーザー指示で外した部品：fv-1 yk-hero（→ヒーロー画像 lp-hero）、fv-2 ロゴの横流し・image-2 導入画像（FV直下は画像なしの会話）
 const path = require('path');
 const { chromium } = require('playwright');
 const DIR = 'file://' + path.resolve(__dirname, '..', 'ranking') + '/';
-const PAGES = ['index', 'sogaku', 'runner', 'tintle', 'succeed', 'try', 'coaching1', 'method'];
+const PAGES = ['index', 'sogaku', 'runner', 'tintle', 'method'];
 // パーツ集の29部品（image-1 の画像指示枠 mt-imgslot は制作中だけ使い、公開ページに残してはいけない）
 const PARTS = {
-  'fv-1 FV': '.yk-hero', 'fv-2 ロゴの横流し': '.yk-logos', 'fv-3 PR表記': '.yk-pr', 'top-1 BEST3': '.yk-best3', 'top-2 求人の例カード': '.yk-hscroll .yk-jobcard',
+  'FV ヒーロー画像': 'h1.lp-hero img', '導入会話': '.lp-hero ~ .mt-talk', 'fv-3 PR表記': '.yk-pr', 'top-1 BEST3': '.yk-best3', 'top-2 求人の例カード': '.yk-hscroll .yk-jobcard',
   'compare-1 タブ切替の比較表': '.yk-tabs .yk-cmp, .yk-fold', 'compare-2 2軸の早見表': '.yk-matrix', 'compare-3 2社併用': '.yk-combo',
   'rank-1 順位見出し': '.yk-rankhead', 'rank-2 ランキング内のタブ': '.yk-rankarea .yk-tabs', 'rank-3 特徴': '.yk-features', 'rank-4 編集部': '.yk-editor',
   'rank-5 口コミ': '.yk-voice', 'rank-6 2ボタン': '.yk-btnpair', 'rank-7 レーダー': '.yk-radar svg', 'rank-8 基本情報の表': '.yk-info', 'rank-9 求人例カード': '.yk-jobex',
   'close-1 迷ったらまずは': '.yk-pickup', 'close-2 診断': '.yk-finder', 'close-3 フッター': '.yk-footer',
   'detail-1 パンくず': '.yk-crumb', 'detail-2 サービス概要': '.yk-svchead__grid', 'detail-3 公式画面': '.yk-shot', 'detail-4 目次ボックス': '.yk-order',
-  'detail-5 番号見出し': '.yk-numh', 'detail-6 チェックの箱': '.yk-listbox', 'detail-7 登録ボタン': 'main > .yk-btn', 'image-2 本文画像': 'figure.mt-img img',
+  'detail-5 番号見出し': '.yk-numh', 'detail-6 チェックの箱': '.yk-listbox', 'detail-7 登録ボタン': 'main > .yk-btn',
 };
 const NG = ['#sample', 'yk-ph', '◯', 'サービスA', 'mt-imgslot', '薬剤師', '求人', 'undefined', 'None', 'NaN'];
 (async () => {
@@ -57,7 +58,7 @@ const NG = ['#sample', 'yk-ph', '◯', 'サービスA', 'mt-imgslot', '薬剤師
         if (!require('fs').existsSync(f)) fails.push(`${tag}: 画像ファイルがない ${s}`);
       }
       if (n === 'index') {
-        if (r.radarSvg !== 6) fails.push(`${tag}: レーダーは6社ぶん必要（${r.radarSvg}）`);
+        if (r.radarSvg !== 3) fails.push(`${tag}: レーダーは3社ぶん必要（${r.radarSvg}）`);
         await p.selectOption('#finder select[name=concern]', 'focus');
         await p.selectOption('#finder select[name=length]', 'short');
         await p.click('#finder button[type=submit]');
@@ -65,7 +66,7 @@ const NG = ['#sample', 'yk-ph', '◯', 'サービスA', 'mt-imgslot', '薬剤師
         if (res.hidden || !/ソウガク/.test(res.first) || res.links.length !== 2) fails.push(`${tag}: 診断の結果が出ない・想定と違う ${JSON.stringify(res)}`);
         await p.click('label[for=cmp1-more]');
         const rows = await p.evaluate(() => document.querySelectorAll('#cmp1-more ~ .yk-fold__body tr').length);
-        if (rows !== 7) fails.push(`${tag}: 比較表の行数 ${rows}（見出し＋6社）`);
+        if (rows !== 4) fails.push(`${tag}: 比較表の行数 ${rows}（見出し＋3社）`);
       }
     }
     if (errs.length) fails.push(`${w}px: スクリプトのエラー ${errs.join(' / ')}`);
