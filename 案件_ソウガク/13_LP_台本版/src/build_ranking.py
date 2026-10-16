@@ -575,8 +575,6 @@ def top():
     n_ax = len(AXES)
     o = head("【2026年10月】発達障害・グレーゾーンの子に合うオンライン家庭教師ランキングTOP3｜6社を比較",
              f"発達障害・グレーゾーンの子に対応したオンライン家庭教師6社（{names}）を、発達特性への対応・先生・入会前の確認・授業時間・保護者サポート・料金・費用と契約の{n_ax}項目で採点し、{N_ITEMS}項目で比較しました。")
-    # A-0 PR（FVの上）
-    o += '\n<!-- A-0 PR表記（yk-pr）：FVの上。FV直下は会話にするため -->\n<p class="yk-pr"><b>PR</b><span>当サイトはアフィリエイト広告を利用しており、ソウガクのプロモーションを含みます。順位は広告の有無ではなく、<a href="method.html">公開している採点基準</a>で決めています（' + UPDATED + '最新版）。</span></p>\n'
     # A-1 FV ヒーロー画像（上に更新日【最新】、下にロゴの横流し）
     logos = "".join(f'<li>{logo_img(s, alt=s["name"])}</li>' for s in R) + "".join(f'<li>{logo_img(s, alt="")}</li>' for s in R)
     o += f"""
@@ -584,6 +582,7 @@ def top():
 <p class="rk-update"><time datetime="{CHECKED_ISO}">{CHECKED}</time><span>【最新】</span></p>
 <h1 class="lp-hero"><span class="lp-sr">発達障害・グレーゾーンの子に合う オンライン家庭教師ランキングTOP3</span><img fetchpriority="high" src="{IMG}gen/00_hero_top3_v3.webp" srcset="{IMG}gen/00_hero_top3_v3-608.webp 608w, {IMG}gen/00_hero_top3_v3-912.webp 912w, {IMG}gen/00_hero_top3_v3.webp 1200w" sizes="(max-width: 751px) 100vw, 696px" alt="" width="1200" height="675"></h1>
 <div class="yk-logos rk-logos" role="region" aria-label="比較したオンライン家庭教師6社"><ul class="yk-logos__track">{logos}</ul></div>
+<p class="yk-pr"><b>PR</b><span>本ページは<wbr>広告・<wbr>アフィリエイトリンクを<wbr>含み⁠ま⁠す⁠。</span></p>
 """
     # A-2 導入会話（画像なし）
     rows = [
