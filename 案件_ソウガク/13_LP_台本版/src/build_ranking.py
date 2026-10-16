@@ -12,6 +12,7 @@ import os
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(os.path.dirname(HERE), "ranking")
 CHECKED = "2026年10月16日"
+CHECKED_ISO = "2026-10-16"
 UPDATED = "2026年10月"
 SITE = "わが子の学び方ガイド"
 ASP = "https://t.felmat.net/fmcl?ak=C12158L.1.I1680104.D1416296&amp;pb="
@@ -283,6 +284,36 @@ def grade(v):
     return "S" if v >= 4.5 else "A" if v >= 4.0 else "B"
 
 
+# ボタンの上の一言（置き場所ごとに変える。なければ btn_catch）。すべて公式サイトの記載にもとづく
+CATCH = {
+    "sogaku": {"compare": "比較17項目のうち13項目で◎", "combo": "体験は2回とも無料", "rank_tab": "担当予定の先生と無料体験2回",
+               "plan": "違約金・途中解約料0円", "plan_card": "科目を増やしても料金は同じ", "pickup": "合わなければ先生の交代も無料",
+               "detail_strength": "先生は全員、研修を受けた社会人", "detail_fit": "当てはまったら、まず体験で相性を確認",
+               "detail_fee": "入会金はキャンペーンで無料の場合あり", "detail_flow": "申込フォームは簡単3分（公式）",
+               "detail_voice": "担当予定の先生と無料体験2回", "detail_faq": "違約金・途中解約料0円"},
+    "runner": {"rank_tab": "勉強が苦手な子専門の家庭教師", "plan": "指導料は1コマ30分900円（小中学生）",
+               "detail_strength": "合わなければ先生の交代は何度でも無料", "detail_fit": "体験レッスンは90分程度",
+               "detail_fee": "指導した分だけの支払い", "detail_flow": "土日祝日も体験レッスンを受けられる",
+               "detail_voice": "分からない問題はLINEで質問できる"},
+    "tintle": {"rank_tab": "不登校専門のオンライン個別指導", "plan": "30分単位・受けた分だけ後払い",
+               "detail_strength": "曜日・時間・回数を自由に決められる", "detail_fit": "個別相談会は何度でも受けられる",
+               "detail_fee": "受けた分だけの後払い", "detail_voice": "先生は全員が現役の大学生"},
+    "succeed": {"rank_tab": "LD・ADHD・ASDサポートコースあり", "plan": "追加の教材費なしと公式に記載",
+                "detail_strength": "先生の交代は何度でも無料", "detail_fee": "追加の教材費なしと公式に記載",
+                "detail_flow": "申込から8日以内なら解約できる", "detail_voice": "毎回の授業報告と月1回の保護者面談"},
+    "try": {"rank_tab": "教育プランナーが専任でつく", "plan": "教材費・年会費なしと公式に記載",
+            "detail_strength": "WISC検査の結果を学習に活かす", "detail_fee": "前月までの申し出で解約金なし",
+            "detail_flow": "保護者だけの面談もできる", "detail_faq": "前日22時までの連絡で振替できる"},
+    "coaching1": {"rank_tab": "発達特性のある子の受験に対応", "plan": "教材費なし（年会費は別途）",
+                  "detail_strength": "提携する臨床心理士の発達検査あり", "detail_fee": "教材費なし（年会費は別途）",
+                  "detail_flow": "体験はオンラインでも受けられる", "detail_faq": "毎回の指導報告書あり"},
+}
+
+
+def catch(s, key):
+    return CATCH.get(s["id"], {}).get(key, s["btn_catch"])
+
+
 def esc(t):
     return html.escape(t, quote=True)
 
@@ -382,7 +413,7 @@ def jobex(s):
     for i, (g, plan, price, note) in enumerate(s["plans"], 1):
         cards += (f'<div class="yk-jobex"><p class="yk-jobex__ttl">料金プランの例{i}</p><ul class="yk-tags yk-tags--green"><li>{g}</li><li>{s.get("plan_tag", "オンライン")}</li></ul>'
                   f'<table class="yk-kv"><tr><th>{s.get("plan_label", "月額")}</th><td><b>{price}</b></td></tr><tr><th>授業</th><td>{plan}</td></tr><tr><th>補足</th><td>{note}</td></tr></table>'
-                  f'<p class="yk-catch">{esc(s["btn_catch"])}</p><a class="yk-btn yk-btn--sm" {link_attrs(s, "rank_plan")}>公式で料金を見る</a>'
+                  f'<p class="yk-catch">{esc(catch(s, "plan"))}</p><a class="yk-btn yk-btn--sm" {link_attrs(s, "rank_plan")}>公式で料金を見る</a>'
                   f'<span class="yk-jobex__logo" style="display:block">{logo_img(s, alt="")}</span></div>')
     hint = '<p class="yk-hint">横にスクロールできます</p>' if len(s["plans"]) > 1 else ""
     return (f'{hint}<div class="yk-hscroll">{cards}</div>\n'
@@ -400,7 +431,7 @@ def voices(s):
 
 
 def btn_main(s, cta, text=None):
-    return f'<p class="yk-catch">{esc(s["btn_catch"])}</p><a class="yk-btn" {link_attrs(s, cta)}>{text or s["btn"]}</a>'
+    return f'<p class="yk-catch">{esc(catch(s, cta))}</p><a class="yk-btn" {link_attrs(s, cta)}>{text or s["btn"]}</a>'
 
 
 # ---------------------------------------------------------------- トップ
@@ -546,19 +577,20 @@ def top():
              f"発達障害・グレーゾーンの子に対応したオンライン家庭教師6社（{names}）を、発達特性への対応・先生・入会前の確認・授業時間・保護者サポート・料金・費用と契約の{n_ax}項目で採点し、{N_ITEMS}項目で比較しました。")
     # A-0 PR（FVの上）
     o += '\n<!-- A-0 PR表記（yk-pr）：FVの上。FV直下は会話にするため -->\n<p class="yk-pr"><b>PR</b><span>当サイトはアフィリエイト広告を利用しており、ソウガクのプロモーションを含みます。順位は広告の有無ではなく、<a href="method.html">公開している採点基準</a>で決めています（' + UPDATED + '最新版）。</span></p>\n'
-    # A-1 FV ヒーロー画像
+    # A-1 FV ヒーロー画像（上に更新日【最新】、下にロゴの横流し）
+    logos = "".join(f'<li>{logo_img(s, alt=s["name"])}</li>' for s in R) + "".join(f'<li>{logo_img(s, alt="")}</li>' for s in R)
     o += f"""
-<!-- A-1 FV：ヒーロー画像（王道LPと同じ 00_hero_top3_v3。見出しは画像内の文字、同じ文を lp-sr に持つ） -->
+<!-- A-1 FV：更新日の帯（rk-update）＋ヒーロー画像（王道LPと同じ 00_hero_top3_v3。見出しは画像内の文字、同じ文を lp-sr に持つ）＋ロゴの横流し（yk-logos、2周目は alt=""） -->
+<p class="rk-update"><time datetime="{CHECKED_ISO}">{CHECKED}</time><span>【最新】</span></p>
 <h1 class="lp-hero"><span class="lp-sr">発達障害・グレーゾーンの子に合う オンライン家庭教師ランキングTOP3</span><img fetchpriority="high" src="{IMG}gen/00_hero_top3_v3.webp" srcset="{IMG}gen/00_hero_top3_v3-608.webp 608w, {IMG}gen/00_hero_top3_v3-912.webp 912w, {IMG}gen/00_hero_top3_v3.webp 1200w" sizes="(max-width: 751px) 100vw, 696px" alt="" width="1200" height="675"></h1>
+<div class="yk-logos rk-logos" role="region" aria-label="比較したオンライン家庭教師6社"><ul class="yk-logos__track">{logos}</ul></div>
 """
     # A-2 導入会話（画像なし）
     rows = [
-        ("保護者", "宿題を見ていると、すぐ親子げんかになってしまって…。家庭教師をお願いしたいけど、<span class='mt-mark'>発達特性を分かってくれる先生</span>って、どう選べばいいんでしょう？", True),
-        ("編集部", "見るところは3つです。<b>先生が発達特性を学んでいるか</b>、<b>授業の長さが子どもに合うか</b>、そして<b>入会前に実際の先生と試せるか</b>。", False),
-        ("保護者", "うちの子、30分も座っていられるか心配で…。診断もまだ受けていないんです。", True),
-        ("編集部", "それなら、小学生は25分から選べて、診断なしでも相談できる<span class='mt-mark'>ソウガク</span>から見てみてください。入会後に担当する予定の先生と、無料体験を2回受けられます。", False),
-        ("保護者", "ほかの家庭教師とも比べてから決めたいです。", True),
-        ("編集部", f"発達特性に対応したオンライン家庭教師6社の公式サイトを{CHECKED}に確認して、{n_ax}つの基準で採点しました。上位3社をTOP3として紹介しています。", False),
+        ("保護者", "宿題を見ると、すぐ親子げんかに…。<span class='mt-mark'>発達特性を分かってくれる先生</span>って、どう選べばいいんでしょう？", True),
+        ("編集部", "見るのは3つ。<b>先生が発達特性を学んでいるか</b>、<b>授業の長さ</b>、<b>入会前に実際の先生と試せるか</b>です。", False),
+        ("保護者", "30分も座っていられるか心配で…。診断もまだなんです。", True),
+        ("編集部", f"それなら、小学生は25分から選べて診断なしでも相談できる<span class='mt-mark'>ソウガク</span>から。6社を{n_ax}つの基準で採点したTOP3を下にまとめました。", False),
     ]
     o += ('\n<!-- A-2 導入会話（mt-talk）：FV直下。画像なし。よくある迷いを編集部が会話例にしたもの（実在の発言ではない） -->\n<div class="mt-talk">'
           + "".join(talk_row(w, t, r) for w, t, r in rows) + '</div>\n<p class="yk-small">※よくある迷いを編集部が会話形式にしたものです（人物はイメージ）。</p>\n')
@@ -585,7 +617,7 @@ def top():
         cards += (f'<div class="yk-jobcard"><h3 class="yk-jobcard__ttl">{ttl}</h3><img class="yk-jobcard__img" src="{IMG}{img}" alt="{alt}（イメージ）" width="960" height="640" loading="lazy">'
                   f'<p class="yk-jobcard__pay">月額<b>{pay}</b></p><table class="yk-kv"><tr><th>学年</th><td>{g}</td></tr>'
                   f'<tr><th>授業</th><td>{plan}</td></tr></table><ul class="yk-tags">{tg}</ul>'
-                  f'<p class="yk-catch">{esc(sg["btn_catch"])}</p><a class="yk-btn yk-btn--sm" {link_attrs(sg, "plan_card")}>無料体験を公式で見る</a></div>')
+                  f'<p class="yk-catch">{esc(catch(sg, "plan_card"))}</p><a class="yk-btn yk-btn--sm" {link_attrs(sg, "plan_card")}>無料体験を公式で見る</a></div>')
     o += f"""
 <!-- B-2 1位ソウガクの目的別プラン（yk-hscroll + yk-jobcard）：公式の料金表（{sg["plan_src"]}、{CHECKED}確認） -->
 <h2 class="yk-sec-ttl">1位<em>ソウガク</em>の料金プラン｜目的別の例</h2>
@@ -696,7 +728,7 @@ def top():
 <!-- E-1 迷ったらまずは（yk-pickup）：ソウガク1社 -->
 <section class="yk-pickup"><h2 class="yk-pickup__ttl"><small>迷ったらまずは</small><br><em>ソウガク</em>の無料体験から！</h2>
 <ul class="yk-pickup__list">
-  <li class="yk-pickup__item"><p class="yk-pickup__name">ソウガク</p>{banner(sg, "yk-pickup__img", "pickup_banner")}<p class="yk-pickup__text">発達特性を学んだ社会人講師と、短い授業（小学生25分・中高生35分）から。担当予定の先生と2回試してから決められます。違約金・途中解約料は0円です。</p><p class="yk-catch">診断なし・グレーゾーンでも相談OK</p><a class="yk-btn yk-btn--sm" {link_attrs(sg, "pickup")}>無料体験を公式で見る</a></li>
+  <li class="yk-pickup__item"><p class="yk-pickup__name">ソウガク</p>{banner(sg, "yk-pickup__img", "pickup_banner")}<p class="yk-pickup__text">発達特性を学んだ社会人講師と、短い授業（小学生25分・中高生35分）から。担当予定の先生と2回試してから決められます。違約金・途中解約料は0円です。</p><p class="yk-catch">{esc(catch(sg, "pickup"))}</p><a class="yk-btn yk-btn--sm" {link_attrs(sg, "pickup")}>無料体験を公式で見る</a></li>
 </ul></section>
 """
     # E-2 診断
