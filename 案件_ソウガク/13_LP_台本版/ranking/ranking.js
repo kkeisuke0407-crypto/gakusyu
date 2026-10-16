@@ -9,9 +9,9 @@
     sogaku: { name: 'ソウガク', base: 4.9 },
     runner: { name: '家庭教師のランナー', base: 4.0 },
     tintle: { name: 'ティントル', base: 3.7 },
-    succeed: { name: '家庭教師のサクシード', base: 0 },
-    'try': { name: 'トライのオンライン個別指導塾', base: 0 },
-    coaching1: { name: '家庭教師のコーチング1', base: 0 }
+    succeed: { name: '家庭教師のサクシード', base: 4.0 },
+    'try': { name: 'トライのオンライン個別指導塾', base: 4.0 },
+    coaching1: { name: '家庭教師のコーチング1', base: 3.6 }
   };
   // [条件, 会社, 点, 理由]
   var RULES = [
