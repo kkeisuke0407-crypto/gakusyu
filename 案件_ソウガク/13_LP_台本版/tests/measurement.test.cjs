@@ -88,4 +88,19 @@ for(const path of ['index.html',...Array.from({length:8},(_,i)=>`lp0${i+2}/index
   assert.equal((html.match(/data-cta-id=/g)||[]).length,9,path);
   assert.equal((html.match(/data-faq-id=/g)||[]).length,8,path);
 }
-console.log('PASS: explicit single page_view, LP/debug context on all 9 pages, safe variants, unknown/private query removal, matching, click deduplication, middle-click, scroll milestones, visibility, active time, destination, opt-out.');
+// /ranking/（ランキングLPと各社詳細・調査概要）
+for (const [path, expected] of [['/ranking/','RANKING'],['/ranking/index.html','RANKING'],['/ranking/sogaku.html','RANKING_SOGAKU'],['/ranking/method.html','RANKING_METHOD'],['/ranking/x/','LP01']]) {
+  assert.equal(boot({path}).events('page_view')[0][2].lp_id, expected);
+}
+{
+  const r=boot({path:'/ranking/'});
+  r.click(); assert.equal(r.events('sougaku_mcv').length,1); assert.equal(r.events('sougaku_mcv')[0][2].lp_id,'RANKING'); assert.equal(r.events('conversion').length,1);
+  r.click({href:'https://k-runner.co.jp/course/developmental-disabilities/',hasAttribute:()=>false,dataset:{otherCta:'rank'}});
+  r.click({href:'https://www.benkyo.co.jp/course/ld-adhd-asd/',hasAttribute:()=>false,dataset:{otherCta:'best3'}});
+  r.click({href:'https://www.try-online.jp/kobetsu/tokusei/',hasAttribute:()=>false,dataset:{}});
+  r.click({href:'https://example.com/',hasAttribute:()=>false,dataset:{otherCta:'rank'}});
+  const o=r.events('lp_other_service_click').map(e=>[e[2].destination,e[2].cta_id]);
+  assert.equal(JSON.stringify(o),JSON.stringify([['k-runner.co.jp','rank'],['benkyo.co.jp','best3'],['try-online.jp','unclassified']]));
+  assert.equal(r.events('conversion').length,1);
+}
+console.log('PASS: explicit single page_view, LP/debug context on all 9 pages and /ranking/, safe variants, unknown/private query removal, matching, click deduplication, middle-click, scroll milestones, visibility, active time, destination, opt-out.');

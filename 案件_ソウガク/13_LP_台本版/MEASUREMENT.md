@@ -48,3 +48,18 @@ MCVは紹介先への遷移であり、無料体験申込・承認成果では�
 - `/lp09/` を `lp_id=LP09` として計測（lp-measurement.js のLP判定を /lp02/〜/lp09/ に拡張。/lp10/ など未対応のパスは従来どおり LP01 扱い）。スクリプトの読み込みは `?v=20261011` に更新。
 - イベント名・パラメータは既存のまま（page_view / lp_section_view / lp_cta_view / sougaku_mcv / lp_other_service_click / lp_scroll / lp_active_read / lp_faq_open）。新しいイベントは追加していない。
 - LP09 独自のセクション: intro_1（書けないにも、いろいろな困り方）／intro_2（家で教えるのが難しいとき）／intro_3（先生を選ぶなら）。比較表以降は全LP共通（comparison〜final）。
+
+## 2026-10-16 ランキングLP（/ranking/）追加
+
+- `/ranking/`（トップ）と各社詳細・調査概要にも lp-measurement.js を読み込み（`?v=20261016`）。それまでランキングLPには計測タグが入っていなかった。
+- `lp_id`：`/ranking/` と `/ranking/index.html` は `RANKING`、各社詳細などは `RANKING_SOGAKU` / `RANKING_RUNNER` / `RANKING_SUCCEED` / `RANKING_TRY` / `RANKING_TINTLE` / `RANKING_COACHING1` / `RANKING_METHOD`。
+- ソウガク（felmat、同じ ak）のクリックは既存LPと同じく `sougaku_mcv`＋Google広告のMCV（Sougaku_MCV_OfficialClick）。`cta_id`：best3 / plan_card / comparison / compare / combo / rank_topshot / rank_tab / rank_plan / rank / pickup_banner / pickup / detail_top / detail_strength / detail_fit / detail_fee / detail_flow / detail_voice / detail_faq など。
+- ソウガク以外の5社のリンクは `lp_other_service_click`。`destination` に k-runner.co.jp / benkyo.co.jp / try-online.jp を追加（www. は外す）、`cta_id` は `data-other-cta` の値。tintle.net / coaching01.com は既存どおり。MCV・広告コンバージョンには入れない。
+- `lp_section_view` の `section_id`：トップは talk / best3 / plans / comparison / matrix / trial / ranking / rank_<会社ID> / pickup / finder、各社詳細は strength / fit / fee / flow / voice / faq。
+- テスト：`node tests/measurement.test.cjs`（/ranking/ の lp_id、MCV、他社クリックを追加）。
+
+### オフラインCV（未完了・既存LPも同じ）
+
+- 全LP・ランキングLPとも felmat の `pb=` は空のまま。GCLID は GA4 のページURLには残るが、felmat には渡していない。
+- このため felmat の成果データだけでは、Google広告のクリック（GCLID）と成果をひも付けられず、SougakuConversion（クリックからのオフラインインポート）にアップロードできない。
+- 必要なこと：felmat に「pb に GCLID を入れてよいか（文字数・使える文字）」「成果レポート／成果通知に pb が出るか」を確認。可なら、LPで広告クリック時の GCLID を pb に入れる実装と、成果の GCLID・成果日時を Google広告へ取り込む運用を決める。

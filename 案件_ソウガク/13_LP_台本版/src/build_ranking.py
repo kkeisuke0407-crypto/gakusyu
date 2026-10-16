@@ -321,7 +321,7 @@ def esc(t):
 def link_attrs(s, cta=None):
     if s["sponsored"]:
         return f'href="{s["url"]}" target="_blank" rel="sponsored nofollow noopener" data-cta data-cta-id="{cta or "ranking"}"'
-    return f'href="{s["url"]}" target="_blank" rel="nofollow noopener"'
+    return f'href="{s["url"]}" target="_blank" rel="nofollow noopener" data-other-cta="{cta or "ranking"}"'
 
 
 def logo_img(s, cls="", alt=None, lazy=True):
@@ -356,6 +356,7 @@ def head(title, desc):
 <link rel="stylesheet" href="../parts.css">
 <link rel="stylesheet" href="yk-parts.css">
 <link rel="stylesheet" href="ranking.css">
+<script defer src="../lp-measurement.js?v=20261016"></script>
 </head>
 <body>
 <main class="yk-body rk-wrap">
@@ -591,7 +592,7 @@ def top():
         ("保護者", "30分も座っていられるか心配で…。診断もまだなんです。", True),
         ("編集部", f"それなら、小学生は25分から選べて診断なしでも相談できる<span class='mt-mark'>ソウガク</span>から。6社を{n_ax}つの基準で採点したTOP3を下にまとめました。", False),
     ]
-    o += ('\n<!-- A-2 導入会話（mt-talk）：FV直下。画像なし。よくある迷いを編集部が会話例にしたもの（実在の発言ではない） -->\n<div class="mt-talk">'
+    o += ('\n<!-- A-2 導入会話（mt-talk）：FV直下。画像なし。よくある迷いを編集部が会話例にしたもの（実在の発言ではない） -->\n<div class="mt-talk" data-section-id="talk">'
           + "".join(talk_row(w, t, r) for w, t, r in rows) + '</div>\n<p class="yk-small">※よくある迷いを編集部が会話形式にしたものです（人物はイメージ）。</p>\n')
     # B-1 BEST3
     items = ""
@@ -601,7 +602,7 @@ def top():
                   f'<p class="yk-best3__text"><span class="yk-red">{r}</span><br><span class="yk-mark">{m}</span>。{t}</p>'
                   f'<p class="yk-best3__note">※対象は{s["target"]}</p><p class="yk-catch">総合評価 {s["total"]}</p>'
                   f'<a class="yk-btn yk-btn--sm" {link_attrs(s, "best3")}>公式サイト</a></li>')
-    o += f'\n<!-- B-1 BEST3（yk-best3）：順位の根拠は method.html -->\n<section class="yk-best3"><h2 class="yk-best3__ttl"><em>発達特性</em>に強いオンライン家庭教師<em>TOP3</em></h2>\n<ol class="yk-best3__list">{items}</ol></section>\n'
+    o += f'\n<!-- B-1 BEST3（yk-best3）：順位の根拠は method.html -->\n<section class="yk-best3"><h2 class="yk-best3__ttl" data-section-id="best3"><em>発達特性</em>に強いオンライン家庭教師<em>TOP3</em></h2>\n<ol class="yk-best3__list">{items}</ol></section>\n'
     # B-2 ソウガクの目的別プラン（求人の例カードの型）
     sg = S["sogaku"]
     jobs = [
@@ -619,7 +620,7 @@ def top():
                   f'<p class="yk-catch">{esc(catch(sg, "plan_card"))}</p><a class="yk-btn yk-btn--sm" {link_attrs(sg, "plan_card")}>無料体験を公式で見る</a></div>')
     o += f"""
 <!-- B-2 1位ソウガクの目的別プラン（yk-hscroll + yk-jobcard）：公式の料金表（{sg["plan_src"]}、{CHECKED}確認） -->
-<h2 class="yk-sec-ttl">1位<em>ソウガク</em>の料金プラン｜目的別の例</h2>
+<h2 class="yk-sec-ttl" data-section-id="plans">1位<em>ソウガク</em>の料金プラン｜目的別の例</h2>
 <p class="yk-hint">横にスクロールできます</p>
 <div class="yk-hscroll">{cards}</div>
 <p class="yk-small">※月額は<a href="{sg["plan_src"]}" target="_blank" rel="nofollow noopener">ソウガク公式サイト</a>の料金表（月4回・税込、{CHECKED}確認）。入会金22,000円（税込）は別途（キャンペーンで無料の場合あり）。月8回のコースもあります。写真はイメージです。</p>
@@ -648,7 +649,7 @@ def top():
     win = sum(1 for _, items in CMP_GROUPS for it in items if CMP["sogaku"][it][0] == "◎")
     o += f"""
 <!-- C-1 タブ切替の比較表（yk-tabs + yk-cmp + yk-fold）：総合（6社・採点）＋{N_ITEMS}項目を3つのタブに。各社公式サイトの記載（{CHECKED}確認）。採点の基準は method.html -->
-<h2 class="yk-sec-ttl" id="compare"><em>6社</em>を{N_ITEMS}項目で比較</h2>
+<h2 class="yk-sec-ttl" id="compare" data-section-id="comparison"><em>6社</em>を{N_ITEMS}項目で比較</h2>
 <p>先生・体験・授業の長さ・報告・費用や契約まで、各社の公式サイトに書かれていることを並べました。<span class="yk-mark">1位のソウガクは{N_ITEMS}項目のうち{win}項目で◎</span>です。</p>
 <div class="yk-tabs rk-tabs4">
   <input type="radio" name="cmp1" id="cmp1-1" checked>{radios}
@@ -676,7 +677,7 @@ def top():
             items += f'<span class="yk-matrix__item" style="--x:{x}%;--y:{y}%">{logo_img(s)}</span>'
     o += f"""
 <!-- C-2 2軸の早見表（yk-matrix）：縦＝採点「入会前に確かめられること」、横＝採点「特性への対応＋先生」（method.html） -->
-<h2 class="yk-sec-ttl">ひと目でわかる<em>6社の位置</em></h2>
+<h2 class="yk-sec-ttl" data-section-id="matrix">ひと目でわかる<em>6社の位置</em></h2>
 <div class="yk-matrix">
   <span class="yk-matrix__ax yk-matrix__ax--t">担当の先生と試せる</span><span class="yk-matrix__ax yk-matrix__ax--b">相談が中心</span><span class="yk-matrix__ax yk-matrix__ax--l">特性への支援 標準</span><span class="yk-matrix__ax yk-matrix__ax--r">特性への支援 厚い</span>
   {items}
@@ -686,7 +687,7 @@ def top():
     # C-3 ソウガクの無料体験2回（yk-combo の型をソウガク1社で使う）
     o += f"""
 <!-- C-3 無料体験のすすめ（yk-combo）：ソウガク1社・カード1枚（公式 faq.html・trial-flow.html、{CHECKED}確認） -->
-<section class="yk-combo"><h2 class="yk-combo__ttl"><em>ソウガク</em>の無料体験2回で<br>先生との相性を確かめましょう！</h2>
+<section class="yk-combo"><h2 class="yk-combo__ttl" data-section-id="trial"><em>ソウガク</em>の無料体験2回で<br>先生との相性を確かめましょう！</h2>
   <div class="yk-combo__card"><p class="yk-combo__head">担当予定の先生と、2回試してから決められる</p><span class="yk-combo__logo" style="display:block">{logo_img(sg)}</span><a class="yk-combo__link" href="sogaku.html#f3">体験の流れを見る</a>
     <ul class="yk-combo__points"><li><b>1回目は保護者と先生の面談にもできる！</b><br>体験では、入会後に受け持つ予定の先生が教えます。子どもの様子や苦手なことを先に伝えてから、2回目に授業を受けられます。</li><li><b>小学生は25分か50分！</b><br>中高生は35分か60分。最初に流れを説明して、できることから始めます。</li><li><b>体験後に指導計画がもらえる</b><br>得意・不得意をまとめた、その子だけの指導計画を受け取れます。相性が合えば、そのまま同じ先生が担当します。</li></ul>
     {btn_main(sg, "combo")}</div>
@@ -696,7 +697,7 @@ def top():
     # D ランキング
     o += f"""
 <!-- D ランキング：順位見出し→赤キャッチ→タブ（イチオシ／基本情報／料金プラン例）→特徴→編集部→口コミ→2ボタン -->
-<h2 class="yk-sec-ttl" id="ranking">発達特性に強いオンライン家庭教師<br><em>おすすめランキング</em></h2>
+<h2 class="yk-sec-ttl" id="ranking" data-section-id="ranking">発達特性に強いオンライン家庭教師<br><em>おすすめランキング</em></h2>
 <div class="mt-say"><span class="mt-say__icon"><img src="{IMG}gen/icon_editor2.webp" alt="" width="240" height="240" loading="lazy"></span><p class="mt-say__b">先生との相性は、体験してみないと分かりません。ソウガクは入会後に担当する予定の先生と2回体験できるので、まずはそこで確かめるのがおすすめです。</p></div>
 """
     for s in R:
@@ -704,7 +705,7 @@ def top():
         medal = "yk-medal" + {1: "", 2: " yk-medal--2", 3: " yk-medal--3"}.get(n, " yk-medal--n")
         o += f"""
 <!-- 第{n}位 {s["name"]}（事実の出典：{s["official"]} ほか、{CHECKED}確認） -->
-<div class="yk-rankarea" id="rank-{s["id"]}"><h3 class="yk-rankhead"><span class="{medal}">{n}</span>{esc(s["name"])}</h3><p class="yk-rankcatch">{s["catch"]}</p>
+<div class="yk-rankarea" id="rank-{s["id"]}" data-section-id="rank_{s["id"]}"><h3 class="yk-rankhead"><span class="{medal}">{n}</span>{esc(s["name"])}</h3><p class="yk-rankcatch">{s["catch"]}</p>
 <div class="yk-tabs">
   <input type="radio" name="rk{n}" id="rk{n}-1" checked><input type="radio" name="rk{n}" id="rk{n}-2"><input type="radio" name="rk{n}" id="rk{n}-3">
   <div class="yk-tabs__labels"><label for="rk{n}-1">イチオシ<br>ポイント</label><label for="rk{n}-2">基本情報</label><label for="rk{n}-3">料金<br>プラン例</label></div>
@@ -725,7 +726,7 @@ def top():
     # E-1 迷ったらまずは（ソウガクだけ）
     o += f"""
 <!-- E-1 迷ったらまずは（yk-pickup）：ソウガク1社 -->
-<section class="yk-pickup"><h2 class="yk-pickup__ttl"><small>迷ったらまずは</small><br><em>ソウガク</em>の無料体験から！</h2>
+<section class="yk-pickup"><h2 class="yk-pickup__ttl" data-section-id="pickup"><small>迷ったらまずは</small><br><em>ソウガク</em>の無料体験から！</h2>
 <ul class="yk-pickup__list">
   <li class="yk-pickup__item"><p class="yk-pickup__name">ソウガク</p>{banner(sg, "yk-pickup__img", "pickup_banner")}<p class="yk-pickup__text">発達特性を学んだ社会人講師と、短い授業（小学生25分・中高生35分）から。担当予定の先生と2回試してから決められます。違約金・途中解約料は0円です。</p><p class="yk-catch">{esc(catch(sg, "pickup"))}</p><a class="yk-btn yk-btn--sm" {link_attrs(sg, "pickup")}>無料体験を公式で見る</a></li>
 </ul></section>
@@ -733,7 +734,7 @@ def top():
     # E-2 診断
     o += f"""
 <!-- E-2 診断フォーム（yk-finder）：結果は下の rk-result にその場で表示。判定は各社公式の記載で決められる条件だけ（rules は ranking.js） -->
-<form class="yk-finder" id="finder" action="#finder-result"><p class="yk-finder__ttl">オンライン家庭教師<br><em>かんたん</em>診断</p>
+<form class="yk-finder" id="finder" data-section-id="finder" action="#finder-result"><p class="yk-finder__ttl">オンライン家庭教師<br><em>かんたん</em>診断</p>
   <label class="yk-finder__row">学年<select name="grade"><option value="">指定なし</option><option value="pre">未就学</option><option value="es">小学生</option><option value="jhs">中学生</option><option value="hs">高校生</option></select></label>
   <label class="yk-finder__row">いちばん気になること<select name="concern"><option value="">指定なし</option><option value="focus">集中が続きにくい</option><option value="match">先生との相性</option><option value="nodiag">診断を受けていない</option><option value="school">学校に行きづらい</option><option value="exam">受験を考えている</option><option value="cost">費用を抑えたい</option></select></label>
   <label class="yk-finder__row">1回の授業の長さ<select name="length"><option value="">指定なし</option><option value="short">30分くらいまで</option><option value="mid">60分くらい</option><option value="long">90分でもよい</option></select></label>
@@ -935,7 +936,7 @@ def detail(k):
 """
     # 強み
     names = [t for t, _, _ in d["strengths"]]
-    o += f'\n<!-- F-4 番号つき目次（yk-order）→ F-5 番号ラベルつき見出し（yk-numh）→ F-3 公式画面（yk-shot） -->\n<h2 class="yk-sec-ttl">{esc(s["short"])}の<em>強み</em></h2>\n{order_box(s["short"] + "の強み", "強み", names, "s")}\n'
+    o += f'\n<!-- F-4 番号つき目次（yk-order）→ F-5 番号ラベルつき見出し（yk-numh）→ F-3 公式画面（yk-shot） -->\n<h2 class="yk-sec-ttl" data-section-id="strength">{esc(s["short"])}の<em>強み</em></h2>\n{order_box(s["short"] + "の強み", "強み", names, "s")}\n'
     for i, (t, body, img) in enumerate(d["strengths"], 1):
         o += f'<h3 class="yk-numh" id="s{i}"><span>強み{i}</span>{esc(t)}</h3>\n{body}\n'
         if img:
@@ -946,7 +947,7 @@ def detail(k):
     chk = "".join(f"<li>{esc(t)}</li>" for t in d["check"])
     o += f"""
 <!-- F-6 チェックの箱（yk-listbox）：公式の対象・強みから書く。感想で作らない -->
-<h2 class="yk-sec-ttl">{esc(s["short"])}が<em>向いている家庭</em></h2>
+<h2 class="yk-sec-ttl" data-section-id="fit">{esc(s["short"])}が<em>向いている家庭</em></h2>
 <div class="yk-listbox"><p class="yk-listbox__ttl">こんな家庭に向いています</p><ul>{fit}</ul></div>
 <div class="yk-listbox"><p class="yk-listbox__ttl">申し込む前に確認したいこと</p><ul>{chk}</ul></div>
 {btn_main(s, "detail_fit")}
@@ -955,16 +956,16 @@ def detail(k):
     if "fee" in d:
         rows = "".join(f"<tr><th>{g}</th><td>{a}</td><td>{b}</td></tr>" for g, a, b in d["fee"])
         o += f"""
-<h2 class="yk-sec-ttl">{esc(s["short"])}の<em>料金</em></h2>
+<h2 class="yk-sec-ttl" data-section-id="fee">{esc(s["short"])}の<em>料金</em></h2>
 <table class="rk-fee"><tr><th>学年</th><th>短いコース</th><th>長いコース</th></tr>{rows}</table>
 <p class="yk-small">※{d["fee_note"]} 出典：<a href="{d["fee_src"]}" target="_blank" rel="nofollow noopener">公式サイト</a>（{CHECKED}確認）</p>
 """
     else:
-        o += f'\n<h2 class="yk-sec-ttl">{esc(s["short"])}の<em>料金</em></h2>\n{jobex(s)}\n'
+        o += f'\n<h2 class="yk-sec-ttl" data-section-id="fee">{esc(s["short"])}の<em>料金</em></h2>\n{jobex(s)}\n'
     o += btn_main(s, "detail_fee") + "\n"
     # 手順
     steps = [t for t, _ in d["steps"]]
-    o += f'\n<h2 class="yk-sec-ttl">無料体験・<em>申し込みの流れ</em></h2>\n{order_box("申し込みの流れ", "ステップ", steps, "f")}\n'
+    o += f'\n<h2 class="yk-sec-ttl" data-section-id="flow">無料体験・<em>申し込みの流れ</em></h2>\n{order_box("申し込みの流れ", "ステップ", steps, "f")}\n'
     for i, (t, body) in enumerate(d["steps"], 1):
         o += f'<h3 class="yk-numh" id="f{i}"><span>ステップ{i}</span>{esc(t)}</h3>\n<p>{esc(body)}</p>\n'
         if k == "sogaku" and i == 3:
@@ -976,10 +977,10 @@ def detail(k):
     o += f'<p class="yk-small">※流れの出典：<a href="{d["steps_src"]}" target="_blank" rel="nofollow noopener">{esc(s["short"])}公式サイト</a>（{CHECKED}確認）。</p>\n{btn_main(s, "detail_flow")}\n'
     # 口コミ
     if s["voices"]:
-        o += f'\n<h2 class="yk-sec-ttl">{esc(s["short"])}の<em>口コミ・評判</em></h2>\n{voices(s)}\n{btn_main(s, "detail_voice")}\n'
+        o += f'\n<h2 class="yk-sec-ttl" data-section-id="voice">{esc(s["short"])}の<em>口コミ・評判</em></h2>\n{voices(s)}\n{btn_main(s, "detail_voice")}\n'
     # FAQ
     qs = [q for q, _ in d["faq"]]
-    o += f'\n<h2 class="yk-sec-ttl">よくある<em>質問</em></h2>\n{order_box("よくある質問", "質問", qs, "q")}\n'
+    o += f'\n<h2 class="yk-sec-ttl" data-section-id="faq">よくある<em>質問</em></h2>\n{order_box("よくある質問", "質問", qs, "q")}\n'
     for i, (q, a) in enumerate(d["faq"], 1):
         o += f'<h3 class="yk-numh" id="q{i}"><span>質問{i}</span>{esc(q)}</h3>\n<p>{esc(a)}</p>\n'
     o += f'<p class="yk-small">※出典：<a href="{d["faq_src"]}" target="_blank" rel="nofollow noopener">{esc(s["short"])}公式サイト</a>（{CHECKED}確認）。</p>\n{btn_main(s, "detail_faq")}\n'
