@@ -1,4 +1,4 @@
-/* Shared measurement for LP01–LP09. No form data or unrestricted URL parameters. */
+/* Shared measurement for LP01–LP09 and /ranking/. No form data or unrestricted URL parameters. */
 (function () {
   'use strict';
   if (window.__souMeasurement) return;
@@ -8,7 +8,8 @@
   var MCV = ADS + '/Mt8tCJijlZQdELzIhPNE';
   var path = location.pathname;
   var match = path.match(/^\/lp(0[2-9])\/(?:index\.html)?$/);
-  var lp = match ? 'LP' + match[1] : 'LP01';
+  var rank = path.match(/^\/ranking\/(?:index\.html)?$/) ? 'RANKING' : (path.match(/^\/ranking\/([a-z0-9]+)\.html$/) || [])[1];
+  var lp = match ? 'LP' + match[1] : rank === 'RANKING' ? 'RANKING' : rank ? 'RANKING_' + rank.toUpperCase() : 'LP01';
   var query = new URLSearchParams(location.search);
   var debug = query.get('measurement_debug') === '1';
   var disabled = false;
@@ -75,9 +76,9 @@
       // Preserve native target=_blank, keyboard and modified-click navigation.
     } else {
       try {
-        var host = new URL(link.href).hostname;
-        if (host === 'tintle.net' || host === 'coaching01.com')
-          event('lp_other_service_click', { destination: host });
+        var host = new URL(link.href).hostname.replace(/^www\./, '');
+        if (['tintle.net', 'coaching01.com', 'k-runner.co.jp', 'benkyo.co.jp', 'try-online.jp'].indexOf(host) !== -1)
+          event('lp_other_service_click', { destination: host, cta_id: (link.dataset || {}).otherCta || 'unclassified' });
       } catch (_) {}
     }
   }
