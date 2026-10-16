@@ -83,3 +83,13 @@ body { margin: 0; background: #f3f5f8; }
 .rk-detail-cmp th:first-child { position: sticky; left: 0; z-index: 1; }
 /* 迷ったらまずは：1社だけのときは中央に広げる */
 .yk-pickup__list:has(> li:only-child) { grid-template-columns: minmax(0, 440px); justify-content: center; }
+/* ランキングのイチオシタブ：各社公式サイトのトップページの画面 */
+.rk-topshot { margin: 0 0 .6em; }
+.rk-topshot a { display: block; }
+.rk-topshot img { display: block; width: 100%; height: auto; border: 1px solid var(--yk-rule); border-radius: 6px; }
+.rk-topshot figcaption { margin-top: 3px; font-size: 11px; color: var(--yk-sub); text-align: right; }
+/* BEST3：文章を中央揃え */
+.yk-best3__text, .yk-best3__note { text-align: center; }
+/* 料金プランのカード：ボタンの位置を下でそろえる */
+.yk-hscroll > .yk-jobcard, .yk-hscroll > .yk-jobex { display: flex; flex-direction: column; }
+.yk-hscroll > .yk-jobcard > .yk-catch, .yk-hscroll > .yk-jobex > .yk-catch { margin-top: auto !important; padding-top: .6em; }
