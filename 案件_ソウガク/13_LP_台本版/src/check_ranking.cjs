@@ -6,7 +6,7 @@
 const path = require('path');
 const { chromium } = require('playwright');
 const DIR = 'file://' + path.resolve(__dirname, '..', 'ranking') + '/';
-const PAGES = ['index', 'sogaku', 'runner', 'tintle', 'succeed', 'try', 'coaching1', 'method'];
+const PAGES = ['index', 'sogaku', 'rebalance', 'try', 'coaching1', 'tos', 'kizuki', 'method'];
 // パーツ集の29部品（image-1 の画像指示枠 mt-imgslot は制作中だけ使い、公開ページに残してはいけない）
 const PARTS = {
   'FV ヒーロー画像': 'h1.lp-hero img', '導入会話': '.lp-hero ~ .mt-talk', 'fv-3 PR表記': '.yk-pr', 'top-1 BEST3': '.yk-best3', 'top-2 求人の例カード': '.yk-hscroll .yk-jobcard',

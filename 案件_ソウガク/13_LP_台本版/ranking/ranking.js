@@ -1,5 +1,5 @@
 /* yk-finder（オンライン家庭教師かんたん診断）の判定。
-   点数は各社公式サイトの記載（2026-10-16確認）で決められる条件だけ。入力内容は送信・保存しない。 */
+   点数は各社公式サイトの記載（2026-10-17確認）で決められる条件だけ。入力内容は送信・保存しない。 */
 (function () {
   'use strict';
   var form = document.getElementById('finder');
@@ -7,51 +7,62 @@
   if (!form || !out) return;
   var SV = {
     sogaku: { name: 'ソウガク', base: 4.9 },
-    runner: { name: '家庭教師のランナー', base: 4.0 },
-    tintle: { name: 'ティントル', base: 3.7 },
-    succeed: { name: '家庭教師のサクシード', base: 4.0 },
+    rebalance: { name: 'オンライン個別指導塾リバランス', base: 4.0 },
     'try': { name: 'トライのオンライン個別指導塾', base: 4.0 },
-    coaching1: { name: '家庭教師のコーチング1', base: 3.6 }
+    coaching1: { name: '個別指導のコーチング1', base: 3.9 },
+    tos: { name: 'TOS家庭教師センター', base: 3.9 },
+    kizuki: { name: 'キズキ共育塾', base: 3.4 }
   };
   // [条件, 会社, 点, 理由]
   var RULES = [
-    ['grade:pre', 'runner', 3, '未就学児から指導している（ソウガク・ティントルは小学生から）'],
+    ['grade:pre', 'coaching1', 2, '年長から対象（オンライン指導も全学年）'],
+    ['grade:pre', 'tos', 2, '幼児から対象'],
+    ['grade:hs', 'kizuki', 1, '大学受験・高卒認定まで対応'],
+    ['grade:hs', 'tos', 1, '高校生・高卒認定にも対応'],
     ['concern:focus', 'sogaku', 3, '集中が続きにくい子向けに小学生25分のコースがある'],
-    ['concern:focus', 'tintle', 1, '1コマ30分単位で受けられる'],
-    ['concern:focus', 'runner', 1, '集中が続きにくい子には時間を短く区切る方針'],
+    ['concern:focus', 'kizuki', 1, '1回50分から受けられる'],
+    ['concern:focus', 'rebalance', 1, 'ADHDの子には指示や課題を細かく分ける方針'],
     ['concern:match', 'sogaku', 3, '入会後に担当する予定の先生と無料体験を2回受けられる'],
-    ['concern:match', 'runner', 1, '本部が10〜20名の候補から先生を選び、交代は何度でも無料'],
+    ['concern:match', 'tos', 2, '実際に担当する家庭教師が無料体験を行う（オンラインでも同じかは要確認）'],
+    ['concern:match', 'kizuki', 1, '講師・科目の変更は無料'],
     ['concern:nodiag', 'sogaku', 3, '診断なし・グレーゾーンでも受講でき、手帳の提出も不要と明記'],
-    ['concern:nodiag', 'runner', 1, 'グレーゾーンも対象と記載'],
-    ['concern:nodiag', 'tintle', 1, '検査を受けていない子にも対応と記載'],
-    ['concern:school', 'tintle', 3, '不登校専門。出席扱いの申請オプションもある'],
+    ['concern:nodiag', 'rebalance', 2, '確定診断のないグレーゾーンの子のほうが多いと記載'],
+    ['concern:nodiag', 'coaching1', 1, '診断・発達検査がなくても指導すると記載'],
+    ['concern:school', 'kizuki', 3, '不登校の学び直しが中心。出席扱いの相談もできる'],
+    ['concern:school', 'tos', 2, '不登校からの受験・高卒認定に対応'],
+    ['concern:school', 'try', 1, '受講が在籍校で出席と認定された実績があると公式に記載'],
     ['concern:school', 'sogaku', 1, '午前中の授業にも対応'],
-    ['concern:school', 'runner', 1, '不登校の子のコースがある'],
-    ['concern:cost', 'runner', 2, '1コマ30分900円から、指導した分だけの支払い'],
-    ['concern:cost', 'tintle', 2, '受けた分だけの後払い（小学生は1コマ30分1,320円〜）'],
-    ['length:short', 'sogaku', 2, '小学生25分・中高生35分から選べる'],
-    ['length:short', 'tintle', 1, '1コマ30分'],
-    ['length:short', 'runner', 1, '1コマ30分単位'],
-    ['length:mid', 'sogaku', 1, '小学生50分・中高生60分のコース'],
-    ['report', 'sogaku', 2, '授業のたびにアプリで指導報告が届く'],
-    ['report', 'runner', 1, '毎月、指導報告書が届く'],
-    ['adult', 'sogaku', 3, '先生は全員が社会人'],
-    ['contract', 'sogaku', 3, '違約金・途中解約料0円、月単位で休会・退会できると明記'],
-    ['flex', 'tintle', 2, '曜日・時間・回数を固定しない'],
-    ['flex', 'runner', 1, '指導した分だけの支払い'],
-    ['flex', 'sogaku', 1, '回数・時間を月ごとに変えられる'],
+    ['concern:school', 'rebalance', 1, '不登校でも指導できると記載'],
     ['concern:exam', 'coaching1', 3, '発達特性のある子の中学・高校受験に対応'],
+    ['concern:exam', 'rebalance', 2, '特性に合わせて中学受験・高校受験の対策をすると記載'],
     ['concern:exam', 'try', 1, '受験・英検の対策にも対応'],
     ['concern:exam', 'sogaku', 1, '中学生コースは受験対策にも対応。受験生の割増なし'],
-    ['concern:exam', 'runner', 1, '定期テスト対策から受験指導まで対応'],
-    ['concern:school', 'try', 1, '受講が在籍校で出席と認定された実績があると公式に記載'],
-    ['concern:cost', 'succeed', 1, 'オンラインは月会費・交通費がかからない'],
-    ['length:mid', 'succeed', 1, 'オンラインは1時間単位'],
+    ['concern:exam', 'tos', 1, '不登校からの高校・大学受験に対応'],
+    ['concern:cost', 'sogaku', 2, '小学生25分×月4回 13,200円（税込）から。6社で月額の目安がいちばん低い'],
+    ['concern:cost', 'try', 2, '60分×月4回 14,960円（税込）から'],
+    ['concern:cost', 'tos', 1, 'オンライン60分×月4回 19,400円（税込）から。テキスト代・管理費なし'],
+    ['length:short', 'sogaku', 2, '小学生25分・中高生35分から選べる'],
+    ['length:mid', 'sogaku', 1, '小学生50分・中高生60分のコース'],
     ['length:mid', 'try', 1, '料金例は1コマ60分'],
-    ['length:long', 'coaching1', 2, '1回90分から'],
-    ['report', 'succeed', 1, '毎回の授業報告と月1回の保護者面談'],
+    ['length:mid', 'rebalance', 1, '1回60分から'],
+    ['length:mid', 'coaching1', 1, 'オンラインは60分から'],
+    ['length:mid', 'tos', 1, 'オンラインは60分から'],
+    ['length:long', 'coaching1', 2, '60分・90分・120分から選べる'],
+    ['length:long', 'tos', 1, 'オンラインは90分のコースもある'],
+    ['length:long', 'kizuki', 1, '80分のコースもある'],
+    ['report', 'sogaku', 2, '授業のたびにアプリで指導報告が届く'],
+    ['report', 'rebalance', 2, '授業後に毎回フィードバックがある'],
     ['report', 'coaching1', 1, '毎回の指導報告書'],
-    ['report', 'try', 1, '学習管理アプリで毎回の進捗が見える']
+    ['report', 'try', 1, '学習管理アプリで毎回の進捗が見える'],
+    ['adult', 'sogaku', 3, '先生は全員が社会人'],
+    ['adult', 'rebalance', 1, 'プロ講師（社会人・有資格の学生）中心の体制'],
+    ['adult', 'tos', 1, 'オンライン用のプロコースがある'],
+    ['contract', 'sogaku', 3, '違約金・途中解約料0円、月単位で休会・退会できると明記'],
+    ['contract', 'tos', 2, '解約金・違約金なし。1か月単位の契約'],
+    ['contract', 'kizuki', 1, '休会・退会・入会キャンセルの決まりを規約に明記'],
+    ['flex', 'sogaku', 1, '回数・時間を月ごとに変えられる'],
+    ['flex', 'kizuki', 1, '前日までの連絡で授業日時を無料で変えられる'],
+    ['flex', 'tos', 1, 'テスト前だけ回数を増やせる']
   ];
   form.addEventListener('submit', function (e) {
     e.preventDefault();
