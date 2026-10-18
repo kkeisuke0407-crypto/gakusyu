@@ -104,3 +104,7 @@ body { margin: 0; background: #f3f5f8; }
   .rk-update { margin: 0 -12px !important; border-radius: 0; font-size: 17px; }
   .rk-logos { margin: 0 -12px 1em; border: 0; border-radius: 0; }
 }
+/* 「総合」タブの無料体験の欄：太字の一言＋補足1行、記号の凡例 */
+.rk-trial__b { display: block; margin-top: .2em; color: #222; font-size: 13px; line-height: 1.4; }
+.rk-trial__s { display: block; margin-top: .25em; color: #666; font-size: 11px; line-height: 1.45; }
+.rk-trial-legend { margin: 0 0 .5em !important; padding-top: .4em; color: #555; font-size: 12px; line-height: 1.6; }

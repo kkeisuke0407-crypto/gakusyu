@@ -564,6 +564,16 @@ CMP = {
     },
 }
 N_ITEMS = sum(len(items) for _, items in CMP_GROUPS)
+# 「総合」タブの無料体験の欄：太字の一言＋補足1行（各社公式の記載、CHECKED確認）。記号は採点「入会前に確かめられること」の点
+TRIAL_CELL = {
+    "sogaku": ("担当予定の先生と2回", "25分か50分。1回目は親の面談にもできる"),
+    "rebalance": ("体験授業あり", "約90分。担当者の記載なし"),
+    "try": ("体験授業あり", "英語か数学。担当者の記載なし"),
+    "coaching1": ("体験授業あり", "約120分。教務スタッフが担当"),
+    "tos": ("担当予定の先生と1回", "40分〜1時間。オンラインは要確認"),
+    "kizuki": ("体験授業なし", "入会相談・見学のみ"),
+}
+TRIAL_LEGEND = "◎＝入会後に担当する先生と試せる／○＝子どもが体験授業を受けられる／△＝相談・見学だけ"
 CATCH["sogaku"]["compare"] = f"比較{N_ITEMS}項目のうち{sum(1 for _, items in CMP_GROUPS for it in items if CMP['sogaku'][it][0] == '◎')}項目で◎"
 
 
@@ -630,7 +640,7 @@ def top():
         chips = "".join(f'<li class="{c}">{t}</li>' if c else f"<li>{t}</li>" for c, t in s["chips"])
         rows += (f'<tr{" class=" + chr(34) + "is-pick" + chr(34) if s["rank"] == 1 else ""}><td><span class="yk-cmp__rank">{s["rank"]}</span><span class="yk-cmp__logo" style="display:block">{logo_img(s)}</span>'
                  f'<a class="yk-cmp__name" href="{s["id"]}.html">{esc(s["short"])}</a><span class="yk-stars">{stars(s["total"])}</span><span class="yk-grade">総合評価 <b>{s["total"]}</b></span></td>'
-                 f'<td><span class="yk-maru">{mk(s["scores"]["trial"])}</span>{CMP[s["id"]]["体験を担当する人"][1]}</td>'
+                 f'<td><span class="yk-maru">{mk(s["scores"]["trial"])}</span><b class="rk-trial__b">{TRIAL_CELL[s["id"]][0]}</b><small class="rk-trial__s">{TRIAL_CELL[s["id"]][1]}</small></td>'
                  f'<td class="is-left">{s["cmp_text"]}<ul class="yk-chips">{chips}</ul></td>'
                  f'<td><a class="yk-btn yk-btn--sm" {link_attrs(s, "comparison")}>公式</a></td></tr>')
     heads = "".join(f'<th{" class=" + chr(34) + "is-pick" + chr(34) if s["rank"] == 1 else ""}>{s["rank"]}位<br>{esc(s["short"])}</th>' for s in R)
@@ -652,14 +662,14 @@ def top():
   <input type="radio" name="cmp1" id="cmp1-1" checked>{radios}
   <div class="yk-tabs__labels"><label for="cmp1-1">総合</label>{labels}</div>
   <div class="yk-tabs__panels">
-    <div><div class="yk-fold"><input type="checkbox" id="cmp1-more"><div class="yk-fold__body">
+    <div><p class="rk-trial-legend">無料体験の記号：{TRIAL_LEGEND}</p><div class="yk-fold"><input type="checkbox" id="cmp1-more"><div class="yk-fold__body">
       <table class="yk-cmp"><colgroup><col class="c1"><col class="c2"><col><col class="c4"></colgroup>
-        <tr><th>サービス</th><th>入会前の体験</th><th>編集部のひとこと</th><th>公式</th></tr>
+        <tr><th>サービス</th><th>無料体験</th><th>編集部のひとこと</th><th>公式</th></tr>
         {rows}
       </table></div><label class="yk-fold__btn" for="cmp1-more">もっと見る</label></div></div>{panels}
   </div>
 </div>
-<p class="yk-small">※◎＝特に手厚い、○＝ある、△＝限られる、－＝公式に記載なし（各社公式サイトの記載をもとにした当サイトの判断、{CHECKED}確認）。「総合」の入会前の体験の記号と総合評価は、<a href="method.html">ランキング調査概要</a>で公開している{n_ax}項目の採点によります。キズキは小学生の料金が公式に書かれていないため「要確認」としています。</p>
+<p class="yk-small">※◎＝特に手厚い、○＝ある、△＝限られる、－＝公式に記載なし（各社公式サイトの記載をもとにした当サイトの判断、{CHECKED}確認）。「総合」の無料体験の記号と総合評価は、<a href="method.html">ランキング調査概要</a>で公開している{n_ax}項目の採点によります。キズキは小学生の料金が公式に書かれていないため「要確認」としています。</p>
 {btn_main(sg, "compare")}
 """
     # C-2 2軸マップ（縦＝入会前の確認、横＝特性への対応＋先生）
@@ -1028,7 +1038,7 @@ def method():
 <li>星：総合評価を四捨五入した数（例：4.9→★5、4.0→★4、3.7→★4）</li>
 <li>総合評価のランク：S＝4.5以上、A＝4.0以上、B＝4.0未満</li>
 <li>同点のとき：「発達特性への対応」→「先生の体制」→小学生の月額の目安が安い順</li>
-<li>「総合」タブの入会前の体験の記号：5点＝◎、4点＝○、3点・2点＝△、1点＝×</li><li>そのほかの比較項目の記号は、各社公式サイトの記載をもとにした当サイトの判断：◎＝特に手厚い、○＝ある、△＝限られる、－＝公式に記載なし</li></ul>
+<li>「総合」タブの無料体験の記号：採点「入会前に確かめられること」が5点＝◎（入会後に担当する先生と試せる）、4点＝○（子どもが体験授業を受けられる）、3点・2点＝△（相談・見学だけ）、1点＝×</li><li>そのほかの比較項目の記号は、各社公式サイトの記載をもとにした当サイトの判断：◎＝特に手厚い、○＝ある、△＝限られる、－＝公式に記載なし</li></ul>
 <h2 class="yk-sec-ttl">採点の結果</h2>
 <div class="rk-scroll"><table class="yk-cmp"><tr><th>サービス</th>{head_cells}<th>総合</th></tr>{score_rows}</table></div>
 <h2 class="yk-sec-ttl">採点の根拠</h2>
