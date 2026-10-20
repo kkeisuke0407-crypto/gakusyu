@@ -108,3 +108,5 @@ body { margin: 0; background: #f3f5f8; }
 .rk-trial__b { display: block; margin-top: .2em; color: #222; font-size: 13px; line-height: 1.4; }
 .rk-trial__s { display: block; margin-top: .25em; color: #666; font-size: 11px; line-height: 1.45; }
 .rk-trial-legend { margin: 0 0 .5em !important; padding-top: .4em; color: #555; font-size: 12px; line-height: 1.6; }
+/* TOP3の見出しの下のひとこと */
+.rk-best3-lead { margin: -.3em 0 .9em !important; text-align: center; font-size: 14px; font-weight: 700; line-height: 1.6; }
