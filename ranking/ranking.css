@@ -58,7 +58,7 @@ body { margin: 0; background: #f3f5f8; }
 .rk-why td { font-size: 12px; }
 @media (min-width: 600px) { .yk-hscroll > * { flex-basis: 280px; } }
 
-/* FV：ヒーロー画像（王道LPと同じ 00_hero_top3_v3。見出しの文字は画像内、同じ文を lp-sr で読み上げ用に持つ）。style.css の .lp-hero と同じ見た目 */
+/* FV：文字なしのヒーロー背景（lp09_hero）に見えるHTMLのH1を重ねる。王道LPのヒーロー画像（00_hero_top3_v3）と同じ見た目に寄せる */
 .lp-hero { margin: 0 0 .9em; line-height: 0; border: 1px solid var(--yk-rule); border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,.08); }
 .lp-hero img { display: block; width: 100%; height: auto; }
 .lp-sr { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
@@ -110,3 +110,15 @@ body { margin: 0; background: #f3f5f8; }
 .rk-trial-legend { margin: 0 0 .5em !important; padding-top: .4em; color: #555; font-size: 12px; line-height: 1.6; }
 /* TOP3の見出しの下のひとこと */
 .rk-best3-lead { margin: -.3em 0 .9em !important; text-align: center; font-size: 14px; font-weight: 700; line-height: 1.6; }
+/* FVの見出し（見えるH1）：画像左の白い余白に重ねる */
+.lp-hero--text { position: relative; }
+.lp-hero__ttl { position: absolute; left: 4.5%; top: 47%; transform: translateY(-50%); width: 62%; margin: 0; color: #17305e; font-size: min(6.4vw, 44px); font-weight: 900; line-height: 1.3; letter-spacing: .01em; font-feature-settings: "palt"; text-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 10px rgba(255,255,255,.9); }
+.lp-hero__ttl > span { display: block; white-space: nowrap; }
+.lp-hero__ttl .lp-hero__sub { margin-bottom: .25em; font-size: .52em; letter-spacing: .02em; }
+.lp-hero__ttl em { font-style: normal; color: #f26b0c; }
+/* ボタンの光（yk-parts.css の yk-shine は left を動かし、ボタンの数だけ毎フレーム再レイアウトが起きる）。
+   LP側の mt-shine と同じく transform で動かす（見た目は同じ：left -80%→130% ＝ 自分の幅45%の約4.67倍） */
+.yk-btn::after { animation-name: rk-shine; }
+@keyframes rk-shine { 0% { transform: translateX(0) skewX(-20deg); } 55%, 100% { transform: translateX(467%) skewX(-20deg); } }
+/* 画面外の各順位（1社あたり高さ1,300〜2,100px・ページの要素の大半）は、近づくまで配置の計算を後回しにする（スマホのLCP・TBT対策） */
+.yk-rankarea { content-visibility: auto; contain-intrinsic-size: auto 1700px; }
