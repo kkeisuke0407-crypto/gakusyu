@@ -9,7 +9,7 @@ const DIR = 'file://' + path.resolve(__dirname, '..', 'ranking') + '/';
 const PAGES = ['index', 'sogaku', 'rebalance', 'try', 'coaching1', 'tos', 'kizuki', 'method'];
 // パーツ集の29部品（image-1 の画像指示枠 mt-imgslot は制作中だけ使い、公開ページに残してはいけない）
 const PARTS = {
-  'FV ヒーロー画像': 'h1.lp-hero img', '導入会話': '.lp-hero ~ .mt-talk', 'fv-3 PR表記': '.yk-pr', 'top-1 BEST3': '.yk-best3', 'top-2 求人の例カード': '.yk-hscroll .yk-jobcard',
+  'FV ヒーロー画像': '.lp-hero--text img', 'FV 見える見出し': '.lp-hero--text h1.lp-hero__ttl', '導入会話': '.lp-hero ~ .mt-talk', 'fv-3 PR表記': '.yk-pr', 'top-1 BEST3': '.yk-best3', 'top-2 求人の例カード': '.yk-hscroll .yk-jobcard',
   'compare-1 タブ切替の比較表': '.yk-tabs .yk-cmp, .yk-fold', 'compare-2 2軸の早見表': '.yk-matrix', 'compare-3 2社併用': '.yk-combo',
   'rank-1 順位見出し': '.yk-rankhead', 'rank-2 ランキング内のタブ': '.yk-rankarea .yk-tabs', 'rank-3 特徴': '.yk-features', 'rank-4 編集部': '.yk-editor',
   'rank-5 口コミ': '.yk-voice', 'rank-6 2ボタン': '.yk-btnpair', 'rank-7 レーダー': '.yk-radar svg', 'rank-8 基本情報の表': '.yk-info', 'rank-9 求人例カード': '.yk-jobex',
@@ -59,6 +59,9 @@ const NG = ['#sample', 'yk-ph', '◯', 'サービスA', 'mt-imgslot', '薬剤師
       }
       if (n === 'index') {
         if (r.radarSvg !== 6) fails.push(`${tag}: レーダーは6社ぶん必要（${r.radarSvg}）`);
+        // FVの見出しは画面に見えるH1（広告の品質：キーワードと見出しの一致）。1つだけ・見えている・キーワードを含む
+        const h1 = await p.evaluate(() => { const hs = [...document.querySelectorAll('h1')]; const h = hs[0]; const r = h && h.getBoundingClientRect(); return { n: hs.length, w: r ? r.width : 0, text: h ? h.innerText.replace(/\s+/g, '') : '' }; });
+        if (h1.n !== 1 || h1.w < 100 || !/発達障害.*オンライン家庭教師.*ランキング/.test(h1.text)) fails.push(`${tag}: 見えるH1がない・キーワード不足 ${JSON.stringify(h1)}`);
         await p.selectOption('#finder select[name=concern]', 'focus');
         await p.selectOption('#finder select[name=length]', 'short');
         await p.click('#finder button[type=submit]');

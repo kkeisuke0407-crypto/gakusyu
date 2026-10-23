@@ -586,9 +586,9 @@ def top():
     # A-1 FV ヒーロー画像（上に更新日【最新】、下にロゴの横流し）
     logos = "".join(f'<li>{logo_img(s, alt=s["name"])}</li>' for s in R) + "".join(f'<li>{logo_img(s, alt="")}</li>' for s in R)
     o += f"""
-<!-- A-1 FV：更新日の帯（rk-update）＋ヒーロー画像（王道LPと同じ 00_hero_top3_v3。見出しは画像内の文字、同じ文を lp-sr に持つ）＋ロゴの横流し（yk-logos、2周目は alt=""） -->
+<!-- A-1 FV：更新日の帯（rk-update）＋文字なしのヒーロー背景（lp09_hero、王道LPのヒーローと同じ絵）に見えるHTMLのH1を重ねる（広告の品質：キーワードと見出しの一致）＋ロゴの横流し（yk-logos、2周目は alt=""） -->
 <p class="rk-update"><time datetime="{CHECKED_ISO}">{CHECKED}</time><span>【最新】</span></p>
-<h1 class="lp-hero"><span class="lp-sr">発達障害・グレーゾーンの子に合う オンライン家庭教師ランキングTOP3</span><img fetchpriority="high" src="{IMG}gen/00_hero_top3_v3.webp" srcset="{IMG}gen/00_hero_top3_v3-608.webp 608w, {IMG}gen/00_hero_top3_v3-912.webp 912w, {IMG}gen/00_hero_top3_v3.webp 1200w" sizes="(max-width: 751px) 100vw, 696px" alt="" width="1200" height="675"></h1>
+<div class="lp-hero lp-hero--text"><img fetchpriority="high" src="{IMG}gen/lp09_hero.webp" srcset="{IMG}gen/lp09_hero-608.webp 608w, {IMG}gen/lp09_hero-912.webp 912w, {IMG}gen/lp09_hero.webp 1200w" sizes="(max-width: 751px) 100vw, 696px" alt="" width="1200" height="675"><h1 class="lp-hero__ttl"><span class="lp-hero__sub">発達障害・グレーゾーンの子に合う</span><span>オンライン家庭教師</span><span>ランキング<em>TOP3</em></span></h1></div>
 <div class="yk-logos rk-logos" role="region" aria-label="比較したオンライン家庭教師6社"><ul class="yk-logos__track">{logos}</ul></div>
 <p class="yk-pr"><b>PR</b><span>本ページは<wbr>広告・<wbr>アフィリエイトリンクを<wbr>含み⁠ま⁠す⁠。</span></p>
 """
