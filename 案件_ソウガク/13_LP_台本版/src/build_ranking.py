@@ -353,7 +353,7 @@ def head(title, desc):
 <link rel="stylesheet" href="../parts.css">
 <link rel="stylesheet" href="yk-parts.css">
 <link rel="stylesheet" href="ranking.css">
-<script defer src="../lp-measurement.js?v=20261023"></script>
+<script defer src="../lp-measurement.js?v=20261023b"></script>
 </head>
 <body>
 <main class="yk-body rk-wrap">
