@@ -49,9 +49,12 @@
   loader.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA;
   // gtag.js (GA4 + Google Ads, ~340KB) runs only after the page has rendered: loading it right away delayed mobile LCP to 5-7s
   // (landing page experience). Events above are queued in dataLayer and sent once it loads; all CTAs open a new tab.
+  // On the live site the load event can fire before the hero is painted, so wait 1.5s after load (then idle).
+  // Any interaction loads it at once, so engaged visitors are measured as before.
   function loadTag() { if (!loader.parentNode) document.head.appendChild(loader); }
-  function afterLoad() { (window.requestIdleCallback || setTimeout)(loadTag, { timeout: 2000 }); }
+  function afterLoad() { setTimeout(function () { (window.requestIdleCallback || setTimeout)(loadTag, { timeout: 2000 }); }, 1500); }
   if (document.readyState === 'complete') afterLoad(); else window.addEventListener('load', afterLoad, { once: true });
+  ['pointerdown', 'keydown', 'touchstart', 'scroll'].forEach(function (type) { window.addEventListener(type, loadTag, { once: true, passive: true }); });
 
   function event(name, parameters) {
     gtag('event', name, Object.assign({ send_to: GA, lp_id: lp,

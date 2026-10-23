@@ -27,7 +27,7 @@ function boot({ path = '/lp08/', search = '?utm_source=google&gclid=test&email=s
   return { window, document, cta, section, faq, context, events, observers, intervals,
     emit: (name,e={}) => (listeners[name] || []).forEach(f => f(e)),
     click: (link=cta, type='click',button=0) => (listeners[type] || []).forEach(f => f({ type,button,target:{closest:()=>link} })),
-    flush: () => { [...timeouts.values()].forEach(f=>f()); timeouts.clear(); },
+    flush: () => { const fs=[...timeouts.values()]; timeouts.clear(); fs.forEach(f=>f()); },
     advance: n => clock += n, faqToggle: () => listeners.faq() };
 }
 const t=boot();
@@ -82,7 +82,8 @@ for(let i=0;i<30;i++){t.advance(1000);t.intervals[0]();}assert.equal(t.events('l
 t.document.hidden=true;for(let i=0;i<60;i++){t.advance(1000);t.intervals[0]();}assert.equal(t.events('lp_active_read').length,1);
 vm.runInNewContext(source,t.context);assert.equal(t.window.dataLayer.filter(x=>x[0]==='js').length,1);
 // gtag.js is loaded only after the window load event (and idle), not while the page is rendering
-{ const g=boot(); assert.equal(g.document.loaded,undefined); g.emit('load'); g.flush(); assert.equal(g.document.loaded,'https://www.googletagmanager.com/gtag/js?id=G-FQS2SK5HNF'); }
+{ const g=boot(); assert.equal(g.document.loaded,undefined); g.emit('load'); g.flush(); g.flush(); assert.equal(g.document.loaded,'https://www.googletagmanager.com/gtag/js?id=G-FQS2SK5HNF'); }
+{ const g=boot(); assert.equal(g.document.loaded,undefined); g.emit('pointerdown'); assert.equal(g.document.loaded,'https://www.googletagmanager.com/gtag/js?id=G-FQS2SK5HNF'); }
 // clicks to the current /ranking/ competitors are recorded
 { const g=boot({path:'/ranking/'}); ['https://reba1ance.com/','https://www.juku-coaching01.com/','https://kizuki.or.jp/facility/online/','https://tos-kc1.com/'].forEach(h=>g.click({href:h,hasAttribute:()=>false,dataset:{otherCta:'rank'}}));
   assert.equal(JSON.stringify(g.events('lp_other_service_click').map(e=>e[2].destination)),JSON.stringify(['reba1ance.com','juku-coaching01.com','kizuki.or.jp','tos-kc1.com'])); }
