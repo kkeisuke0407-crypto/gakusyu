@@ -47,7 +47,11 @@
   var loader = document.createElement('script');
   loader.async = true;
   loader.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA;
-  document.head.appendChild(loader);
+  // gtag.js (GA4 + Google Ads, ~340KB) runs only after the page has rendered: loading it right away delayed mobile LCP to 5-7s
+  // (landing page experience). Events above are queued in dataLayer and sent once it loads; all CTAs open a new tab.
+  function loadTag() { if (!loader.parentNode) document.head.appendChild(loader); }
+  function afterLoad() { (window.requestIdleCallback || setTimeout)(loadTag, { timeout: 2000 }); }
+  if (document.readyState === 'complete') afterLoad(); else window.addEventListener('load', afterLoad, { once: true });
 
   function event(name, parameters) {
     gtag('event', name, Object.assign({ send_to: GA, lp_id: lp,
@@ -77,7 +81,7 @@
     } else {
       try {
         var host = new URL(link.href).hostname.replace(/^www\./, '');
-        if (['tintle.net', 'coaching01.com', 'k-runner.co.jp', 'benkyo.co.jp', 'try-online.jp'].indexOf(host) !== -1)
+        if (['tintle.net', 'coaching01.com', 'k-runner.co.jp', 'benkyo.co.jp', 'try-online.jp', 'reba1ance.com', 'juku-coaching01.com', 'kizuki.or.jp', 'tos-kc1.com'].indexOf(host) !== -1)
           event('lp_other_service_click', { destination: host, cta_id: (link.dataset || {}).otherCta || 'unclassified' });
       } catch (_) {}
     }

@@ -81,6 +81,11 @@ t.faqToggle();assert.equal(t.events('lp_faq_open').length,1);
 for(let i=0;i<30;i++){t.advance(1000);t.intervals[0]();}assert.equal(t.events('lp_active_read').length,1);
 t.document.hidden=true;for(let i=0;i<60;i++){t.advance(1000);t.intervals[0]();}assert.equal(t.events('lp_active_read').length,1);
 vm.runInNewContext(source,t.context);assert.equal(t.window.dataLayer.filter(x=>x[0]==='js').length,1);
+// gtag.js is loaded only after the window load event (and idle), not while the page is rendering
+{ const g=boot(); assert.equal(g.document.loaded,undefined); g.emit('load'); g.flush(); assert.equal(g.document.loaded,'https://www.googletagmanager.com/gtag/js?id=G-FQS2SK5HNF'); }
+// clicks to the current /ranking/ competitors are recorded
+{ const g=boot({path:'/ranking/'}); ['https://reba1ance.com/','https://www.juku-coaching01.com/','https://kizuki.or.jp/facility/online/','https://tos-kc1.com/'].forEach(h=>g.click({href:h,hasAttribute:()=>false,dataset:{otherCta:'rank'}}));
+  assert.equal(JSON.stringify(g.events('lp_other_service_click').map(e=>e[2].destination)),JSON.stringify(['reba1ance.com','juku-coaching01.com','kizuki.or.jp','tos-kc1.com'])); }
 assert.equal(boot({optout:true}).document.loaded,undefined);assert.equal(boot({gpc:true}).document.loaded,undefined);
 for(const path of ['index.html',...Array.from({length:8},(_,i)=>`lp0${i+2}/index.html`)]) {
   const html=fs.readFileSync(path,'utf8');
