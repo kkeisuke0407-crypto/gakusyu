@@ -3,13 +3,14 @@
 // 見ること：375px・1280pxで横はみ出しなし／画像が読める・alt・width・height／パーツ集の見本の残り（#sample・yk-ph・◯・サービスA・画像指示枠）なし／
 // 使うと決めたパーツが使われている／レーダー3つ／診断フォームで結果が出る
 // 2026-10-16 ユーザー指示で外した部品：fv-1 yk-hero（→ヒーロー画像 lp-hero）、fv-2 ロゴの横流し・image-2 導入画像（FV直下は画像なしの会話）
+// 2026-10-26 ユーザー指示で外した部品：top-2 求人の例カード（1位ソウガクの目的別プラン）。TOP3はFV直下にカードだけ（見出しなし）、導入会話はTOP3の後
 const path = require('path');
 const { chromium } = require('playwright');
 const DIR = 'file://' + path.resolve(__dirname, '..', 'ranking') + '/';
 const PAGES = ['index', 'sogaku', 'rebalance', 'try', 'coaching1', 'tos', 'kizuki', 'method'];
 // パーツ集の29部品（image-1 の画像指示枠 mt-imgslot は制作中だけ使い、公開ページに残してはいけない）
 const PARTS = {
-  'FV ヒーロー画像': '.lp-hero--text img', 'FV 見える見出し': '.lp-hero--text h1.lp-hero__ttl', '導入会話': '.lp-hero ~ .mt-talk', 'fv-3 PR表記': '.yk-pr', 'top-1 BEST3': '.yk-best3', 'top-2 求人の例カード': '.yk-hscroll .yk-jobcard',
+  'FV ヒーロー画像': '.lp-hero--text img', 'FV 見える見出し': '.lp-hero--text h1.lp-hero__ttl', '導入会話': '.yk-best3 ~ .mt-talk', 'fv-3 PR表記': '.yk-pr', 'top-1 BEST3': '.yk-pr ~ .yk-best3',
   'compare-1 タブ切替の比較表': '.yk-tabs .yk-cmp, .yk-fold', 'compare-2 2軸の早見表': '.yk-matrix', 'compare-3 2社併用': '.yk-combo',
   'rank-1 順位見出し': '.yk-rankhead', 'rank-2 ランキング内のタブ': '.yk-rankarea .yk-tabs', 'rank-3 特徴': '.yk-features', 'rank-4 編集部': '.yk-editor',
   'rank-5 口コミ': '.yk-voice', 'rank-6 2ボタン': '.yk-btnpair', 'rank-7 レーダー': '.yk-radar svg', 'rank-8 基本情報の表': '.yk-info', 'rank-9 求人例カード': '.yk-jobex',

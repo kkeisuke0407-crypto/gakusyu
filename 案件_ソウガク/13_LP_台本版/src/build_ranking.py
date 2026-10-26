@@ -285,7 +285,7 @@ def grade(v):
 # ボタンの上の一言（置き場所ごとに変える。なければ btn_catch）。すべて公式サイトの記載にもとづく
 CATCH = {
     "sogaku": {"compare": "比較17項目のうち13項目で◎", "combo": "体験は2回とも無料", "rank_tab": "担当予定の先生と無料体験2回",
-               "plan": "違約金・途中解約料0円", "rank": "合わなければ授業料1か月分を全額返金", "plan_card": "科目を増やしても料金は同じ", "pickup": "合わなければ先生の交代も無料",
+               "plan": "違約金・途中解約料0円", "rank": "合わなければ授業料1か月分を全額返金", "pickup": "合わなければ先生の交代も無料",
                "detail_strength": "先生は全員、研修を受けた社会人", "detail_fit": "当てはまったら、まず体験で相性を確認",
                "detail_fee": "入会金はキャンペーンで無料の場合あり", "detail_flow": "申込フォームは簡単3分（公式）",
                "detail_voice": "担任制で、毎回同じ先生が教える", "detail_faq": "違約金・途中解約料0円"},
@@ -592,16 +592,7 @@ def top():
 <div class="yk-logos rk-logos" role="region" aria-label="比較したオンライン家庭教師6社"><ul class="yk-logos__track">{logos}</ul></div>
 <p class="yk-pr"><b>PR</b><span>本ページは<wbr>広告・<wbr>アフィリエイトリンクを<wbr>含み⁠ま⁠す⁠。</span></p>
 """
-    # A-2 導入会話（画像なし）
-    rows = [
-        ("保護者", "以前、塾が合わなかったことがあって……。<br>家庭教師も気になるけど、子どもが知らない先生といきなり話すのを嫌がりそうで。", True),
-        ("編集部", "それなら、最初は親だけで相談できる家庭教師もありますよ。<span class='mt-mark'>無料体験の1回目を、保護者だけの面談にできる</span>んです。", False),
-        ("保護者", "それなら安心ですね！ 先に私が子どもの様子を伝えて、合いそうなら次は本人に体験してもらえるんですね。", True),
-        ("編集部", "そうなんです。大切なのは、<b>お子さんの特性を理解してくれる先生</b>を選ぶこと。そこで今回は、先生の専門性や無料体験の内容など、オンライン家庭教師6社を比較しました。", False),
-    ]
-    o += ('\n<!-- A-2 導入会話（mt-talk）：FV直下。画像なし。よくある迷いを編集部が会話例にしたもの（実在の発言ではない） -->\n<div class="mt-talk" data-section-id="talk">'
-          + "".join(talk_row(w, t, r) for w, t, r in rows) + '</div>\n')
-    # B-1 BEST3
+    # B-1 BEST3：FV（とPR表記）の直下に1・2・3位のカードだけ。見出しはFVの「ランキングTOP3」と重なるので置かない
     items = ""
     for s in R[:3]:
         r, m, t = s["best3"]
@@ -609,29 +600,17 @@ def top():
                   f'<p class="yk-best3__text"><span class="yk-red">{r}</span><br><span class="yk-mark">{m}</span>。{t}</p>'
                   f'<p class="yk-catch">総合評価 {s["total"]}</p>'
                   f'<a class="yk-btn yk-btn--sm" {link_attrs(s, "best3")}>公式サイト</a></li>')
-    o += f'\n<!-- B-1 BEST3（yk-best3）：順位の根拠は method.html -->\n<section class="yk-best3"><h2 class="yk-best3__ttl" data-section-id="best3"><em>発達特性</em>に強いオンライン家庭教師<br>ランキング<em>TOP3</em></h2>\n<p class="rk-best3-lead">まずは相談から始めて、<br>お子さんに合う先生を探してみませんか？</p>\n<ol class="yk-best3__list">{items}</ol></section>\n'
-    # B-2 ソウガクの目的別プラン（求人の例カードの型）
-    sg = S["sogaku"]
-    jobs = [
-        ("集中が続きにくい・低学年", "05_online_home.webp", "家のノートパソコンで学ぶ子ども", "小学生", "25分×月4回", "13,200円", ["25分から", "体験2回", "毎回の報告"]),
-        ("小学生でしっかり学びたい", "08_calm_home.webp", "落ち着いた部屋の机に向かう子ども", "小学生", "50分×月4回（公式のおすすめ）", "22,000円", ["5教科", "毎回の報告", "教材購入なし"]),
-        ("中学生・受験も見据えて", "04_one_on_one.webp", "机で勉強する子ども", "中学生", "35分×月4回（60分は26,400円）", "18,480円", ["受験対策にも対応", "受験生割増なし", "振替あり"]),
-        ("高校生・得意を活かしたい", "01_fv_study.webp", "机でノートに書く子ども", "高校生", "35分×月4回（60分は29,920円）", "21,560円", ["得意を活かす", "学年で料金アップなし", "違約金0円"]),
+    o += f'\n<!-- B-1 BEST3（yk-best3）：順位の根拠は method.html -->\n<section class="yk-best3" data-section-id="best3" aria-label="おすすめTOP3">\n<ol class="yk-best3__list">{items}</ol></section>\n'
+    # A-2 導入会話（画像なし）：TOP3のあと。最後の吹き出しから比較表へつなぐ
+    rows = [
+        ("保護者", "以前、塾が合わなかったことがあって……。<br>家庭教師も気になるけど、子どもが知らない先生といきなり話すのを嫌がりそうで。", True),
+        ("編集部", "それなら、最初は親だけで相談できる家庭教師もありますよ。<span class='mt-mark'>無料体験の1回目を、保護者だけの面談にできる</span>んです。", False),
+        ("保護者", "それなら安心ですね！ 先に私が子どもの様子を伝えて、合いそうなら次は本人に体験してもらえるんですね。", True),
+        ("編集部", "そうなんです。大切なのは、<b>お子さんの特性を理解してくれる先生</b>を選ぶこと。そこで今回は、先生の専門性や無料体験の内容など、オンライン家庭教師6社を比較しました。", False),
     ]
-    cards = ""
-    for ttl, img, alt, g, plan, pay, tags in jobs:
-        tg = "".join(f"<li>{t}</li>" for t in tags)
-        cards += (f'<div class="yk-jobcard"><h3 class="yk-jobcard__ttl">{ttl}</h3><img class="yk-jobcard__img" src="{IMG}{img}" alt="{alt}（イメージ）" width="960" height="640" loading="lazy">'
-                  f'<p class="yk-jobcard__pay">月額<b>{pay}</b></p><table class="yk-kv"><tr><th>学年</th><td>{g}</td></tr>'
-                  f'<tr><th>授業</th><td>{plan}</td></tr></table><ul class="yk-tags">{tg}</ul>'
-                  f'<p class="yk-catch">{esc(catch(sg, "plan_card"))}</p><a class="yk-btn yk-btn--sm" {link_attrs(sg, "plan_card")}>無料体験を公式で見る</a></div>')
-    o += f"""
-<!-- B-2 1位ソウガクの目的別プラン（yk-hscroll + yk-jobcard）：公式の料金表（{sg["plan_src"]}、{CHECKED}確認） -->
-<h2 class="yk-sec-ttl" data-section-id="plans">1位<em>ソウガク</em>の料金プラン｜目的別の例</h2>
-<p class="yk-hint">横にスクロールできます</p>
-<div class="yk-hscroll">{cards}</div>
-<p class="yk-small">※月4回・税込。入会金22,000円は別途（キャンペーンで無料の場合あり）。写真はイメージです。</p>
-"""
+    o += ('\n<!-- A-2 導入会話（mt-talk）：TOP3の直後。画像なし。よくある迷いを編集部が会話例にしたもの（実在の発言ではない） -->\n<div class="mt-talk" data-section-id="talk">'
+          + "".join(talk_row(w, t, r) for w, t, r in rows) + '</div>\n')
+    sg = S["sogaku"]
     # C-1 比較表（タブ：総合＋17項目を3つのタブに）
     def mk(v):
         return {5: "◎", 4: "○", 3: "△", 2: "△", 1: "×"}[v]
